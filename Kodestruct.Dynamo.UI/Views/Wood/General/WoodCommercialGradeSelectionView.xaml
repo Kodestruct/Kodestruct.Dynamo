@@ -1,0 +1,55 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Wood.NDS.General.WoodCommercialGradeSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
+              <KodestructControls:EnumDataElement   EnumString="SelectStructural"  Description="SelectStructural" />
+              <KodestructControls:EnumDataElement   EnumString="No1"  Description="No1" />
+              <KodestructControls:EnumDataElement   EnumString="No2"  Description="No2" />
+              <KodestructControls:EnumDataElement   EnumString="No3"  Description="No3" />
+              <KodestructControls:EnumDataElement   EnumString="Stud"  Description="Stud" />
+              <KodestructControls:EnumDataElement   EnumString="Construction"  Description="Construction" />
+              <KodestructControls:EnumDataElement   EnumString="Standard"  Description="Standard" />
+              <KodestructControls:EnumDataElement   EnumString="Utility"  Description="Utility" />
+              <KodestructControls:EnumDataElement   EnumString="ClearStructural"  Description="ClearStructural" />
+              <KodestructControls:EnumDataElement   EnumString="SelectStructuralOpenGrain"  Description="SelectStructuralOpenGrain" />
+              <KodestructControls:EnumDataElement   EnumString="No1OpenGrain"  Description="No1OpenGrain" />
+              <KodestructControls:EnumDataElement   EnumString="No2OpenGrain"  Description="No2OpenGrain" />
+              <KodestructControls:EnumDataElement   EnumString="No3OpenGrain"  Description="No3OpenGrain" />
+              <KodestructControls:EnumDataElement   EnumString="No1AndBetter"  Description="No1AndBetter" />
+              <KodestructControls:EnumDataElement   EnumString="DenseSelectStructural"  Description="DenseSelectStructural" />
+              <KodestructControls:EnumDataElement   EnumString="NonDenseSelectStructural"  Description="NonDenseSelectStructural" />
+              <KodestructControls:EnumDataElement   EnumString="No1Dense"  Description="No1Dense" />
+              <KodestructControls:EnumDataElement   EnumString="No2Dense"  Description="No2Dense" />
+              <KodestructControls:EnumDataElement   EnumString="No1NonDense"  Description="No1NonDense" />
+              <KodestructControls:EnumDataElement   EnumString="No2NonDense"  Description="No2NonDense" />
+              <KodestructControls:EnumDataElement   EnumString="DenseStructural86"  Description="DenseStructural86" />
+              <KodestructControls:EnumDataElement   EnumString="DenseStructural72"  Description="DenseStructural72" />
+              <KodestructControls:EnumDataElement   EnumString="DenseStructural65"  Description="DenseStructural65" />
+
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <KodestructControls:EnumControl  HeaderText="Wood. Commercial grade selection" 
+                                    ItemsSource="{StaticResource SelectionItemSource}" 
+					DataPath="WoodCommercialGrade"/>
+    </Grid>
+</UserControl>

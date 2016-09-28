@@ -1,0 +1,159 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Steel.AISC.General.RecommendedMaterialSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="300">
+
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="RecommendedMaterialSelectionIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <KodestructConverters:BooleanToVisibilityInvertedConverter x:Key="BooleanToVisibilityInvertedConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="MaterialGroupItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource Shape}" EnumString="Shape" Description="Shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource Plate}" EnumString="Plate" Description="Plate"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource Fastener}" EnumString="Fastener" Description="Fastener" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="SectionTypeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIRolled}" EnumString="IShape" Description="I-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelRolled}" EnumString="Channel" Description="Channel"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecAngleRolled}" EnumString="Angle" Description="Angle"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeRolled}" EnumString="Tee" Description="Tee"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecDoubleAngleRolled}" EnumString="DoubleAngle" Description="Double angle"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTubeRolled}" EnumString="RectangularHSS" Description="Tube (rectangular HSS)"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="CircularHSS" Description="Pipe or circular HSS"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="IShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIW}" EnumString="W" Description="W-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIS}" EnumString="S" Description="S-shape"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIM}" EnumString="M" Description="M-shape" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="ChannelShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelC}" EnumString="C" Description="C-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelMC}" EnumString="MC" Description="MC-shape"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="TShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeW}" EnumString="WT" Description="WT-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeS}" EnumString="ST" Description="ST-shape"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeM}" EnumString="MT" Description="MT-shape" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="CHSShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="CHS" Description="Circular HSS (CHS)" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="Pipe" Description="Pipe"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="PlateThicknessItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="PL_lessEq0_75" Description="Less than 0.75 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_0_75less_t_lessEq1_25" Description="Between 0.75 in. and (including) 1.25 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_1_25less_t_lessEq1_5" Description="Between 1.25 in. and (including) 1.5 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_1_5less_t_lessEq2_0" Description="Between 1.5 in. and (including) 2.0 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_2less_t_lessEq2_5" Description="Between 2 in. and (including) 2.5 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_2_5less_t_lessEq4" Description="Between 2.5 in.and (including) 4 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_4less_t_lessEq5" Description="Between 4 in. and (including) 5 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_6less_t_lessEq6" Description="Between 6 in. and (including) 6 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_6less_t_lessEq8" Description="Between 6 in. and (including) 8 in." />
+                <KodestructControls:EnumDataElement EnumString="PL_over8," Description="Over 8 in." />
+            </KodestructControls:EnumDataCollection>
+
+
+            <KodestructControls:EnumDataCollection x:Key="FastenerTypeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="HighStrengthBolt" Description="High-strength bolt" />
+                <KodestructControls:EnumDataElement EnumString="CommonBolt" Description="Common bolt"/>
+                <KodestructControls:EnumDataElement EnumString="AnchorRod" Description="Anchor rod" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="HiStrenghtBoltTypeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="Conventional" Description="Conventional" />
+                <KodestructControls:EnumDataElement EnumString="TwistOff" Description="Twist-off"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="AnchorRodTypeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="ThreadedAndNutted" Description="Threaded and nutted"/>
+                <KodestructControls:EnumDataElement EnumString="Headed" Description="Headed" />
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" >
+
+        <StackPanel >
+            <KodestructControls:EnumControl  HeaderText="Material group:" ItemsSource="{StaticResource MaterialGroupItemsSource}" 
+					DataPath="MaterialGroup"  ParameterPath="MaterialGroup"/>
+
+            <StackPanel x:Name="ShapeStack" Height="Auto" Orientation="Vertical" Visibility="{Binding IsMaterialShape,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Section type:" ItemsSource="{StaticResource SectionTypeItemsSource}" 
+					DataPath="CatalogShapeType"  ParameterPath="CatalogShapeType"/>
+                <StackPanel x:Name="IShapeStack" Height="Auto" Visibility="{Binding IsShapeI, Converter={StaticResource BooleanToVisibilityConverter}}" >
+                    <KodestructControls:EnumControl  HeaderText="I-shape sub-type:" ItemsSource="{StaticResource IShapeItemsSource}" 
+						DataPath="IShapeType"  ParameterPath="IShapeType"/>
+                </StackPanel>
+                <StackPanel x:Name="ChannelStack" Height="Auto" Visibility="{Binding IsShapeChannel, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <KodestructControls:EnumControl  HeaderText="Channel sub-type:" ItemsSource="{StaticResource ChannelShapeItemsSource}" 
+						DataPath="CShapeType"  ParameterPath="CShapeType" />
+                </StackPanel>
+                <StackPanel x:Name="TeeStack" Height="Auto" Visibility="{Binding IsShapeTee, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <KodestructControls:EnumControl  HeaderText="Tee sub-type:" ItemsSource="{StaticResource TShapeItemsSource}" 
+						DataPath="TShapeType"  ParameterPath="TShapeType"/>
+                </StackPanel>
+
+                <StackPanel x:Name="PipeStack" Height="Auto" Visibility="{Binding IsShapeCHS, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <KodestructControls:EnumControl  HeaderText="Pipe sub-type:" ItemsSource="{StaticResource CHSShapeItemsSource}" 
+						DataPath="CHSType"  ParameterPath="CHSType"/>
+                </StackPanel>
+
+            </StackPanel>
+            <StackPanel x:Name="PlateStack" Height="Auto" Visibility="{Binding IsMaterialPlate,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl HeaderText="Plate thickness range" ItemsSource="{StaticResource PlateThicknessItemsSource}" 
+						DataPath="PlateThicknessRange"  ParameterPath="PlateThicknessRange"/>
+            </StackPanel>
+            <StackPanel x:Name="FastenerStack" Height="Auto" Visibility="{Binding IsMaterialFastener,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl HeaderText="Fastener type" ItemsSource="{StaticResource FastenerTypeItemsSource}" 
+						DataPath="BoltType"  ParameterPath="BoltType"/>
+
+                <StackPanel x:Name="HighStrengthBoltStack" Height="Auto" Visibility="{Binding IsMaterialHighStrengthBolt,Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <KodestructControls:EnumControl HeaderText="High-strength bolt type:" ItemsSource="{StaticResource HiStrenghtBoltTypeItemsSource}" 
+						DataPath="HighStrengthBoltType"  ParameterPath="HighStrengthBoltType"/>
+                </StackPanel>
+                <StackPanel x:Name="AnchorRodStack" Height="Auto" Visibility="{Binding IsMaterialAnchorRod,Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <KodestructControls:DataEntryElement Description="Bolt diameter" 
+                                                    DataPath="d_b"  />
+                    <KodestructControls:EnumControl HeaderText="Anchor rod type:" ItemsSource="{StaticResource AnchorRodTypeItemsSource}" 
+						DataPath="AnchorRodType"  ParameterPath="AnchorRodType"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="0,20,0,0" VerticalAlignment="Top" Background="White" >
+
+                <StackPanel Margin="0,20,0,0" VerticalAlignment="Top" Background="White" >
+                    <TextBlock TextWrapping="Wrap" Text="Available material:" HorizontalAlignment="Center"/>
+                    <Grid Height="200">
+                        <ListBox ItemsSource="{Binding AvailableMaterials}" SelectedItem="{Binding SteelMaterialId, Mode=TwoWay}" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                    </Grid>
+
+                </StackPanel>
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+
+</UserControl>

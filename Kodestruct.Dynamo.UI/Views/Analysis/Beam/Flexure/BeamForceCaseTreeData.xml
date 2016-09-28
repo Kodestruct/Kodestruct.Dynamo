@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="SIMPLY SUPPORTED" Description="Simply supported" Id="X" ResourcePath="BC1SimplySupported" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED">
+    <XTreeItem Header="CONCENTRATED LOAD" Description="Concentrated load" Id="X" ResourcePath="LoadAConcentrated" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED\CONCENTRATED LOAD">
+      <XTreeItem Header="Load at center" Description="Simply supported. Concentrated load. Load at center" Id="C1A_1" ResourcePath="C1A_1" Tag="P" TemplateName="Block" TreePath="SIMPLY SUPPORTED\CONCENTRATED LOAD\Load at center" />
+      <XTreeItem Header="Load at any point" Description="Simply supported. Concentrated load. Load at any point" Id="C1A_2" ResourcePath="C1A_2" Tag="P,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED\CONCENTRATED LOAD\Load at any point" />
+      <XTreeItem Header="Two equal loads placed symmetrically" Description="Simply supported. Concentrated load. Two equal loads placed symmetrically" Id="C1A_3" ResourcePath="C1A_3" Tag="P,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED\CONCENTRATED LOAD\Two equal loads placed symmetrically" />
+      <XTreeItem Header="Two loads placed unsymmetrically" Description="Simply supported. Concentrated load. Two loads placed unsymmetrically" Id="C1A_4" ResourcePath="C1A_4" Tag="P1,P2,a,b" TemplateName="Block" TreePath="SIMPLY SUPPORTED\CONCENTRATED LOAD\Two loads placed unsymmetrically" />
+      <XTreeItem Header="Load at center and variable end moments" Description="Simply supported. Concentrated load. Load at center and variable end moments" Id="C1A_5" ResourcePath="C1A_5" Tag="P,M1,M2" TemplateName="Block" TreePath="SIMPLY SUPPORTED\CONCENTRATED LOAD\Load at center and variable end moments" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD FULL SPAN" Description="Uniform load on full span" Id="X" ResourcePath="LoadBUniformEntireSpan" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED\UNIFORM LOAD FULL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Simply supported. Uniform load on full span. Uniformly distributed load" Id="C1B_1" ResourcePath="C1B_1" Tag="w" TemplateName="Block" TreePath="SIMPLY SUPPORTED\UNIFORM LOAD FULL SPAN\Uniformly distributed load" />
+      <XTreeItem Header="Uniformly distributed load and variable end moments" Description="Simply supported. Uniform load on full span. Uniformly distributed load and variable end moments" Id="C1B_2" ResourcePath="C1B_2" Tag="w,M1,M2" TemplateName="Block" TreePath="SIMPLY SUPPORTED\UNIFORM LOAD FULL SPAN\Uniformly distributed load and variable end moments" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD PARTIAL SPAN" Description="Uniform load on partial span" Id="X" ResourcePath="LoadCUniformPartialSpan" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED\UNIFORM LOAD PARTIAL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Simply supported. Uniform load on partial span. Uniformly distributed load" Id="C1C_1" ResourcePath="C1C_1" Tag="w,a,b" TemplateName="Block" TreePath="SIMPLY SUPPORTED\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="VARYING LOAD" Description="Varying load" Id="X" ResourcePath="LoadDVariable" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED\VARYING LOAD">
+      <XTreeItem Header="Load uniformly increasing to one end" Description="Simply supported. Varying load. Load uniformly increasing to one end" Id="C1D_1" ResourcePath="C1D_1" Tag="w" TemplateName="Block" TreePath="SIMPLY SUPPORTED\VARYING LOAD\Load uniformly increasing to one end" />
+      <XTreeItem Header="Load uniformly increasing to center" Description="Simply supported. Varying load. Load uniformly increasing to center" Id="C1D_2" ResourcePath="C1D_2" Tag="w" TemplateName="Block" TreePath="SIMPLY SUPPORTED\VARYING LOAD\Load uniformly increasing to center" />
+    </XTreeItem>
+    <XTreeItem Header="APPLIED MOMENT" Description="Applied moment" Id="X" ResourcePath="LoadECouple" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED\APPLIED MOMENT">
+      <XTreeItem Header="Moment applied at one end" Description="Simply supported. Applied moment. Moment applied at one end" Id="C1E_1" ResourcePath="C1E_1" Tag="M" TemplateName="Block" TreePath="SIMPLY SUPPORTED\APPLIED MOMENT\Moment applied at one end" />
+      <XTreeItem Header="Moment applied at opposite end" Description="Simply supported. Applied moment. Moment applied at opposite end" Id="C1E_4" ResourcePath="C1E_4" Tag="M" TemplateName="Block" TreePath="SIMPLY SUPPORTED\APPLIED MOMENT\Moment applied at opposite end" />
+      <XTreeItem Header="Moment applied at any point" Description="Simply supported. Applied moment. Moment applied at any point" Id="C1E_2" ResourcePath="C1E_2" Tag="M,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED\APPLIED MOMENT\Moment applied at any point" />
+      <XTreeItem Header="Moments applied at both ends" Description="Simply supported. Applied moment. Moments applied at both ends" Id="C1E_3" ResourcePath="C1E_3" Tag="M1,M2" TemplateName="Block" TreePath="SIMPLY SUPPORTED\APPLIED MOMENT\Moments applied at both ends" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="SIMPLY SUPPORTED WITH OVERHANG" Description="Simply supported with overhang" Id="X" ResourcePath="BC2SingleSpanWithOverhang" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED WITH OVERHANG">
+    <XTreeItem Header="CONCENTRATED LOAD" Description="Concentrated load" Id="X" ResourcePath="LoadAConcentrated" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED WITH OVERHANG\CONCENTRATED LOAD">
+      <XTreeItem Header="Load at any point between supports" Description="Simply supported with overhang. Concentrated load. Load at any point between supports" Id="C2A_1" ResourcePath="C2A_1" Tag="P,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED WITH OVERHANG\CONCENTRATED LOAD\Load at any point between supports" />
+      <XTreeItem Header="Load at the end of overhang" Description="Simply supported with overhang. Concentrated load. Load at the end of overhang" Id="C2A_2" ResourcePath="C2A_2" Tag="P,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED WITH OVERHANG\CONCENTRATED LOAD\Load at the end of overhang" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD FULL SPAN" Description="Uniform load on full span" Id="X" ResourcePath="LoadBUniformEntireSpan" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED WITH OVERHANG\UNIFORM LOAD FULL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Simply supported with overhang. Uniform load on full span. Uniformly distributed load" Id="C2B_1" ResourcePath="C2B_1" Tag="w,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED WITH OVERHANG\UNIFORM LOAD FULL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD PARTIAL SPAN" Description="Uniform load on partial span" Id="X" ResourcePath="LoadCUniformPartialSpan" Tag="X" TemplateName="Category" TreePath="SIMPLY SUPPORTED WITH OVERHANG\UNIFORM LOAD PARTIAL SPAN">
+      <XTreeItem Header="Uniformly distributed load between supports" Description="Simply supported with overhang. Uniform load on partial span. Uniformly distributed load between supports" Id="C2C_1" ResourcePath="C2C_1" Tag="w,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED WITH OVERHANG\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load between supports" />
+      <XTreeItem Header="Uniformly distributed load on overhang" Description="Simply supported with overhang. Uniform load on partial span. Uniformly distributed load on overhang" Id="C2C_2" ResourcePath="C2C_2" Tag="w,a" TemplateName="Block" TreePath="SIMPLY SUPPORTED WITH OVERHANG\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load on overhang" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="FIXED-PINNED" Description="Fixed-pinned (propped cantilever)" Id="X" ResourcePath="BC3PinnedFixed" Tag="X" TemplateName="Category" TreePath="FIXED-PINNED">
+    <XTreeItem Header="CONCENTRATED LOAD" Description="Concentrated load" Id="X" ResourcePath="LoadAConcentrated" Tag="X" TemplateName="Category" TreePath="FIXED-PINNED\CONCENTRATED LOAD">
+      <XTreeItem Header="Load at center" Description="Fixed-pinned (propped cantilever). Concentrated load. Load at center" Id="C3A_1" ResourcePath="C3A_1" Tag="P" TemplateName="Block" TreePath="FIXED-PINNED\CONCENTRATED LOAD\Load at center" />
+      <XTreeItem Header="Load at any point" Description="Fixed-pinned (propped cantilever). Concentrated load. Load at any point" Id="C3A_2" ResourcePath="C3A_2" Tag="P,a" TemplateName="Block" TreePath="FIXED-PINNED\CONCENTRATED LOAD\Load at any point" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD FULL SPAN" Description="Uniform load on full span" Id="X" ResourcePath="LoadBUniformEntireSpan" Tag="X" TemplateName="Category" TreePath="FIXED-PINNED\UNIFORM LOAD FULL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Fixed-pinned (propped cantilever). Uniform load on full span. Uniformly distributed load" Id="C3B_1" ResourcePath="C3B_1" Tag="w" TemplateName="Block" TreePath="FIXED-PINNED\UNIFORM LOAD FULL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD PARTIAL SPAN" Description="Uniform load on partial span" Id="X" ResourcePath="LoadCUniformPartialSpan" Tag="X" TemplateName="Category" TreePath="FIXED-PINNED\UNIFORM LOAD PARTIAL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Fixed-pinned (propped cantilever). Uniform load on partial span. Uniformly distributed load" Id="C3C_1" ResourcePath="C3C_1" Tag="w,a,b" TemplateName="Block" TreePath="FIXED-PINNED\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="APPLIED MOMENT" Description="Applied moment" Id="X" ResourcePath="LoadECouple" Tag="X" TemplateName="Category" TreePath="FIXED-PINNED\APPLIED MOMENT">
+      <XTreeItem Header="Moment applied at free end" Description="Fixed-pinned (propped cantilever). Applied moment. Moment applied at free end" Id="C3E_1" ResourcePath="C3E_1" Tag="M" TemplateName="Block" TreePath="FIXED-PINNED\APPLIED MOMENT\Moment applied at free end" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="FIXED-FIXED" Description="Fixed-fixed" Id="X" ResourcePath="BC4FixedFixed" Tag="X" TemplateName="Category" TreePath="FIXED-FIXED">
+    <XTreeItem Header="CONCENTRATED LOAD" Description="Concentrated load" Id="X" ResourcePath="LoadAConcentrated" Tag="X" TemplateName="Category" TreePath="FIXED-FIXED\CONCENTRATED LOAD">
+      <XTreeItem Header="Load at center" Description="Fixed-fixed. Concentrated load. Load at center" Id="C4A_1" ResourcePath="C4A_1" Tag="P" TemplateName="Block" TreePath="FIXED-FIXED\CONCENTRATED LOAD\Load at center" />
+      <XTreeItem Header="Load at any point" Description="Fixed-fixed. Concentrated load. Load at any point" Id="C4A_2" ResourcePath="C4A_2" Tag="P,a" TemplateName="Block" TreePath="FIXED-FIXED\CONCENTRATED LOAD\Load at any point" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD FULL SPAN" Description="Uniform load on full span" Id="X" ResourcePath="LoadBUniformEntireSpan" Tag="X" TemplateName="Category" TreePath="FIXED-FIXED\UNIFORM LOAD FULL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Fixed-fixed. Uniform load on full span. Uniformly distributed load" Id="C4B_1" ResourcePath="C4B_1" Tag="w" TemplateName="Block" TreePath="FIXED-FIXED\UNIFORM LOAD FULL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD PARTIAL SPAN" Description="Uniform load on partial span" Id="X" ResourcePath="LoadCUniformPartialSpan" Tag="X" TemplateName="Category" TreePath="FIXED-FIXED\UNIFORM LOAD PARTIAL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Fixed-fixed. Uniform load on partial span. Uniformly distributed load" Id="C4C_1" ResourcePath="C4C_1" Tag="w,a,b" TemplateName="Block" TreePath="FIXED-FIXED\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="APPLIED MOMENT" Description="Applied moment" Id="X" ResourcePath="LoadECouple" Tag="X" TemplateName="Category" TreePath="FIXED-FIXED\APPLIED MOMENT">
+      <XTreeItem Header="Moment applied at any point" Description="Fixed-fixed. Applied moment. Moment applied at any point" Id="C4E_2" ResourcePath="C4E_2" Tag="M,a" TemplateName="Block" TreePath="FIXED-FIXED\APPLIED MOMENT\Moment applied at any point" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="CANTILEVER" Description="Cantilever" Id="X" ResourcePath="BC5Cantilever" Tag="X" TemplateName="Category" TreePath="CANTILEVER">
+    <XTreeItem Header="CONCENTRATED LOAD" Description="Concentrated load" Id="X" ResourcePath="LoadAConcentrated" Tag="X" TemplateName="Category" TreePath="CANTILEVER\CONCENTRATED LOAD">
+      <XTreeItem Header="Load at free end" Description="Cantilever. Concentrated load. Load at free end" Id="C5A_1" ResourcePath="C5A_1" Tag="P" TemplateName="Block" TreePath="CANTILEVER\CONCENTRATED LOAD\Load at free end" />
+      <XTreeItem Header="Load at any point" Description="Cantilever. Concentrated load. Load at any point" Id="C5A_2" ResourcePath="C5A_2" Tag="P,a" TemplateName="Block" TreePath="CANTILEVER\CONCENTRATED LOAD\Load at any point" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD FULL SPAN" Description="Uniform load on full span" Id="X" ResourcePath="LoadBUniformEntireSpan" Tag="X" TemplateName="Category" TreePath="CANTILEVER\UNIFORM LOAD FULL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Cantilever. Uniform load on full span. Uniformly distributed load" Id="C5B_1" ResourcePath="C5B_1" Tag="w" TemplateName="Block" TreePath="CANTILEVER\UNIFORM LOAD FULL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="UNIFORM LOAD PARTIAL SPAN" Description="Uniform load on partial span" Id="X" ResourcePath="LoadCUniformPartialSpan" Tag="X" TemplateName="Category" TreePath="CANTILEVER\UNIFORM LOAD PARTIAL SPAN">
+      <XTreeItem Header="Uniformly distributed load" Description="Cantilever. Uniform load on partial span. Uniformly distributed load" Id="C5C_1" ResourcePath="C5C_1" Tag="w,b" TemplateName="Block" TreePath="CANTILEVER\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load" />
+    </XTreeItem>
+    <XTreeItem Header="VARYING LOAD" Description="Varying load" Id="X" ResourcePath="LoadDVariable" Tag="X" TemplateName="Category" TreePath="CANTILEVER\VARYING LOAD">
+      <XTreeItem Header="Load uniformly increasing to free end" Description="Cantilever. Varying load. Load uniformly increasing to free end" Id="C5D_1" ResourcePath="C5D_1" Tag="w" TemplateName="Block" TreePath="CANTILEVER\VARYING LOAD\Load uniformly increasing to free end" />
+      <XTreeItem Header="Load uniformly increasing to fixed end" Description="Cantilever. Varying load. Load uniformly increasing to fixed end" Id="C5D_2" ResourcePath="C5D_2" Tag="w" TemplateName="Block" TreePath="CANTILEVER\VARYING LOAD\Load uniformly increasing to fixed end" />
+    </XTreeItem>
+    <XTreeItem Header="APPLIED MOMENT" Description="Applied moment" Id="X" ResourcePath="LoadECouple" Tag="X" TemplateName="Category" TreePath="CANTILEVER\APPLIED MOMENT">
+      <XTreeItem Header="Moment applied at free end" Description="Cantilever. Applied moment. Moment applied at free end" Id="C5E_1" ResourcePath="C5E_1" Tag="M" TemplateName="Block" TreePath="CANTILEVER\APPLIED MOMENT\Moment applied at free end" />
+    </XTreeItem>
+  </XTreeItem>
+</Root>

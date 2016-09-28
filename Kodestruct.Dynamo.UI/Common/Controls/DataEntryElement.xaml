@@ -1,0 +1,45 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+    xmlns:System="clr-namespace:System;assembly=mscorlib" 
+    xmlns:local="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+    x:Class="Kodestruct.Dynamo.Common.Infra.DataEntryElement"
+    x:Name="EntryControl"
+    mc:Ignorable="d"
+    d:DesignWidth="250" d:DesignHeight="70">
+
+ 
+
+   <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+             </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White" Height="Auto">
+		<Grid Height="40">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="60"/>
+			</Grid.ColumnDefinitions>
+            
+       
+			<TextBlock x:Name="HeaderTextBlock" 
+				Text="{Binding Description, ElementName=EntryControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+				VerticalAlignment="Center"  
+				Grid.Row="0" Margin="10,0" Height="25" TextAlignment="Right" />
+			<TextBox x:Name="ValueBox" Grid.Column="1" Height="25" Margin="0,0,10,0" 
+                     TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+
+        
+		</Grid>
+    </Grid>
+    
+</UserControl>

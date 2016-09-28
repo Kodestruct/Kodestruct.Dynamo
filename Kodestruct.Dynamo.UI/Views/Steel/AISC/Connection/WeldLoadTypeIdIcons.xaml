@@ -1,0 +1,96 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="WeldTensionNormal" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="WeldTensionNormal" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle x:Name="Rectangle" Width="37.8333" Height="7.16667" Canvas.Left="2.49067" Canvas.Top="16.6667" Stretch="Fill" Fill="#FF333333" />
+                            <Path x:Name="Path" Width="9.488" Height="14.084" Canvas.Left="16.6625" Canvas.Top="25.7917" Stretch="Fill" Fill="#FF333333" Data="F1 M 20.3972,31.7317L 20.3972,25.7917L 22.4159,25.7917L 22.4159,31.7317L 26.1505,31.7317L 21.4025,39.8757L 16.6625,31.7317L 20.3972,31.7317 Z " />
+                            <Path x:Name="Path_0" Width="9.488" Height="13.992" Canvas.Left="16.6625" Canvas.Top="1.55" Stretch="Fill" Fill="#FF333333" Data="F1 M 20.3972,9.694L 20.3972,15.542L 22.4159,15.542L 22.4159,9.694L 26.1505,9.694L 21.4025,1.55L 16.6625,9.694L 20.3972,9.694 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CompressionSpliceFinishedToBear" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="CompressionSpliceFinishedToBear" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_1" Width="27.1667" Height="15.8333" Canvas.Left="8.16667" Canvas.Top="5.33333" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 29,16.5L 29,6L 14.5,6L 14.5,16.5L 8.83333,16.5L 8.83333,20.5L 34.6667,20.5L 34.6667,16.5L 29,16.5 Z " />
+                            <Path x:Name="Path_2" Width="27.1667" Height="15.8333" Canvas.Left="8.16667" Canvas.Top="21.8333" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 29,26.5L 29,37L 14.5,37L 14.5,26.5L 8.83333,26.5L 8.83333,22.5L 34.6667,22.5L 34.6667,26.5L 29,26.5 Z " />
+                            <Path x:Name="Path_3" Width="5.16667" Height="4.592" Canvas.Left="29" Canvas.Top="11.908" Stretch="Fill" Fill="#FF333333" Data="F1 M 34.1667,16.5L 29,16.5L 29,11.908L 34.1667,16.5 Z " />
+                            <Path x:Name="Path_4" Width="4.592" Height="5.16667" Canvas.Left="29" Canvas.Top="26.5" Stretch="Fill" Fill="#FF333333" Data="F1 M 29,31.6667L 29,26.5L 33.592,26.5L 29,31.6667 Z " />
+                            <Path x:Name="Path_5" Width="5.16667" Height="4.592" Canvas.Left="9.33333" Canvas.Top="11.908" Stretch="Fill" Fill="#FF333333" Data="F1 M 9.33333,16.5L 14.5,16.5L 14.5,11.908L 9.33333,16.5 Z " />
+                            <Path x:Name="Path_6" Width="4.592" Height="5.16667" Canvas.Left="9.908" Canvas.Top="26.5" Stretch="Fill" Fill="#FF333333" Data="F1 M 14.5,31.6667L 14.5,26.5L 9.908,26.5L 14.5,31.6667 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CompressionSpliceNotFinishedToBear" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="CompressionSpliceNotFinishedToBear" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_4" Width="5.16667" Height="4.592" Canvas.Left="29" Canvas.Top="9.908" Stretch="Fill" Fill="#FF333333" Data="F1 M 34.1667,14.5L 29,14.5L 29,9.908L 34.1667,14.5 Z " />
+                            <Path x:Name="Path_5" Width="4.592" Height="5.16667" Canvas.Left="29" Canvas.Top="27.6667" Stretch="Fill" Fill="#FF333333" Data="F1 M 29,32.8333L 29,27.6667L 33.592,27.6667L 29,32.8333 Z " />
+                            <Path x:Name="Path_6" Width="5.16667" Height="4.592" Canvas.Left="9.33333" Canvas.Top="9.908" Stretch="Fill" Fill="#FF333333" Data="F1 M 9.33333,14.5L 14.5,14.5L 14.5,9.908L 9.33333,14.5 Z " />
+                            <Path x:Name="Path_7" Width="4.592" Height="5.16667" Canvas.Left="9.908" Canvas.Top="27.6667" Stretch="Fill" Fill="#FF333333" Data="F1 M 14.5,32.8333L 14.5,27.6667L 9.908,27.6667L 14.5,32.8333 Z " />
+                            <Path x:Name="Path_8" Width="16.837" Height="6.5" Canvas.Left="13.3297" Canvas.Top="17.8333" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 13.9964,23.6236L 14,18.5L 29.5,18.5L 29.5,23.6667L 13.9964,23.6236 Z " />
+                            <Path x:Name="Path_9" Width="27.1667" Height="35.5" Canvas.Left="8.16667" Canvas.Top="3.33333" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 29,14.5L 29,4L 14.5,4L 14.5,14.5L 8.83333,14.5L 8.83333,27.6667L 14.5,27.6667L 14.5,38.1667L 29,38.1667L 29,27.6667L 34.6667,27.6667L 34.6667,14.5L 29,14.5 Z " />
+                            <Path x:Name="Line_10" Width="6.08567" Height="0.666667" Canvas.Left="8.5" Canvas.Top="18.1667" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 14.2523,18.5L 8.83333,18.5" />
+                            <Path x:Name="Line_11" Width="6.08567" Height="0.666667" Canvas.Left="8.5" Canvas.Top="23.3333" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 14.2523,23.6667L 8.83333,23.6667" />
+                            <Path x:Name="Line_12" Width="5.83333" Height="0.666667" Canvas.Left="29.1667" Canvas.Top="18.1667" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 34.6667,18.5L 29.5,18.5" />
+                            <Path x:Name="Line_13" Width="5.83333" Height="0.666667" Canvas.Left="29.1667" Canvas.Top="23.3333" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 34.6667,23.6667L 29.5,23.6667" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="WeldCompressionNormal" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="WeldCompressionNormal" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_15" Width="9.488" Height="14.084" Canvas.Left="17.0004" Canvas.Top="1.62507" Stretch="Fill" Fill="#FF333333" Data="F1 M 20.7351,7.56507L 20.7351,1.62507L 22.7524,1.62507L 22.7524,7.56507L 26.4884,7.56507L 21.7391,15.7091L 17.0004,7.56507L 20.7351,7.56507 Z " />
+                            <Path x:Name="Path_16" Width="9.488" Height="13.992" Canvas.Left="17.0004" Canvas.Top="25.05" Stretch="Fill" Fill="#FF333333" Data="F1 M 20.7351,33.194L 20.7351,39.042L 22.7524,39.042L 22.7524,33.194L 26.4884,33.194L 21.7391,25.05L 17.0004,33.194L 20.7351,33.194 Z " />
+                            <Rectangle x:Name="Rectangle_17" Width="37.8333" Height="7.16667" Canvas.Left="2.06933" Canvas.Top="16.6667" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WeldShear" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="WeldShear" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle x:Name="Rectangle_18" Width="37.8333" Height="7.16667" Canvas.Left="2.06933" Canvas.Top="16.6667" Stretch="Fill" Fill="#FF333333" />
+                            <Path x:Name="Path_19" Width="21.6773" Height="5.15866" Canvas.Left="10.0003" Canvas.Top="32.4349" Stretch="Fill" Fill="#FF333333" Data="F1 M 22.9909,32.4349L 10.0003,32.4349L 10.0003,34.5069L 22.9909,34.5069L 22.9909,37.5936L 31.6776,32.4349L 22.9909,32.4349 Z " />
+                            <Path x:Name="Path_20" Width="22.476" Height="5.156" Canvas.Left="10.0191" Canvas.Top="3.6904" Stretch="Fill" Fill="#FF333333" Data="F1 M 18.7044,8.8464L 32.4951,8.8464L 32.4951,6.7744L 18.7044,6.7744L 18.7044,3.6904L 10.0191,8.8464L 18.7044,8.8464 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

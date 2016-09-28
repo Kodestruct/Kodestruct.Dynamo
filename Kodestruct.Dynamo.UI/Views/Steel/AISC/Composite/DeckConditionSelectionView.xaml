@@ -1,0 +1,36 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Steel.AISC.Composite.Anchor.DeckConditionSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DeckIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="HeadedAnchorDeckConditionSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement  Icon="{StaticResource  NoDeck}" EnumString="NoDeck" 		Description="No decking" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource  DeckParallel}" EnumString="Parallel" 		Description="Formed steel deck parallel to shape"/>
+                <KodestructControls:EnumDataElement  Icon="{StaticResource  DeckPerpendicular}" EnumString="Perpendicular" Description="Formed steel deck perpendicular to shape"/>
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <KodestructControls:EnumControl  HeaderText="Deck condition:" 
+                                    ItemsSource="{StaticResource HeadedAnchorDeckConditionSource}" 
+					DataPath="DeckAtBeamCondition"/>
+    </Grid>
+</UserControl>

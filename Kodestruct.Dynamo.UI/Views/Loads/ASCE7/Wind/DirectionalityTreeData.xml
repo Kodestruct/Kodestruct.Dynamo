@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="BUILDINGS" Description="Buildings" Id="X" ResourcePath="Building" Tag="X" TemplateName="Category" TreePath="BUILDINGS">
+
+      <XTreeItem Header="Main Wind Force Resisting System (MWFRS)" Description="Main Wind Force Resisting System (MWFRS)" Id="Building (MWFRS)" ResourcePath="X" Tag="MWFRS" TemplateName="Block" TreePath="BUILDINGS\Main Wind Force Resisting System (MWFRS)" />
+      <XTreeItem Header="Components and Cladding" Description="Components and Cladding" Id="Building (CC)" ResourcePath="X" Tag="CC" TemplateName="Block" TreePath="BUILDINGS\Components and Cladding" />
+
+  </XTreeItem>
+  <XTreeItem Header="ARCHED ROOFS " Description="Arched roofs " Id="X" ResourcePath="ArchedRoof" Tag="X" TemplateName="Category" TreePath="ARCHED ROOFS ">
+
+      <XTreeItem Header="Arched roof" Description="Arched roof" Id="Arched roof" ResourcePath="X" Tag="ArchRoof" TemplateName="Block" TreePath="ARCHED ROOFS \Arched roof" />
+
+  </XTreeItem>
+  <XTreeItem Header="CHIMNEYS, TANKS, AND SIMILAR" Description="Chimneys, tanks, and similar" Id="X" ResourcePath="ChimneysTanks" Tag="X" TemplateName="Category" TreePath="CHIMNEYS, TANKS, AND SIMILAR">
+
+      <XTreeItem Header="Square" Description="Square" Id="Square chimney,tank or sim." ResourcePath="X" Tag="ChimneySquare" TemplateName="Block" TreePath="CHIMNEYS, TANKS, AND SIMILAR\Square" />
+      <XTreeItem Header="Hexagonal" Description="Hexagonal" Id="Hexagonal  chimney,tank or sim." ResourcePath="X" Tag="ChimneyHex" TemplateName="Block" TreePath="CHIMNEYS, TANKS, AND SIMILAR\Hexagonal" />
+      <XTreeItem Header="Round" Description="Round" Id="Round  chimney,tank or sim." ResourcePath="X" Tag="ChimneyRound" TemplateName="Block" TreePath="CHIMNEYS, TANKS, AND SIMILAR\Round" />
+
+  </XTreeItem>
+  <XTreeItem Header="SOLID WALLS AND SIGNS" Description="Solid walls and signs" Id="X" ResourcePath="WallsSigns" Tag="X" TemplateName="Category" TreePath="SOLID WALLS AND SIGNS">
+
+      <XTreeItem Header="Freestanding wall" Description="Freestanding wall" Id="Freestanding wall" ResourcePath="X" Tag="FreestandingWall" TemplateName="Block" TreePath="SOLID WALLS AND SIGNS\Freestanding wall" />
+      <XTreeItem Header="Freestanding sign" Description="Freestanding sign" Id="Freestanding sign" ResourcePath="X" Tag="FreestandingSign" TemplateName="Block" TreePath="SOLID WALLS AND SIGNS\Freestanding sign" />
+      <XTreeItem Header="Attached sign" Description="Attached sign" Id="Attached sign" ResourcePath="X" Tag="AttachedSign" TemplateName="Block" TreePath="SOLID WALLS AND SIGNS\Attached sign" />
+
+  </XTreeItem>
+  <XTreeItem Header="OPEN SIGNS AND LATTICE FRAMEWORK" Description="Open signs and lattice framework" Id="X" ResourcePath="Latticework" Tag="X" TemplateName="Category" TreePath="OPEN SIGNS AND LATTICE FRAMEWORK">
+
+      <XTreeItem Header="Lattice framework" Description="Lattice framework" Id="Lattice framework" ResourcePath="X" Tag="Lattice" TemplateName="Block" TreePath="OPEN SIGNS AND LATTICE FRAMEWORK\Lattice framework" />
+      <XTreeItem Header="Open sign" Description="Open sign" Id="Open sign" ResourcePath="X" Tag="OpenSign" TemplateName="Block" TreePath="OPEN SIGNS AND LATTICE FRAMEWORK\Open sign" />
+
+  </XTreeItem>
+  <XTreeItem Header="TRUSSED TOWERS" Description="Trussed towers" Id="X" ResourcePath="TrussedTowers" Tag="X" TemplateName="Category" TreePath="TRUSSED TOWERS">
+
+      <XTreeItem Header="Triangular, square, rectangular" Description="Triangular, square, rectangular" Id="Triangular, square, rectangular trussed twr." ResourcePath="X" Tag="TrussedTower" TemplateName="Block" TreePath="TRUSSED TOWERS\Triangular, square, rectangular" />
+      <XTreeItem Header="Other cross section" Description="Other cross section" Id="Other cross section  trussed twr." ResourcePath="X" Tag="TrussedTowerOther" TemplateName="Block" TreePath="TRUSSED TOWERS\Other cross section" />
+
+  </XTreeItem>
+</Root>

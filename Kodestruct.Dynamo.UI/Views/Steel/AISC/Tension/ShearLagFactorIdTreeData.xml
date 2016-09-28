@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="DIRECT TRANSFER TO ALL ELEMENTS" Description="Tension load is transmitted directly to each of the cross-sectional elements" Id="Case1" ResourcePath="C1" Tag="Direct transfer to all elements" TemplateName="Block" TreePath="DIRECT TRANSFER TO ALL ELEMENTS" />
+  <XTreeItem Header="PARTIAL TRANSFER" Description="Partial transfer to some elements of section" Id="X" ResourcePath="Partial" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER">
+    <XTreeItem Header="FASTENERS" Description="Fasteners" Id="X" ResourcePath="Bolt" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\FASTENERS">
+      <XTreeItem Header="General case" Description="General case" Id="Case2" ResourcePath="General" Tag="General case" TemplateName="Block" TreePath="PARTIAL TRANSFER\FASTENERS\General case" />
+      <XTreeItem Header="I-BEAM OR TEE" Description="I-Beam or Tee" Id="X" ResourcePath="Ibeam" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\FASTENERS\I-BEAM OR TEE">
+        <XTreeItem Header="Flange with 3 or more fasteners per line" Description="W, M, S or HP  Shapes or Tees cut  from these shapes with flange connected with 3 ormore fasteners per line in the direction of loading" Id="Case7a" ResourcePath="C7a" Tag="Flange with 3 or more fasteners per line" TemplateName="Block" TreePath="PARTIAL TRANSFER\FASTENERS\I-BEAM OR TEE\Flange with 3 or more fasteners per line" />
+        <XTreeItem Header="Web with 4 or more fasteners per line" Description="W, M, S or HP  Shapes or Tees cut  from these shapes with web connected with 4 or more fasteners per line in the direction of loading" Id="Case7b" ResourcePath="C7b" Tag="Web with 4 or more fasteners per line" TemplateName="Block" TreePath="PARTIAL TRANSFER\FASTENERS\I-BEAM OR TEE\Web with 4 or more fasteners per line" />
+      </XTreeItem>
+      <XTreeItem Header="ANGLES" Description="Angles" Id="X" ResourcePath="Angle" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\FASTENERS\ANGLES">
+        <XTreeItem Header="3 fasteners" Description="Single and double angles with 4 or more fasteners per line in the direction of loading" Id="Case8a" ResourcePath="C8a" Tag="3 fasteners" TemplateName="Block" TreePath="PARTIAL TRANSFER\FASTENERS\ANGLES\3 fasteners" />
+        <XTreeItem Header="4 or more fasteners" Description="Single and double angles with 3 fasteners per line in the direction of loading" Id="Case8b" ResourcePath="C8b" Tag="4 or more fasteners" TemplateName="Block" TreePath="PARTIAL TRANSFER\FASTENERS\ANGLES\4 or more fasteners" />
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="WELDS" Description="Welds" Id="X" ResourcePath="Welding" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\WELDS">
+      <XTreeItem Header="ALL OTHER SHAPES" Description="All other shapes" Id="X" ResourcePath="IBeam" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\WELDS\ALL OTHER SHAPES">
+        <XTreeItem Header="General case" Description="General case tension load is transmitted to some of the cross-sectional elements (except plates and HSS)" Id="Case2" ResourcePath="C2" Tag="General case" TemplateName="Block" TreePath="PARTIAL TRANSFER\WELDS\ALL OTHER SHAPES\General case" />
+        <XTreeItem Header="Transverse welds only" Description="All tension members where the tension load is transmitted only by transverse welds" Id="Case3" ResourcePath="C3" Tag="Transverse welds only" TemplateName="Block" TreePath="PARTIAL TRANSFER\WELDS\ALL OTHER SHAPES\Transverse welds only" />
+      </XTreeItem>
+      <XTreeItem Header="PLATES" Description="Plates" Id="X" ResourcePath="Plate" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\WELDS\PLATES">
+        <XTreeItem Header="Longitudinal welds only" Description="Plates where the tension load is transmitted by longitudinal welds only" Id="Case4" ResourcePath="C4" Tag="Longitudinal welds only" TemplateName="Block" TreePath="PARTIAL TRANSFER\WELDS\PLATES\Longitudinal welds only" />
+      </XTreeItem>
+      <XTreeItem Header="HSS" Description="HSS" Id="X" ResourcePath="HSS" Tag="X" TemplateName="Category" TreePath="PARTIAL TRANSFER\WELDS\HSS">
+        <XTreeItem Header="Rectangular HSS with 1 concentric gusset  plate" Description="Rectangular HSS with a single concentric gusset  plate" Id="Case6a" ResourcePath="C6a" Tag="Rectangular hss with 1 concentric gusset  plate" TemplateName="Block" TreePath="PARTIAL TRANSFER\WELDS\HSS\Rectangular HSS with 1 concentric gusset  plate" />
+        <XTreeItem Header="Rectangular HSS with 2 side gusset plates" Description="Rectangular HSS with 2 side gusset plates" Id="Case6b" ResourcePath="C6b" Tag="Rectangular hss with 2 side gusset plates" TemplateName="Block" TreePath="PARTIAL TRANSFER\WELDS\HSS\Rectangular HSS with 2 side gusset plates" />
+        <XTreeItem Header="Round HSS with 1 concentric gusset  plate" Description="Round HSS with 1 concentric gusset  plate" Id="Case5" ResourcePath="C5" Tag="Round hss with 1 concentric gusset  plate" TemplateName="Block" TreePath="PARTIAL TRANSFER\WELDS\HSS\Round HSS with 1 concentric gusset  plate" />
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+</Root>
+
+

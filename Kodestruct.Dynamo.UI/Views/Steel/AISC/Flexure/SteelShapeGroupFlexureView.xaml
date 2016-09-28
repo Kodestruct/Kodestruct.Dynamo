@@ -1,0 +1,91 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Steel.AISC.Flexure.SteelShapeGroupFlexureView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="400">
+
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="SteelShapeGroupFlexureIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="SectionTypeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIRolled}" EnumString="IShape" Description="I-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelRolled}" EnumString="Channel" Description="Channel"/>
+                <!--<KodestructControls:EnumDataElement Icon="{StaticResource SecAngleRolled}" EnumString="Angle" Description="Angle"/>-->
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeRolled}" EnumString="Tee" Description="Tee"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecDoubleAngleRolled}" EnumString="DoubleAngle" Description="Double angle"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTubeRolled}" EnumString="RectangularHSS" Description="Tube or box"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="CircularHSS" Description="Pipe or circular HSS"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecRect}" EnumString="SolidRectangle" Description="Solid rectangle"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecRound}" EnumString="SolidCircle" Description="Solid circle"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="IShapeAxisSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource BendingAxisX}" EnumString="Major" Description="Major axis" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource BendingAxisY}" EnumString="Minor" Description="Minor axis" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="IShapeSymmetrySource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource DoublySymmetric}" EnumString="DoublySymmetric" Description="Doubly-symmetric"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SinglySymmetric}" EnumString="SinglySymmetric" Description="Singly-symmetric" />
+                <!--<KodestructControls:EnumDataElement Icon="{StaticResource Unsymmetric}" EnumString="Unsymmetrical" Description="Other"/>-->
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="IShapeMajorAxisDoublySymmetricItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF2}" EnumString="F2" Description="Compact" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF3}" EnumString="F3" Description="Compact web. Noncompact or slender flanges"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF3}" EnumString="F4" Description="Noncompact web. Flanges of any compactness."/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF5}" EnumString="F5" Description="Slender web. Flanges of any compactness." />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="IShapeMajorAxisSinglySymmetricItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF3}" EnumString="F4" Description="Compact or noncompact web. Flanges of any compactness."/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF5}" EnumString="F5" Description="Slender web. Flanges of any compactness." />
+            </KodestructControls:EnumDataCollection>
+
+            <!--<KodestructControls:EnumDataCollection x:Key="UnsymmetricalItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF3}" EnumString="F12" Description="General unsymmetrical shape."/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="MinorAxisItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource FlexuralCaseF6}" EnumString="F6" Description="Minor axis."/>
+            </KodestructControls:EnumDataCollection>-->
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+        <KodestructControls:EnumControl  HeaderText="Type of section:" 
+                                    ItemsSource="{StaticResource SectionTypeItemsSource}" 
+					DataPath="SteelShapeType"/>
+        <KodestructControls:EnumControl  HeaderText="Axis of bending:" 
+                                    ItemsSource="{StaticResource IShapeAxisSource}" 
+                                    Visibility="{Binding IsIShapeOrChannel,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="BendingAxis"/>
+        <KodestructControls:EnumControl  HeaderText="Shape symmetry:" 
+                                    ItemsSource="{StaticResource IShapeSymmetrySource}" 
+                                    Visibility="{Binding IsMajorAxisShapeIOrChannel,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="SymmetryType"/>
+        <KodestructControls:EnumControl  HeaderText="Type of doubly symmetric I-section or Channel:" 
+                                    ItemsSource="{StaticResource IShapeMajorAxisDoublySymmetricItemsSource}" 
+                                    Visibility="{Binding IsDoublySymmetric,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="SteelShapeGroupFlexure"/>
+        <KodestructControls:EnumControl  HeaderText="Type of singly symmetric I-section or Channel:" 
+                                    ItemsSource="{StaticResource IShapeMajorAxisSinglySymmetricItemsSource}" 
+                                    Visibility="{Binding IsSinglySymmetric,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="SteelShapeGroupFlexure"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

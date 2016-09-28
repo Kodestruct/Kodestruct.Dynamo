@@ -1,0 +1,147 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="SeismicSystemOtherIcon" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSystemOther" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle Width="10.2267" Height="14.4333" Canvas.Left="17.5933" Canvas.Top="8.69733" Stretch="Fill" Fill="#FFCCCCCC" />
+                            <Path Width="21.448" Height="15.4333" Canvas.Left="6.87173" Canvas.Top="8.19693" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF808080" Data="F1 M 7.37173,23.1303L 7.37173,8.69693L 27.8197,8.69693L 27.8197,23.1303" />
+                            <Path Width="21.4507" Height="1" Canvas.Left="6.9636" Canvas.Top="12.6732" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF808080" Data="F1 M 7.4636,13.1732L 27.9143,13.1732" />
+                            <Path Width="21.4507" Height="1" Canvas.Left="6.9636" Canvas.Top="17.722" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF808080" Data="F1 M 7.4636,18.222L 27.9143,18.222" />
+                            <Path Width="1" Height="15.4333" Canvas.Left="17.0937" Canvas.Top="8.1972" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF808080" Data="F1 M 17.5937,8.6972L 17.5937,23.1305" />
+                            <Path Width="25.4307" Height="1" Canvas.Left="3.56507" Canvas.Top="22.6303" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF808080" Data="F1 M 4.06507,23.1303L 28.4957,23.1303" />
+                            <Path Width="17.5867" Height="17.4227" Canvas.Left="15.4544" Canvas.Top="15.2675" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 15.9544,32.1901L 15.9544,15.7675L 32.5411,15.7675L 32.5411,32.1901" />
+                            <Path Width="17.588" Height="1" Canvas.Left="15.5287" Canvas.Top="20.6888" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 16.0287,21.1888L 32.6167,21.1888" />
+                            <Path Width="17.588" Height="1" Canvas.Left="15.5287" Canvas.Top="26.2683" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 16.0287,26.7683L 32.6167,26.7683" />
+                            <Path Width="9.292" Height="6.42133" Canvas.Left="15.4544" Canvas.Top="26.2688" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 15.9544,32.1901L 24.2464,26.7688" />
+                            <Path Width="9.292" Height="6.42133" Canvas.Left="23.7497" Canvas.Top="26.2688" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 32.5417,32.1901L 24.2497,26.7688" />
+                            <Path Width="9.292" Height="6.42134" Canvas.Left="15.4544" Canvas.Top="20.8469" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 15.9544,26.7683L 24.2464,21.3469" />
+                            <Path Width="9.292" Height="6.42134" Canvas.Left="23.7497" Canvas.Top="20.8469" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 32.5417,26.7683L 24.2497,21.3469" />
+                            <Path Width="9.292" Height="6.42133" Canvas.Left="15.4544" Canvas.Top="15.2675" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 15.9544,21.1888L 24.2464,15.7675" />
+                            <Path Width="9.292" Height="6.42133" Canvas.Left="23.7497" Canvas.Top="15.2675" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 32.5417,21.1888L 24.2497,15.7675" />
+                            <Path Width="28.6427" Height="1" Canvas.Left="10.1621" Canvas.Top="31.6901" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 10.6621,32.1901L 38.3048,32.1901" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSystemMomentSteelIcon" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSystemMomentSteel" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="23.2573" Height="16.612" Canvas.Left="9.082" Canvas.Top="13.3411" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.41533,29.6197L 9.41533,13.6744L 32.006,13.6744L 32.006,29.6197" />
+                            <Path Width="30.728" Height="0.666667" Canvas.Left="5.4304" Canvas.Top="29.2864" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 5.76373,29.6197L 35.8251,29.6197" />
+                            <Path Width="23.26" Height="0.666667" Canvas.Left="9.18493" Canvas.Top="18.2859" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,18.6192L 32.1116,18.6192" />
+                            <Path Width="23.26" Height="0.666667" Canvas.Left="9.18493" Canvas.Top="23.8645" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,24.1979L 32.1116,24.1979" />
+                            <Path Width="0.666667" Height="16.612" Canvas.Left="20.3776" Canvas.Top="13.3405" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,13.6739L 20.7109,29.6192" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSystemMomentConcreteIcon" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSystemMomentConcrete" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="23.924" Height="17.2787" Canvas.Left="8.74867" Canvas.Top="13.0077" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.41533,29.6197L 9.41533,13.6744L 32.006,13.6744L 32.006,29.6197" />
+                            <Path Width="23.9267" Height="1.33333" Canvas.Left="8.8516" Canvas.Top="17.9525" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,18.6192L 32.1116,18.6192" />
+                            <Path Width="23.9267" Height="1.33333" Canvas.Left="8.8516" Canvas.Top="23.5312" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,24.1979L 32.1116,24.1979" />
+                            <Path Width="1.33333" Height="17.2787" Canvas.Left="20.0443" Canvas.Top="13.0072" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,13.6739L 20.7109,29.6192" />
+                            <Path Width="30.728" Height="0.666667" Canvas.Left="5.4304" Canvas.Top="29.2864" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 5.76373,29.6197L 35.8251,29.6197" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSystemEBFIcon" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSystemEBF" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="22.9907" Height="16.9027" Canvas.Left="9.21533" Canvas.Top="12.9171" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.41533,29.6197L 9.41533,13.1171L 32.006,13.1171L 32.006,29.6197" />
+                            <Path Width="22.9933" Height="0.4" Canvas.Left="9.31827" Canvas.Top="18.4192" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,18.6192L 32.1116,18.6192" />
+                            <Path Width="22.9933" Height="0.4" Canvas.Left="9.31827" Canvas.Top="23.9979" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,24.1979L 32.1116,24.1979" />
+                            <Path Width="0.4" Height="16.9027" Canvas.Left="20.5109" Canvas.Top="12.9165" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,13.1165L 20.7109,29.6192" />
+                            <Path Width="4.71733" Height="5.90266" Canvas.Left="9.31827" Canvas.Top="12.9165" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,18.6192L 13.8356,13.1165" />
+                            <Path Width="4.58667" Height="5.90266" Canvas.Left="16.3243" Canvas.Top="12.9165" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,18.6192L 16.5243,13.1165" />
+                            <Path Width="4.71466" Height="5.90266" Canvas.Left="20.5109" Canvas.Top="12.9165" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,18.6192L 25.0256,13.1165" />
+                            <Path Width="4.588" Height="5.90266" Canvas.Left="27.5131" Canvas.Top="12.9165" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 31.9011,18.6192L 27.7131,13.1165" />
+                            <Path Width="4.71733" Height="5.90267" Canvas.Left="9.31827" Canvas.Top="18.4952" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,24.1979L 13.8356,18.6952" />
+                            <Path Width="4.58667" Height="5.90267" Canvas.Left="16.3243" Canvas.Top="18.4952" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,24.1979L 16.5243,18.6952" />
+                            <Path Width="4.71466" Height="5.90267" Canvas.Left="20.5109" Canvas.Top="18.4952" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,24.1979L 25.0256,18.6952" />
+                            <Path Width="4.588" Height="5.90267" Canvas.Left="27.5131" Canvas.Top="18.4952" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 31.9011,24.1979L 27.7131,18.6952" />
+                            <Path Width="4.71733" Height="5.90533" Canvas.Left="9.31827" Canvas.Top="23.9144" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 9.51827,29.6197L 13.8356,24.1144" />
+                            <Path Width="4.58667" Height="5.90533" Canvas.Left="16.3243" Canvas.Top="23.9144" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,29.6197L 16.5243,24.1144" />
+                            <Path Width="4.71466" Height="5.90533" Canvas.Left="20.5109" Canvas.Top="23.9144" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.7109,29.6197L 25.0256,24.1144" />
+                            <Path Width="4.588" Height="5.90533" Canvas.Left="27.5131" Canvas.Top="23.9144" Stretch="Fill" StrokeThickness="0.4" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 31.9011,29.6197L 27.7131,24.1144" />
+                            <Path Width="30.728" Height="0.666667" Canvas.Left="5.4304" Canvas.Top="29.2864" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 5.76373,29.6197L 35.8251,29.6197" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSystemBRBFIcon" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSystemBRBF" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="16.9227" Height="16.7547" Canvas.Left="12.3092" Canvas.Top="13.0317" Stretch="Fill" StrokeThickness="0.333333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.4759,29.6197L 12.4759,13.1984L 29.0652,13.1984L 29.0652,29.6197" />
+                            <Path Width="16.9227" Height="0.333333" Canvas.Left="12.3855" Canvas.Top="18.4525" Stretch="Fill" StrokeThickness="0.333333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.5521,18.6192L 29.1415,18.6192" />
+                            <Path Width="16.9227" Height="0.333333" Canvas.Left="12.3855" Canvas.Top="24.0312" Stretch="Fill" StrokeThickness="0.333333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.5521,24.1979L 29.1415,24.1979" />
+                            <Path Width="8.56" Height="5.688" Canvas.Left="12.3425" Canvas.Top="24.0651" Stretch="Fill" StrokeThickness="0.266667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.4759,29.6197L 20.7692,24.1984" />
+                            <Path Width="4.33867" Height="3.10933" Canvas.Left="14.2719" Canvas.Top="25.4729" Stretch="Fill" StrokeThickness="0.8" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 14.6719,28.1823L 18.2105,25.8729" />
+                            <Path Width="8.56" Height="5.688" Canvas.Left="20.6384" Canvas.Top="24.0651" Stretch="Fill" StrokeThickness="0.266667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 29.0651,29.6197L 20.7717,24.1984" />
+                            <Path Width="4.336" Height="3.10933" Canvas.Left="22.9312" Canvas.Top="25.4729" Stretch="Fill" StrokeThickness="0.8" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 26.8672,28.1823L 23.3312,25.8729" />
+                            <Path Width="8.56" Height="5.688" Canvas.Left="12.3425" Canvas.Top="18.6432" Stretch="Fill" StrokeThickness="0.266667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.4759,24.1979L 20.7692,18.7765" />
+                            <Path Width="4.33867" Height="3.11067" Canvas.Left="14.2719" Canvas.Top="20.0497" Stretch="Fill" StrokeThickness="0.8" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 14.6719,22.7604L 18.2105,20.4497" />
+                            <Path Width="8.56" Height="5.688" Canvas.Left="20.6384" Canvas.Top="18.6432" Stretch="Fill" StrokeThickness="0.266667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 29.0651,24.1979L 20.7717,18.7765" />
+                            <Path Width="4.336" Height="3.11067" Canvas.Left="22.9312" Canvas.Top="20.0497" Stretch="Fill" StrokeThickness="0.8" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 26.8672,22.7604L 23.3312,20.4497" />
+                            <Path Width="8.56" Height="5.688" Canvas.Left="12.3425" Canvas.Top="13.0645" Stretch="Fill" StrokeThickness="0.266667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.4759,18.6192L 20.7692,13.1979" />
+                            <Path Width="4.33867" Height="3.11067" Canvas.Left="14.2719" Canvas.Top="14.4716" Stretch="Fill" StrokeThickness="0.8" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 14.6719,17.1823L 18.2105,14.8716" />
+                            <Path Width="8.56" Height="5.688" Canvas.Left="20.6384" Canvas.Top="13.0645" Stretch="Fill" StrokeThickness="0.266667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 29.0651,18.6192L 20.7717,13.1979" />
+                            <Path Width="4.336" Height="3.11067" Canvas.Left="22.9312" Canvas.Top="14.4716" Stretch="Fill" StrokeThickness="0.8" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 26.8672,17.1823L 23.3312,14.8716" />
+                            <Path Width="30.728" Height="0.666667" Canvas.Left="5.4304" Canvas.Top="29.2864" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 5.76373,29.6197L 35.8251,29.6197" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSystemShearWallIcon" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSystemGroupInteractive" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle Width="8.27467" Height="16.42" Canvas.Left="16.896" Canvas.Top="13.2187" Stretch="Fill" Fill="#FFCCCCCC" />
+                            <Path Width="25.944" Height="17.0867" Canvas.Left="7.94853" Canvas.Top="12.8847" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 8.28187,29.638L 8.28187,13.218L 33.5592,13.218L 33.5592,29.638" />
+                            <Path Width="25.944" Height="0.666667" Canvas.Left="7.94853" Canvas.Top="18.3053" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 8.28187,18.6387L 33.5592,18.6387" />
+                            <Path Width="25.944" Height="0.666667" Canvas.Left="7.94853" Canvas.Top="23.8828" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 8.28187,24.2161L 33.5592,24.2161" />
+                            <Path Width="0.666667" Height="17.0867" Canvas.Left="16.1093" Canvas.Top="12.8841" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 16.4427,13.2175L 16.4427,29.6375" />
+                            <Path Width="0.666667" Height="17.0867" Canvas.Left="24.8372" Canvas.Top="12.8841" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 25.1705,13.2175L 25.1705,29.6375" />
+                            <Path Width="30.728" Height="0.666667" Canvas.Left="5.4304" Canvas.Top="29.3047" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 5.76373,29.638L 35.8251,29.638" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

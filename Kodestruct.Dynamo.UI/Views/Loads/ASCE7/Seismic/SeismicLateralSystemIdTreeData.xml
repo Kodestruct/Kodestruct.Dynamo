@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="BEARING WALL" Description="BEARING WALL" Id="LoadBearingWallSystem" ResourcePath="SeismicSystemGroupBearingWallIcon" Tag="X" TemplateName="Category" TreePath="BEARING WALL">
+   
+      <XTreeItem Header="CONCRETE" Description="Concrete" Id="LoadBearingWallSystem" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="BEARING WALL\CONCRETE">
+       
+          <XTreeItem Header="REINFORCED" Description="Reinforced" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\CONCRETE\REINFORCED">
+           
+              <XTreeItem Header="Special RC bearing wall" Description="Bearing walls. Special reinforced concrete shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A1" TemplateName="Block" TreePath="BEARING WALL\CONCRETE\REINFORCED\Special RC bearing wall" />
+              <XTreeItem Header="Ordinary RC bearing wall" Description="Bearing walls. Ordinary reinforced concrete shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A2" TemplateName="Block" TreePath="BEARING WALL\CONCRETE\REINFORCED\Ordinary RC bearing wall" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PLAIN" Description="Plain" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\CONCRETE\PLAIN">
+           
+              <XTreeItem Header="Detailed plain concrete bearing wall" Description="Bearing walls. Detailed plain concrete shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A3" TemplateName="Block" TreePath="BEARING WALL\CONCRETE\PLAIN\Detailed plain concrete bearing wall" />
+              <XTreeItem Header="Ordinary plain concrete bearing wall" Description="Bearing walls. Ordinary plain concrete shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A4" TemplateName="Block" TreePath="BEARING WALL\CONCRETE\PLAIN\Ordinary plain concrete bearing wall" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PRECAST" Description="Precast" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\CONCRETE\PRECAST">
+           
+              <XTreeItem Header="Intermediate PC bearing wall" Description="Bearing walls. Intermediate precast shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A5" TemplateName="Block" TreePath="BEARING WALL\CONCRETE\PRECAST\Intermediate PC bearing wall" />
+              <XTreeItem Header="Ordinary PC bearing wall" Description="Bearing walls. Ordinary precast shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A6" TemplateName="Block" TreePath="BEARING WALL\CONCRETE\PRECAST\Ordinary PC bearing wall" />
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="MASONRY" Description="Masonry" Id="LoadBearingWallSystem" ResourcePath="Masonry" Tag="X" TemplateName="Category" TreePath="BEARING WALL\MASONRY">
+       
+          <XTreeItem Header="REINFORCED" Description="Reinforced" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\MASONRY\REINFORCED">
+           
+              <XTreeItem Header="Special reinf. masonry bearing wall" Description="Bearing walls. Special reinforced masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A7" TemplateName="Block" TreePath="BEARING WALL\MASONRY\REINFORCED\Special reinf. masonry bearing wall" />
+              <XTreeItem Header="Intermediate reinf. masonry bearing wall" Description="Bearing walls. Intermediate reinforced masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A8" TemplateName="Block" TreePath="BEARING WALL\MASONRY\REINFORCED\Intermediate reinf. masonry bearing wall" />
+              <XTreeItem Header="Ordinary reinf. masonry bearing wall" Description="Bearing walls. Ordinary reinforced masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A9" TemplateName="Block" TreePath="BEARING WALL\MASONRY\REINFORCED\Ordinary reinf. masonry bearing wall" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PLAIN" Description="Plain" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\MASONRY\PLAIN">
+           
+              <XTreeItem Header="Detailed plain masonry bearing wall" Description="Bearing walls. Detailed plain masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A10" TemplateName="Block" TreePath="BEARING WALL\MASONRY\PLAIN\Detailed plain masonry bearing wall" />
+              <XTreeItem Header="Ordinary plain masonry bearing wall" Description="Bearing walls. Ordinary plain masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A11" TemplateName="Block" TreePath="BEARING WALL\MASONRY\PLAIN\Ordinary plain masonry bearing wall" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PRESTRESSED" Description="Prestressed" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\MASONRY\PRESTRESSED">
+           
+              <XTreeItem Header="Prestressed masonry bearing wall" Description="Bearing walls. Prestressed masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A12" TemplateName="Block" TreePath="BEARING WALL\MASONRY\PRESTRESSED\Prestressed masonry bearing wall" />
+            
+          </XTreeItem>
+          <XTreeItem Header="AAC" Description="AAC" Id="LoadBearingWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="BEARING WALL\MASONRY\AAC">
+           
+              <XTreeItem Header="Ordinary reinforced AAC bearing wall" Description="Bearing walls. Ordinary reinforced AAC masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A13" TemplateName="Block" TreePath="BEARING WALL\MASONRY\AAC\Ordinary reinforced AAC bearing wall" />
+              <XTreeItem Header="Ordinary plain AAC bearing wall" Description="Bearing walls. Ordinary plain AAC masonry shear walls" Id="LoadBearingWallSystem" ResourcePath="X" Tag="A14" TemplateName="Block" TreePath="BEARING WALL\MASONRY\AAC\Ordinary plain AAC bearing wall" />
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="WOOD" Description="Wood" Id="LoadBearingWallSystem" ResourcePath="Wood" Tag="X" TemplateName="Category" TreePath="BEARING WALL\WOOD">
+       
+          <XTreeItem Header="Sheathed with rated wood panels" Description="Bearing walls. Light-frame (wood) walls sheathed with wood structural panels rated for shear resistance or steel sheets" Id="StudWallSystem" ResourcePath="X" Tag="A15" TemplateName="Block" TreePath="BEARING WALL\WOOD\Sheathed with rated wood panels" />
+        
+      </XTreeItem>
+      <XTreeItem Header="COLD-FORMED STEEL" Description="Cold-formed steel" Id="LoadBearingWallSystem" ResourcePath="ColdFormedSteel" Tag="X" TemplateName="Category" TreePath="BEARING WALL\COLD-FORMED STEEL">
+       
+          <XTreeItem Header="Sheathed with rated wood panels" Description="Bearing walls. Light-frame (cold-formed steel) walls sheathed with wood structural panels rated for shear resistance or steel sheets" Id="StudWallSystem" ResourcePath="X" Tag="A16" TemplateName="Block" TreePath="BEARING WALL\COLD-FORMED STEEL\Sheathed with rated wood panels" />
+          <XTreeItem Header="With strap bracing" Description="Bearing walls. Light-frame (cold-formed steel) wall systems using flat strap bracing" Id="StudWallSystem" ResourcePath="X" Tag="A18" TemplateName="Block" TreePath="BEARING WALL\COLD-FORMED STEEL\With strap bracing" />
+        
+      </XTreeItem>
+      <XTreeItem Header="OTHER MATERIALS" Description="Other materials" Id="LoadBearingWallSystem" ResourcePath="OtherMaterial" Tag="X" TemplateName="Category" TreePath="BEARING WALL\OTHER MATERIALS">
+       
+          <XTreeItem Header="Sheathed with other panels" Description="Bearing walls. Light-frame walls with shear panels of all other materials" Id="StudWallSystem" ResourcePath="X" Tag="A17" TemplateName="Block" TreePath="BEARING WALL\OTHER MATERIALS\Sheathed with other panels" />
+        
+      </XTreeItem>
+    
+  </XTreeItem>
+  <XTreeItem Header="FRAME" Description="FRAME" Id="BracedFrameSystem" ResourcePath="SeismicSystemGroupFrameIcon" Tag="X" TemplateName="Category" TreePath="FRAME">
+   
+      <XTreeItem Header="STEEL" Description="Steel" Id="BracedFrameSystem" ResourcePath="Steel" Tag="X" TemplateName="Category" TreePath="FRAME\STEEL">
+       
+          <XTreeItem Header="ECCENTRICALLY BRACED (EBF)" Description="Eccentrically braced (EBF)" Id="EccentricBracedFrameSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\STEEL\ECCENTRICALLY BRACED (EBF)">
+           
+              <XTreeItem Header="Eccentrically braced" Description="Frame. Steel eccentrically braced frames" Id="EccentricBracedFrameSystem" ResourcePath="X" Tag="B1" TemplateName="Block" TreePath="FRAME\STEEL\ECCENTRICALLY BRACED (EBF)\Eccentrically braced" />
+            
+          </XTreeItem>
+          <XTreeItem Header="CONCENTRICALLY BRACED (CBF)" Description="Concentrically braced (CBF)" Id="BracedFrameSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\STEEL\CONCENTRICALLY BRACED (CBF)">
+           
+              <XTreeItem Header="Special CBF" Description="Frame. Steel special concentrically braced frames" Id="BracedFrameSystem" ResourcePath="X" Tag="B2" TemplateName="Block" TreePath="FRAME\STEEL\CONCENTRICALLY BRACED (CBF)\Special CBF" />
+              <XTreeItem Header="Ordinary CBF" Description="Frame. Steel ordinary concentrically braced frames" Id="BracedFrameSystem" ResourcePath="X" Tag="B3" TemplateName="Block" TreePath="FRAME\STEEL\CONCENTRICALLY BRACED (CBF)\Ordinary CBF" />
+            
+          </XTreeItem>
+          <XTreeItem Header="BUCKLING-RESTRAINED (BRBF)" Description="Buckling-restrained (BRBF)" Id="BracedFrameSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\STEEL\BUCKLING-RESTRAINED (BRBF)">
+           
+              <XTreeItem Header="Buckling-restrained braced frames" Description="Frame. Steel buckling-restrained braced frames" Id="BracedFrameSystem" ResourcePath="X" Tag="B25" TemplateName="Block" TreePath="FRAME\STEEL\BUCKLING-RESTRAINED (BRBF)\Buckling-restrained braced frames" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PLATE SHEAR WALL" Description="Plate shear wall" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\STEEL\PLATE SHEAR WALL">
+           
+              <XTreeItem Header="Plate shear walls" Description="Frame. Steel special plate shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B26" TemplateName="Block" TreePath="FRAME\STEEL\PLATE SHEAR WALL\Plate shear walls" />
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="CONCRETE" Description="Concrete" Id="ShearWallSystem" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="FRAME\CONCRETE">
+       
+          <XTreeItem Header="REINFORCED SHEAR WALLS" Description="Reinforced shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\CONCRETE\REINFORCED SHEAR WALLS">
+           
+              <XTreeItem Header="Special RC shears walls" Description="Frame. Special reinforced concrete shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B4" TemplateName="Block" TreePath="FRAME\CONCRETE\REINFORCED SHEAR WALLS\Special RC shears walls" />
+              <XTreeItem Header="Ordinary RC shear walls" Description="Frame. Ordinary reinforced concrete shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B5" TemplateName="Block" TreePath="FRAME\CONCRETE\REINFORCED SHEAR WALLS\Ordinary RC shear walls" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PLAIN SHEAR WALLS" Description="Plain shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\CONCRETE\PLAIN SHEAR WALLS">
+           
+              <XTreeItem Header="Detailed plain concrete shear walls" Description="Frame. Detailed plain concrete shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B6" TemplateName="Block" TreePath="FRAME\CONCRETE\PLAIN SHEAR WALLS\Detailed plain concrete shear walls" />
+              <XTreeItem Header="Ordinary plain concrete shear walls" Description="Frame. Ordinary plain concrete shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B7" TemplateName="Block" TreePath="FRAME\CONCRETE\PLAIN SHEAR WALLS\Ordinary plain concrete shear walls" />
+            
+          </XTreeItem>
+          <XTreeItem Header="PRECAST SHEAR WALLS" Description="Precast shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\CONCRETE\PRECAST SHEAR WALLS">
+           
+              <XTreeItem Header="Intermediate PC shear walls" Description="Frame. Intermediate precast shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B8" TemplateName="Block" TreePath="FRAME\CONCRETE\PRECAST SHEAR WALLS\Intermediate PC shear walls" />
+              <XTreeItem Header="Ordinary PC shear walls" Description="Frame. Ordinary precast shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B9" TemplateName="Block" TreePath="FRAME\CONCRETE\PRECAST SHEAR WALLS\Ordinary PC shear walls" />
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="COMPOSITE" Description="Composite" Id="BracedFrameSystem" ResourcePath="Composite" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE">
+       
+          <XTreeItem Header="BRACED FRAME" Description="Braced frame" Id="BracedFrameSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE\BRACED FRAME">
+           
+              <XTreeItem Header="ECCENTRICALLY BRACED (EBF)" Description="Eccentrically braced (EBF)" Id="EccentricBracedFrameSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE\BRACED FRAME\ECCENTRICALLY BRACED (EBF)">
+               
+                  <XTreeItem Header="Eccentrically braced" Description="Frame. Steel and concrete composite eccentrically braced frames" Id="EccentricBracedFrameSystem" ResourcePath="X" Tag="B10" TemplateName="Block" TreePath="FRAME\COMPOSITE\BRACED FRAME\ECCENTRICALLY BRACED (EBF)\Eccentrically braced" />
+                
+              </XTreeItem>
+              <XTreeItem Header="CONCENTRICALLY BRACED (CBF)" Description="Concentrically braced (CBF)" Id="BracedFrameSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE\BRACED FRAME\CONCENTRICALLY BRACED (CBF)">
+               
+                  <XTreeItem Header="Special composite CBF" Description="Frame. Steel and concrete composite special concentrically braced frames" Id="BracedFrameSystem" ResourcePath="X" Tag="B11" TemplateName="Block" TreePath="FRAME\COMPOSITE\BRACED FRAME\CONCENTRICALLY BRACED (CBF)\Special composite CBF" />
+                  <XTreeItem Header="Ordinary composite CBF" Description="Frame. Steel and concrete composite ordinary braced frames" Id="BracedFrameSystem" ResourcePath="X" Tag="B12" TemplateName="Block" TreePath="FRAME\COMPOSITE\BRACED FRAME\CONCENTRICALLY BRACED (CBF)\Ordinary composite CBF" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+          <XTreeItem Header="SHEAR WALL" Description="Shear wall" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE\SHEAR WALL">
+           
+              <XTreeItem Header="PLATE" Description="Plate" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE\SHEAR WALL\PLATE">
+               
+                  <XTreeItem Header="Plate shear walls" Description="Frame. Steel and concrete composite plate shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B13" TemplateName="Block" TreePath="FRAME\COMPOSITE\SHEAR WALL\PLATE\Plate shear walls" />
+                
+              </XTreeItem>
+              <XTreeItem Header="CONVENTIONAL" Description="Conventional" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\COMPOSITE\SHEAR WALL\CONVENTIONAL">
+               
+                  <XTreeItem Header="Ordinary composite shear walls" Description="Frame. Steel and concrete composite ordinary shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B15" TemplateName="Block" TreePath="FRAME\COMPOSITE\SHEAR WALL\CONVENTIONAL\Ordinary composite shear walls" />
+                  <XTreeItem Header="Special composite shear walls" Description="Frame. Special reinforced masonry shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B16" TemplateName="Block" TreePath="FRAME\COMPOSITE\SHEAR WALL\CONVENTIONAL\Special composite shear walls" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="MASONRY" Description="Masonry" Id="ShearWallSystem" ResourcePath="Masonry" Tag="X" TemplateName="Category" TreePath="FRAME\MASONRY">
+       
+          <XTreeItem Header="SHEAR WALLS" Description="Shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\MASONRY\SHEAR WALLS">
+           
+              <XTreeItem Header="REINFORCED" Description="Reinforced" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\MASONRY\SHEAR WALLS\REINFORCED">
+               
+                  <XTreeItem Header=" Intermediate reinforced masonry shear walls" Description="Frame. Intermediate reinforced masonry shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B17" TemplateName="Block" TreePath="FRAME\MASONRY\SHEAR WALLS\REINFORCED\ Intermediate reinforced masonry shear walls" />
+                  <XTreeItem Header="Ordinary reinforced masonry shear walls" Description="Frame. Ordinary reinforced masonry shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B18" TemplateName="Block" TreePath="FRAME\MASONRY\SHEAR WALLS\REINFORCED\Ordinary reinforced masonry shear walls" />
+                
+              </XTreeItem>
+              <XTreeItem Header="PLAIN" Description="Plain" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\MASONRY\SHEAR WALLS\PLAIN">
+               
+                  <XTreeItem Header="Detailed plain masonry shear walls" Description="Frame. Detailed plain masonry shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B19" TemplateName="Block" TreePath="FRAME\MASONRY\SHEAR WALLS\PLAIN\Detailed plain masonry shear walls" />
+                  <XTreeItem Header="Ordinary plain masonry shear walls" Description="Frame. Ordinary plain masonry shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B20" TemplateName="Block" TreePath="FRAME\MASONRY\SHEAR WALLS\PLAIN\Ordinary plain masonry shear walls" />
+                
+              </XTreeItem>
+              <XTreeItem Header="PRESTRESSED" Description="Prestressed" Id="ShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FRAME\MASONRY\SHEAR WALLS\PRESTRESSED">
+               
+                  <XTreeItem Header="Prestressed masonry shear walls" Description="Frame. Prestressed masonry shear walls" Id="ShearWallSystem" ResourcePath="X" Tag="B21" TemplateName="Block" TreePath="FRAME\MASONRY\SHEAR WALLS\PRESTRESSED\Prestressed masonry shear walls" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="WOOD" Description="Wood" Id="StudWallSystem" ResourcePath="Wood" Tag="X" TemplateName="Category" TreePath="FRAME\WOOD">
+       
+          <XTreeItem Header="Walls sheathed with rated wood panels" Description="Frame. Light-frame (wood) walls sheathed with wood structural panels rated for shear resistance" Id="StudWallSystem" ResourcePath="X" Tag="B22" TemplateName="Block" TreePath="FRAME\WOOD\Walls sheathed with rated wood panels" />
+        
+      </XTreeItem>
+      <XTreeItem Header="COLD-FORMED STEEL" Description="Cold-formed steel" Id="StudWallSystem" ResourcePath="ColdFormedSteel" Tag="X" TemplateName="Category" TreePath="FRAME\COLD-FORMED STEEL">
+       
+          <XTreeItem Header="Walls sheathed with rated wood panels" Description="Frame. Light-frame (cold-formed steel) walls sheathed with wood structural panels rated for shear resistance or steel sheets" Id="StudWallSystem" ResourcePath="X" Tag="B23" TemplateName="Block" TreePath="FRAME\COLD-FORMED STEEL\Walls sheathed with rated wood panels" />
+        
+      </XTreeItem>
+      <XTreeItem Header="OTHER MATERIAL" Description="Other material" Id="StudWallSystem" ResourcePath="OtherMaterial" Tag="X" TemplateName="Category" TreePath="FRAME\OTHER MATERIAL">
+       
+          <XTreeItem Header="Wall sheathed with rated other panels" Description="Frame. Light-frame walls with shear panels of all other materials" Id="StudWallSystem" ResourcePath="X" Tag="B24" TemplateName="Block" TreePath="FRAME\OTHER MATERIAL\Wall sheathed with rated other panels" />
+        
+      </XTreeItem>
+    
+  </XTreeItem>
+  <XTreeItem Header="MOMENT FRAME" Description="MOMENT FRAME" Id="MomentFrameSystem" ResourcePath="SeismicSystemGroupMomentFrameIcon" Tag="X" TemplateName="Category" TreePath="MOMENT FRAME">
+   
+      <XTreeItem Header="STEEL" Description="Steel" Id="MomentFrameSystem" ResourcePath="Steel" Tag="X" TemplateName="Category" TreePath="MOMENT FRAME\STEEL">
+       
+          <XTreeItem Header="Special steel MF" Description="Moment frames. Steel special moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C1" TemplateName="Block" TreePath="MOMENT FRAME\STEEL\Special steel MF" />
+          <XTreeItem Header="Special truss MF" Description="Moment frames. Steel special truss moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C2" TemplateName="Block" TreePath="MOMENT FRAME\STEEL\Special truss MF" />
+          <XTreeItem Header="Intermediate steel MF" Description="Moment frames. Steel intermediate moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C3" TemplateName="Block" TreePath="MOMENT FRAME\STEEL\Intermediate steel MF" />
+          <XTreeItem Header="Ordinary steel MF" Description="Moment frames. Steel ordinary moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C4" TemplateName="Block" TreePath="MOMENT FRAME\STEEL\Ordinary steel MF" />
+        
+      </XTreeItem>
+      <XTreeItem Header="CONCRETE" Description="Concrete" Id="MomentFrameSystem" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="MOMENT FRAME\CONCRETE">
+       
+          <XTreeItem Header="Special concrete MF" Description="Moment frames. Special reinforced concrete moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C5" TemplateName="Block" TreePath="MOMENT FRAME\CONCRETE\Special concrete MF" />
+          <XTreeItem Header="Intermediate concrete MF" Description="Moment frames. Intermediate reinforced concrete moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C6" TemplateName="Block" TreePath="MOMENT FRAME\CONCRETE\Intermediate concrete MF" />
+          <XTreeItem Header="Ordinary concrete MF" Description="Moment frames. Ordinary reinforced concrete moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C7" TemplateName="Block" TreePath="MOMENT FRAME\CONCRETE\Ordinary concrete MF" />
+        
+      </XTreeItem>
+      <XTreeItem Header="COMPOSITE" Description="Composite" Id="MomentFrameSystem" ResourcePath="Composite" Tag="X" TemplateName="Category" TreePath="MOMENT FRAME\COMPOSITE">
+       
+          <XTreeItem Header="Special composite MF" Description="Moment frames. Steel and concrete composite special moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C8" TemplateName="Block" TreePath="MOMENT FRAME\COMPOSITE\Special composite MF" />
+          <XTreeItem Header="Intermediate composite MF" Description="Moment frames. Steel and concrete composite intermediate moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C9" TemplateName="Block" TreePath="MOMENT FRAME\COMPOSITE\Intermediate composite MF" />
+          <XTreeItem Header="Partially restrained composite MF" Description="Moment frames. Steel and concrete composite partially restrained moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C10" TemplateName="Block" TreePath="MOMENT FRAME\COMPOSITE\Partially restrained composite MF" />
+          <XTreeItem Header="Ordinary composite MF" Description="Moment frames. Steel and concrete composite ordinary moment frames" Id="MomentFrameSystem" ResourcePath="X" Tag="C11" TemplateName="Block" TreePath="MOMENT FRAME\COMPOSITE\Ordinary composite MF" />
+        
+      </XTreeItem>
+      <XTreeItem Header="COLD-FORMED STEEL" Description="Cold-formed steel" Id="MomentFrameSystem" ResourcePath="ColdFormedSteel" Tag="X" TemplateName="Category" TreePath="MOMENT FRAME\COLD-FORMED STEEL">
+       
+          <XTreeItem Header="Special bolted MF" Description="Moment frames. Cold-formed steel special bolted moment frame" Id="MomentFrameSystem" ResourcePath="X" Tag="C12" TemplateName="Block" TreePath="MOMENT FRAME\COLD-FORMED STEEL\Special bolted MF" />
+        
+      </XTreeItem>
+    
+  </XTreeItem>
+  <XTreeItem Header="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM" Description="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM" Id="DualMfAndCbfSystem" ResourcePath="SeismicSystemGroupDualIntermediateIcon" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM">
+   
+      <XTreeItem Header="DUAL SYSTEM WITH SPECIAL MOMENT FRAME" Description="DUAL SYSTEM WITH SPECIAL MOMENT FRAME" Id="DualMfAndCbfSystem" ResourcePath="SeismicSystemGroupDualSpecialIcon" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME">
+       
+          <XTreeItem Header="STEEL" Description="Steel" Id="X" ResourcePath="Steel" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\STEEL">
+           
+              <XTreeItem Header="Eccentrically braced (EBF)" Description="Dual system. Eccentrically braced frames" Id="DualMfAndEcbfSystem" ResourcePath="X" Tag="D1" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\STEEL\Eccentrically braced (EBF)" />
+              <XTreeItem Header="Concentrically braced (CBF)" Description="Dual system. Special" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="D2" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\STEEL\Concentrically braced (CBF)" />
+              <XTreeItem Header="Buckling-restrained braced frames (BRBF)" Description="Dual system. Buckling-restrained braced frames" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="D12" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\STEEL\Buckling-restrained braced frames (BRBF)" />
+              <XTreeItem Header="Plate shear walls" Description="Dual system. Special plate shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D13" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\STEEL\Plate shear walls" />
+            
+          </XTreeItem>
+          <XTreeItem Header="CONCRETE" Description="Concrete" Id="X" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\CONCRETE">
+           
+              <XTreeItem Header="SHEAR WALLS" Description="Shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\CONCRETE\SHEAR WALLS">
+               
+                  <XTreeItem Header="Special" Description="Dual system. Special reinforced concrete shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D3" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\CONCRETE\SHEAR WALLS\Special" />
+                  <XTreeItem Header="Ordinary" Description="Dual system. Ordinary reinforced concrete shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D4" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\CONCRETE\SHEAR WALLS\Ordinary" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+          <XTreeItem Header="COMPOSITE" Description="Composite" Id="X" ResourcePath="Composite" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE">
+           
+              <XTreeItem Header="BRACED FRAME" Description="Braced frame" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\BRACED FRAME">
+               
+                  <XTreeItem Header="Eccentrically braced (EBF)" Description="Dual system. Steel and concrete composite eccentrically braced frames" Id="DualMfAndEcbfSystem" ResourcePath="X" Tag="D5" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\BRACED FRAME\Eccentrically braced (EBF)" />
+                  <XTreeItem Header="Special Concentrically braced (CBF)" Description="Dual system. Steel and concrete composite special concentrically braced frames" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="D6" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\BRACED FRAME\Special Concentrically braced (CBF)" />
+                
+              </XTreeItem>
+              <XTreeItem Header="SHEAR WALL" Description="Shear wall" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\SHEAR WALL">
+               
+                  <XTreeItem Header="PLATE COMPOSITE SHEAR WALLS" Description="Plate composite shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\SHEAR WALL\PLATE COMPOSITE SHEAR WALLS">
+                   
+                      <XTreeItem Header="Plate shear walls" Description="Dual system. Steel and concrete composite plate shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D7" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\SHEAR WALL\PLATE COMPOSITE SHEAR WALLS\Plate shear walls" />
+                    
+                  </XTreeItem>
+                  <XTreeItem Header="CONVENTIONAL COMPOSITE SHEAR WALLS" Description="Conventional composite shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\SHEAR WALL\CONVENTIONAL COMPOSITE SHEAR WALLS">
+                   
+                      <XTreeItem Header="Special " Description="Dual system. Steel and concrete composite special shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D8" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\SHEAR WALL\CONVENTIONAL COMPOSITE SHEAR WALLS\Special " />
+                      <XTreeItem Header="Ordinary" Description="Dual system. Steel and concrete composite ordinary shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D9" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\COMPOSITE\SHEAR WALL\CONVENTIONAL COMPOSITE SHEAR WALLS\Ordinary" />
+                    
+                  </XTreeItem>
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+          <XTreeItem Header="MASONRY" Description="Masonry" Id="DualMfAndShearWallSystem" ResourcePath="Masonry" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\MASONRY">
+           
+              <XTreeItem Header="SHEAR WALL" Description="Shear wall" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\MASONRY\SHEAR WALL">
+               
+                  <XTreeItem Header="Special" Description="Dual system. Special reinforced masonry shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D10" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\MASONRY\SHEAR WALL\Special" />
+                  <XTreeItem Header="Intermediate" Description="Dual system. Intermediate reinforced masonry shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="D11" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH SPECIAL MOMENT FRAME\MASONRY\SHEAR WALL\Intermediate" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME" Description="DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME" Id="DualMfAndCbfSystem" ResourcePath="SeismicSystemGroupDualIntermediateIcon" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME">
+       
+          <XTreeItem Header="STEEL" Description="Steel" Id="DualMfAndCbfSystem" ResourcePath="Steel" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\STEEL">
+           
+              <XTreeItem Header="Special Concentrically braced (CBF)" Description="Steel special concentrically braced frames" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="E1" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\STEEL\Special Concentrically braced (CBF)" />
+            
+          </XTreeItem>
+          <XTreeItem Header="CONCRETE" Description="Concrete" Id="DualMfAndShearWallSystem" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\CONCRETE">
+           
+              <XTreeItem Header="SHEAR WALLS" Description="Shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\CONCRETE\SHEAR WALLS">
+               
+                  <XTreeItem Header="Special" Description="Dual system. Special reinforced concrete shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="E2" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\CONCRETE\SHEAR WALLS\Special" />
+                  <XTreeItem Header="Ordinary" Description="Dual system. Ordinary reinforced concrete shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="E8" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\CONCRETE\SHEAR WALLS\Ordinary" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+          <XTreeItem Header="COMPOSITE" Description="Composite" Id="DualMfAndCbfSystem" ResourcePath="Composite" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\COMPOSITE">
+           
+              <XTreeItem Header="BRACED FRAME" Description="Braced frame" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\COMPOSITE\BRACED FRAME">
+               
+                  <XTreeItem Header="Special" Description="Dual system. Steel and concrete composite special concentrically braced frames" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="E5" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\COMPOSITE\BRACED FRAME\Special" />
+                  <XTreeItem Header="Ordinary" Description="Dual system. Steel and concrete composite ordinary braced frames" Id="DualMfAndCbfSystem" ResourcePath="X" Tag="E6" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\COMPOSITE\BRACED FRAME\Ordinary" />
+                
+              </XTreeItem>
+              <XTreeItem Header="SHEAR WALL" Description="Shear wall" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\COMPOSITE\SHEAR WALL">
+               
+                  <XTreeItem Header="Ordinary" Description="Dual system. Steel and concrete composite ordinary shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="E7" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\COMPOSITE\SHEAR WALL\Ordinary" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+          <XTreeItem Header="MASONRY" Description="Masonry" Id="DualMfAndShearWallSystem" ResourcePath="Masonry" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\MASONRY">
+           
+              <XTreeItem Header="SHEAR WALLS" Description="Shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\MASONRY\SHEAR WALLS">
+               
+                  <XTreeItem Header="Ordinary" Description="Dual system. Ordinary reinforced masonry shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="E3" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\MASONRY\SHEAR WALLS\Ordinary" />
+                  <XTreeItem Header="Intermediate" Description="Dual system. Intermediate reinforced masonry shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="E4" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\DUAL SYSTEM WITH INTERMEDIATE MOMENT FRAME\MASONRY\SHEAR WALLS\Intermediate" />
+                
+              </XTreeItem>
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+      <XTreeItem Header="SHEAR WALL SYSTEM WITH ORDINARY MOMENT FRAME" Description="SHEAR WALL SYSTEM WITH ORDINARY MOMENT FRAME" Id="DualMfAndShearWallSystem" ResourcePath="SeismicSystemGroupInteractiveIcon" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\SHEAR WALL SYSTEM WITH ORDINARY MOMENT FRAME">
+       
+          <XTreeItem Header="CONCRETE" Description="Concrete" Id="DualMfAndShearWallSystem" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\SHEAR WALL SYSTEM WITH ORDINARY MOMENT FRAME\CONCRETE">
+           
+              <XTreeItem Header="Ordinary reinforced concrete moment frames and shear walls" Description="Dual system. Shear wall-frame interactive system with ordinary reinforced concrete moment frames and ordinary reinforced concrete shear walls" Id="DualMfAndShearWallSystem" ResourcePath="X" Tag="F1" TemplateName="Block" TreePath="DUAL SYSTEM / SHEAR WALL-FRAME SYSTEM\SHEAR WALL SYSTEM WITH ORDINARY MOMENT FRAME\CONCRETE\Ordinary reinforced concrete moment frames and shear walls" />
+            
+          </XTreeItem>
+        
+      </XTreeItem>
+    
+  </XTreeItem>
+  <XTreeItem Header="CANTILEVERED COLUMN" Description="CANTILEVERED COLUMN" Id="CantileverColumnSystem" ResourcePath="SeismicSystemGroupCantileverIcon" Tag="X" TemplateName="Category" TreePath="CANTILEVERED COLUMN">
+   
+      <XTreeItem Header="STEEL" Description="Steel" Id="CantileverColumnSystem" ResourcePath="Steel" Tag="X" TemplateName="Category" TreePath="CANTILEVERED COLUMN\STEEL">
+       
+          <XTreeItem Header="Detailed as special moment frame" Description="Cantilever column system detailed to Steel special cantilever column systems" Id="CantileverColumnSystem" ResourcePath="X" Tag="G1" TemplateName="Block" TreePath="CANTILEVERED COLUMN\STEEL\Detailed as special moment frame" />
+        
+      </XTreeItem>
+      <XTreeItem Header="CONCRETE" Description="Concrete" Id="CantileverColumnSystem" ResourcePath="Concrete" Tag="X" TemplateName="Category" TreePath="CANTILEVERED COLUMN\CONCRETE">
+       
+          <XTreeItem Header="Detailed as special moment frame" Description="Cantilever column system detailed to Special reinforced concrete moment frames" Id="CantileverColumnSystem" ResourcePath="X" Tag="G3" TemplateName="Block" TreePath="CANTILEVERED COLUMN\CONCRETE\Detailed as special moment frame" />
+          <XTreeItem Header="Detailed as intermediate moment frame" Description="Cantilever column system detailed to Intermediate reinforced concrete moment frames" Id="CantileverColumnSystem" ResourcePath="X" Tag="G4" TemplateName="Block" TreePath="CANTILEVERED COLUMN\CONCRETE\Detailed as intermediate moment frame" />
+          <XTreeItem Header="Detailed as ordinary moment frame" Description="Cantilever column system detailed to Ordinary reinforced concrete moment frames" Id="CantileverColumnSystem" ResourcePath="X" Tag="G5" TemplateName="Block" TreePath="CANTILEVERED COLUMN\CONCRETE\Detailed as ordinary moment frame" />
+        
+      </XTreeItem>
+      <XTreeItem Header="TIMBER" Description="Timber" Id="CantileverColumnSystem" ResourcePath="Wood" Tag="X" TemplateName="Category" TreePath="CANTILEVERED COLUMN\TIMBER">
+       
+          <XTreeItem Header="Detailed as timber frames" Description="Cantilever column system detailed to Timber frames" Id="CantileverColumnSystem" ResourcePath="X" Tag="G6" TemplateName="Block" TreePath="CANTILEVERED COLUMN\TIMBER\Detailed as timber frames" />
+        
+      </XTreeItem>
+    
+  </XTreeItem>
+  <XTreeItem Header="NO SEISMIC DETAILING" Description="NO SEISMIC DETAILING" Id="DualMfAndCbfSystem" ResourcePath="SeismicSystemGroupNotDetailedIcon" Tag="X" TemplateName="Category" TreePath="NO SEISMIC DETAILING">
+   
+      <XTreeItem Header="STEEL" Description="Steel" Id="DualMfAndCbfSystem" ResourcePath="Steel" Tag="X" TemplateName="Category" TreePath="NO SEISMIC DETAILING\STEEL">
+       
+          <XTreeItem Header="All steel systems" Description="Steel systems not specifically detailed for seismic resistance excluding cantilever column systems" Id="NotDetailedSystem" ResourcePath="X" Tag="H1" TemplateName="Block" TreePath="NO SEISMIC DETAILING\STEEL\All steel systems" />
+        
+      </XTreeItem>>
+  </XTreeItem>
+</Root>
+
+

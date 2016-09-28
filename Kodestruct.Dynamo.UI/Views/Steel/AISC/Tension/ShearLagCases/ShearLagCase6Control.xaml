@@ -1,0 +1,33 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+    x:Class="Kodestruct.Steel.AISC.Connection.ShearLagCase6Control"
+    mc:Ignorable="d"
+    d:DesignHeight="120" d:DesignWidth="400">
+    
+	<Grid x:Name="LayoutRoot">
+        <Grid Height="120">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="80"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="40"/>
+			</Grid.RowDefinitions>
+			<TextBox x:Name="B_input" Grid.Column="1" Height="20" Margin="4" TextWrapping="Wrap" Text="{Binding B}" VerticalAlignment="Center" Width="73.333"/>
+			<TextBox x:Name="H_input" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="{Binding H}" VerticalAlignment="Center" Height="20" Margin="4,0"/>
+			<TextBox x:Name="l_input" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="{Binding l}" VerticalAlignment="Center" Height="20" Margin="4,0"/>
+			<TextBlock TextWrapping="Wrap" Text="Width of HSS (B)" Margin="8,4" VerticalAlignment="Center" Height="15"/>
+			<TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Height of HSS(H)" Margin="8,4" VerticalAlignment="Center" Height="15"/>
+			<TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Connection length (l)" Margin="8,4" VerticalAlignment="Center" Height="15"/>
+		</Grid>
+	</Grid>
+</UserControl>

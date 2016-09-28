@@ -1,0 +1,38 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Wood.NDS.ReferenceDesignValueTypeSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
+              <KodestructControls:EnumDataElement   EnumString="Bending" Description="Bending" />
+              <KodestructControls:EnumDataElement   EnumString="TensionParallelToGrain" Description="Tension parallel to grain" />
+              <KodestructControls:EnumDataElement   EnumString="ShearParallelToGrain" Description="Shear parallel to grain" />
+              <KodestructControls:EnumDataElement   EnumString="CompresionPerpendicularToGrain" Description="Compresion perpendicular to grain" />
+              <KodestructControls:EnumDataElement   EnumString="CompresionParallelToGrain" Description="Compresion parallel to grain" />
+              <KodestructControls:EnumDataElement   EnumString="ModulusOfElasticity" Description="Modulus of elasticity" />
+              <KodestructControls:EnumDataElement   EnumString="ModulusOfElasticityMin" Description="Minimum modulus of elasticity" />
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <KodestructControls:EnumControl  HeaderText="Reference value selection" 
+                                    ItemsSource="{StaticResource SelectionItemSource}" 
+					DataPath="ReferenceDesignValueType"/>
+    </Grid>
+</UserControl>

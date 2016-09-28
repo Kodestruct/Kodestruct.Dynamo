@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="ASSEMBLY OR RECREATIONAL" Description="Assembly or recreational" Id="X" ResourcePath="Assembly" Tag="X" TemplateName="Category" TreePath="ASSEMBLY OR RECREATIONAL">
+    <XTreeItem Header="ASSEMBLY AREA OR THEATER" Description="Assembly area or theater" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="ASSEMBLY OR RECREATIONAL\ASSEMBLY AREA OR THEATER">
+      <XTreeItem Header="Fixed seats (fastened to floor)" Description="Fixed seats (fastened to floor)" Id="Assembly fixed seats" ResourcePath="X" Tag="Assembly fixed seats" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\ASSEMBLY AREA OR THEATER\Fixed seats (fastened to floor)" />
+      <XTreeItem Header="Lobby" Description="Lobby" Id="Assembly with movable seats" ResourcePath="X" Tag="Assembly with movable seats" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\ASSEMBLY AREA OR THEATER\Lobby" />
+      <XTreeItem Header="Movable seats" Description="Movable seats" Id="Assembly lobby" ResourcePath="X" Tag="Assembly lobby" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\ASSEMBLY AREA OR THEATER\Movable seats" />
+      <XTreeItem Header="Platform" Description="Platform" Id="Assembly platform" ResourcePath="X" Tag="Assembly platform" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\ASSEMBLY AREA OR THEATER\Platform" />
+      <XTreeItem Header="Stage floor" Description="Stage floor" Id="Stage floor" ResourcePath="X" Tag="Stage floor" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\ASSEMBLY AREA OR THEATER\Stage floor" />
+    </XTreeItem>
+    <XTreeItem Header="Dining room or restaurant" Description="Dining room or restaurant" Id="X" ResourcePath="X" Tag="Dining" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\Dining room or restaurant" />
+    <XTreeItem Header="RECREATIONAL OR SPORT USE" Description="Recreational or sport use" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="ASSEMBLY OR RECREATIONAL\RECREATIONAL OR SPORT USE">
+      <XTreeItem Header="Bowling alley, poolroom, or similar" Description="Bowling alley, poolroom, or similar" Id="Bowling alley" ResourcePath="X" Tag="Bowling alley" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\RECREATIONAL OR SPORT USE\Bowling alley, poolroom, or similar" />
+      <XTreeItem Header="Dance hall or ballroom" Description="Dance hall or ballroom" Id="Ballroom" ResourcePath="X" Tag="Ballroom" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\RECREATIONAL OR SPORT USE\Dance hall or ballroom" />
+      <XTreeItem Header="Gym" Description="Gym" Id="Gym" ResourcePath="X" Tag="Gym" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\RECREATIONAL OR SPORT USE\Gym" />
+      <XTreeItem Header="Reviewing stand, grandstand, or bleachers" Description="Reviewing stand, grandstand, or bleachers" Id="Bleachers" ResourcePath="X" Tag="Bleachers" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\RECREATIONAL OR SPORT USE\Reviewing stand, grandstand, or bleachers" />
+      <XTreeItem Header="Stadium or arena with fixed seats (fastened to the floor)" Description="Stadium or arena with fixed seats (fastened to the floor)" Id="Stadium seats" ResourcePath="X" Tag="Stadium seats" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\RECREATIONAL OR SPORT USE\Stadium or arena with fixed seats (fastened to the floor)" />
+    </XTreeItem>
+    <XTreeItem Header="LIBRARY" Description="Library" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="ASSEMBLY OR RECREATIONAL\LIBRARY">
+      <XTreeItem Header="Reading room" Description="Reading room" Id="Library reading room" ResourcePath="X" Tag="Library reading room" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\LIBRARY\Reading room" />
+      <XTreeItem Header="Stack room" Description="Stack room" Id="Library stack room" ResourcePath="X" Tag="Library stack room" TemplateName="Item" TreePath="ASSEMBLY OR RECREATIONAL\LIBRARY\Stack room" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="OFFICE" Description="Office" Id="X" ResourcePath="Office" Tag="X" TemplateName="Category" TreePath="OFFICE">
+    <XTreeItem Header="OFFICE BUILDING" Description="Office building" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="OFFICE\OFFICE BUILDING">
+      <XTreeItem Header="File and computer room" Description="File and computer room" Id="Office file room" ResourcePath="X" Tag="Office file room" TemplateName="Item" TreePath="OFFICE\OFFICE BUILDING\File and computer room" />
+      <XTreeItem Header="Lobby" Description="Lobby" Id="Office lobby" ResourcePath="X" Tag="Office lobby" TemplateName="Item" TreePath="OFFICE\OFFICE BUILDING\Lobby" />
+      <XTreeItem Header="Office space" Description="Office space" Id="Office" ResourcePath="X" Tag="Office" TemplateName="Item" TreePath="OFFICE\OFFICE BUILDING\Office space" />
+      <XTreeItem Header="ACCESS FLOOR SYSTEM" Description="Access floor system" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="OFFICE\OFFICE BUILDING\ACCESS FLOOR SYSTEM">
+        <XTreeItem Header="Office use" Description="Office use" Id="Office access system" ResourcePath="X" Tag="Office access system" TemplateName="Item" TreePath="OFFICE\OFFICE BUILDING\ACCESS FLOOR SYSTEM\Office use" />
+        <XTreeItem Header="Computer use" Description="Computer use" Id="Office access system computer" ResourcePath="X" Tag="Office access system computer" TemplateName="Item" TreePath="OFFICE\OFFICE BUILDING\ACCESS FLOOR SYSTEM\Computer use" />
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="EDUCATIONAL" Description="Educational" Id="X" ResourcePath="Educational" Tag="X" TemplateName="Category" TreePath="EDUCATIONAL">
+    <XTreeItem Header="SCHOOL" Description="School" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="EDUCATIONAL\SCHOOL">
+      <XTreeItem Header="Classroom" Description="Classroom" Id="Classroom" ResourcePath="X" Tag="Classroom" TemplateName="Item" TreePath="EDUCATIONAL\SCHOOL\Classroom" />
+      <XTreeItem Header="Classroom for students above the 12th grade" Description="Classroom for students above the 12th grade" Id="Classroom above 12 grade" ResourcePath="X" Tag="Classroom above 12 grade" TemplateName="Item" TreePath="EDUCATIONAL\SCHOOL\Classroom for students above the 12th grade" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="FACTORY OR INDUSTRIAL" Description="Factory or Industrial" Id="X" ResourcePath="Factory" Tag="X" TemplateName="Category" TreePath="FACTORY OR INDUSTRIAL">
+    <XTreeItem Header="MANUFACTURING" Description="Manufacturing" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FACTORY OR INDUSTRIAL\MANUFACTURING">
+      <XTreeItem Header="Light" Description="Light" Id="Light factory" ResourcePath="X" Tag="Light factory" TemplateName="Item" TreePath="FACTORY OR INDUSTRIAL\MANUFACTURING\Light" />
+      <XTreeItem Header="Heavy" Description="Heavy" Id="Heavy factory" ResourcePath="X" Tag="Heavy factory" TemplateName="Item" TreePath="FACTORY OR INDUSTRIAL\MANUFACTURING\Heavy" />
+    </XTreeItem>
+    <XTreeItem Header="MAINTENANCE" Description="Maintenance" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="FACTORY OR INDUSTRIAL\MAINTENANCE">
+      <XTreeItem Header="Catwalks for maintenance access" Description="Catwalks for maintenance access" Id="Factory catwalk" ResourcePath="X" Tag="Factory catwalk" TemplateName="Item" TreePath="FACTORY OR INDUSTRIAL\MAINTENANCE\Catwalks for maintenance access" />
+      <XTreeItem Header="Walkways and elevated platforms" Description="Walkways and elevated platforms" Id="Factory walkway" ResourcePath="X" Tag="Factory walkway" TemplateName="Item" TreePath="FACTORY OR INDUSTRIAL\MAINTENANCE\Walkways and elevated platforms" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="INSTITUTIONAL" Description="Institutional" Id="X" ResourcePath="Institutional" Tag="X" TemplateName="Category" TreePath="INSTITUTIONAL">
+    <XTreeItem Header="PENAL INSTITUTION" Description="Penal institution" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="INSTITUTIONAL\PENAL INSTITUTION">
+      <XTreeItem Header="Cell block" Description="Cell block" Id="Prison" ResourcePath="X" Tag="Prison" TemplateName="Item" TreePath="INSTITUTIONAL\PENAL INSTITUTION\Cell block" />
+    </XTreeItem>
+    <XTreeItem Header="MEDICAL FACILITY" Description="Medical Facility" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="INSTITUTIONAL\MEDICAL FACILITY">
+      <XTreeItem Header="HOSPITALS" Description="Hospitals" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="INSTITUTIONAL\MEDICAL FACILITY\HOSPITALS">
+        <XTreeItem Header="Operating room or laboratory" Description="Operating room or laboratory" Id="Hospital operating room" ResourcePath="X" Tag="Hospital operating room" TemplateName="Item" TreePath="INSTITUTIONAL\MEDICAL FACILITY\HOSPITALS\Operating room or laboratory" />
+        <XTreeItem Header="Patient room" Description="Patient room" Id="Hospital room" ResourcePath="X" Tag="Hospital room" TemplateName="Item" TreePath="INSTITUTIONAL\MEDICAL FACILITY\HOSPITALS\Patient room" />
+      </XTreeItem>
+      <XTreeItem Header="AMBULATORY HEALTH CARE" Description="Ambulatory health care" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="INSTITUTIONAL\MEDICAL FACILITY\AMBULATORY HEALTH CARE">
+        <XTreeItem Header="Office" Description="Office" Id="Ambulatory care room" ResourcePath="X" Tag="Ambulatory care room" TemplateName="Item" TreePath="INSTITUTIONAL\MEDICAL FACILITY\AMBULATORY HEALTH CARE\Office" />
+        <XTreeItem Header="Lobby" Description="Lobby" Id="Ambulatory care lobby" ResourcePath="X" Tag="Ambulatory care lobby" TemplateName="Item" TreePath="INSTITUTIONAL\MEDICAL FACILITY\AMBULATORY HEALTH CARE\Lobby" />
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="RETAIL" Description="Retail" Id="X" ResourcePath="Retail" Tag="X" TemplateName="Category" TreePath="RETAIL">
+    <XTreeItem Header="STORE" Description="Store" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="RETAIL\STORE">
+      <XTreeItem Header="RETAIL" Description="Retail" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="RETAIL\STORE\RETAIL">
+        <XTreeItem Header="First floor" Description="First floor" Id="Retail first floor" ResourcePath="X" Tag="Retail first floor" TemplateName="Item" TreePath="RETAIL\STORE\RETAIL\First floor" />
+        <XTreeItem Header="Upper floor" Description="Upper floor" Id="Retail upper floor" ResourcePath="X" Tag="Retail upper floor" TemplateName="Item" TreePath="RETAIL\STORE\RETAIL\Upper floor" />
+      </XTreeItem>
+      <XTreeItem Header="Wholesale" Description="Wholesale" Id="Wholesale store" ResourcePath="X" Tag="Wholesale store" TemplateName="Item" TreePath="RETAIL\STORE\Wholesale" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="RESIDENCE OR HOTEL" Description="Residence or hotel" Id="X" ResourcePath="Residential" Tag="X" TemplateName="Category" TreePath="RESIDENCE OR HOTEL">
+    <XTreeItem Header="ONE- AND TWO- FAMILY" Description="One- and two- family" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="RESIDENCE OR HOTEL\ONE- AND TWO- FAMILY">
+      <XTreeItem Header="Room or other area" Description="Room or other area" Id="House" ResourcePath="X" Tag="House" TemplateName="Item" TreePath="RESIDENCE OR HOTEL\ONE- AND TWO- FAMILY\Room or other area" />
+      <XTreeItem Header="ATTIC" Description="Attic" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="RESIDENCE OR HOTEL\ONE- AND TWO- FAMILY\ATTIC">
+        <XTreeItem Header="Uninhabitable attics without storage" Description="Uninhabitable attics without storage" Id="House attic" ResourcePath="X" Tag="House attic" TemplateName="Item" TreePath="RESIDENCE OR HOTEL\ONE- AND TWO- FAMILY\ATTIC\Uninhabitable attics without storage" />
+        <XTreeItem Header="Uninhabitable attics with storage" Description="Uninhabitable attics with storage" Id="House attic with storage" ResourcePath="X" Tag="House attic with storage" TemplateName="Item" TreePath="RESIDENCE OR HOTEL\ONE- AND TWO- FAMILY\ATTIC\Uninhabitable attics with storage" />
+        <XTreeItem Header="Habitable attics and sleeping areas" Description="Habitable attics and sleeping areas" Id="House habitable attic" ResourcePath="X" Tag="House habitable attic" TemplateName="Item" TreePath="RESIDENCE OR HOTEL\ONE- AND TWO- FAMILY\ATTIC\Habitable attics and sleeping areas" />
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="OTHER RESIDENTIAL OCCUPANCY" Description="Other residential occupancy" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="RESIDENCE OR HOTEL\OTHER RESIDENTIAL OCCUPANCY">
+      <XTreeItem Header="Private room" Description="Private room" Id="Residence" ResourcePath="X" Tag="Residence" TemplateName="Item" TreePath="RESIDENCE OR HOTEL\OTHER RESIDENTIAL OCCUPANCY\Private room" />
+      <XTreeItem Header="Public room" Description="Public room" Id="Residence public room" ResourcePath="X" Tag="Residence public room" TemplateName="Item" TreePath="RESIDENCE OR HOTEL\OTHER RESIDENTIAL OCCUPANCY\Public room" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="GARAGE" Description="Garage" Id="X" ResourcePath="Garage" Tag="X" TemplateName="Category" TreePath="GARAGE">
+    <XTreeItem Header="Passenger vehicles only" Description="Passenger vehicles only" Id="X" ResourcePath="X" Tag="Passenger garage" TemplateName="Item" TreePath="GARAGE\Passenger vehicles only" />
+    <XTreeItem Header="Trucks and buses" Description="Trucks and buses" Id="X" ResourcePath="X" Tag="Truck garage" TemplateName="Item" TreePath="GARAGE\Trucks and buses" />
+  </XTreeItem>
+  <XTreeItem Header="STORAGE" Description="Storage" Id="X" ResourcePath="Storage" Tag="X" TemplateName="Category" TreePath="STORAGE">
+    <XTreeItem Header="Light" Description="Light" Id="X" ResourcePath="X" Tag="Storage light" TemplateName="Item" TreePath="STORAGE\Light" />
+    <XTreeItem Header="Heavy" Description="Heavy" Id="X" ResourcePath="X" Tag="Storage heavy" TemplateName="Item" TreePath="STORAGE\Heavy" />
+    <XTreeItem Header="Storage area above ceiling" Description="Storage area above ceiling" Id="X" ResourcePath="X" Tag="Storage above" TemplateName="Item" TreePath="STORAGE\Storage area above ceiling" />
+  </XTreeItem>
+  <XTreeItem Header="CORRIDOR OR STAIR" Description="Corridor or stair" Id="X" ResourcePath="Stair" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR">
+    <XTreeItem Header="First floor cooridor" Description="First floor cooridor" Id="X" ResourcePath="X" Tag="Corridor first floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\First floor cooridor" />
+    <XTreeItem Header="CORRIDOR ON OTHER FLOOR" Description="Corridor on other floor" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR">
+      <XTreeItem Header="Office building" Description="Office building" Id="Office corridor upper floor" ResourcePath="X" Tag="Office corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\Office building" />
+      <XTreeItem Header="Library" Description="Library" Id="Library corridor upper floor" ResourcePath="X" Tag="Library corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\Library" />
+      <XTreeItem Header="Penal institution" Description="Penal institution" Id="Prison corridor" ResourcePath="X" Tag="Prison corridor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\Penal institution" />
+      <XTreeItem Header="Hospital" Description="Hospital" Id="Hospital corridor upper floor" ResourcePath="X" Tag="Hospital corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\Hospital" />
+      <XTreeItem Header="Residential occupancy (serving public rooms)" Description="Residential occupancy (serving public rooms)" Id="Residential corridor for public use" ResourcePath="X" Tag="Residential corridor for public use" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\Residential occupancy (serving public rooms)" />
+      <XTreeItem Header="School" Description="School" Id="School corridor upper floor" ResourcePath="X" Tag="School corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\School" />
+      <XTreeItem Header="OTHER CORRIDOR" Description="Other corridor" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR">
+        <XTreeItem Header="ASSEMBLY" Description="Assembly" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\ASSEMBLY">
+          <XTreeItem Header="Dance hall,  ballroom or gymnasium" Description="Dance hall,  ballroom or gymnasium" Id="Ballroom corridor upper " ResourcePath="X" Tag="Ballroom corridor upper " TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\ASSEMBLY\Dance hall,  ballroom or gymnasium" />
+          <XTreeItem Header="Bowling alley, poolroom, or similar " Description="Bowling alley, poolroom, or similar " Id="Ballroom bowling alley upper " ResourcePath="X" Tag="Ballroom bowling alley upper " TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\ASSEMBLY\Bowling alley, poolroom, or similar " />
+        </XTreeItem>
+        <XTreeItem Header="RESIDENTIAL" Description="Residential" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\RESIDENTIAL">
+          <XTreeItem Header="Single-family dwelling" Description="Single-family dwelling" Id="Single family residence corridor" ResourcePath="X" Tag="Single family residence corridor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\RESIDENTIAL\Single-family dwelling" />
+          <XTreeItem Header="Serving private rooms" Description="Serving private rooms" Id="Multiple family residence corridor" ResourcePath="X" Tag="Multiple family residence corridor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\RESIDENTIAL\Serving private rooms" />
+        </XTreeItem>
+        <XTreeItem Header="RETAIL" Description="Retail" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\RETAIL">
+          <XTreeItem Header="Upper floor" Description="Upper floor" Id="Retail corridor upper floor" ResourcePath="X" Tag="Retail corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\RETAIL\Upper floor" />
+          <XTreeItem Header="Wholesale" Description="Wholesale" Id="Wholesale corridor upper floor" ResourcePath="X" Tag="Wholesale corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\RETAIL\Wholesale" />
+        </XTreeItem>
+        <XTreeItem Header="STORAGE" Description="Storage" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\STORAGE">
+          <XTreeItem Header="Light" Description="Light" Id="Light storage corridor" ResourcePath="X" Tag="Light storage corridor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\STORAGE\Light" />
+          <XTreeItem Header="Heavy" Description="Heavy" Id="Heavy storage corridor" ResourcePath="X" Tag="Heavy storage corridor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\STORAGE\Heavy" />
+        </XTreeItem>
+        <XTreeItem Header="MEDICAL FACILITY" Description="Medical Facility" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\MEDICAL FACILITY">
+          <XTreeItem Header="Ambulatory health care" Description="Ambulatory health care" Id="Ambulatory care corridor upper floor" ResourcePath="X" Tag="Ambulatory care corridor upper floor" TemplateName="Item" TreePath="CORRIDOR OR STAIR\CORRIDOR ON OTHER FLOOR\OTHER CORRIDOR\MEDICAL FACILITY\Ambulatory health care" />
+        </XTreeItem>
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="FIRE ESCAPE" Description="Fire escape" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\FIRE ESCAPE">
+      <XTreeItem Header="Single-family dwelling" Description="Single-family dwelling" Id="Fire escape single family house" ResourcePath="X" Tag="Fire escape single family house" TemplateName="Item" TreePath="CORRIDOR OR STAIR\FIRE ESCAPE\Single-family dwelling" />
+      <XTreeItem Header="Other residential occupancy" Description="Other residential occupancy" Id="Fire escape residence" ResourcePath="X" Tag="Fire escape residence" TemplateName="Item" TreePath="CORRIDOR OR STAIR\FIRE ESCAPE\Other residential occupancy" />
+    </XTreeItem>
+    <XTreeItem Header="STAIR" Description="Stair" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="CORRIDOR OR STAIR\STAIR">
+      <XTreeItem Header="Single-family dwelling" Description="Single-family dwelling" Id="Stair of single family house" ResourcePath="X" Tag="Stair of single family house" TemplateName="Item" TreePath="CORRIDOR OR STAIR\STAIR\Single-family dwelling" />
+      <XTreeItem Header="Other occupancy" Description="Other occupancy" Id="Stair" ResourcePath="X" Tag="Stair" TemplateName="Item" TreePath="CORRIDOR OR STAIR\STAIR\Other occupancy" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="ROOF" Description="Roof" Id="RB" ResourcePath="Roof" Tag="X" TemplateName="Category" TreePath="ROOF">
+    <XTreeItem Header="Ordinary flat, pitched, or curved " Description="Ordinary flat, pitched, or curved " Id="X" ResourcePath="X" Tag="Roof" TemplateName="Item" TreePath="ROOF\Ordinary flat, pitched, or curved " />
+    <XTreeItem Header="Roof garden" Description="Roof garden" Id="X" ResourcePath="X" Tag="Roof garden" TemplateName="Item" TreePath="ROOF\Roof garden" />
+    <XTreeItem Header="ROOF USED FOR ASSEMBLY PURPOSES" Description="Roof used for assembly purposes" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES">
+      <XTreeItem Header="Adjacent to library reading room" Description="Adjacent to library reading room" Id="Roof used for assebly adjacent to library reading room" ResourcePath="X" Tag="Public roof library" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Adjacent to library reading room" />
+      <XTreeItem Header="Lobby" Description="Lobby" Id="Roof used for assebly adjacent to a lobby" ResourcePath="X" Tag="Public roof assembly" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Lobby" />
+      <XTreeItem Header="Adjacent to bowling alley, poolroom, or similar" Description="Adjacent to bowling alley, poolroom, or similar" Id="Roof used for assebly adjacent to bowling alley, poolroom, or similar" ResourcePath="X" Tag="Public roof bowling alley" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Adjacent to bowling alley, poolroom, or similar" />
+      <XTreeItem Header="Adjacent to dance hall or ballroom" Description="Adjacent to dance hall or ballroom" Id="Roof used for assebly adjacent to dance hall or ballroom" ResourcePath="X" Tag="Public roof ballroom" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Adjacent to dance hall or ballroom" />
+      <XTreeItem Header="Adjacent to gym" Description="Adjacent to gym" Id="Roof used for assebly adjacent to gym" ResourcePath="X" Tag="Public roof gym" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Adjacent to gym" />
+      <XTreeItem Header="Adjacent to reviewing stand, grandstand, or bleachers" Description="Adjacent to reviewing stand, grandstand, or bleachers" Id="Roof used for assebly adjacent to reviewing stand, grandstand, or bleachers" ResourcePath="X" Tag="Public roof bleachers" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Adjacent to reviewing stand, grandstand, or bleachers" />
+      <XTreeItem Header="Adjacent to stadium or arena with fixed seats" Description="Adjacent to stadium or arena with fixed seats" Id="Roof used for assebly adjacent to stadium or arena with fixed seats" ResourcePath="X" Tag="Public roof stadium" TemplateName="Item" TreePath="ROOF\ROOF USED FOR ASSEMBLY PURPOSES\Adjacent to stadium or arena with fixed seats" />
+    </XTreeItem>
+    <XTreeItem Header="Fabric canopy construction supported by a skeleton structure" TreePath="ROOF\Fabric canopy construction supported by a skeleton structure" />
+  </XTreeItem>
+  <XTreeItem Header="EXTERIOR SPACE" Description="Exterior space" Id="U" ResourcePath="Exterior" Tag="X" TemplateName="Category" TreePath="EXTERIOR SPACE">
+    <XTreeItem Header="EXTERIOR SPACES" Description="Exterior spaces" Id="X-Exterior spaces" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="EXTERIOR SPACE\EXTERIOR SPACES">
+      <XTreeItem Header="Pedestrian yard or terrace" Description="Pedestrian yard or terrace" Id="Yard" ResourcePath="X" Tag="Yard" TemplateName="Item" TreePath="EXTERIOR SPACE\EXTERIOR SPACES\Pedestrian yard or terrace" />
+      <XTreeItem Header="Sidewalk, drivewaay or area subject to trucking" Description="Sidewalk, drivewaay or area subject to trucking" Id="Sidewalk" ResourcePath="X" Tag="Sidewalk" TemplateName="Item" TreePath="EXTERIOR SPACE\EXTERIOR SPACES\Sidewalk, drivewaay or area subject to trucking" />
+      <XTreeItem Header="Roof used for roof garden" Description="Roof used for roof garden" Id="Roof garden" ResourcePath="X" Tag="Roof garden" TemplateName="Item" TreePath="EXTERIOR SPACE\EXTERIOR SPACES\Roof used for roof garden" />
+    </XTreeItem>
+    <XTreeItem Header="Helipad" Description="Helipad" Id="Helipad" ResourcePath="X" Tag="Helipad" TemplateName="Item" TreePath="EXTERIOR SPACE\Helipad" />
+    <XTreeItem Header="BALCONY" Description="Balcony" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="EXTERIOR SPACE\BALCONY">
+      <XTreeItem Header="RESIDENTIAL" Description="Residential" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="EXTERIOR SPACE\BALCONY\RESIDENTIAL">
+        <XTreeItem Header="One- and two- family" Description="One- and two- family" Id="Balcony residence" ResourcePath="X" Tag="Balcony residence" TemplateName="Item" TreePath="EXTERIOR SPACE\BALCONY\RESIDENTIAL\One- and two- family" />
+        <XTreeItem Header="OTHER RESIDENTIAL OCCUPANCY" Description="Other residential occupancy" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="EXTERIOR SPACE\BALCONY\RESIDENTIAL\OTHER RESIDENTIAL OCCUPANCY">
+          <XTreeItem Header="Serving private rooms" Description="Serving private rooms" Id="Balcony private" ResourcePath="X" Tag="Balcony private" TemplateName="Item" TreePath="EXTERIOR SPACE\BALCONY\RESIDENTIAL\OTHER RESIDENTIAL OCCUPANCY\Serving private rooms" />
+          <XTreeItem Header="Serving public rooms" Description="Serving public rooms" Id="Balcony public" ResourcePath="X" Tag="Balcony public" TemplateName="Item" TreePath="EXTERIOR SPACE\BALCONY\RESIDENTIAL\OTHER RESIDENTIAL OCCUPANCY\Serving public rooms" />
+        </XTreeItem>
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+</Root>
+
+

@@ -1,0 +1,71 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Dynamo.UI.Views.Analysis.Beam.Flexure.BeamDeflectionCaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters"
+             mc:Ignorable="d" 
+             Width="Auto"
+             Height="Auto"
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="BeamForceCaseIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:StyleConverter x:Key="IconStyleConverter">
+                <converters:StyleConverter.ResourceDictionary>
+                    <ResourceDictionary Source="BeamForceCaseIcons.xaml"/>
+                </converters:StyleConverter.ResourceDictionary>
+            </converters:StyleConverter>
+            <converters:TreeItemConverter x:Key="TreeItemConverter"/>
+
+            <XmlDataProvider x:Key="xmldata"
+                         Source="BeamDeflectionCaseTreeData.xml"
+                         XPath="/Root" />
+            <HierarchicalDataTemplate DataType="XTreeItem"
+                                  ItemsSource="{Binding XPath=./*}">
+                <StackPanel Orientation="Horizontal">
+                    <ContentControl Width="50" Height="32" Background="White"
+                            Style="{Binding XPath=@ResourcePath, Converter={StaticResource IconStyleConverter}}"/>
+                    <TextBlock Text="{Binding XPath=@Header}" VerticalAlignment="Center" />
+                </StackPanel>
+            </HierarchicalDataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+
+    <Grid >
+
+        <StackPanel Orientation="Vertical" Width="300" Height="Auto" HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Stretch" Height="55">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Beam case" VerticalAlignment="Center"  Margin="0"/>
+                <TextBox HorizontalAlignment="Stretch" Margin="10,5,5,5" Grid.Column="1" Height="45" 
+                         Text="{Binding BeamForcesCaseDescription, Mode=TwoWay }" TextWrapping="Wrap" 
+                         />
+            </Grid>
+            <Expander Header="Boundary conditions and load type selection" IsExpanded="False" >
+                <TreeView x:Name="selectionTree"
+                  SelectedValuePath="Id" 
+                  Height="300"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Stretch"
+                  ItemsSource="{Binding Source={StaticResource xmldata}, XPath=./*}"
+                  VirtualizingPanel.IsVirtualizing="False"
+                  VirtualizingPanel.VirtualizationMode="Standard" 
+                  Background="LightGray" Width="300">
+                </TreeView>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</UserControl>

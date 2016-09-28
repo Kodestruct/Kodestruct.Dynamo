@@ -1,0 +1,95 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="BoltHoleStandard" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BoltHoleStandard" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_21" Width="13.708" Height="13.7107" Canvas.Left="14.9847" Canvas.Top="15.0125" Stretch="Fill" Fill="#FF333333" Data="F1 M 28.6927,21.8672C 28.6927,25.6525 25.6247,28.7232 21.8393,28.7232C 18.054,28.7232 14.9847,25.6525 14.9847,21.8672C 14.9847,18.0819 18.054,15.0125 21.8393,15.0125C 25.6247,15.0125 28.6927,18.0819 28.6927,21.8672 Z " />
+                            <Path x:Name="Path_22" Width="20.6867" Height="20.6853" Canvas.Left="11.4956" Canvas.Top="11.5245" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 31.5156,21.8672C 31.5156,27.2112 27.1836,31.5432 21.8396,31.5432C 16.4943,31.5432 12.1623,27.2112 12.1623,21.8672C 12.1623,16.5232 16.4943,12.1912 21.8396,12.1912C 27.1836,12.1912 31.5156,16.5232 31.5156,21.8672 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BoltHoleOversized" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BoltHoleOversized" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_23" Width="13.708" Height="13.7107" Canvas.Left="15.0056" Canvas.Top="14.7833" Stretch="Fill" Fill="#FF333333" Data="F1 M 28.7136,21.638C 28.7136,25.4233 25.6456,28.494 21.8603,28.494C 18.0749,28.494 15.0056,25.4233 15.0056,21.638C 15.0056,17.8527 18.0749,14.7833 21.8603,14.7833C 25.6456,14.7833 28.7136,17.8527 28.7136,21.638 Z " />
+                            <Path x:Name="Path_24" Width="26.7693" Height="26.768" Canvas.Left="8.47547" Canvas.Top="8.254" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 34.5781,21.638C 34.5781,28.662 28.8835,34.3553 21.8608,34.3553C 14.8355,34.3553 9.14213,28.662 9.14213,21.638C 9.14213,14.614 14.8355,8.92067 21.8608,8.92067C 28.8835,8.92067 34.5781,14.614 34.5781,21.638 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BoltHoleShortSlotPerpendicular" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BoltHoleShortSlotPerpendicular" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_25" Width="13.7093" Height="13.7107" Canvas.Left="15.1279" Canvas.Top="15.4292" Stretch="Fill" Fill="#FF333333" Data="F1 M 28.8372,22.2839C 28.8372,26.0692 25.7692,29.1399 21.9825,29.1399C 18.1972,29.1399 15.1279,26.0692 15.1279,22.2839C 15.1279,18.4985 18.1972,15.4292 21.9825,15.4292C 25.7692,15.4292 28.8372,18.4985 28.8372,22.2839 Z " />
+                            <Path x:Name="Path_26" Width="25.056" Height="19.0187" Canvas.Left="9.45467" Canvas.Top="12.7743" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 25.0013,31.1263C 29.884,31.1263 33.844,27.1676 33.844,22.2836C 33.844,17.4009 29.884,13.4409 25.0013,13.4409L 18.9653,13.4409C 14.08,13.4409 10.1213,17.4009 10.1213,22.2836C 10.1213,27.1676 14.08,31.1263 18.9653,31.1263L 25.0013,31.1263 Z " />
+                            <Path x:Name="Path_27" Width="7.972" Height="7.64934" Canvas.Left="17.9968" Canvas.Top="4.5648" Stretch="Fill" Fill="#FF333333" Data="F1 M 21.1341,9.02213L 21.1341,12.2141L 22.8288,12.2141L 22.8288,9.02213L 25.9688,9.02213L 21.9781,4.5648L 17.9968,9.02213L 21.1341,9.02213 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BoltHoleShortSlotParallel" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BoltHoleShortSlotParallel" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_28" Width="13.7093" Height="13.7107" Canvas.Left="18.2945" Canvas.Top="15.4644" Stretch="Fill" Fill="#FF333333" Data="F1 M 32.0039,22.3191C 32.0039,26.1044 28.9359,29.1751 25.1479,29.1751C 21.3639,29.1751 18.2945,26.1044 18.2945,22.3191C 18.2945,18.5337 21.3639,15.4644 25.1479,15.4644C 28.9359,15.4644 32.0039,18.5337 32.0039,22.3191 Z " />
+                            <Path x:Name="Path_29" Width="25.056" Height="19.0187" Canvas.Left="12.6213" Canvas.Top="12.8095" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 28.168,31.1615C 33.0507,31.1615 37.0107,27.2028 37.0107,22.3188C 37.0107,17.4361 33.0507,13.4761 28.168,13.4761L 22.132,13.4761C 17.2467,13.4761 13.288,17.4361 13.288,22.3188C 13.288,27.2028 17.2467,31.1615 22.132,31.1615L 28.168,31.1615 Z " />
+                            <Path x:Name="Path_30" Width="7.64933" Height="7.972" Canvas.Left="3.90853" Canvas.Top="18.3333" Stretch="Fill" Fill="#FF333333" Data="F1 M 8.36587,23.168L 11.5579,23.168L 11.5579,21.4733L 8.36587,21.4733L 8.36587,18.3333L 3.90853,22.324L 8.36587,26.3053L 8.36587,23.168 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BoltHoleLongSlotPerpendicular" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BoltHoleLongSlotPerpendicular" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_31" Width="13.7093" Height="13.7093" Canvas.Left="15.1448" Canvas.Top="16.5139" Stretch="Fill" Fill="#FF333333" Data="F1 M 28.8541,23.3672C 28.8541,27.1525 25.7861,30.2232 21.9981,30.2232C 18.2141,30.2232 15.1448,27.1525 15.1448,23.3672C 15.1448,19.5832 18.2141,16.5139 21.9981,16.5139C 25.7861,16.5139 28.8541,19.5832 28.8541,23.3672 Z " />
+                            <Path x:Name="Path_32" Width="31.1147" Height="19.0187" Canvas.Left="6.4416" Canvas.Top="13.8589" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 28.0469,32.2109C 32.9296,32.2109 36.8896,28.2523 36.8896,23.3683C 36.8896,18.4856 32.9296,14.5256 28.0469,14.5256L 15.9523,14.5256C 11.0683,14.5256 7.10827,18.4856 7.10827,23.3683C 7.10827,28.2523 11.0683,32.2109 15.9523,32.2109L 28.0469,32.2109 Z " />
+                            <Path x:Name="Path_33" Width="7.972" Height="7.64933" Canvas.Left="18.0129" Canvas.Top="4.74973" Stretch="Fill" Fill="#FF333333" Data="F1 M 22.8476,9.20707L 22.8476,12.3991L 21.1529,12.3991L 21.1529,9.20707L 18.0129,9.20707L 22.0036,4.74973L 25.9849,9.20707L 22.8476,9.20707 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BoltHoleLongSlotParallel" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BoltHoleLongSlotParallel" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_34" Width="13.7093" Height="13.7093" Canvas.Left="18.0407" Canvas.Top="15.4259" Stretch="Fill" Fill="#FF333333" Data="F1 M 31.75,22.2805C 31.75,26.0645 28.682,29.1352 24.894,29.1352C 21.11,29.1352 18.0407,26.0645 18.0407,22.2805C 18.0407,18.4952 21.11,15.4259 24.894,15.4259C 28.682,15.4259 31.75,18.4952 31.75,22.2805 Z " />
+                            <Path x:Name="Path_35" Width="31.1147" Height="19.0187" Canvas.Left="9.33733" Canvas.Top="12.7717" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 30.9427,31.1237C 35.8253,31.1237 39.7853,27.1651 39.7853,22.2811C 39.7853,17.3984 35.8253,13.4384 30.9427,13.4384L 18.848,13.4384C 13.964,13.4384 10.004,17.3984 10.004,22.2811C 10.004,27.1651 13.964,31.1237 18.848,31.1237L 30.9427,31.1237 Z " />
+                            <Path x:Name="Path_36" Width="7.64933" Height="7.972" Canvas.Left="0.741867" Canvas.Top="18.2949" Stretch="Fill" Fill="#FF333333" Data="F1 M 5.1992,21.4323L 8.3912,21.4323L 8.3912,23.1269L 5.1992,23.1269L 5.1992,26.2669L 0.741867,22.2763L 5.1992,18.2949L 5.1992,21.4323 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

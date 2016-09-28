@@ -1,0 +1,164 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <Style x:Key="ComboPlastic" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboPlastic" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="28.556" Height="28.8893" Canvas.Left="9.388" Canvas.Top="7.83334" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 37.444,36.2227L 9.888,36.2227L 9.888,8.33334" />
+                            <Path Width="24.5333" Height="26.136" Canvas.Left="10.0119" Canvas.Top="10.1563" Stretch="Fill" Fill="#FF333333" Data="F1 M 31.2825,27.2083C 28.0985,22.9669 21.9879,18.3149 16.5745,14.5216C 14.1052,12.8029 11.7985,11.2949 10.0119,10.1563L 10.0119,14.9189C 11.3185,15.7749 12.7705,16.7483 14.2865,17.8043C 19.5519,21.4523 25.5465,26.1563 28.0719,29.5949C 29.3025,31.1656 30.0425,33.7669 30.4759,36.2923L 34.5452,36.2923C 34.0932,33.2643 33.1812,29.8549 31.2825,27.2083 Z " />
+                            <Path Width="5.33067" Height="5.33067" Canvas.Left="15.8581" Canvas.Top="23.2735" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.1888,25.9401C 20.1888,26.8588 19.4435,27.6041 18.5235,27.6041C 17.6048,27.6041 16.8581,26.8588 16.8581,25.9401C 16.8581,25.0215 17.6048,24.2735 18.5235,24.2735C 19.4435,24.2735 20.1888,25.0215 20.1888,25.9401 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboAnchorage" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboAnchorage" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="28.556" Height="28.8893" Canvas.Left="9.388" Canvas.Top="7.83334" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 37.444,36.2227L 9.888,36.2227L 9.888,8.33334" />
+                            <Path Width="23.64" Height="25.1613" Canvas.Left="10.0512" Canvas.Top="10.8387" Stretch="Fill" Fill="#FF333333" Data="F1 M 26.9245,17.164C 22.0219,11.8253 14.4299,10.9827 10.0512,10.8387L 10.0512,14.828C 14.0059,14.9467 20.6019,15.9733 23.9485,19.8347C 28.8005,25.188 29.6352,32.6107 29.6952,36L 33.6912,36C 33.6139,32.1813 32.8325,23.8 26.9245,17.164 Z " />
+                            <Path Width="5.33067" Height="5.33067" Canvas.Left="15.8945" Canvas.Top="23.25" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.2252,25.9167C 20.2252,26.8353 19.4799,27.5807 18.5599,27.5807C 17.6412,27.5807 16.8945,26.8353 16.8945,25.9167C 16.8945,24.9967 17.6412,24.25 18.5599,24.25C 19.4799,24.25 20.2252,24.9967 20.2252,25.9167 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboElliptical" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboElliptical" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="28.556" Height="28.8893" Canvas.Left="9.388" Canvas.Top="7.83334" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 37.444,36.2227L 9.888,36.2227L 9.888,8.33334" />
+                            <Path Width="23.6187" Height="23.6507" Canvas.Left="10.0896" Canvas.Top="12.3492" Stretch="Fill" Fill="#FF333333" Data="F1 M 23.5989,21.8105C 18.9936,17.2279 12.9016,13.8052 10.0896,12.3492L 10.0896,16.8972C 10.6043,17.1865 11.1549,17.5025 11.7469,17.8572C 14.5616,19.5399 18.0709,21.9345 20.7709,24.6385C 24.1843,28.0505 26.7109,31.7239 28.3643,34.5305C 28.6776,35.0572 28.9483,35.5412 29.1976,35.9999L 33.7083,35.9999C 32.3256,33.1825 29.0603,27.2812 23.5989,21.8105 Z " />
+                            <Path Width="5.33067" Height="5.33067" Canvas.Left="15.8979" Canvas.Top="23.224" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.2285,25.8907C 20.2285,26.8093 19.4832,27.5547 18.5632,27.5547C 17.6445,27.5547 16.8979,26.8093 16.8979,25.8907C 16.8979,24.9707 17.6445,24.224 18.5632,24.224C 19.4832,24.224 20.2285,24.9707 20.2285,25.8907 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboLinear" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboLinear" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="28.556" Height="28.8893" Canvas.Left="9.388" Canvas.Top="7.83334" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 37.444,36.2227L 9.888,36.2227L 9.888,8.33334" />
+                            <Path Width="25.6747" Height="25.8" Canvas.Left="9.70333" Canvas.Top="10.4227" Stretch="Fill" Fill="#FF333333" Data="F1 M 9.88867,16.2787L 9.70333,10.4227L 35.378,36.2227L 29.734,36.2227L 9.88867,16.2787 Z " />
+                            <Path Width="5.33067" Height="5.33067" Canvas.Left="16.0105" Canvas.Top="23.362" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.3412,26.0287C 20.3412,26.9473 19.5959,27.6927 18.6759,27.6927C 17.7572,27.6927 17.0105,26.9473 17.0105,26.0287C 17.0105,25.1073 17.7572,24.362 18.6759,24.362C 19.5959,24.362 20.3412,25.1073 20.3412,26.0287 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ShapeDoublySymmetric" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ShapeDoublySymmetric" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="27.6213" Height="27.624" Canvas.Left="7.9132" Canvas.Top="8.15894" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 27.2839,31.5456C 24.8199,31.5456 22.8239,29.5509 22.8239,27.0869L 22.8239,16.9603C 22.8239,14.4963 24.8199,12.5003 27.2839,12.5003L 35.0345,12.5003L 35.0345,8.65894L 8.4132,8.65894L 8.4132,12.5003L 16.2532,12.5003C 18.7159,12.5003 20.7119,14.4963 20.7119,16.9603L 20.7119,27.0869C 20.7119,29.5509 18.7159,31.5456 16.2532,31.5456L 8.4132,31.5456L 8.4132,35.2829L 35.0345,35.2829L 35.0345,31.5456L 27.2839,31.5456 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ShapeSinglySymmetric" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ShapeSinglySymmetric" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="27.6227" Height="27.624" Canvas.Left="7.91227" Canvas.Top="8.15894" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 22.8243,31.5456L 22.8243,12.5003L 35.0349,12.5003L 35.0349,8.65894L 8.41227,8.65894L 8.41227,12.5003L 20.7123,12.5003L 20.7123,31.5456L 14.7589,31.5456L 14.7589,35.2829L 28.6883,35.2829L 28.6883,31.5456L 22.8243,31.5456 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ComboFlexureAxial" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboFlexureAxial" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="8.764" Height="24.956" Canvas.Left="21.8115" Canvas.Top="7.51013" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 30.2421,26.1355L 22.1448,32.1328L 22.1448,13.8408L 30.2421,7.84347L 30.2421,26.1355 Z " />
+                            <Path Width="11.2173" Height="8.692" Canvas.Left="10.9273" Canvas.Top="10.022" Stretch="Fill" Fill="#FF333333" Data="F1 M 16.8593,13.1393L 22.1447,16.8073L 22.002,18.714L 15.9193,14.494L 14.1793,16.998L 10.9273,10.022L 18.5967,10.634L 16.8593,13.1393 Z " />
+                            <Path Width="11.7107" Height="9.128" Canvas.Left="14.6197" Canvas.Top="21.51" Stretch="Fill" Fill="#FF333333" Data="F1 M 19.4291,25.974L 25.3357,21.51L 26.3304,22.8233L 20.4224,27.2887L 22.2611,29.722L 14.6197,30.638L 17.5904,23.542L 19.4291,25.974 Z " />
+                            <Path Width="11.712" Height="9.128" Canvas.Left="10.7864" Canvas.Top="24.4059" Stretch="Fill" Fill="#FF333333" Data="F1 M 15.5971,28.8672L 21.5037,24.4059L 22.4984,25.7192L 16.5904,30.1819L 18.4291,32.6179L 10.7864,33.5339L 13.7571,26.4379L 15.5971,28.8672 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboFlexuralAxialTorsion" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboFlexuralAxialTorsion" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="8.764" Height="24.9573" Canvas.Left="16.9157" Canvas.Top="7.57907" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 25.3464,26.2057L 17.2491,32.2031L 17.2491,13.9097L 25.3464,7.9124L 25.3464,26.2057 Z " />
+                            <Path Width="11.2173" Height="8.69333" Canvas.Left="6.0316" Canvas.Top="10.0916" Stretch="Fill" Fill="#FF333333" Data="F1 M 11.9636,13.2089L 17.2489,16.8783L 17.1063,18.7849L 11.0236,14.5636L 9.2836,17.0689L 6.0316,10.0916L 13.7009,10.7036L 11.9636,13.2089 Z " />
+                            <Path Width="12.0133" Height="8.69333" Canvas.Left="27.7711" Canvas.Top="24.4152" Stretch="Fill" Fill="#FF333333" Data="F1 M 33.7031,27.5325L 39.7844,31.7539L 38.8457,33.1085L 32.7631,28.8872L 31.0231,31.3925L 27.7711,24.4152L 35.4404,25.0272L 33.7031,27.5325 Z " />
+                            <Path Width="12.0133" Height="8.69333" Canvas.Left="23.8259" Canvas.Top="21.6756" Stretch="Fill" Fill="#FF333333" Data="F1 M 29.7579,24.7929L 35.8392,29.0143L 34.9005,30.3689L 28.8179,26.1476L 27.0779,28.6529L 23.8259,21.6756L 31.4952,22.2876L 29.7579,24.7929 Z " />
+                            <Path Width="11.7107" Height="9.12667" Canvas.Left="9.72387" Canvas.Top="21.5803" Stretch="Fill" Fill="#FF333333" Data="F1 M 14.5332,26.0429L 20.4399,21.5803L 21.4345,22.8936L 15.5265,27.3576L 17.3652,29.7909L 9.72387,30.7069L 12.6945,23.6123L 14.5332,26.0429 Z " />
+                            <Path Width="11.712" Height="9.128" Canvas.Left="5.89053" Canvas.Top="24.4748" Stretch="Fill" Fill="#FF333333" Data="F1 M 10.7012,28.9375L 16.6079,24.4748L 17.6025,25.7881L 11.6945,30.2521L 13.5332,32.6868L 5.89053,33.6028L 8.8612,26.5068L 10.7012,28.9375 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboConnection" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboConnection" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle Width="17.0627" Height="13.6667" Canvas.Left="4.868" Canvas.Top="5.888" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                            <Rectangle Width="33.1267" Height="13.6667" Canvas.Left="4.868" Canvas.Top="18.5547" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                            <Path Width="10.944" Height="10.944" Canvas.Left="21.4311" Canvas.Top="8.11067" Stretch="Fill" Fill="#FF333333" Data="F1 M 32.3751,19.0547L 21.4311,19.0547L 21.4311,8.11067L 32.3751,19.0547 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ComboMember" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ComboMember" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="10.8893" Height="10.888" Canvas.Left="28.3372" Canvas.Top="3.44147" Stretch="Fill" StrokeThickness="2.66667" StrokeMiterLimit="2.75" Stroke="#FF333333" Data="F1 M 37.8932,8.88547C 37.8932,11.1561 36.0519,12.9961 33.7812,12.9961C 31.5105,12.9961 29.6705,11.1561 29.6705,8.88547C 29.6705,6.61613 31.5105,4.7748 33.7812,4.7748C 36.0519,4.7748 37.8932,6.61613 37.8932,8.88547 Z " />
+                            <Path Width="10.8893" Height="10.888" Canvas.Left="4.13013" Canvas.Top="27.6485" Stretch="Fill" StrokeThickness="2.66667" StrokeMiterLimit="2.75" Stroke="#FF333333" Data="F1 M 13.6861,33.0912C 13.6861,35.3619 11.8448,37.2032 9.57413,37.2032C 7.30347,37.2032 5.46347,35.3619 5.46347,33.0912C 5.46347,30.8232 7.30347,28.9819 9.57413,28.9819C 11.8448,28.9819 13.6861,30.8232 13.6861,33.0912 Z " />
+                            <Path Width="23.7267" Height="23.7253" Canvas.Left="9.81387" Canvas.Top="9.12627" Stretch="Fill" StrokeThickness="5.33334" StrokeMiterLimit="2.75" Stroke="#FF333333" Data="F1 M 12.4805,30.1849L 30.8739,11.7929" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+</ResourceDictionary>

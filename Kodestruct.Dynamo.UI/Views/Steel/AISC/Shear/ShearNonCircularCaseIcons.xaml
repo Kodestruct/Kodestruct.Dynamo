@@ -1,0 +1,49 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <Style x:Key="UnstiffenedWeb" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="UnstiffenedWeb" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="25.5091" Height="25.5107" Canvas.Left="9.13157" Canvas.Top="7.33313" Stretch="Fill" Fill="#FF333333" Data="F1 M 27.2139,29.2624C 24.8543,29.2624 22.9403,27.3516 22.9403,24.9904L 22.9403,15.2877C 22.9403,12.9281 24.8543,11.0141 27.2139,11.0141L 34.6407,11.0141L 34.6407,7.33313L 9.13157,7.33313L 9.13157,11.0141L 16.6436,11.0141C 19.0033,11.0141 20.9173,12.9281 20.9173,15.2877L 20.9173,24.9904C 20.9173,27.3516 19.0033,29.2624 16.6436,29.2624L 9.13157,29.2624L 9.13157,32.8438L 34.6407,32.8438L 34.6407,29.2624L 27.2139,29.2624 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="StiffenedWeb" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="StiffenedWeb" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="26.5091" Height="26.5107" Canvas.Left="8.22037" Canvas.Top="7.25513" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 26.8027,29.6844C 24.4431,29.6844 22.5291,27.7736 22.5291,25.4123L 22.5291,15.7097C 22.5291,13.3501 24.4431,11.4361 26.8027,11.4361L 34.2295,11.4361L 34.2295,7.75513L 8.72037,7.75513L 8.72037,11.4361L 16.2324,11.4361C 18.5921,11.4361 20.5061,13.3501 20.5061,15.7097L 20.5061,25.4123C 20.5061,27.7736 18.5921,29.6844 16.2324,29.6844L 8.72037,29.6844L 8.72037,33.2658L 34.2295,33.2658L 34.2295,29.6844L 26.8027,29.6844 Z " />
+                            <Path Width="11.7004" Height="18.2483" Canvas.Left="22.5291" Canvas.Top="11.4361" Stretch="Fill" Fill="#FF333333" Data="F1 M 26.8027,29.6844L 22.5291,25.4123L 22.5291,15.7097L 26.8027,11.4361L 34.2295,11.4361L 34.2295,29.6844L 26.8027,29.6844 Z " />
+                            <Path Width="11.7004" Height="18.2483" Canvas.Left="8.72037" Canvas.Top="11.4361" Stretch="Fill" Fill="#FF333333" Data="F1 M 16.1471,11.4361L 20.4207,15.7082L 20.4207,25.4108L 16.1471,29.6844L 8.72037,29.6844L 8.72037,11.4361L 16.1471,11.4361 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Tee" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="Tee" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="21.734" Height="30.5802" Canvas.Left="11.2409" Canvas.Top="5.9958" Stretch="Fill" Fill="#FF333333" Data="F1 M 23.1268,36.576L 23.1268,13.6868C 23.1268,11.4047 24.979,9.55437 27.2611,9.55437L 32.9749,9.55437L 32.9749,5.9958L 11.2409,5.9958L 11.2409,9.55437L 17.038,9.55437C 19.3201,9.55437 21.1704,11.4047 21.1704,13.6868L 21.1704,36.576L 23.1268,36.576 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

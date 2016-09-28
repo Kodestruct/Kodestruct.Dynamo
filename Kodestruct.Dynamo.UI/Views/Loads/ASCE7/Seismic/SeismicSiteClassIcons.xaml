@@ -1,0 +1,112 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="SeismicSiteClassA" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSiteClassA" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="12.5427" Height="13.7227" Canvas.Left="12.4017" Canvas.Top="4.64067" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 13.0684,17.6967L 13.0684,5.30733L 24.2777,5.30733L 24.2777,17.6967" />
+                            <Path Width="12.5427" Height="1.33333" Canvas.Left="12.4017" Canvas.Top="11.6315" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 13.0684,12.2981L 24.2777,12.2981" />
+                            <Rectangle Width="24.264" Height="7.116" Canvas.Left="6.288" Canvas.Top="17.696" Stretch="Fill" Fill="#FF333333" />
+                            <Rectangle Width="24.2653" Height="7.11468" Canvas.Left="7.14134" Canvas.Top="26.4693" Stretch="Fill" Fill="#FF333333" />
+                            <Path Width="32.0813" Height="1" Canvas.Left="2.91147" Canvas.Top="17.1967" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 3.41147,17.6967L 34.4928,17.6967" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSiteClassB" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSiteClassB" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="14.644" Height="13.7227" Canvas.Left="12.2579" Canvas.Top="4.64067" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.9245,17.6967L 14.0219,5.30733L 26.2352,5.30733L 25.1405,17.6967" />
+                            <Path Width="13.5507" Height="1.33333" Canvas.Left="12.8144" Canvas.Top="10.7389" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 13.4811,11.4056L 25.6984,11.4056" />
+                            <Rectangle Width="24.2653" Height="7.116" Canvas.Left="6.64267" Canvas.Top="17.696" Stretch="Fill" Fill="#FF333333" />
+                            <Rectangle Width="24.2653" Height="7.11468" Canvas.Left="9.704" Canvas.Top="26.4693" Stretch="Fill" Fill="#FF333333" />
+                            <Path Width="32.08" Height="1" Canvas.Left="2.9928" Canvas.Top="17.1967" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 3.4928,17.6967L 34.5728,17.6967" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSiteClassC" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSiteClassC" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="13.5493" Height="2.46372" Canvas.Left="13.6393" Canvas.Top="9.71637" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 14.306,10.6843C 21.37,13.0989 20.2247,9.33493 26.522,10.6843" />
+                            <Path Width="16.2135" Height="14.0234" Canvas.Left="12.2579" Canvas.Top="4.33989" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.9245,17.6967C 12.9245,11.074 15.4125,10.062 15.4125,5.30733C 22.4765,7.722 21.3312,3.95934 27.6299,5.30733C 28.6112,9.43933 25.1405,11.8887 25.1405,17.6967" />
+                            <Path Width="32.2453" Height="2.30933" Canvas.Left="2.91014" Canvas.Top="17.1967" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 3.41014,17.6967L 10.3715,17.6967L 19.2035,19.006L 27.8741,17.6967L 34.6555,17.6967" />
+                            <Path Width="24.264" Height="7.116" Canvas.Left="6.3584" Canvas.Top="17.6967" Stretch="Fill" Fill="#FF333333" Data="F1 M 30.6224,17.6967L 30.6224,24.8127L 6.3584,24.8127L 6.3584,17.6967" />
+                            <Rectangle Width="24.2667" Height="7.11468" Canvas.Left="11.624" Canvas.Top="26.4693" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSiteClassD" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSiteClassD" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="13.5507" Height="2.46372" Canvas.Left="15.3581" Canvas.Top="9.71637" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 16.0248,10.6843C 23.0875,13.0989 21.9435,9.33493 28.2421,10.6843" />
+                            <Path Width="18.6308" Height="14.0234" Canvas.Left="12.2579" Canvas.Top="4.33989" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.9245,17.6967C 12.9245,11.074 17.8965,10.062 17.8965,5.30733C 24.9592,7.722 23.8152,3.95934 30.1125,5.30733C 31.0952,9.43933 25.1405,11.8887 25.1405,17.6967" />
+                            <Path Width="32.244" Height="3.128" Canvas.Left="2.9928" Canvas.Top="16.3775" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 3.4928,18.0241L 10.4541,16.8775L 19.2848,19.0055L 27.9568,16.8775L 34.7368,18.5148" />
+                            <Path Width="24.2667" Height="7.93467" Canvas.Left="6.39173" Canvas.Top="16.8776" Stretch="Fill" Fill="#FF333333" Data="F1 M 10.4544,16.8776L 19.2851,19.0056L 27.9571,16.8776L 30.6584,17.6963L 30.6584,24.8123L 6.39173,24.8123L 6.39173,17.6963L 10.4544,16.8776 Z " />
+                            <Rectangle Width="24.2653" Height="7.11468" Canvas.Left="13.8667" Canvas.Top="26.4693" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSiteClassE" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSiteClassE" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="13.5493" Height="2.46372" Canvas.Left="16.6967" Canvas.Top="9.71637" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 17.3633,10.6843C 24.426,13.0989 23.2807,9.33493 29.5793,10.6843" />
+                            <Path Width="21.7048" Height="14.0234" Canvas.Left="12.2579" Canvas.Top="4.33989" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.9245,17.6967C 12.9245,11.074 21.0045,10.062 21.0045,5.30733C 28.0672,7.722 26.9232,3.95934 33.2219,5.30733C 34.2019,9.43933 25.1405,11.8887 25.1405,17.6967" />
+                            <Path Width="32.244" Height="5.416" Canvas.Left="2.9928" Canvas.Top="15.3988" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 3.4928,18.0241L 10.4541,15.8988L 19.2848,20.3148L 27.9568,16.8815L 34.7368,18.5148" />
+                            <Path Width="24.2653" Height="8.91467" Canvas.Left="5.99974" Canvas.Top="15.8984" Stretch="Fill" Fill="#FF333333" Data="F1 M 10.4544,15.8984L 19.0317,20.1877L 27.9571,16.8811L 30.2651,17.6971L 30.2651,24.8131L 5.99974,24.8131L 5.99974,17.6971L 10.4544,15.8984 Z " />
+                            <Rectangle Width="24.2653" Height="7.11468" Canvas.Left="15.68" Canvas.Top="26.4693" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SeismicSiteClassF" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="SeismicSiteClassF" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="13.5493" Height="4.27733" Canvas.Left="16.7136" Canvas.Top="9.91013" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 17.3803,10.5768C 22.5483,14.8861 24.5949,10.8781 29.5963,13.5208" />
+                            <Path Width="21.7048" Height="17.556" Canvas.Left="12.2579" Canvas.Top="4.64067" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 12.9245,17.6967C 12.9245,11.074 21.0045,10.062 21.0045,5.30733C 26.1725,9.61667 28.2192,5.60867 33.2219,8.25267C 34.2019,12.3833 25.1405,15.722 25.1405,21.53" />
+                            <Path Width="32.244" Height="7.21466" Canvas.Left="2.9928" Canvas.Top="15.3988" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 3.4928,18.0241L 10.4541,15.8988L 19.2848,20.3148L 27.9568,22.1135L 34.7368,21.1321" />
+                            <Path Width="24.2667" Height="8.91467" Canvas.Left="5.50107" Canvas.Top="15.8984" Stretch="Fill" Fill="#FF333333" Data="F1 M 10.4544,15.8984L 19.2851,20.3157L 27.2091,21.9584L 29.7677,21.8491L 29.7677,24.8131L 5.50107,24.8131L 5.50107,17.6971L 10.4544,15.8984 Z " />
+                            <Rectangle Width="24.2667" Height="7.11468" Canvas.Left="17.388" Canvas.Top="26.4693" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+   
+
+</ResourceDictionary>

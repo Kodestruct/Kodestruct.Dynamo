@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C196CB6-CC64-4356-A4B5-FEE5F8A225C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KodestructDynamoUI</RootNamespace>
+    <AssemblyName>KodestructDynamoUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KodestructDynamoUI.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\KodestructDynamoUI.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clipper_library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Clipper.6.2.10\lib\net40\clipper_library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreNodeModels, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.1.1.0\lib\net45\CoreNodeModels.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreNodeModelsWpf, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.1.1.0\lib\net45\CoreNodeModelsWpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoCore, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoCoreWpf, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.1.1.0\lib\net45\DynamoCoreWpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoServices, Version=1.1.0.2094, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.DynamoServices.1.1.0\lib\net45\DynamoServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoShapeManager, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoShapeManager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoUnits, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.1.1.0\lib\net45\DynamoUnits.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoUtilities, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoUtilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Analysis, Version=0.0.8.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Analysis.0.0.1.4\lib\net45\Kodestruct.Analysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Common, Version=0.0.8.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.3\lib\net45\Kodestruct.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.4\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Steel, Version=0.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.1.4\lib\net45\Kodestruct.Steel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Wood.0.0.1.4\lib\net45\Kodestruct.Wood.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ProtoCore, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\ProtoCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ProtoGeometry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.1.1.0\lib\net45\ProtoGeometry.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BaseClasses\IUiNodeBase.cs" />
+    <Compile Include="Common\BaseClasses\UiNodeBase.cs" />
+    <Compile Include="Common\BaseClasses\UiNodeBaseViewCustomization.cs" />
+    <Compile Include="Common\Controls\DataEntryElement.xaml.cs">
+      <DependentUpon>DataEntryElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\EnumControl.xaml.cs">
+      <DependentUpon>EnumControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\EnumDataCollection.cs" />
+    <Compile Include="Common\Controls\EnumDataElement.cs" />
+    <Compile Include="Common\Converters\BooleanToVisibilityInvertedConverter.cs" />
+    <Compile Include="Common\Converters\BooleanToVisibiltyConverter.cs" />
+    <Compile Include="Common\Converters\StyleConverter.cs" />
+    <Compile Include="Common\Converters\TreeItemConverter.cs" />
+    <Compile Include="Common\TreeItems\Category.cs" />
+    <Compile Include="Common\TreeItems\XmlTreeHelper.cs" />
+    <Compile Include="Common\TreeItems\XTreeItem.cs" />
+    <Compile Include="Nodes\Analysis\Beam\Flexure\BeamDeflectionCaseSelection.cs" />
+    <Compile Include="Nodes\Analysis\Beam\Flexure\BeamForceCaseSelection.cs" />
+    <Compile Include="Nodes\Analysis\Beam\Torsion\BeamTorsionCaseSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Concrete\ACI318\Details\CoatingTypeSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\Details\EnclosingRebarDirectionSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\Details\HookTypeSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\Details\RebarCastingPositionSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\Details\RebarSpliceClassSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\RebarSizeSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\General\Flexure\AngleOrientation.cs" />
+    <Compile Include="Nodes\General\Flexure\AngleRotation.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\EnclosureType.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindDirectionalityCaseIdSelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindStrucureDynamicResponseType.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindSystemTypeByMaterial.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\General\BuildingOccupancyIdSelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Gravity\Dead\ComponentIdSelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Gravity\Live\LiveLoadOccupancySelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Seismic\SeismicDesignCategorySelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Seismic\SeismicLateralSystemIdSelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Seismic\SeismicSiteClass.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Seismic\SeismicSystemTypeGeneralProcedureSelection.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindExposureCategory.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindFace.cs" />
+    <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindVelocityLocation.cs" />
+    <Compile Include="Nodes\Steel\AISC\Combination\CombinedForcesMemberTypeSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\Steel\AISC\Composite\DeckAtBeamConditionSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Composite\HeadedAnchorWeldCaseSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BeamCopeCaseSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BoltFayingSurfaceSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BoltFillerCaseSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BoltHoleDeformationSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BoltHoleTypeSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BoltThreadInclusionSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\ShearAreaCaseSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\GussetConfigurationSelection.cs" />
+    <Compile Include="Nodes\General\Flexure\FlexuralBracingCase.cs" />
+    <Compile Include="Nodes\General\Flexure\FlexuralCompressionLocation.cs" />
+    <Compile Include="Nodes\General\ForceTypeSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Floor vibrations\AdjacentSpanWeightIncreaseTypeSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Floor vibrations\BeamLocationSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Floor vibrations\FloorDampingComponentSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Floor vibrations\FloorOccupancyTypeForVibrationSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Floor vibrations\JoistToGirderConnectionTypeSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\HSS\HssTrussConnectionClassificationSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\HSS\HssConnectionMemberTypeSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Shear\ShearCaseNonCircularSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Tension\ShearLagCaseSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\WeldLoadTypeAndDirection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\StressDistributionSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\WeldGroupPatternSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\WeldTypeSelection.cs" />
+    <Compile Include="Nodes\General\Flexure\BendingAxisSelection.cs" />
+    <Compile Include="Nodes\Analysis\Section\AISC\AiscShapeSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\Connection\BoltDiameterSelection.cs" />
+    <Compile Include="Nodes\Steel\AISC\General\RecommendedMaterialSelection.cs" />
+    <Compile Include="Nodes\Wood\NDS\General\WoodSpeciesAndGradeSelection.cs" />
+    <Compile Include="Nodes\Wood\NDS\General\LoadCombinationTypeSelection.cs" />
+    <Compile Include="Nodes\Wood\NDS\General\ReferenceDesignValueTypeSelection.cs" />
+    <Compile Include="Nodes\Wood\NDS\General\ServiceMoistureConditionSelection.cs" />
+    <Compile Include="Nodes\Wood\NDS\General\WoodCommercialGradeSelection.cs" />
+    <Compile Include="Nodes\Wood\NDS\General\WoodMemberTypeSelection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Analysis\Beam\Flexure\BeamDeflectionCaseView.xaml.cs">
+      <DependentUpon>BeamDeflectionCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Analysis\Beam\Flexure\BeamForceCaseView.xaml.cs">
+      <DependentUpon>BeamForceCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Analysis\Beam\Torsion\BeamTorsionCaseView.xaml.cs">
+      <DependentUpon>BeamTorsionCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\Details\CoatingTypeSelectionView.xaml.cs">
+      <DependentUpon>CoatingTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\Details\EnclosingRebarDirectionSelectionView.xaml.cs">
+      <DependentUpon>EnclosingRebarDirectionSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\Details\HookTypeSelectionView.xaml.cs">
+      <DependentUpon>HookTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\Details\RebarCastingPositionSelectionView.xaml.cs">
+      <DependentUpon>RebarCastingPositionSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\Details\RebarSpliceClassSelectionView.xaml.cs">
+      <DependentUpon>RebarSpliceClassSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\General\Rebar\RebarSizeSelectionView.xaml.cs">
+      <DependentUpon>RebarSizeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\Flexure\AngleOrientationView.xaml.cs">
+      <DependentUpon>AngleOrientationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\Flexure\AngleRotationView.xaml.cs">
+      <DependentUpon>AngleRotationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\General\BuildingOccupancyIdView.xaml.cs">
+      <DependentUpon>BuildingOccupancyIdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ClayBrickControl.xaml.cs">
+      <DependentUpon>ClayBrickControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ConcFillOnDeck1_5Control.xaml.cs">
+      <DependentUpon>ConcFillOnDeck1_5Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ConcFillOnDeck2Control.xaml.cs">
+      <DependentUpon>ConcFillOnDeck2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ConcFillOnDeck3Control.xaml.cs">
+      <DependentUpon>ConcFillOnDeck3Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\CustomComponentControl.xaml.cs">
+      <DependentUpon>CustomComponentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\DeckControl.xaml.cs">
+      <DependentUpon>DeckControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\FullGroutedCMU.xaml.cs">
+      <DependentUpon>FullGroutedCMU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\GFRCPanelControl.xaml.cs">
+      <DependentUpon>GFRCPanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\GroutedCMU.xaml.cs">
+      <DependentUpon>GroutedCMU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\HollowCMU.xaml.cs">
+      <DependentUpon>HollowCMU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\PrecastPanelControl.xaml.cs">
+      <DependentUpon>PrecastPanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\RoofDeckControl.xaml.cs">
+      <DependentUpon>RoofDeckControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\SolidCMU.xaml.cs">
+      <DependentUpon>SolidCMU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ThicknessControl.xaml.cs">
+      <DependentUpon>ThicknessControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\WoodFramingControl.xaml.cs">
+      <DependentUpon>WoodFramingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Dead\ComponentIdView.xaml.cs">
+      <DependentUpon>ComponentIdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Live\LiveLoadOccupancyIdView.xaml.cs">
+      <DependentUpon>LiveLoadOccupancyIdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Seismic\SeismicDesignCategorySelectionView.xaml.cs">
+      <DependentUpon>SeismicDesignCategorySelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Seismic\SeismicLateralSystemIdSelectionView.xaml.cs">
+      <DependentUpon>SeismicLateralSystemIdSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Seismic\SeismicSiteClassView.xaml.cs">
+      <DependentUpon>SeismicSiteClassView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Seismic\SeismicSystemTypeGeneralProcedureSelectionView.xaml.cs">
+      <DependentUpon>SeismicSystemTypeGeneralProcedureSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\EnclosureTypeView.xaml.cs">
+      <DependentUpon>EnclosureTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\WindDirectionalityCaseIdSelectionView.xaml.cs">
+      <DependentUpon>WindDirectionalityCaseIdSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\WindExposureCategoryView.xaml.cs">
+      <DependentUpon>WindExposureCategoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\WindFaceView.xaml.cs">
+      <DependentUpon>WindFaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\WindStrucureDynamicResponseTypeView.xaml.cs">
+      <DependentUpon>WindStrucureDynamicResponseTypeView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\WindSystemTypeByMaterialView.xaml.cs">
+      <DependentUpon>WindSystemTypeByMaterialView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Loads\ASCE7\Wind\WindVelocityLocationView.xaml.cs">
+      <DependentUpon>WindVelocityLocationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Combination\CombinationCaseIdView.xaml.cs">
+      <DependentUpon>CombinationCaseIdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Composite\HeadedAnchorWeldCaseView.xaml.cs">
+      <DependentUpon>HeadedAnchorWeldCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Composite\DeckConditionSelectionView.xaml.cs">
+      <DependentUpon>DeckConditionSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BeamCopeCaseView.xaml.cs">
+      <DependentUpon>BeamCopeCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltDiameterSelectionView.xaml.cs">
+      <DependentUpon>BoltDiameterSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltFayingSurfaceView.xaml.cs">
+      <DependentUpon>BoltFayingSurfaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltFillerCaseView.xaml.cs">
+      <DependentUpon>BoltFillerCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltHoleDeformationView.xaml.cs">
+      <DependentUpon>BoltHoleDeformationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltHoleTypeView.xaml.cs">
+      <DependentUpon>BoltHoleTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltThreadCaseView.xaml.cs">
+      <DependentUpon>BoltThreadCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\BoltTypeView.xaml.cs">
+      <DependentUpon>BoltTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\ShearAreaCaseView.xaml.cs">
+      <DependentUpon>ShearAreaCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\GussetConfigurationView.xaml.cs">
+      <DependentUpon>GussetConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\Flexure\FlexuralBracingCaseView.xaml.cs">
+      <DependentUpon>FlexuralBracingCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\Flexure\FlexuralCompressionLocationView.xaml.cs">
+      <DependentUpon>FlexuralCompressionLocationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\AxialForceTypeSelectionView.xaml.cs">
+      <DependentUpon>AxialForceTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Floor vibrations\AdjacentSpanWeightIncreaseTypeSelectionView.xaml.cs">
+      <DependentUpon>AdjacentSpanWeightIncreaseTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Floor vibrations\BeamLocationSelectionView.xaml.cs">
+      <DependentUpon>BeamLocationSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Floor vibrations\FloorDampingComponentSelectionView.xaml.cs">
+      <DependentUpon>FloorDampingComponentSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Floor vibrations\FloorOccupancyTypeForVibrationSelectionView.xaml.cs">
+      <DependentUpon>FloorOccupancyTypeForVibrationSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Floor vibrations\JoistToGirderConnectionTypeSelectionView.xaml.cs">
+      <DependentUpon>JoistToGirderConnectionTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\HSS\HssTrussConnectionClassificationSelectionView.xaml.cs">
+      <DependentUpon>HssTrussConnectionClassificationSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\HSS\HssConnectionMemberTypeSelectionView.xaml.cs">
+      <DependentUpon>HssConnectionMemberTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Shear\ShearNonCircularCaseView.xaml.cs">
+      <DependentUpon>ShearNonCircularCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase2Control.xaml.cs">
+      <DependentUpon>ShearLagCase2Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase4Control.xaml.cs">
+      <DependentUpon>ShearLagCase4Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase5Control.xaml.cs">
+      <DependentUpon>ShearLagCase5Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase6Control.xaml.cs">
+      <DependentUpon>ShearLagCase6Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase7Control.xaml.cs">
+      <DependentUpon>ShearLagCase7Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Tension\ShearLagFactorIdView.xaml.cs">
+      <DependentUpon>ShearLagFactorIdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\StressDistibutionTypeView.xaml.cs">
+      <DependentUpon>StressDistibutionTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\WeldGroupPatternView.xaml.cs">
+      <DependentUpon>WeldGroupPatternView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\WeldLoadTypeIdView.xaml.cs">
+      <DependentUpon>WeldLoadTypeIdView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Connection\WeldTypeView.xaml.cs">
+      <DependentUpon>WeldTypeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\Flexure\SteelShapeGroupFlexureView.xaml.cs">
+      <DependentUpon>SteelShapeGroupFlexureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Analysis\Section\AISC\AiscShapeSelectionView.xaml.cs">
+      <DependentUpon>AiscShapeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\Flexure\BendingAxisSelection.xaml.cs">
+      <DependentUpon>BendingAxisSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Steel\AISC\General\RecommendedMaterialSelectionView.xaml.cs">
+      <DependentUpon>RecommendedMaterialSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\FlatMemberTypeSelectionView.xaml.cs">
+      <DependentUpon>FlatMemberTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\LoadCombinationTypeSelectionView.xaml.cs">
+      <DependentUpon>LoadCombinationTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\ReferenceDesignValueTypeSelectionView.xaml.cs">
+      <DependentUpon>ReferenceDesignValueTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\ServiceMoistureConditionTypeSelectionView.xaml.cs">
+      <DependentUpon>ServiceMoistureConditionTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\WoodCommercialGradeSelectionView.xaml.cs">
+      <DependentUpon>WoodCommercialGradeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\WoodMemberTypeSelectionView.xaml.cs">
+      <DependentUpon>WoodMemberTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wood\General\WoodSpeciesAndGradeSelectionView.xaml.cs">
+      <DependentUpon>WoodSpeciesAndGradeSelectionView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Loads\ASCE7\General\BuildingOccupancyTreeData.xml" />
+    <Resource Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightTreeData.xml" />
+    <Resource Include="Views\Loads\ASCE7\Live\LiveLoadOccupancyIdTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\Controls\DataEntryElement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\Controls\EnumControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\Controls\EnumDataTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\Themes\ExpressionLightTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\Details\CoatingTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\Details\EnclosingRebarDirectionSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\Details\HookTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\Details\RebarCastingPositionSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\Details\RebarSpliceClassSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\FlatMemberTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\LoadCombinationTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\ReferenceDesignValueTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\ServiceMoistureConditionTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\WoodCommercialGradeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\WoodMemberTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Wood\General\WoodSpeciesAndGradeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Analysis\Beam\Flexure\BeamForceCaseIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Page Include="Views\Analysis\Beam\Flexure\BeamDeflectionCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Analysis\Beam\Flexure\BeamForceCaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Views\Analysis\Beam\Torsion\BeamTorsionCaseIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Analysis\Beam\Torsion\BeamTorsionCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\General\Rebar\RebarSizeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Flexure\AngleOrientationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Flexure\AngleRotationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\General\BuildingOccupancyIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\General\BuildingOccupancyIdView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ClayBrickControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ConcFillOnDeck1_5Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ConcFillOnDeck2Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ConcFillOnDeck3Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\CustomComponentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\DeckControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\FullGroutedCMU.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\GFRCPanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\GroutedCMU.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\HollowCMU.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\PrecastPanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\RoofDeckControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\SolidCMU.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\ThicknessControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightCases\WoodFramingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Dead\ComponentIdView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Loads\ASCE7\Seismic\SeismicLateralSystemIdIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Loads\ASCE7\Seismic\SeismicDesignCategorySelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Loads\ASCE7\Seismic\SeismicSystemTypeGeneralProcedureIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Loads\ASCE7\Seismic\SeismicLateralSystemIdSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Loads\ASCE7\Seismic\SeismicSiteClassIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Loads\ASCE7\Seismic\SeismicSiteClassView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Seismic\SeismicSystemTypeGeneralProcedureSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\EnclosureTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindDirectionalityIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindDirectionalityCaseIdSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindExposureCategoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindFaceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindStrucureDynamicResponseTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindSystemTypeByMaterialView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Loads\ASCE7\Wind\WindVelocityLocationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Combination\CombinationCaseIdIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Combination\CombinationCaseIdView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Composite\DeckIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Composite\HeadedAnchorWeldCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Composite\DeckConditionSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BeamCopeCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BeamCopeCaseIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltDiameterSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltFayingSurfaceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltFillerCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltHoleDeformationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltHoleTypeIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltHoleTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltThreadCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltTypeIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\BoltTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\GroupAreaPatternIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\ShearAreaCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\GussetConfigurationIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\GussetConfigurationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\StressDistibutionIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\General\Flexure\BendingBracingCaseIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\General\Flexure\FlexuralBracingCaseView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Flexure\FlexuralCompressionLocationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Flexure\FlexureIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\General\AxialForceTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Floor vibrations\AdjacentSpanWeightIncreaseTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Floor vibrations\BeamLocationSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Floor vibrations\FloorDampingComponentSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Floor vibrations\FloorOccupancyTypeForVibrationSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Floor vibrations\JoistToGirderConnectionTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\HSS\HssTrussConnectionClassificationSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\HSS\HssConnectionMemberTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Shear\ShearNonCircularCaseIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Shear\ShearNonCircularCaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase2Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase4Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase5Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase6Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagCases\ShearLagCase7Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagFactorIdView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Tension\ShearLagFactorIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\StressDistibutionTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\WeldGroupPatternIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\WeldGroupPatternView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\WeldLoadTypeIdIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\WeldLoadTypeIdView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\WeldTypeIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Connection\WeldTypeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Flexure\SteelShapeGroupFlexureIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\Flexure\SteelShapeGroupFlexureView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Analysis\Section\AISC\AiscShapeSelectionIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Analysis\Section\AISC\AiscShapeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Flexure\BendingAxisSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\General\Flexure\BendingAxisSelectionIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\General\RecommendedMaterialSelectionIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Steel\AISC\General\RecommendedMaterialSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Loads\ASCE7\Dead\ComponentDeadWeightIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Views\Loads\ASCE7\Live\LiveLoadOccupancyIdIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Loads\ASCE7\Live\LiveLoadOccupancyIdView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LICENSE" />
+    <None Include="NOTICE" />
+    <None Include="packages.config" />
+    <None Include="KodestructDynamoUI.licenseheader" />
+    <EmbeddedResource Include="Resources\KodestructDynamoUIImages.resources" />
+    <EmbeddedResource Include="KodestructDynamoUIImages.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Nodes\Concrete\ACI318\Compression\SectionStrength\" />
+    <Folder Include="Nodes\Concrete\ACI318\Compression\Stability\" />
+    <Folder Include="Nodes\Concrete\ACI318\Flexure\" />
+    <Folder Include="Nodes\Concrete\ACI318\General\Material\" />
+    <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\OneWay\" />
+    <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\Torsion\" />
+    <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\TwoWay\" />
+    <Folder Include="Nodes\Steel\AISC\Flexure\" />
+    <Folder Include="Views\Concrete\ACI318\Compression\SectionStrength\" />
+    <Folder Include="Views\Concrete\ACI318\Compression\Stability\" />
+    <Folder Include="Views\Concrete\ACI318\Flexure\" />
+    <Folder Include="Views\Concrete\ACI318\General\Material\" />
+    <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\OneWay\" />
+    <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\Torsion\" />
+    <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\" />
+    <Folder Include="Views\Loads\ASCE7\Snow\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Steel\AISC\Tension\ShearLagFactorIdTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AiscMaterialFastenerDiameterLimits.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AiscMaterialFastenerMaterial.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AiscMaterialPlateMaterial.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AiscMaterialsAll.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AiscMaterialShapeMaterial.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CHS_Shapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\L2_Equal.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\L2_LLBB.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\L2_SLBB.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MCShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MTShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\PipeShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RHS_Shapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SectionSpecificProperties.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\STShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\WShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\WTShapes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Analysis\Beam\Flexure\BeamForceCaseTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Analysis\Beam\Flexure\BeamDeflectionCaseTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Analysis\Beam\Torsion\BeamTorsionCaseTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Loads\ASCE7\Seismic\SeismicLateralSystemIdTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Loads\ASCE7\Wind\DirectionalityTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NDS2015Table4A.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <!-- Get System.Drawing.dll -->
+    <GetReferenceAssemblyPaths TargetFrameworkMoniker=".NETFramework, Version=v2.0">
+      <Output TaskParameter="FullFrameworkReferenceAssemblyPaths" PropertyName="FrameworkAssembliesPath" />
+    </GetReferenceAssemblyPaths>
+    <!-- Get assembly -->
+    <GetAssemblyIdentity AssemblyFiles="$(OutDir)$(TargetName).dll">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+    </GetAssemblyIdentity>
+    <!-- Generate customization dll -->
+    <GenerateResource UseSourcePath="true" Sources="$(ProjectDir)\KodestructDynamoUIImages.resx" OutputResources="$(ProjectDir)\Resources\KodestructDynamoUIImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
+    <AL TargetType="library" EmbedResources="$(ProjectDir)\Resources\KodestructDynamoUIImages.resources" OutputAssembly="$(OutDir)KodestructDynamoUI.customization.dll" Version="%(AssemblyInfo.Version)" />
+  </Target>
+</Project>

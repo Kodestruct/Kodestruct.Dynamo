@@ -1,0 +1,35 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="KodestructDynamoUI.Views.Loads.ASCE7.ConcFillOnDeck1_5Control"
+    mc:Ignorable="d"
+    d:DesignHeight="80" d:DesignWidth="400">
+    
+	<Grid x:Name="LayoutRoot" Height="70">
+		<StackPanel Margin="8">
+			<StackPanel Margin="0,5" Orientation="Horizontal">
+				<TextBlock TextWrapping="Wrap" Text="Total slab thickness" VerticalAlignment="Center" Margin="0,2.02"/>
+				<ComboBox Width="80" Height="20" SelectedIndex="{Binding ComponentOption1}" Margin="8,0">
+					<ComboBoxItem Content="3-1/2 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="4 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="4-1/2 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="5 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="5-1/2 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="6 in." Height="20" Width="70"/>
+				</ComboBox>
+			</StackPanel>
+			<StackPanel Margin="0,5" Orientation="Horizontal">
+				<TextBlock TextWrapping="Wrap" Text="Composite deck profile" VerticalAlignment="Center" Margin="0,2.02"/>
+				<ComboBox Width="247" Height="20" SelectedIndex="{Binding ComponentOption2}" Margin="8,0">
+					<ComboBoxItem Content="1.5&quot; deep X 12&quot; rib spacing" Width="240"/>
+					<ComboBoxItem Content="1.5&quot; deep X 12&quot; rib spacing (Inverted)" Width="240"/>
+				</ComboBox>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</UserControl>

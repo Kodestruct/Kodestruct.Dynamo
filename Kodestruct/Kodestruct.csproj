@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46B258A3-3F59-4D21-8AC1-F353B40D0506}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kodestruct</RootNamespace>
+    <AssemblyName>Kodestruct</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Kodestruct.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Kodestruct.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clipper_library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Clipper.6.2.10\lib\net40\clipper_library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreNodeModels, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.1.1.0\lib\net45\CoreNodeModels.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreNodeModelsWpf, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.1.1.0\lib\net45\CoreNodeModelsWpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoCore, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoCoreWpf, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.1.1.0\lib\net45\DynamoCoreWpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoServices, Version=1.1.0.2094, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.DynamoServices.1.1.0\lib\net45\DynamoServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoShapeManager, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoShapeManager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoUnits, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.1.1.0\lib\net45\DynamoUnits.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DynamoUtilities, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoUtilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Analysis, Version=0.0.8.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Analysis.0.0.1.4\lib\net45\Kodestruct.Analysis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Common, Version=0.0.8.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.3\lib\net45\Kodestruct.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.4\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Steel, Version=0.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.1.4\lib\net45\Kodestruct.Steel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Wood.0.0.1.4\lib\net45\Kodestruct.Wood.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ProtoCore, Version=1.1.0.2177, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\ProtoCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ProtoGeometry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.1.1.0\lib\net45\ProtoGeometry.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\Beam\Flexure\BeamDeflections.cs" />
+    <Compile Include="Analysis\Beam\Flexure\BeamForces.cs" />
+    <Compile Include="Analysis\Beam\Groups\BeamAnalysisFlexure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Beam\Groups\BeamAnalysisTorsion.cs" />
+    <Compile Include="Analysis\Beam\Torsion\TorsionalFunctionValues.cs" />
+    <Compile Include="Analysis\Section\AISC\CatalogSection.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionAngle.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionBox.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionChannel.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionChannelRolled.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionDoubleAngle.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionDoubleStacked.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionI.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionIWithReinfWebOpening.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionIRolled.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionPipe.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionOfPlateWithHoles.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionRound.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionTee.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionTube.cs" />
+    <Compile Include="Analysis\Section\Stress\Groups\ElasticStress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\Groups\TorsionalStress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\NormalStressDueToAxialLoad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\NormalStressDueToBending.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\NormalStressDueToWarping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\PureTorsionStress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\ShearStressDueToAppliedShear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\Stress\ShearStressDueToWarping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\SectionTypes\CustomProfile.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\CustomProfileProperties.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionRectangular.cs" />
+    <Compile Include="Concrete\ACI318\Details\CompressionDevelopmentLength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\ACI318\Details\CompressionLapSpliceLength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\ACI318\Details\Groups\DevelopmentLength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\ACI318\Details\Groups\LapSplice.cs" />
+    <Compile Include="Concrete\ACI318\Details\StandardHookTensionDevelopmentLengthDetailed.cs" />
+    <Compile Include="Concrete\ACI318\Details\StandardHookTensionDevelopmentLengthBasic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\ACI318\Details\StraightBarTensionDevelopmentLengthBasic.cs" />
+    <Compile Include="Concrete\ACI318\Details\StraightBarTensionDevelopmentLengthDetailed.cs" />
+    <Compile Include="Concrete\ACI318\Details\StraightBarTensionLapSpliceLengthBasic.cs" />
+    <Compile Include="Concrete\ACI318\Details\StraightBarTensionLapSpliceLengthDetailed.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\EffectiveDepthToLongitudinalRebar.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterialProperties.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\RebarPointByArea.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\AxialAndMomentStrength.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\FlexuralStrength.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\Groups\Flexure.cs" />
+    <Compile Include="Concrete\ACI318\General\Concrete\ConcreteMaterial.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterial.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\BarArea.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\Groups\SizeAreaAndProperties.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\RebarAreaByElementWidthAndIdAndSpacing.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\RebarAreaByIdAndNumberOfBars.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\Groups\Flexure.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\Groups\ConcreteFlexureAndAxiaSection.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\RectangularSectionFourSideReinforced.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\RectangularSectionSinglyReinforced.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\Groups\NonPrestressed.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\UpperLimitOnShearStrength.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\OneWayShearStrengthProvidedByConcrete.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\OneWayShearStrengthProvidedByRebar.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\TotalOneWayShearStrength.cs" />
+    <Compile Include="General\DesignToCapacityMultiple.cs" />
+    <Compile Include="General\DesignToCapacitySingle.cs" />
+    <Compile Include="General\Groups\DemandToCapacity.cs" />
+    <Compile Include="Loads\ASCE7\General\Groups\General.cs" />
+    <Compile Include="Loads\ASCE7\General\RiskCategory.cs" />
+    <Compile Include="Loads\ASCE7\Gravity\Dead\ComponentWeight.cs" />
+    <Compile Include="Loads\ASCE7\Gravity\Dead\Groups\Live.cs" />
+    <Compile Include="Loads\ASCE7\Gravity\Dead\Groups\Dead.cs" />
+    <Compile Include="Loads\ASCE7\Gravity\Live\UniformLiveLoad.cs" />
+    <Compile Include="Examples\SectionProperties\SectionIRolled.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Building fundamental period\BuildingFundamentalPeriodForSeismicLoads.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Building fundamental period\SeismicFundamentalPeriodGeneralMethod.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Building fundamental period\SeismicFundamentalPeriodUpperLimitCoefficient.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Groups\AccelerationParameters.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Groups\Building.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Groups\General.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Groups\BuildingFundamentalPeriod.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\Groups\Site.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicBaseShear.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicDesignCategory.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicDesignSiteAccelerationParameters.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicImportanceFactor.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicLateralSystemDesignCoefficientsAndFactors.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicResponseCoefficient.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicSiteCoefficients.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Seismic\SeismicStoryForces.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\DampingRatio.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Groups\PressureCoefficient.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Groups\General.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Groups\Pressure.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Groups\StructureParameters.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\PressureCoefficient\ExternalPressureCoefficientMWFRS.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\PressureCoefficient\WindInternalPressureCoefficient.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Pressure\WindNetPressureMWFRS.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Pressure\WindPressureMWFRS.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Pressure\WindVelocityPressure.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Pressure\WindVelocityPressureExposureCoefficientByExposure.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\Pressure\WindVelocityPressureExposureCoefficient.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\WindDirectionalityFactor.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\WindExposureConstants.cs" />
+    <Compile Include="Loads\ASCE7\Lateral\Wind\WindGustEffectFactor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\ReportCollector.cs" />
+    <Compile Include="Steel\AISC\Combination\Groups\Combination.cs" />
+    <Compile Include="Steel\AISC\Combination\InteractionRatio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Steel\AISC\Composite\BeamEffectiveSlabWidth.cs" />
+    <Compile Include="Steel\AISC\Composite\DesignSumOfAnchorStrengths.cs" />
+    <Compile Include="Steel\AISC\Composite\Groups\Anchor.cs" />
+    <Compile Include="Steel\AISC\Composite\Groups\Flexure.cs" />
+    <Compile Include="Steel\AISC\Composite\HeadedAnchorPositionAndGroupFactors.cs" />
+    <Compile Include="Steel\AISC\Composite\LowerBoundMomentOfInertia.cs" />
+    <Compile Include="Steel\AISC\Composite\PositiveMomentFlexuralStrength.cs" />
+    <Compile Include="Steel\AISC\Composite\Groups\CompositeSteelShape.cs" />
+    <Compile Include="Steel\AISC\Composite\Shapes\CompositeSectionGeneral.cs" />
+    <Compile Include="Steel\AISC\Composite\Shapes\CompositeSectionI.cs" />
+    <Compile Include="Steel\AISC\Composite\ShearStrengthOfHeadedAnchor.cs" />
+    <Compile Include="Steel\AISC\Compression\FlexuralBucklingStrength.cs" />
+    <Compile Include="Steel\AISC\Compression\Groups\Compression.cs" />
+    <Compile Include="Steel\AISC\Compression\TorsionalAndFlexuralTorsionalBucklingStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\BasePlateBearingStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\BasePlateRhsShape.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\BasePlateChsShape.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\BasePlateIShape.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\CompositeIBeamWebOpeningShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\Groups\CompositeIBeamWebOpeningShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\SteelIBeamWebOpeningShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BearingBoltNominalShearStress.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BearingBoltShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BearingStrengthAtBoltHole.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\BlockShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltClearDistance.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltGroupBearingStrength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltGroupCoefficient.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltGroupShearAndTensionAreas.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltGroupStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltHoleSize.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltNominalTensileStress.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\BoltTensileStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\ConcentricallyLoadedBasePlateMinimumThickness.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\ConnectedElementStrengthInFlexure.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\ConnectedElementStrengthInShear.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\ConnectedElementStrengthInTension.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\CopedSectionStrengthInFlexure.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\EccentricallyLoadedBasePlateMinimumThickness.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\Groups\Seated.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\Seated\TriangularSeatStiffenerForces.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\Seated\TriangularSeatStiffenerPlateThicknessToPrecludeBuckling.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\Seated\TriangularSeatStiffenerStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\Seated\WeldStrengthForVerticalLegsOfSeat.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\Groups\UniformForceMethod.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\GussetToBeamConnectionBetaIdeal.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\GussetToColumnConnectionAlphaIdeal.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\UFMForcesMomentAtBeamGussetInterface.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\UFMForcesMomentAtColumnGussetInterface.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\UFMForcesNoMomentsAtInterfaces.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\UFMForcesSpecialCase1.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\UFMForcesSpecialCase2.cs" />
+    <Compile Include="Steel\AISC\Connection\UFM\UFMForcesSpecialCase3.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\FilletWeldGroupConcentricLoadStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\FilletWeldGroupEccentricLoadStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\FlangeLocalBending.cs" />
+    <Compile Include="Steel\AISC\Connection\Groups\AffectedElements.cs" />
+    <Compile Include="Steel\AISC\Connection\Groups\BasePlateShapeObject.cs" />
+    <Compile Include="Steel\AISC\Connection\Groups\MinimumThickness.cs" />
+    <Compile Include="Steel\AISC\Connection\Groups\Bearing.cs" />
+    <Compile Include="Steel\AISC\Connection\Groups\Bolted.cs" />
+    <Compile Include="Steel\AISC\Connection\Groups\Welded.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\GussetPlateConfigurationCompactness.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\GussetPlateEffectiveCompressionLength.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\MaximumTensileForceWithEffectsOfPryingAction.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\MinimumPlateThicknessEffectsOfPryingAction.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\ModifiedBoltShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\FilletWeldGroupCoefficient.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\PlateStrengthInCompression .cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\Slip-CriticalBoltCombinedTensionAndShear.cs" />
+    <Compile Include="Steel\AISC\Connection\Bolts\Slip-CriticalBoltShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\Groups\ExtendedSingle.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\SinglePlate\ExtendedSinglePlateFlexuralBucklingStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\SinglePlate\ExtendedSinglePlateMaxPlateThickness.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\SinglePlate\ExtendedSinglePlateShearStrengthWithoutStabilizer.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\SinglePlate\StabilizedExtendedSinglePlateTorsionalMoment.cs" />
+    <Compile Include="Steel\AISC\Connection\SpecialCase\SinglePlate\StabilizedExtendedSinglePlateTorsionalStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\BasePlate\TensionLoadedBasePlateMinimumThickness.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\WebCompressionBuckling.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\WebLocalCrippling.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\WebLocalYielding.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\WebPanelZoneShear.cs" />
+    <Compile Include="Steel\AISC\Connection\AffectedElements\WebSideswayBuckling.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\WeldStrength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Steel\AISC\Connection\AffectedElements\WhitmoreSectionWidth.cs" />
+    <Compile Include="Steel\AISC\Flexure\BucklingModificationFactor.cs" />
+    <Compile Include="Steel\AISC\Flexure\BucklingModificationFactorByBeamCaseId.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralCompressionFlangeYielding.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralFlangeLocalBuckling.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralLateralTorsionalBuckling.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralLegOrStemLocalBuckling.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralTensionFlangeYielding.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralWebOrWallLocalBuckling.cs" />
+    <Compile Include="Steel\AISC\Flexure\FlexuralYielding.cs" />
+    <Compile Include="Steel\AISC\Flexure\Groups\Flexure.cs" />
+    <Compile Include="Steel\AISC\Flexure\LimitingLengthForFlexuralInelasticBuckling.cs" />
+    <Compile Include="Steel\AISC\Flexure\LimitingLengthForFlexuralYielding.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\BeamFrequencyCombined.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\BeamFrequencySingle.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\CombinedModeEffectiveWeight.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\FloorAccelerationLimit.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\FloorPredictedAcceleration.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\GirderEffectivePanelWidth.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\GirderModeEffectiveWeight.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\Groups\Acceleration.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\Groups\BeamFrequencyCombined.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\Groups\EffectiveWeight.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\JoistEffectivePanelWidth.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\JoistModeEffectiveWeight.cs" />
+    <Compile Include="Steel\AISC\Floor vibrations\ModalDamping.cs" />
+    <Compile Include="Steel\AISC\General\Groups\MaterialProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\AISC\StandardShapeProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Steel\AISC\General\MaterialMechanicalProperties.cs" />
+    <Compile Include="Analysis\Section\AISC\ShapeBasicGeometricProperties.cs" />
+    <Compile Include="Analysis\Section\AISC\TorsionalProperties.cs" />
+    <Compile Include="Analysis\Section\AISC\XAxisProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analysis\Section\AISC\YAxisProperties.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\Groups\CapPlate.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\Groups\TransversePlate.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\Groups\LongitudinalPlate.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\HssCapPlateLocalYieldingOrCripplingOfHss.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\HssToLongitudinalPlateMaximumPlateThicknessForShear.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\HssToLongitudinalPlateWallPlastification.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\HssToTransversePlateLocalCripplingAndYieldingStrengthOfHss.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\HssToTransversePlateLocalPunchingStrengthOfPlate.cs" />
+    <Compile Include="Steel\AISC\HSS\ConcentratedForce\HssToTransversePlateLocalYieldingStrengthOfPlate.cs" />
+    <Compile Include="Steel\AISC\HSS\Truss\BranchPunchingStrength.cs" />
+    <Compile Include="Steel\AISC\HSS\Truss\BranchYieldingFromUnevenLoadDistributionStrength.cs" />
+    <Compile Include="Steel\AISC\HSS\Truss\ChordSidewallLocalCripplingStrength.cs" />
+    <Compile Include="Steel\AISC\HSS\Truss\ChordSidewallLocalYieldingStrength.cs" />
+    <Compile Include="Steel\AISC\HSS\Truss\ChordSidewallShearStrength.cs" />
+    <Compile Include="Steel\AISC\HSS\Truss\ChordWallPlastificationStrength.cs" />
+    <Compile Include="Steel\AISC\HSS\Groups\Truss.cs" />
+    <Compile Include="Steel\AISC\Shear\Groups\ShearStrength.cs" />
+    <Compile Include="Steel\AISC\Shear\ShearStrengthCircular.cs" />
+    <Compile Include="Steel\AISC\Shear\ShearStrengthNonCircular.cs" />
+    <Compile Include="Steel\AISC\Tension\EffectiveNetArea.cs" />
+    <Compile Include="Steel\AISC\Tension\Groups\Tension.cs" />
+    <Compile Include="Steel\AISC\Tension\Shear lag factor.cs" />
+    <Compile Include="Steel\AISC\Tension\TensileStrength.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\BeamStabilityFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\ColumnStabilityFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\FlatUseFactor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Wood\NDS\Adjustment factors\Groups\AdjustmentFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\IncisingFactor.cs" />
+    <Compile Include="Wood\NDS\Design values\Groups\DesignValues.cs" />
+    <Compile Include="Wood\NDS\General\Groups\General.cs" />
+    <Compile Include="Wood\NDS\General\ReferenceValues.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\RepetitiveMemberFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\SizeFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\TemperatureFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\TimeEffectFactor.cs" />
+    <Compile Include="Wood\NDS\Adjustment factors\WetServiceFactor.cs" />
+    <Compile Include="Wood\NDS\Design values\AdjustedBendingDesignValue.cs" />
+    <Compile Include="Wood\NDS\Design values\AdjustedCompressionDesignValue.cs" />
+    <Compile Include="Wood\NDS\Design values\AdjustedMinimumModulusOfElasticity.cs" />
+    <Compile Include="Wood\NDS\Design values\AdjustedModulusOfElasticity.cs" />
+    <Compile Include="Wood\NDS\Design values\AdjustedShearDesignValue.cs" />
+    <Compile Include="Wood\NDS\Design values\AdjustedTensionDesignValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concrete\ACI318\Beam\Flexure\" />
+    <Folder Include="Concrete\ACI318\Beam\ShearAndTorsion\OneWayShear\" />
+    <Folder Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\" />
+    <Folder Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\" />
+    <Folder Include="Loads\ASCE7\Gravity\Ice\" />
+    <Folder Include="Loads\ASCE7\Gravity\Snow\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LICENSE" />
+    <None Include="NOTICE" />
+    <None Include="packages.config" />
+    <None Include="Kodestruct.licenseheader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Examples\SectionProperties\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\KodestructImages.resources" />
+    <EmbeddedResource Include="KodestructImages.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+    -->
+  <Target Name="AfterBuild">
+    <!-- Get System.Drawing.dll -->
+    <GetReferenceAssemblyPaths TargetFrameworkMoniker=".NETFramework, Version=v2.0">
+      <Output TaskParameter="FullFrameworkReferenceAssemblyPaths" PropertyName="FrameworkAssembliesPath" />
+    </GetReferenceAssemblyPaths>
+    <!-- Get assembly -->
+    <GetAssemblyIdentity AssemblyFiles="$(OutDir)$(TargetName).dll">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+    </GetAssemblyIdentity>
+    <!-- Generate customization dll -->
+    <GenerateResource UseSourcePath="true" Sources="$(ProjectDir)\KodestructImages.resx" OutputResources="$(ProjectDir)\Resources\KodestructImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
+    <AL TargetType="library" EmbedResources="$(ProjectDir)\Resources\KodestructImages.resources" OutputAssembly="$(OutDir)Kodestruct.customization.dll" Version="%(AssemblyInfo.Version)" />
+  </Target>
+</Project>

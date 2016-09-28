@@ -1,0 +1,5 @@
+ConventionalHighStrengthBolt,A325,A490
+TwistOffHighStrengthBolt,F1852
+ConventionalBolt,A307
+HeadedAnchorBolt,F1554Grade55,A354GradeBC,A354GradeBD,A449,F1554Grade105
+ThreadedAndNuttedAnchorBolt,F1554Grade55,A354GradeBC,A354GradeBD,A449,F1554Grade105

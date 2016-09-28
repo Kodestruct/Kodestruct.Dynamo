@@ -1,0 +1,46 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Steel.AISC.Connection.WeldLoadTypeIdView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="WeldLoadTypeIdIcons.xaml"/>
+                <ResourceDictionary Source="WeldTypeIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="WeldDirectionSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement  Icon="{StaticResource WeldTensionNormal}"    EnumString="WeldTensionNormal"     Description="Tension. Normal to weld axis" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource WeldCompressionNormal}" EnumString="WeldCompressionNormal" Description="Compression. Normal to weld axis"/>
+                <KodestructControls:EnumDataElement  Icon="{StaticResource WeldShear}"            EnumString="WeldShear"             Description="Shear" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="WeldCompressionSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource CompressionSpliceFinishedToBear}"      EnumString="WeldCompressionSpliceFinishedToBear" Description="Finished to bear (non-column compression slice)"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource CompressionSpliceNotFinishedToBear}"   EnumString="WeldCompressionSpliceNotFinishedToBear" Description="Not finished to bear (non-column compression slice)"/>
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+        <KodestructControls:EnumControl  HeaderText="Load direction:" 
+                                    ItemsSource="{StaticResource WeldDirectionSource}" 
+					DataPath="WeldLoadTypeId"/>
+        <KodestructControls:EnumControl  HeaderText="Compression connection type:" 
+                                    ItemsSource="{StaticResource WeldCompressionSource}" 
+                                    Visibility="{Binding IsCompressionSplice,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="CompressionSpliceType"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

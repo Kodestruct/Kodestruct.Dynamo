@@ -1,0 +1,38 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="KodestructDynamoUI.Views.Loads.ASCE7.GroutedCMU"
+    mc:Ignorable="d"
+    d:DesignHeight="70" d:DesignWidth="400">
+    
+	<Grid x:Name="LayoutRoot" Height="70">
+
+		<StackPanel>
+			<StackPanel Margin="8,5" Orientation="Horizontal">
+				<TextBlock TextWrapping="Wrap" Text="Unit nominal size" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2.02"/>
+				<ComboBox Width="80" Height="20" SelectedIndex="{Binding ComponentOption1}" Margin="8,0">
+					<ComboBoxItem Content="6 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="8 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="10 in." Height="20" Width="70"/>
+					<ComboBoxItem Content="12 in." Height="20" Width="70"/>
+				</ComboBox>
+			</StackPanel>
+			<StackPanel Margin="8,5" Orientation="Horizontal">
+				<TextBlock TextWrapping="Wrap" Text="Grout spacing" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,2.02"/>
+				<ComboBox Width="80" Height="20" SelectedIndex="{Binding ComponentOption2}" Margin="8,0">
+					<ComboBoxItem Content="48 in. o.c." Height="20" Width="70"/>
+					<ComboBoxItem Content="40 in. o.c." Height="20" Width="70"/>
+					<ComboBoxItem Content="32 in. o.c." Height="20" Width="70"/>
+					<ComboBoxItem Content="24 in. o.c." Height="20" Width="70"/>
+					<ComboBoxItem Content="16 in. o.c." Height="20" Width="70"/>
+				</ComboBox>
+			</StackPanel>
+		</StackPanel>
+
+	</Grid>
+</UserControl>

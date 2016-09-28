@@ -1,0 +1,387 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+    xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+	mc:Ignorable="d"
+	x:Class="Kodestruct.Analysis.Section.AISC.AiscShapeSelectionView"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="1500">
+    
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="AiscShapeSelectionIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <KodestructConverters:BooleanToVisibilityInvertedConverter x:Key="BooleanToVisibilityInvertedConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="SectionTypeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIRolled}" EnumString="IShape" Description="I-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelRolled}" EnumString="Channel" Description="Channel"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecAngleRolled}" EnumString="Angle" Description="Angle"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeRolled}" EnumString="Tee" Description="Tee"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecDoubleAngleRolled}" EnumString="DoubleAngle" Description="Double angle"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTubeRolled}" EnumString="RectangularHSS" Description="Tube (rectangular HSS)"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="CircularHSS" Description="Pipe or circular HSS"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="IShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIW}" EnumString="W" Description="W-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIS}" EnumString="S" Description="S-shape"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecIM}" EnumString="M" Description="M-shape" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="ChannelShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelC}" EnumString="C" Description="C-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecChannelMC}" EnumString="MC" Description="MC-shape"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="LDoubleShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource Sec2LEqual}" EnumString="Equal" Description="Equal-leg shapes" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource Sec2LSLBB}" EnumString="SLBB" Description="Short leg back-to-back (SLBB)"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource Sec2LLLBB}" EnumString="LLBB" Description="Long leg back-to-back (LLBB)" />
+            </KodestructControls:EnumDataCollection>
+
+
+            <KodestructControls:EnumDataCollection x:Key="LDoubleGapItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement  EnumString="NoGap" Description="No gap" />
+                <KodestructControls:EnumDataElement  EnumString="Angle3I8" Description="3/8in. gap"/>
+                <KodestructControls:EnumDataElement  EnumString="Angle3I4" Description="3/4in. gap" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="TShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeW}" EnumString="WT" Description="WT-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeS}" EnumString="ST" Description="ST-shape"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecTeeM}" EnumString="MT" Description="MT-shape" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="CHSShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="CHS" Description="Circular HSS (CHS)" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource SecPipe}" EnumString="Pipe" Description="Pipe"/>
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="WShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="W44" Description="W44" />
+                <KodestructControls:EnumDataElement EnumString="W40" Description="W40" />
+                <KodestructControls:EnumDataElement EnumString="W36" Description="W36" />
+                <KodestructControls:EnumDataElement EnumString="W33" Description="W33" />
+                <KodestructControls:EnumDataElement EnumString="W30" Description="W30" />
+                <KodestructControls:EnumDataElement EnumString="W27" Description="W27" />
+                <KodestructControls:EnumDataElement EnumString="W24" Description="W24" />
+                <KodestructControls:EnumDataElement EnumString="W21" Description="W21" />
+                <KodestructControls:EnumDataElement EnumString="W18" Description="W18" />
+                <KodestructControls:EnumDataElement EnumString="W16" Description="W16" />
+                <KodestructControls:EnumDataElement EnumString="W14" Description="W14" />
+                <KodestructControls:EnumDataElement EnumString="W12" Description="W12" />
+                <KodestructControls:EnumDataElement EnumString="W10" Description="W10" />
+                <KodestructControls:EnumDataElement EnumString="W8" Description="W8" />
+                <KodestructControls:EnumDataElement EnumString="W6" Description="W6" />
+                <KodestructControls:EnumDataElement EnumString="W5" Description="W5" />
+                <KodestructControls:EnumDataElement EnumString="W4" Description="W4" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="SShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="S24" Description="S24" />
+                <KodestructControls:EnumDataElement EnumString="S20" Description="S20" />
+                <KodestructControls:EnumDataElement EnumString="S18" Description="S18" />
+                <KodestructControls:EnumDataElement EnumString="S15" Description="S15" />
+                <KodestructControls:EnumDataElement EnumString="S12" Description="S12" />
+                <KodestructControls:EnumDataElement EnumString="S10" Description="S10" />
+                <KodestructControls:EnumDataElement EnumString="S8" Description="S8" />
+                <KodestructControls:EnumDataElement EnumString="S6" Description="S6" />
+                <KodestructControls:EnumDataElement EnumString="S5" Description="S5" />
+                <KodestructControls:EnumDataElement EnumString="S4" Description="S4" />
+                <KodestructControls:EnumDataElement EnumString="S3" Description="S3" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="MShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="M12z5" Description="M12.5" />
+                <KodestructControls:EnumDataElement EnumString="M12" Description="M12" />
+                <KodestructControls:EnumDataElement EnumString="M10" Description="M10" />
+                <KodestructControls:EnumDataElement EnumString="M8" Description="M8" />
+                <KodestructControls:EnumDataElement EnumString="M6" Description="M6" />
+                <KodestructControls:EnumDataElement EnumString="M5" Description="M5" />
+                <KodestructControls:EnumDataElement EnumString="M4" Description="M4" />
+                <KodestructControls:EnumDataElement EnumString="M3" Description="M3" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="CShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="C15" Description="C15" />
+                <KodestructControls:EnumDataElement EnumString="C12" Description="C12" />
+                <KodestructControls:EnumDataElement EnumString="C10" Description="C10" />
+                <KodestructControls:EnumDataElement EnumString="C9" Description="C9" />
+                <KodestructControls:EnumDataElement EnumString="C8" Description="C8" />
+                <KodestructControls:EnumDataElement EnumString="C7" Description="C7" />
+                <KodestructControls:EnumDataElement EnumString="C6" Description="C6" />
+                <KodestructControls:EnumDataElement EnumString="C5" Description="C5" />
+                <KodestructControls:EnumDataElement EnumString="C4" Description="C4" />
+                <KodestructControls:EnumDataElement EnumString="C3" Description="C3" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="MCShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="MC18" Description="MC18" />
+                <KodestructControls:EnumDataElement EnumString="MC13" Description="MC13" />
+                <KodestructControls:EnumDataElement EnumString="MC12" Description="MC12" />
+                <KodestructControls:EnumDataElement EnumString="MC10" Description="MC10" />
+                <KodestructControls:EnumDataElement EnumString="MC9" Description="MC9" />
+                <KodestructControls:EnumDataElement EnumString="MC8" Description="MC8" />
+                <KodestructControls:EnumDataElement EnumString="MC7" Description="MC7" />
+                <KodestructControls:EnumDataElement EnumString="MC6" Description="MC6" />
+                <KodestructControls:EnumDataElement EnumString="MC4" Description="MC4" />
+                <KodestructControls:EnumDataElement EnumString="MC3" Description="MC3" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="WTShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="WT22" Description="WT22" />
+                <KodestructControls:EnumDataElement EnumString="WT20" Description="WT20" />
+                <KodestructControls:EnumDataElement EnumString="WT18" Description="WT18" />
+                <KodestructControls:EnumDataElement EnumString="WT16z5" Description="WT16.5" />
+                <KodestructControls:EnumDataElement EnumString="WT15" Description="WT15" />
+                <KodestructControls:EnumDataElement EnumString="WT13z5" Description="WT13.5" />
+                <KodestructControls:EnumDataElement EnumString="WT12" Description="WT12" />
+                <KodestructControls:EnumDataElement EnumString="WT10z5" Description="WT10.5" />
+                <KodestructControls:EnumDataElement EnumString="WT9" Description="WT9" />
+                <KodestructControls:EnumDataElement EnumString="WT8" Description="WT8" />
+                <KodestructControls:EnumDataElement EnumString="WT7" Description="WT7" />
+                <KodestructControls:EnumDataElement EnumString="WT6" Description="WT6" />
+                <KodestructControls:EnumDataElement EnumString="WT5" Description="WT5" />
+                <KodestructControls:EnumDataElement EnumString="WT4" Description="WT4" />
+                <KodestructControls:EnumDataElement EnumString="WT3" Description="WT3" />
+                <KodestructControls:EnumDataElement EnumString="WT2z5" Description="WT2.5" />
+                <KodestructControls:EnumDataElement EnumString="WT2" Description="WT2" />
+
+            </KodestructControls:EnumDataCollection>
+            <KodestructControls:EnumDataCollection x:Key="MTShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="MT6z25" Description="MT6.25" />
+                <KodestructControls:EnumDataElement EnumString="MT6" Description="MT6" />
+                <KodestructControls:EnumDataElement EnumString="MT5" Description="MT5" />
+                <KodestructControls:EnumDataElement EnumString="MT4" Description="MT4" />
+                <KodestructControls:EnumDataElement EnumString="MT3" Description="MT3" />
+                <KodestructControls:EnumDataElement EnumString="MT2z5" Description="MT2.5" />
+                <KodestructControls:EnumDataElement EnumString="MT2" Description="MT2" />
+
+            </KodestructControls:EnumDataCollection>
+            <KodestructControls:EnumDataCollection x:Key="STShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="ST12" Description="ST12" />
+                <KodestructControls:EnumDataElement EnumString="ST10" Description="ST10" />
+                <KodestructControls:EnumDataElement EnumString="ST9" Description="ST9" />
+                <KodestructControls:EnumDataElement EnumString="ST7z5" Description="ST7.5" />
+                <KodestructControls:EnumDataElement EnumString="ST6" Description="ST6" />
+                <KodestructControls:EnumDataElement EnumString="ST5" Description="ST5" />
+                <KodestructControls:EnumDataElement EnumString="ST4" Description="ST4" />
+                <KodestructControls:EnumDataElement EnumString="ST3" Description="ST3" />
+                <KodestructControls:EnumDataElement EnumString="ST2z5" Description="ST2.5" />
+                <KodestructControls:EnumDataElement EnumString="ST2" Description="ST2" />
+                <KodestructControls:EnumDataElement EnumString="ST1z5" Description="ST1.5" />
+
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="LShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="L8"      Description="L8" />
+                <KodestructControls:EnumDataElement EnumString="L7"      Description="L7" />
+                <KodestructControls:EnumDataElement EnumString="L6"      Description="L6" />
+                <KodestructControls:EnumDataElement EnumString="L5"      Description="L5" />
+                <KodestructControls:EnumDataElement EnumString="L4"      Description="L4" />
+                <KodestructControls:EnumDataElement EnumString="L3_1I2"  Description="L3-1/2" />
+                <KodestructControls:EnumDataElement EnumString="L3"      Description="L3" />
+                <KodestructControls:EnumDataElement EnumString="L2_1I2"  Description="L2-1/2" />
+                <KodestructControls:EnumDataElement EnumString="L2"      Description="L2" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="LDoubleEqualShapeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="Angle2L8"     Description="2L8" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L6"     Description="2L6" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L5"     Description="2L5" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L4"     Description="2L4" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L3_1I2" Description="2L3-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L3"     Description="2L3" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L2_1I2" Description="2L2-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L2"     Description="2L2" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="LDoubleEqualLLBBItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="Angle2L8" Description="2L8" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L7" Description="2L7" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L6" Description="2L6" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L5" Description="2L5" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L4" Description="2L4" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L3_1I2" Description="2L3-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L3" Description="2L3" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L2_1I2" Description="2L2-1/2" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="LDoubleEqualSLBBItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="Angle2L8" Description="2L8" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L7" Description="2L7" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L6" Description="2L6" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L5" Description="2L5" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L4" Description="2L4" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L3_1I2" Description="2L3-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L3" Description="2L3" />
+                <KodestructControls:EnumDataElement EnumString="Angle2L2_1I2" Description="2L2-1/2" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="CircularHSSItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="HSS20" Description="HSS20" />
+                <KodestructControls:EnumDataElement EnumString="HSS18" Description="HSS18" />
+                <KodestructControls:EnumDataElement EnumString="HSS16" Description="HSS16" />
+                <KodestructControls:EnumDataElement EnumString="HSS14" Description="HSS14" />
+                <KodestructControls:EnumDataElement EnumString="HSS12z75" Description="HSS12.75" />
+                <KodestructControls:EnumDataElement EnumString="HSS10z75" Description="HSS10.75" />
+                <KodestructControls:EnumDataElement EnumString="HSS10" Description="HSS10" />
+                <KodestructControls:EnumDataElement EnumString="HSS9z625" Description="HSS9.625" />
+                <KodestructControls:EnumDataElement EnumString="HSS8z625" Description="HSS8.625" />
+                <KodestructControls:EnumDataElement EnumString="HSS7z625" Description="HSS7.625" />
+                <KodestructControls:EnumDataElement EnumString="HSS7z5" Description="HSS7.5" />
+                <KodestructControls:EnumDataElement EnumString="HSS7" Description="HSS7" />
+                <KodestructControls:EnumDataElement EnumString="HSS6z875" Description="HSS6.875" />
+                <KodestructControls:EnumDataElement EnumString="HSS6z625" Description="HSS6.625" />
+                <KodestructControls:EnumDataElement EnumString="HSS6" Description="HSS6" />
+                <KodestructControls:EnumDataElement EnumString="HSS5z563" Description="HSS5.563" />
+                <KodestructControls:EnumDataElement EnumString="HSS5z5" Description="HSS5.5" />
+                <KodestructControls:EnumDataElement EnumString="HSS5" Description="HSS5" />
+                <KodestructControls:EnumDataElement EnumString="HSS4z5" Description="HSS4.5" />
+                <KodestructControls:EnumDataElement EnumString="HSS4" Description="HSS4" />
+                <KodestructControls:EnumDataElement EnumString="HSS3z5" Description="HSS3.5" />
+                <KodestructControls:EnumDataElement EnumString="HSS3" Description="HSS3" />
+                <KodestructControls:EnumDataElement EnumString="HSS2z875" Description="HSS2.875" />
+                <KodestructControls:EnumDataElement EnumString="HSS2z5" Description="HSS2.5" />
+                <KodestructControls:EnumDataElement EnumString="HSS2z375" Description="HSS2.375" />
+                <KodestructControls:EnumDataElement EnumString="HSS1z9" Description="HSS1.9" />
+                <KodestructControls:EnumDataElement EnumString="HSS1z66" Description="HSS1.66" />
+
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="RHSItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="HSS20" Description="HSS20" />
+                <KodestructControls:EnumDataElement EnumString="HSS18" Description="HSS18" />
+                <KodestructControls:EnumDataElement EnumString="HSS16" Description="HSS16" />
+                <KodestructControls:EnumDataElement EnumString="HSS14" Description="HSS14" />
+                <KodestructControls:EnumDataElement EnumString="HSS12" Description="HSS12" />
+                <KodestructControls:EnumDataElement EnumString="HSS10" Description="HSS10" />
+                <KodestructControls:EnumDataElement EnumString="HSS9" Description="HSS9" />
+                <KodestructControls:EnumDataElement EnumString="HSS8" Description="HSS8" />
+                <KodestructControls:EnumDataElement EnumString="HSS7" Description="HSS7" />
+                <KodestructControls:EnumDataElement EnumString="HSS6" Description="HSS6" />
+                <KodestructControls:EnumDataElement EnumString="HSS5_1I2" Description="HSS5-1/2" />
+                <KodestructControls:EnumDataElement EnumString="HSS5" Description="HSS5" />
+                <KodestructControls:EnumDataElement EnumString="HSS4_1I2" Description="HSS4-1/2" />
+                <KodestructControls:EnumDataElement EnumString="HSS4" Description="HSS4" />
+                <KodestructControls:EnumDataElement EnumString="HSS3_1I2" Description="HSS3-1/2" />
+                <KodestructControls:EnumDataElement EnumString="HSS3" Description="HSS3" />
+                <KodestructControls:EnumDataElement EnumString="HSS2_1I2" Description="HSS2-1/2" />
+                <KodestructControls:EnumDataElement EnumString="HSS2_1I4" Description="HSS2-1/4" />
+                <KodestructControls:EnumDataElement EnumString="HSS2" Description="HSS2" />
+            </KodestructControls:EnumDataCollection>
+
+            <KodestructControls:EnumDataCollection x:Key="PipeItemsSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement EnumString="Pipe12" Description="Pipe12" />
+                <KodestructControls:EnumDataElement EnumString="Pipe10" Description="Pipe10" />
+                <KodestructControls:EnumDataElement EnumString="Pipe8" Description="Pipe8" />
+                <KodestructControls:EnumDataElement EnumString="Pipe6" Description="Pipe6" />
+                <KodestructControls:EnumDataElement EnumString="Pipe5" Description="Pipe5" />
+                <KodestructControls:EnumDataElement EnumString="Pipe4" Description="Pipe4" />
+                <KodestructControls:EnumDataElement EnumString="Pipe3_1I2" Description="Pipe3-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Pipe3" Description="Pipe3" />
+                <KodestructControls:EnumDataElement EnumString="Pipe2_1I2" Description="Pipe2-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Pipe2" Description="Pipe2" />
+                <KodestructControls:EnumDataElement EnumString="Pipe1_1I2" Description="Pipe1-1/2" />
+                <KodestructControls:EnumDataElement EnumString="Pipe1_1I4" Description="Pipe1-1/4" />
+                <KodestructControls:EnumDataElement EnumString="Pipe1" Description="Pipe1" />
+                <KodestructControls:EnumDataElement EnumString="Pipe3I4" Description="Pipe3/4" />
+                <KodestructControls:EnumDataElement EnumString="Pipe1I2" Description="Pipe1/2" />
+            </KodestructControls:EnumDataCollection>
+
+
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel>
+
+            <KodestructControls:EnumControl  HeaderText="Section type:" ItemsSource="{StaticResource SectionTypeItemsSource}" 
+				DataPath="CatalogShapeType"  ParameterPath="CatalogShapeType"/>
+            <StackPanel x:Name="IShapeStack" Height="Auto" Visibility="{Binding IsShapeI,Converter={StaticResource BooleanToVisibilityConverter}}" >
+                <KodestructControls:EnumControl  HeaderText="I-shape sub-type:" ItemsSource="{StaticResource IShapeItemsSource}" 
+					DataPath="IShapeType"  ParameterPath="IShapeType"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource WShapeItemsSource}" Visibility="{Binding IsShapeW,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="WShapeGroup"  ParameterPath="WShapeGroup"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource SShapeItemsSource}" Visibility="{Binding IsShapeS,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="SShapeGroup"  ParameterPath="SShapeGroup"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource MShapeItemsSource}" Visibility="{Binding IsShapeM,Converter={StaticResource BooleanToVisibilityConverter}}"
+					DataPath="MShapeGroup"  ParameterPath="MShapeGroup"/>
+            </StackPanel>
+            <StackPanel x:Name="ChannelStack" Height="Auto" Visibility="{Binding IsShapeChannel,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Channel sub-type:" ItemsSource="{StaticResource ChannelShapeItemsSource}" 
+					DataPath="CShapeType"  ParameterPath="CShapeType" />
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource CShapeItemsSource}" 
+					DataPath="CShapeGroup"  ParameterPath="CShapeGroup" Visibility="{Binding IsShapeC,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource MCShapeItemsSource}" 
+					DataPath="MCShapeGroup"  ParameterPath="MCShapeGroup" Visibility="{Binding IsShapeMC,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+            <StackPanel x:Name="TeeStack" Height="Auto" Visibility="{Binding IsShapeTee,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Tee sub-type:" ItemsSource="{StaticResource TShapeItemsSource}" 
+					DataPath="TShapeType"  ParameterPath="TShapeType"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource WTShapeItemsSource}" 
+					DataPath="WTShapeGroup"  ParameterPath="WTShapeGroup" Visibility="{Binding IsShapeWT,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource STShapeItemsSource}" 
+					DataPath="STShapeGroup"  ParameterPath="STShapeGroup" Visibility="{Binding IsShapeST,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource MTShapeItemsSource}" 
+					DataPath="MTShapeGroup"  ParameterPath="MTShapeGroup" Visibility="{Binding IsShapeMT,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+
+            <StackPanel x:Name="LStack" Height="Auto" Visibility="{Binding IsShapeAngle,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource LShapeItemsSource}" 
+					DataPath="LShapeGroup"  ParameterPath="LShapeGroup"/>
+            </StackPanel>
+
+            <StackPanel x:Name="DoubleAngleStack" Height="Auto" Visibility="{Binding IsShapeDoubleAngle,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Double-angle sub-type:" ItemsSource="{StaticResource LDoubleShapeItemsSource}" 
+					DataPath="LDoubleShapeType"  ParameterPath="LDoubleShapeType" />
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource LDoubleEqualShapeItemsSource}" 
+					DataPath="LDoubleEqualGroup"  ParameterPath="LDoubleEqualGroup" Visibility="{Binding IsShapeAngleEqualLeg,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource LDoubleEqualLLBBItemsSource}" 
+					DataPath="LDoubleSLBBGroup"  ParameterPath="LDoubleSLBBGroup" Visibility="{Binding IsShapeAngleSLBB,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource LDoubleEqualSLBBItemsSource}" 
+					DataPath="LDoubleLLBBGroup"  ParameterPath="LDoubleLLBBGroup" Visibility="{Binding IsShapeAngleLLBB,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Gap between shapes:" ItemsSource="{StaticResource LDoubleGapItemsSource}" 
+					DataPath="LDoubleGapType"  ParameterPath="LDoubleGapType" />
+            </StackPanel>
+
+            <StackPanel x:Name="TubeStack" Height="Auto" Visibility="{Binding IsShapeTube,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource RHSItemsSource}" 
+					DataPath="RHSShapeGroup"  ParameterPath="RHSShapeGroup"/>
+            </StackPanel>
+
+            <StackPanel x:Name="PipeStack" Height="Auto" Visibility="{Binding IsShapeCHS,Converter={StaticResource BooleanToVisibilityConverter}}">
+                <KodestructControls:EnumControl  HeaderText="Pipe sub-type:" ItemsSource="{StaticResource CHSShapeItemsSource}" 
+					DataPath="CHSType"  ParameterPath="CHSType"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource CircularHSSItemsSource}" 
+					DataPath="CHSShapeGroup"  ParameterPath="CHSShapeGroup" Visibility="{Binding IsShapeCircularHSS,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <KodestructControls:EnumControl  HeaderText="Size group:" ItemsSource="{StaticResource PipeItemsSource}" 
+					DataPath="PipeGroup"  ParameterPath="PipeGroup" Visibility="{Binding IsShapePipe,Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+
+
+
+            <StackPanel Margin="0,20,0,0" VerticalAlignment="Top" Background="White" >
+                <TextBlock TextWrapping="Wrap" Text="Available shapes:" FontFamily="Segoe UI Light" FontSize="12" HorizontalAlignment="Center"/>
+                <Grid Height="200">
+                    <ListBox ItemsSource="{Binding AvailableShapes}" SelectedItem="{Binding SteelShapeId, Mode=TwoWay}" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                </Grid>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

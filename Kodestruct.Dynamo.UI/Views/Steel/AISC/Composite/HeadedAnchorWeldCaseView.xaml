@@ -1,0 +1,35 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Steel.AISC.Composite.Anchor.HeadedAnchorWeldCaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DeckIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="HeadedAnchorWeldCaseSource" d:IsDataSource="True">
+                <KodestructControls:EnumDataElement Icon="{StaticResource StudWeldedDirectly}"  EnumString="WeldedDirectly" Description="Welded directly to the steel shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource  StudWeldedThroughDeck}"  EnumString="WeldedThroughDeck" Description="Welded through steel deck"/>
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <KodestructControls:EnumControl  HeaderText="Headed anchor welding:" 
+                                    ItemsSource="{StaticResource HeadedAnchorWeldCaseSource}" 
+					DataPath="HeadedAnchorWeldCase"/>
+    </Grid>
+</UserControl>

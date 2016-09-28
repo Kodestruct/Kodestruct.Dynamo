@@ -1,0 +1,53 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="WeldTypeCJP" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="WeldTypeCJP" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_37" Width="15.5267" Height="13.6667" Canvas.Left="4.86787" Canvas.Top="15.2317" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 19.8945,28.3984L 5.36787,28.3984L 5.36787,15.7317L 14.0612,15.7317L 19.8945,28.3984 Z " />
+                            <Path x:Name="Path_38" Width="15.528" Height="13.6667" Canvas.Left="22.4675" Canvas.Top="15.2317" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 22.9675,28.3984L 37.4955,28.3984L 37.4955,15.7317L 28.6928,15.7317L 22.9675,28.3984 Z " />
+                            <Path x:Name="Path_39" Width="15.964" Height="14" Canvas.Left="13.3955" Canvas.Top="15.0651" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Fill="#FF333333" Data="F1 M 22.9675,28.3984L 19.8941,28.3984L 14.0621,15.7317L 28.6928,15.7317L 22.9675,28.3984 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WeldTypePJP" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="WeldTypePJP" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_40" Width="16.2573" Height="13.668" Canvas.Left="4.86773" Canvas.Top="15.2308" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 20.6251,23.4375L 20.6251,28.3988L 5.36773,28.3988L 5.36773,15.7308L 15.1784,15.7308L 20.6251,23.4375 Z " />
+                            <Path x:Name="Path_41" Width="16.2027" Height="13.668" Canvas.Left="21.7917" Canvas.Top="15.2308" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 22.2917,23.4375L 22.2917,28.3988L 37.4944,28.3988L 37.4944,15.7308L 27.5771,15.7308L 22.2917,23.4375 Z " />
+                            <Path x:Name="Path_42" Width="13.732" Height="9.04" Canvas.Left="14.5117" Canvas.Top="15.0641" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FF333333" Fill="#FF333333" Data="F1 M 22.2917,23.4375L 20.6251,23.4375L 15.1784,15.7308L 27.5771,15.7308L 22.2917,23.4375 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WeldTypeFillet" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="WeldTypeFillet" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle x:Name="Rectangle_43" Width="17.0627" Height="13.6667" Canvas.Left="4.868" Canvas.Top="5.888" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                            <Rectangle x:Name="Rectangle_44" Width="33.1267" Height="13.6667" Canvas.Left="4.868" Canvas.Top="18.5547" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                            <Path x:Name="Path_45" Width="10.944" Height="10.944" Canvas.Left="21.4311" Canvas.Top="8.11067" Stretch="Fill" Fill="#FF333333" Data="F1 M 32.3751,19.0547L 21.4311,19.0547L 21.4311,8.11067L 32.3751,19.0547 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

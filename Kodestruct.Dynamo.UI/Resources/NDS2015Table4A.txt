@@ -1,0 +1,273 @@
+ALASKA CEDAR,SelectStructural,2 in. & wider
+ALASKA CEDAR,No.1,2 in. & wider
+ALASKA CEDAR,No.2,2 in. & wider
+ALASKA CEDAR,No.3,2 in. & wider
+ALASKA CEDAR,Stud,2 in. & wider
+ALASKA CEDAR,Construction,2 in. - 4 in. wide
+ALASKA CEDAR,Standard,2 in. - 4 in. wide
+ALASKA CEDAR,Utility,2 in. - 4 in. wide
+ALASKA HEMLOCK,SelectStructural,2 in. & wider
+ALASKA HEMLOCK,No.1,2 in. & wider
+ALASKA HEMLOCK,No.2,2 in. & wider
+ALASKA HEMLOCK,No.3,2 in. & wider
+ALASKA HEMLOCK,Stud,2 in. & wider
+ALASKA HEMLOCK,Construction,2 in. - 4 in. wide
+ALASKA HEMLOCK,Standard,2 in. - 4 in. wide
+ALASKA HEMLOCK,Utility,2 in. - 4 in. wide
+ALASKA SPRUCE,SelectStructural,2 in. & wider
+ALASKA SPRUCE,No.1,2 in. & wider
+ALASKA SPRUCE,No.2,2 in. & wider
+ALASKA SPRUCE,No.3,2 in. & wider
+ALASKA SPRUCE,Stud,2 in. & wider
+ALASKA SPRUCE,Construction,2 in. - 4 in. wide
+ALASKA SPRUCE,Standard,2 in. - 4 in. wide
+ALASKA SPRUCE,Utility,2 in. - 4 in. wide
+ALASKA YELLOW CEDAR,SelectStructural,2 in. & wider
+ALASKA YELLOW CEDAR,No.1,2 in. & wider
+ALASKA YELLOW CEDAR,No.2,2 in. & wider
+ALASKA YELLOW CEDAR,No.3,2 in. & wider
+ALASKA YELLOW CEDAR,Stud,2 in. & wider
+ALASKA YELLOW CEDAR,Construction,2 in. - 4 in. wide
+ALASKA YELLOW CEDAR,Standard,2 in. - 4 in. wide
+ALASKA YELLOW CEDAR,Utility,2 in. - 4 in. wide
+ASPEN,SelectStructural,2 in. & wider
+ASPEN,No.1,2 in. & wider
+ASPEN,No.2,2 in. & wider
+ASPEN,No.3,2 in. & wider
+ASPEN,Stud,2 in. & wider
+ASPEN,Construction,2 in. - 4 in. wide
+ASPEN,Standard,2 in. - 4 in. wide
+ASPEN,Utility,2 in. - 4 in. wide
+BALDCYPRESS,SelectStructural,2 in. & wider
+BALDCYPRESS,No.1,2 in. & wider
+BALDCYPRESS,No.2,2 in. & wider
+BALDCYPRESS,No.3,2 in. & wider
+BALDCYPRESS,Stud,2 in. & wider
+BALDCYPRESS,Construction,2 in. - 4 in. wide
+BALDCYPRESS,Standard,2 in. - 4 in. wide
+BALDCYPRESS,Utility,2 in. - 4 in. wide
+BEECH-BIRCH-HICKORY,SelectStructural,2 in. & wider
+BEECH-BIRCH-HICKORY,No.1,2 in. & wider
+BEECH-BIRCH-HICKORY,No.2,2 in. & wider
+BEECH-BIRCH-HICKORY,No.3,2 in. & wider
+BEECH-BIRCH-HICKORY,Stud,2 in. & wider
+BEECH-BIRCH-HICKORY,Construction,2 in. - 4 in. wide
+BEECH-BIRCH-HICKORY,Standard,2 in. - 4 in. wide
+BEECH-BIRCH-HICKORY,Utility,2 in. - 4 in. wide
+COAST SITKA SPRUCE,SelectStructural,2 in. & wider
+COAST SITKA SPRUCE,No.1,2 in. & wider
+COAST SITKA SPRUCE,No.2,2 in. & wider
+COAST SITKA SPRUCE,No.3,2 in. & wider
+COAST SITKA SPRUCE,Stud,2 in. & wider
+COAST SITKA SPRUCE,Construction,2 in. - 4 in. wide
+COAST SITKA SPRUCE,Standard,2 in. - 4 in. wide
+COAST SITKA SPRUCE,Utility,2 in. - 4 in. wide
+COTTONWOOD,SelectStructural,2 in. & wider
+COTTONWOOD,No.1,2 in. & wider
+COTTONWOOD,No.2,2 in. & wider
+COTTONWOOD,No.3,2 in. & wider
+COTTONWOOD,Stud,2 in. & wider
+COTTONWOOD,Construction,2 in. - 4 in. wide
+COTTONWOOD,Standard,2 in. - 4 in. wide
+COTTONWOOD,Utility,2 in. - 4 in. wide
+DOUGLAS FIR-LARCH,SelectStructural,2 in. & wider
+DOUGLAS FIR-LARCH,No.1&Btr,2 in. & wider
+DOUGLAS FIR-LARCH,No.1,2 in. & wider
+DOUGLAS FIR-LARCH,No.2,2 in. & wider
+DOUGLAS FIR-LARCH,No.3,2 in. & wider
+DOUGLAS FIR-LARCH,Stud,2 in. & wider
+DOUGLAS FIR-LARCH,Construction,2 in. - 4 in. wide
+DOUGLAS FIR-LARCH,Standard,2 in. - 4 in. wide
+DOUGLAS FIR-LARCH,Utility,2 in. - 4 in. wide
+DOUGLAS FIR-LARCH (NORTH),SelectStructural,2 in. & wider
+DOUGLAS FIR-LARCH (NORTH),No.1,2 in. & wider
+DOUGLAS FIR-LARCH (NORTH),No.2,2 in. & wider
+DOUGLAS FIR-LARCH (NORTH),No.3,2 in. & wider
+DOUGLAS FIR-LARCH (NORTH),Stud,2 in. & wider
+DOUGLAS FIR-LARCH (NORTH),Construction,2 in. - 4 in. wide
+DOUGLAS FIR-LARCH (NORTH),Standard,2 in. - 4 in. wide
+DOUGLAS FIR-LARCH (NORTH),Utility,2 in. - 4 in. wide
+DOUGLAS FIR-SOUTH,SelectStructural,2 in. & wider
+DOUGLAS FIR-SOUTH,No.1&Btr,2 in. & wider
+DOUGLAS FIR-SOUTH,No.1,2 in. & wider
+DOUGLAS FIR-SOUTH,No.2,2 in. & wider
+DOUGLAS FIR-SOUTH,No.3,2 in. & wider
+DOUGLAS FIR-SOUTH,Stud,2 in. & wider
+DOUGLAS FIR-SOUTH,Construction,2 in. - 4 in. wide
+DOUGLAS FIR-SOUTH,Standard,2 in. - 4 in. wide
+DOUGLAS FIR-SOUTH,Utility,2 in. - 4 in. wide
+EASTERN HEMLOCK-BALSAM FIR,SelectStructural,2 in. & wider
+EASTERN HEMLOCK-BALSAM FIR,No.1,2 in. & wider
+EASTERN HEMLOCK-BALSAM FIR,No.2,2 in. & wider
+EASTERN HEMLOCK-BALSAM FIR,No.3,2 in. & wider
+EASTERN HEMLOCK-BALSAM FIR,Stud,2 in. & wider
+EASTERN HEMLOCK-BALSAM FIR,Construction,2 in. - 4 in. wide
+EASTERN HEMLOCK-BALSAM FIR,Standard,2 in. - 4 in. wide
+EASTERN HEMLOCK-BALSAM FIR,Utility,2 in. - 4 in. wide
+EASTERN HEMLOCK-TAMARACK,SelectStructural,2 in. & wider
+EASTERN HEMLOCK-TAMARACK,No.1,2 in. & wider
+EASTERN HEMLOCK-TAMARACK,No.2,2 in. & wider
+EASTERN HEMLOCK-TAMARACK,No.3,2 in. & wider
+EASTERN HEMLOCK-TAMARACK,Stud,2 in. & wider
+EASTERN HEMLOCK-TAMARACK,Construction,2 in. - 4 in. wide
+EASTERN HEMLOCK-TAMARACK,Standard,2 in. - 4 in. wide
+EASTERN HEMLOCK-TAMARACK,Utility,2 in. - 4 in. wide
+EASTERN SOFTWOODS,SelectStructural,2 in. & wider
+EASTERN SOFTWOODS,No.1,2 in. & wider
+EASTERN SOFTWOODS,No.2,2 in. & wider
+EASTERN SOFTWOODS,No.3,2 in. & wider
+EASTERN SOFTWOODS,Stud,2 in. & wider
+EASTERN SOFTWOODS,Construction,2 in. - 4 in. wide
+EASTERN SOFTWOODS,Standard,2 in. - 4 in. wide
+EASTERN SOFTWOODS,Utility,2 in. - 4 in. wide
+EASTERN WHITE PINE,SelectStructural,2 in. & wider
+EASTERN WHITE PINE,No.1,2 in. & wider
+EASTERN WHITE PINE,No.2,2 in. & wider
+EASTERN WHITE PINE,No.3,2 in. & wider
+EASTERN WHITE PINE,Stud,2 in. & wider
+EASTERN WHITE PINE,Construction,2 in. - 4 in. wide
+EASTERN WHITE PINE,Standard,2 in. - 4 in. wide
+EASTERN WHITE PINE,Utility,2 in. - 4 in. wide
+HEM-FIR,SelectStructural,2 in. & wider
+HEM-FIR,No.1&Btr,2 in. & wider
+HEM-FIR,No.1,2 in. & wider
+HEM-FIR,No.2,2 in. & wider
+HEM-FIR,No.3,2 in. & wider
+HEM-FIR,Stud,2 in. & wider
+HEM-FIR,Construction,2 in. - 4 in. wide
+HEM-FIR,Standard,2 in. - 4 in. wide
+HEM-FIR,Utility,2 in. - 4 in. wide
+HEM-FIR (NORTH),SelectStructural,2 in. & wider
+HEM-FIR (NORTH),No.1&Btr,2 in. & wider
+HEM-FIR (NORTH),No.1,2 in. & wider
+HEM-FIR (NORTH),No.2,2 in. & wider
+HEM-FIR (NORTH),No.3,2 in. & wider
+HEM-FIR (NORTH),Stud,2 in. & wider
+HEM-FIR (NORTH),Construction,2 in. - 4 in. wide
+HEM-FIR (NORTH),Standard,2 in. - 4 in. wide
+HEM-FIR (NORTH),Utility,2 in. - 4 in. wide
+MIXED MAPLE,SelectStructural,2 in. & wider
+MIXED MAPLE,No.1,2 in. & wider
+MIXED MAPLE,No.2,2 in. & wider
+MIXED MAPLE,No.3,2 in. & wider
+MIXED MAPLE,Stud,2 in. & wider
+MIXED MAPLE,Construction,2 in. - 4 in. wide
+MIXED MAPLE,Standard,2 in. - 4 in. wide
+MIXED MAPLE,Utility,2 in. - 4 in. wide
+MIXED OAK,SelectStructural,2 in. & wider
+MIXED OAK,No.1,2 in. & wider
+MIXED OAK,No.2,2 in. & wider
+MIXED OAK,No.3,2 in. & wider
+MIXED OAK,Stud,2 in. & wider
+MIXED OAK,Construction,2 in. - 4 in. wide
+MIXED OAK,Standard,2 in. - 4 in. wide
+MIXED OAK,Utility,2 in. - 4 in. wide
+NORTHERN RED OAK,SelectStructural,2 in. & wider
+NORTHERN RED OAK,No.1,2 in. & wider
+NORTHERN RED OAK,No.2,2 in. & wider
+NORTHERN RED OAK,No.3,2 in. & wider
+NORTHERN RED OAK,Stud,2 in. & wider
+NORTHERN RED OAK,Construction,2 in. - 4 in. wide
+NORTHERN RED OAK,Standard,2 in. - 4 in. wide
+NORTHERN RED OAK,Utility,2 in. - 4 in. wide
+NORTHERN SPECIES,SelectStructural,2 in. & wider
+NORTHERN SPECIES,No.1,2 in. & wider
+NORTHERN SPECIES,No.2,2 in. & wider
+NORTHERN SPECIES,No.3,2 in. & wider
+NORTHERN SPECIES,Stud,2 in. & wider
+NORTHERN SPECIES,Construction,2 in. - 4 in. wide
+NORTHERN SPECIES,Standard,2 in. - 4 in. wide
+NORTHERN SPECIES,Utility,2 in. - 4 in. wide
+NORTHERN WHITE CEDAR,SelectStructural,2 in. & wider
+NORTHERN WHITE CEDAR,No.1,2 in. & wider
+NORTHERN WHITE CEDAR,No.2,2 in. & wider
+NORTHERN WHITE CEDAR,No.3,2 in. & wider
+NORTHERN WHITE CEDAR,Stud,2 in. & wider
+NORTHERN WHITE CEDAR,Construction,2 in. - 4 in. wide
+NORTHERN WHITE CEDAR,Standard,2 in. - 4 in. wide
+NORTHERN WHITE CEDAR,Utility,2 in. - 4 in. wide
+RED MAPLE,SelectStructural,2 in. & wider
+RED MAPLE,No.1,2 in. & wider
+RED MAPLE,No.2,2 in. & wider
+RED MAPLE,No.3,2 in. & wider
+RED MAPLE,Stud,2 in. & wider
+RED MAPLE,Construction,2 in. - 4 in. wide
+RED MAPLE,Standard,2 in. - 4 in. wide
+RED MAPLE,Utility,2 in. - 4 in. wide
+RED OAK,SelectStructural,2 in. & wider
+RED OAK,No.1,2 in. & wider
+RED OAK,No.2,2 in. & wider
+RED OAK,No.3,2 in. & wider
+RED OAK,Stud,2 in. & wider
+RED OAK,Construction,2 in. - 4 in. wide
+RED OAK,Standard,2 in. - 4 in. wide
+RED OAK,Utility,2 in. - 4 in. wide
+REDWOOD,ClearStructural,2 in. & wider
+REDWOOD,SelectStructural,2 in. & wider
+REDWOOD,SelectStructural,opengrain,2 in. & wider
+REDWOOD,No.1,2 in. & wider
+REDWOOD,No.1,opengrain,2 in. & wider
+REDWOOD,No.2,2 in. & wider
+REDWOOD,No.2,opengrain,2 in. & wider
+REDWOOD,No.3,2 in. & wider
+REDWOOD,No.3,opengrain,2 in. & wider
+REDWOOD,Stud,2 in. & wider
+REDWOOD,Construction,2 in. - 4 in. wide
+REDWOOD,Standard,2 in. - 4 in. wide
+REDWOOD,Utility,2 in. - 4 in. wide
+SPRUCE-PINE-FIR,SelectStructural,2 in. & wider
+SPRUCE-PINE-FIR,No.1,2 in. & wider
+SPRUCE-PINE-FIR,No.2,2 in. & wider
+SPRUCE-PINE-FIR,No.3,2 in. & wider
+SPRUCE-PINE-FIR,Stud,2 in. & wider
+SPRUCE-PINE-FIR,Construction,2 in. - 4 in. wide
+SPRUCE-PINE-FIR,Standard,2 in. - 4 in. wide
+SPRUCE-PINE-FIR,Utility,2 in. - 4 in. wide
+SPRUCE-PINE-FIR (SOUTH),SelectStructural,2 in. & wider
+SPRUCE-PINE-FIR (SOUTH),No.1,2 in. & wider
+SPRUCE-PINE-FIR (SOUTH),No.2,2 in. & wider
+SPRUCE-PINE-FIR (SOUTH),No.3,2 in. & wider
+SPRUCE-PINE-FIR (SOUTH),Stud,2 in. & wider
+SPRUCE-PINE-FIR (SOUTH),Construction,2 in. - 4 in. wide
+SPRUCE-PINE-FIR (SOUTH),Standard,2 in. - 4 in. wide
+SPRUCE-PINE-FIR (SOUTH),Utility,2 in. - 4 in. wide
+WESTERN CEDARS,SelectStructural,2 in. & wider
+WESTERN CEDARS,No.1,2 in. & wider
+WESTERN CEDARS,No.2,2 in. & wider
+WESTERN CEDARS,No.3,2 in. & wider
+WESTERN CEDARS,Stud,2 in. & wider
+WESTERN CEDARS,Construction,2 in. - 4 in. wide
+WESTERN CEDARS,Standard,2 in. - 4 in. wide
+WESTERN CEDARS,Utility,2 in. - 4 in. wide
+WESTERN WOODS,SelectStructural,2 in. & wider
+WESTERN WOODS,No.1,2 in. & wider
+WESTERN WOODS,No.2,2 in. & wider
+WESTERN WOODS,No.3,2 in. & wider
+WESTERN WOODS,Stud,2 in. & wider
+WESTERN WOODS,Construction,2 in. - 4 in. wide
+WESTERN WOODS,Standard,2 in. - 4 in. wide
+WESTERN WOODS,Utility,2 in. - 4 in. wide
+WHITE OAK,SelectStructural,2 in. & wider
+WHITE OAK,No.1,2 in. & wider
+WHITE OAK,No.2,2 in. & wider
+WHITE OAK,No.3,2 in. & wider
+WHITE OAK,Stud,2 in. & wider
+WHITE OAK,Construction,2 in. - 4 in. wide
+WHITE OAK,Standard,2 in. - 4 in. wide
+WHITE OAK,Utility,2 in. - 4 in. wide
+YELLOW CEDAR,SelectStructural,2 in. & wider
+YELLOW CEDAR,No.1,2 in. & wider
+YELLOW CEDAR,No.2,2 in. & wider
+YELLOW CEDAR,No.3,2 in. & wider
+YELLOW CEDAR,Stud,2 in. & wider
+YELLOW CEDAR,Construction,2 in. - 4 in. wide
+YELLOW CEDAR,Standard,2 in. - 4 in. wide
+YELLOW CEDAR,Utility,2 in. - 4 in. wide
+YELLOW POPLAR,SelectStructural,2 in. & wider
+YELLOW POPLAR,No.1,2 in. & wider
+YELLOW POPLAR,No.2,2 in. & wider
+YELLOW POPLAR,No.3,2 in. & wider
+YELLOW POPLAR,Stud,2 in. & wider
+YELLOW POPLAR,Construction,2 in. - 4 in. wide
+YELLOW POPLAR,Standard,2 in. - 4 in. wide
+YELLOW POPLAR,Utility,2 in. - 4 in. wide

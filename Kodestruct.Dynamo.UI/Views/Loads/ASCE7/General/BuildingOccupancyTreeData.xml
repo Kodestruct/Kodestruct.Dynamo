@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="REGULAR BUILDING" Description="Regular building" Id="X" ResourcePath="Office" Tag="X" TemplateName="Category" TreePath="REGULAR BUILDING">
+    <XTreeItem Header="Residential" Description="Residential building" Id="Residential building" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="REGULAR BUILDING\Residential" />
+    <XTreeItem Header="Commercial" Description="Commercial building" Id="Commercial building" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="REGULAR BUILDING\Commercial" />
+    <XTreeItem Header="Industrial" Description="Industrial building" Id="Industrial building" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="REGULAR BUILDING\Industrial" />
+  </XTreeItem>
+  <XTreeItem Header="BUILDING WITH LARGE NUMBER OF PEOPLE" Description="Building with large number of people" Id="X" ResourcePath="LargeNumberOfPeople" Tag="X" TemplateName="Category" TreePath="BUILDING WITH LARGE NUMBER OF PEOPLE">
+    <XTreeItem Header="Theater or Hall" Description="Theater or hall" Id="Theater or hall" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH LARGE NUMBER OF PEOPLE\Theater or Hall" />
+    <XTreeItem Header="Assembly use" Description="Assembly use" Id="Assembly use" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH LARGE NUMBER OF PEOPLE\Assembly use" />
+  </XTreeItem>
+  <XTreeItem Header="BUILDING WITH PERSONS OF LIMITED MOBILITY" Description="Building with persons of limited mobility" Id="X" ResourcePath="LimitedMobility" Tag="X" TemplateName="Category" TreePath="BUILDING WITH PERSONS OF LIMITED MOBILITY">
+    <XTreeItem Header="Elementary school" Description="Elementary school" Id="Elementary school" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH PERSONS OF LIMITED MOBILITY\Elementary school" />
+    <XTreeItem Header="Prison" Description="Prison" Id="Prison" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH PERSONS OF LIMITED MOBILITY\Prison" />
+    <XTreeItem Header="Small healthcare facility" Description="Small healthcare facility" Id="Small healthcare facility" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH PERSONS OF LIMITED MOBILITY\Small healthcare facility" />
+  </XTreeItem>
+  <XTreeItem Header="BUILDING AFFECTING COMMUNITY" Description="Building affecting community" Id="X" ResourcePath="BuildingAffectingCommunity" Tag="X" TemplateName="Category" TreePath="BUILDING AFFECTING COMMUNITY">
+    <XTreeItem Header="Power generating station" Description="Power generating station" Id="Power generating station" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING AFFECTING COMMUNITY\Power generating station" />
+    <XTreeItem Header="Water treatment plant" Description="Water treatment plant" Id="Water treatment plant" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING AFFECTING COMMUNITY\Water treatment plant" />
+    <XTreeItem Header="Sewage treatment plant" Description="Sewage treatment plant" Id="Sewage treatment plant" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING AFFECTING COMMUNITY\Sewage treatment plant" />
+    <XTreeItem Header="Major telecommunication center" Description="Major telecommunication center" Id="Telecommunication center" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING AFFECTING COMMUNITY\Major telecommunication center" />
+  </XTreeItem>
+  <XTreeItem Header="BUILDING WITH TOXIC MATERIALS" Description="Building with toxic materials" Id="X" ResourcePath="Toxic" Tag="X" TemplateName="Category" TreePath="BUILDING WITH TOXIC MATERIALS">
+    <XTreeItem Header="Toxic materials" Description="Building containing toxic materials" Id="Building containing toxic materials" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH TOXIC MATERIALS\Toxic materials" />
+    <XTreeItem Header="Highly toxic materials" Description="Building containing highly toxic materials" Id="Building containing highly toxic materials" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="BUILDING WITH TOXIC MATERIALS\Highly toxic materials" />
+  </XTreeItem>
+  <XTreeItem Header="ESSENTIAL BUILDING" Description="Essential building" Id="X" ResourcePath="Essential" Tag="X" TemplateName="Category" TreePath="ESSENTIAL BUILDING">
+    <XTreeItem Header="ESSENTIAL FACILITY" Description="Essential facility" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="ESSENTIAL BUILDING\ESSENTIAL FACILITY">
+      <XTreeItem Header="Hospital" Description="Hospital" Id="Hospital" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="ESSENTIAL BUILDING\ESSENTIAL FACILITY\Hospital" />
+      <XTreeItem Header="Police station" Description="Police station" Id="Police station" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="ESSENTIAL BUILDING\ESSENTIAL FACILITY\Police station" />
+      <XTreeItem Header="Fire station" Description="Fire station" Id="Fire station" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="ESSENTIAL BUILDING\ESSENTIAL FACILITY\Fire station" />
+      <XTreeItem Header="Emergency communication center" Description="Emergency communication center" Id="Emergency communication center" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="ESSENTIAL BUILDING\ESSENTIAL FACILITY\Emergency communication center" />
+    </XTreeItem>
+    <XTreeItem Header="Building affecting availability of essential facility" Description="Building affecting availability of essential facility" Id="Building affecting availability of essential facility" ResourcePath="X" Tag="X" TemplateName="Item" TreePath="ESSENTIAL BUILDING\Building affecting availability of essential facility" />
+  </XTreeItem>
+  <XTreeItem Header="LOW-RISK BUILDING" Description="Low-risk building" Id="X" ResourcePath="Farm" Tag="X" TemplateName="Category" TreePath="LOW-RISK BUILDING">
+    <XTreeItem Header="Building that is normally  unoccupied " Description="Building that is normally  unoccupied " Id="Building that is normally  unoccupied " ResourcePath="X" Tag="X" TemplateName="Item" TreePath="LOW-RISK BUILDING\Building that is normally  unoccupied " />
+  </XTreeItem>
+</Root>
+

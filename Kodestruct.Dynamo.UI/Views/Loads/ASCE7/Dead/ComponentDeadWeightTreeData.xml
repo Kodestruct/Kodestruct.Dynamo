@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="CEILING OR ROOF" Description="CEILING OR ROOF" Id="X" ResourcePath="CeilingOrRoof" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF">
+    <XTreeItem Header="CEILING" Description="CEILING" Id="X" ResourcePath="Ceiling" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\CEILING">
+      <XTreeItem Header="BOARD" Description="BOARD" Id="X" ResourcePath="Board" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\CEILING\BOARD">
+        <XTreeItem Header="Acoustical fiber board " Description="Acoustical fiber board " Id="X" ResourcePath="X" Tag="AcousticalFiberBoard" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\BOARD\Acoustical fiber board " />
+        <XTreeItem Header="Gypsum board" Description="Gypsum board" Id="1,1,0.625" ResourcePath="ThicknessControl" Tag="GypsumBoard" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\BOARD\Gypsum board" />
+        <XTreeItem Header="Cement board" Description="Cement board" Id="1,1,0.625" ResourcePath="ThicknessControl" Tag="CementBoard" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\BOARD\Cement board" />
+      </XTreeItem>
+      <XTreeItem Header="PLASTER" Description="PLASTER" Id="X" ResourcePath="Plaster" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\CEILING\PLASTER">
+        <XTreeItem Header="Plaster on tile or concrete " Description="Plaster on tile or concrete " Id="X" ResourcePath="X" Tag="Plaster" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\PLASTER\Plaster on tile or concrete " />
+        <XTreeItem Header="Plaster on wood lath " Description="Plaster on wood lath " Id="X" ResourcePath="X" Tag="PlasterOnWoodLath" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\PLASTER\Plaster on wood lath " />
+      </XTreeItem>
+      <XTreeItem Header="MECHANICAL DUCTS" Description="MECHANICAL DUCTS" Id="X" ResourcePath="MechanicalDucts" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\CEILING\MECHANICAL DUCTS">
+        <XTreeItem Header="Mechanical duct allowance " Description="Mechanical duct allowance " Id="X" ResourcePath="X" Tag="MechanicalDucts" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\MECHANICAL DUCTS\Mechanical duct allowance " />
+      </XTreeItem>
+      <XTreeItem Header="SUSPENDED" Description="SUSPENDED" Id="X" ResourcePath="Suspended" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\CEILING\SUSPENDED">
+        <XTreeItem Header="Suspended steel channel system " Description="Suspended steel channel system " Id="X" ResourcePath="X" Tag="SuspendedSteelChannelSystem" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\SUSPENDED\Suspended steel channel system " />
+        <XTreeItem Header="Suspended metal lath and cement plaster " Description="Suspended metal lath and cement plaster " Id="X" ResourcePath="X" Tag="SuspendedMetalLathAndCementPlaster" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\SUSPENDED\Suspended metal lath and cement plaster " />
+        <XTreeItem Header="Suspended metal lath and gypsum plaster " Description="Suspended metal lath and gypsum plaster " Id="X" ResourcePath="X" Tag="SuspendedMetalLathAndGypsumPlaster" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\SUSPENDED\Suspended metal lath and gypsum plaster " />
+        <XTreeItem Header="Wood furring suspension system " Description="Wood furring suspension system " Id="X" ResourcePath="X" Tag="WoodFurringSuspensionSystem" TemplateName="Item" TreePath="CEILING OR ROOF\CEILING\SUSPENDED\Wood furring suspension system " />
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="ROOF" Description="ROOF" Id="X" ResourcePath="Roof" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF">
+      <XTreeItem Header="SHINGLES" Description="SHINGLES" Id="X" ResourcePath="Shingles" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\SHINGLES">
+        <XTreeItem Header="Asbestos-cement shingles " Description="Asbestos-cement shingles " Id="X" ResourcePath="X" Tag="AsbestosCementShingles" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\SHINGLES\Asbestos-cement shingles " />
+        <XTreeItem Header="Asphalt shingles " Description="Asphalt shingles " Id="X" ResourcePath="X" Tag="AsphaltShingles" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\SHINGLES\Asphalt shingles " />
+        <XTreeItem Header="Slate- 0.1875-in. roofing" Description="Slate- 0.1875-in. roofing" Id="X" ResourcePath="X" Tag="SlateThin" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\SHINGLES\Slate- 0.1875-in. roofing" />
+        <XTreeItem Header="Slate- 0.25-in. roofing" Description="Slate- 0.25-in. roofing" Id="X" ResourcePath="X" Tag="SlateThick" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\SHINGLES\Slate- 0.25-in. roofing" />
+        <XTreeItem Header="Wood shingles " Description="Wood shingles " Id="X" ResourcePath="X" Tag="WoodShingles" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\SHINGLES\Wood shingles " />
+      </XTreeItem>
+      <XTreeItem Header="TILES" Description="TILES" Id="X" ResourcePath="Tile" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\TILES">
+        <XTreeItem Header="CEMENT" Description="CEMENT" Id="X" ResourcePath="CementTile" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\TILES\CEMENT">
+          <XTreeItem Header="Cement tile " Description="Cement tile " Id="X" ResourcePath="X" Tag="CementTile" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CEMENT\Cement tile " />
+          <XTreeItem Header="Corrugated asbestos-cement roofing " Description="Corrugated asbestos-cement roofing " Id="X" ResourcePath="X" Tag="CorrugatedAsbestosCementRoofing" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CEMENT\Corrugated asbestos-cement roofing " />
+        </XTreeItem>
+        <XTreeItem Header="CLAY" Description="CLAY" Id="X" ResourcePath="ClayTile" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY">
+          <XTreeItem Header="Book tile- 2-in. " Description="Book tile- 2-in. " Id="X" ResourcePath="X" Tag="BookTile2In" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY\Book tile- 2-in. " />
+          <XTreeItem Header="Book tile- 3-in. " Description="Book tile- 3-in. " Id="X" ResourcePath="X" Tag="BookTile3In" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY\Book tile- 3-in. " />
+          <XTreeItem Header="Ludowici  tile" Description="Ludowici  tile" Id="X" ResourcePath="X" Tag="LudowiciTile" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY\Ludowici  tile" />
+          <XTreeItem Header="Roman  tile" Description="Roman  tile" Id="X" ResourcePath="X" Tag="RomanTile" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY\Roman  tile" />
+          <XTreeItem Header="Spanish  tile" Description="Spanish  tile" Id="X" ResourcePath="X" Tag="SpanishTile" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY\Spanish  tile" />
+          <XTreeItem Header="Tile mortar" Description="Tile mortar" Id="X" ResourcePath="X" Tag="TileMortar" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\TILES\CLAY\Tile mortar" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="WATERPROOFING MEMBRANE OR COMPOSITION ROOFING" Description="WATERPROOFING MEMBRANE OR COMPOSITION ROOFING" Id="X" ResourcePath="WaterproofingMembraneOrCompositionRoofing" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING">
+        <XTreeItem Header="COMPOSITION" Description="COMPOSITION" Id="X" ResourcePath="CompositionRoofing" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\COMPOSITION">
+          <XTreeItem Header="Three-ply ready roofing " Description="Three-ply ready roofing " Id="X" ResourcePath="X" Tag="Roofing3Ply" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\COMPOSITION\Three-ply ready roofing " />
+          <XTreeItem Header="Four-ply felt and gravel " Description="Four-ply felt and gravel " Id="X" ResourcePath="X" Tag="Felt4PlyAndGravel" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\COMPOSITION\Four-ply felt and gravel " />
+          <XTreeItem Header="Five-ply felt and gravel " Description="Five-ply felt and gravel " Id="X" ResourcePath="X" Tag="Felt5PlyAndGravel" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\COMPOSITION\Five-ply felt and gravel " />
+        </XTreeItem>
+        <XTreeItem Header="WATERPROOFING MEMBRANES:" Description="WATERPROOFING MEMBRANES:" Id="X" ResourcePath="MembraneWaterproofing" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\WATERPROOFING MEMBRANES:">
+          <XTreeItem Header="Bituminous- gravel-covered " Description="Bituminous- gravel-covered " Id="X" ResourcePath="X" Tag="BituminousGravel" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\WATERPROOFING MEMBRANES:\Bituminous- gravel-covered " />
+          <XTreeItem Header="Bituminous- smooth surface " Description="Bituminous- smooth surface " Id="X" ResourcePath="X" Tag="BituminousSmoothSurface" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\WATERPROOFING MEMBRANES:\Bituminous- smooth surface " />
+          <XTreeItem Header="Liquid applied " Description="Liquid applied " Id="X" ResourcePath="X" Tag="LiquidAppliedRoof" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\WATERPROOFING MEMBRANES:\Liquid applied " />
+          <XTreeItem Header="Single-ply- sheet " Description="Single-ply- sheet " Id="X" ResourcePath="X" Tag="SinglePlySheetRoof" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WATERPROOFING MEMBRANE OR COMPOSITION ROOFING\WATERPROOFING MEMBRANES:\Single-ply- sheet " />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="METAL" Description="METAL" Id="X" ResourcePath="MetalRoof" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\METAL">
+        <XTreeItem Header="ROOF DECK" Description="ROOF DECK" Id="X" ResourcePath="MetalRoof" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\METAL\ROOF DECK">
+          <XTreeItem Header="Roof deck" Description="Roof deck" Id="2,2,3" ResourcePath="RoofDeckControl" Tag="RoofMetalDeck" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\METAL\ROOF DECK\Roof deck" />
+        </XTreeItem>
+        <XTreeItem Header="Standing-seam roofing" Description="Standing-seam roofing" Id="X" ResourcePath="X" Tag="StandingSeamRoof" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\METAL\Standing-seam roofing" />
+        <XTreeItem Header="Copper or tin " Description="Copper or tin " Id="X" ResourcePath="X" Tag="Copper" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\METAL\Copper or tin " />
+      </XTreeItem>
+      <XTreeItem Header="WOOD / PLYWOOD" Description="WOOD / PLYWOOD" Id="X" ResourcePath="WoodPlywood" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\WOOD / PLYWOOD">
+        <XTreeItem Header="Decking- 2-in. wood (Douglas fir) " Description="Decking- 2-in. wood (Douglas fir) " Id="X" ResourcePath="X" Tag="WoodDecking2In" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WOOD / PLYWOOD\Decking- 2-in. wood (Douglas fir) " />
+        <XTreeItem Header="Decking- 3-in. wood (Douglas fir) " Description="Decking- 3-in. wood (Douglas fir) " Id="X" ResourcePath="X" Tag="WoodDecking3In" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WOOD / PLYWOOD\Decking- 3-in. wood (Douglas fir) " />
+        <XTreeItem Header="Fiberboard- 0.5-in. " Description="Fiberboard- 0.5-in. " Id="X" ResourcePath="X" Tag="Fiberboard" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WOOD / PLYWOOD\Fiberboard- 0.5-in. " />
+        <XTreeItem Header="Plywood" Description="Plywood" Id="1,1,0.75" ResourcePath="ThicknessControl" Tag="Plywood" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WOOD / PLYWOOD\Plywood" />
+        <XTreeItem Header="Wood sheathing" Description="Wood sheathing" Id="1,1,0.75" ResourcePath="ThicknessControl" Tag="WoodSheathing" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\WOOD / PLYWOOD\Wood sheathing" />
+      </XTreeItem>
+      <XTreeItem Header="INSULATION" Description="INSULATION" Id="X" ResourcePath="Insulation" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\INSULATION">
+        <XTreeItem Header="Cellular glass " Description="Cellular glass " Id="1,1,5.5" ResourcePath="ThicknessControl" Tag="CellularGlass" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Cellular glass " />
+        <XTreeItem Header="Fibrous glass " Description="Fibrous glass " Id="1,1,5.5" ResourcePath="ThicknessControl" Tag="FibrousGlass" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Fibrous glass " />
+        <XTreeItem Header="Fiberboard " Description="Fiberboard " Id="1,1,5.5" ResourcePath="ThicknessControl" Tag="Fiberboard" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Fiberboard " />
+        <XTreeItem Header="Perlite " Description="Perlite " Id="1,1,5.5" ResourcePath="ThicknessControl" Tag="Perlite" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Perlite " />
+        <XTreeItem Header="Polystyrene foam " Description="Polystyrene foam " Id="1,1,1" ResourcePath="ThicknessControl" Tag="PolystyreneFoam" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Polystyrene foam " />
+        <XTreeItem Header="Urethane foam with skin " Description="Urethane foam with skin " Id="1,1,6" ResourcePath="ThicknessControl" Tag="UrethaneFoamWithSkin" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Urethane foam with skin " />
+        <XTreeItem Header="Rigid insulation- 0.5-in. " Description="Rigid insulation- 0.5-in. " Id="X" ResourcePath="X" Tag="RigidInsulation05In" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\INSULATION\Rigid insulation- 0.5-in. " />
+      </XTreeItem>
+      <XTreeItem Header="CONCRETE, STONE OR SAND FILL" Description="CONCRETE, STONE OR SAND FILL" Id="X" ResourcePath="ConcreteStoneGravel" Tag="X" TemplateName="Category" TreePath="CEILING OR ROOF\ROOF\CONCRETE, STONE OR SAND FILL">
+        <XTreeItem Header="Cinder concrete- per inch " Description="Cinder concrete- per inch " Id="X" ResourcePath="X" Tag="CinderConcrete" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\CONCRETE, STONE OR SAND FILL\Cinder concrete- per inch " />
+        <XTreeItem Header="Lightweight concrete- per inch " Description="Lightweight concrete- per inch " Id="X" ResourcePath="X" Tag="LightweightConcrete" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\CONCRETE, STONE OR SAND FILL\Lightweight concrete- per inch " />
+        <XTreeItem Header="Sand- per inch " Description="Sand- per inch " Id="X" ResourcePath="X" Tag="Sand" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\CONCRETE, STONE OR SAND FILL\Sand- per inch " />
+        <XTreeItem Header="Stone concrete- per inch " Description="Stone concrete- per inch " Id="X" ResourcePath="X" Tag="StoneConcrete" TemplateName="Item" TreePath="CEILING OR ROOF\ROOF\CONCRETE, STONE OR SAND FILL\Stone concrete- per inch " />
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="WALL" Description="WALL" Id="X" ResourcePath="Wall" Tag="X" TemplateName="Category" TreePath="WALL">
+    <XTreeItem Header="MASONRY" Description="MASONRY" Id="X" ResourcePath="WallMasonry" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY">
+      <XTreeItem Header="CONCRETE" Description="CONCRETE" Id="X" ResourcePath="WallConcreteMasonry" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY\CONCRETE">
+        <XTreeItem Header="HOLLOW (NO GROUT)" Description="HOLLOW (NO GROUT)" Id="X" ResourcePath="WallConcreteMasonryHollow" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY\CONCRETE\HOLLOW (NO GROUT)">
+          <XTreeItem Header="Ungrouted CMU (density=105 pcf)" Description="Ungrouted CMU (density=105 pcf)" Id="1,1,8" ResourcePath="HollowCMU" Tag="UngroutedCMULW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\HOLLOW (NO GROUT)\Ungrouted CMU (density=105 pcf)" />
+          <XTreeItem Header="Ungrouted CMU (density=125 pcf)" Description="Ungrouted CMU (density=125 pcf)" Id="1,1,8" ResourcePath="HollowCMU" Tag="UngroutedCMUMW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\HOLLOW (NO GROUT)\Ungrouted CMU (density=125 pcf)" />
+          <XTreeItem Header="Ungrouted CMU (density=135 pcf)" Description="Ungrouted CMU (density=135 pcf)" Id="1,1,8" ResourcePath="HollowCMU" Tag="UngroutedCMUNW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\HOLLOW (NO GROUT)\Ungrouted CMU (density=135 pcf)" />
+        </XTreeItem>
+        <XTreeItem Header="PARTIALLY-GROUTED" Description="PARTIALLY-GROUTED" Id="X" ResourcePath="WallConcreteMasonryPartiallyGrouted" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY\CONCRETE\PARTIALLY-GROUTED">
+          <XTreeItem Header="Partially-grouted CMU (density=105 pcf)" Description="Partially-grouted CMU (density=105 pcf)" Id="1,1,8" ResourcePath="GroutedCMU" Tag="PartiallyGroutedCMULW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\PARTIALLY-GROUTED\Partially-grouted CMU (density=105 pcf)" />
+          <XTreeItem Header="Partially-grouted CMU (density=125 pcf)" Description="Partially-grouted CMU (density=125 pcf)" Id="1,1,8" ResourcePath="GroutedCMU" Tag="PartiallyGroutedCMUMW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\PARTIALLY-GROUTED\Partially-grouted CMU (density=125 pcf)" />
+          <XTreeItem Header="Partially-grouted CMU (density=135 pcf)" Description="Partially-grouted CMU (density=135 pcf)" Id="1,1,8" ResourcePath="GroutedCMU" Tag="PartiallyGroutedCMUNW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\PARTIALLY-GROUTED\Partially-grouted CMU (density=135 pcf)" />
+        </XTreeItem>
+        <XTreeItem Header="FULLY GROUTED" Description="FULLY GROUTED" Id="X" ResourcePath="WallConcreteMasonryFullyGrouted" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY\CONCRETE\FULLY GROUTED">
+          <XTreeItem Header="Fully-grouted CMU (density=105 pcf)" Description="Fully-grouted CMU (density=105 pcf)" Id="1,1,8" ResourcePath="FullGroutedCMU" Tag="FullyGroutedCMULW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\FULLY GROUTED\Fully-grouted CMU (density=105 pcf)" />
+          <XTreeItem Header="Fully-grouted CMU (density=125 pcf)" Description="Fully-grouted CMU (density=125 pcf)" Id="1,1,8" ResourcePath="FullGroutedCMU" Tag="FullyGroutedCMUMW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\FULLY GROUTED\Fully-grouted CMU (density=125 pcf)" />
+          <XTreeItem Header="Fully-grouted CMU (density=135 pcf)" Description="Fully-grouted CMU (density=135 pcf)" Id="1,1,8" ResourcePath="FullGroutedCMU" Tag="FullyGroutedCMUNW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\FULLY GROUTED\Fully-grouted CMU (density=135 pcf)" />
+        </XTreeItem>
+        <XTreeItem Header="SOLID UNIT " Description="SOLID UNIT " Id="X" ResourcePath="WallConcreteMasonrySolid" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY\CONCRETE\SOLID UNIT ">
+          <XTreeItem Header="Solid CMU unit (density=105 pcf)" Description="Solid CMU unit (density=105 pcf)" Id="1,1,8" ResourcePath="SolidCMU" Tag="SolidCMULW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\SOLID UNIT \Solid CMU unit (density=105 pcf)" />
+          <XTreeItem Header="Solid CMU unit (density=125 pcf)" Description="Solid CMU unit (density=125 pcf)" Id="1,1,8" ResourcePath="SolidCMU" Tag="SolidCMUMW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\SOLID UNIT \Solid CMU unit (density=125 pcf)" />
+          <XTreeItem Header="Solid CMU unit (density=135 pcf)" Description="Solid CMU unit (density=135 pcf)" Id="1,1,8" ResourcePath="SolidCMU" Tag="SolidCMUNW" TemplateName="Item" TreePath="WALL\MASONRY\CONCRETE\SOLID UNIT \Solid CMU unit (density=135 pcf)" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="CLAY" Description="CLAY" Id="X" ResourcePath="WallClayMasonry" Tag="X" TemplateName="Category" TreePath="WALL\MASONRY\CLAY">
+        <XTreeItem Header="Clay masonry wythe" Description="Clay masonry wythe" Id="&quot;1,1,4&quot;" ResourcePath="ClayBrickControl" Tag="ClayMasonryWythe" TemplateName="Item" TreePath="WALL\MASONRY\CLAY\Clay masonry wythe" />
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="WOOD" Description="WOOD" Id="X" ResourcePath="WallWood" Tag="X" TemplateName="Category" TreePath="WALL\WOOD">
+      <XTreeItem Header="Wood framing" Description="Wood framing" Id="1,2,5.5" ResourcePath="WoodFramingControl" Tag="WoodFraming" TemplateName="Item" TreePath="WALL\WOOD\Wood framing" />
+    </XTreeItem>
+    <XTreeItem Header="COLD-FORMED STEEL (METAL)" Description="COLD-FORMED STEEL (METAL)" Id="X" ResourcePath="WallColdFormedSteel" Tag="X" TemplateName="Category" TreePath="WALL\COLD-FORMED STEEL (METAL)">
+      <XTreeItem Header="6-in. or 8-in. metal studs at 24-in. o.c." Description="6-in. or 8-in. metal studs at 24-in. o.c." Id="X" ResourcePath="X" Tag="MetalStudsAt24In" TemplateName="Item" TreePath="WALL\COLD-FORMED STEEL (METAL)\6-in. or 8-in. metal studs at 24-in. o.c." />
+      <XTreeItem Header="6-in. or 8-in. metal studs at 16-in. o.c." Description="6-in. or 8-in. metal studs at 16-in. o.c." Id="X" ResourcePath="X" Tag="MetalStudsAt16In" TemplateName="Item" TreePath="WALL\COLD-FORMED STEEL (METAL)\6-in. or 8-in. metal studs at 16-in. o.c." />
+    </XTreeItem>
+    <XTreeItem Header="SHEATHING" Description="SHEATHING" Id="X" ResourcePath="WallSheathing" Tag="X" TemplateName="Category" TreePath="WALL\SHEATHING">
+      <XTreeItem Header="Gypsum sheathing (0.5 in.)" Description="Gypsum sheathing (0.5 in.)" Id="1,1,0.625" ResourcePath="ThicknessControl" Tag="GypsumSheathing" TemplateName="Item" TreePath="WALL\SHEATHING\Gypsum sheathing (0.5 in.)" />
+      <XTreeItem Header="Plywood sheathing" Description="Plywood sheathing" Id="1,1,0.75" ResourcePath="ThicknessControl" Tag="PlywoodSheathing" TemplateName="Item" TreePath="WALL\SHEATHING\Plywood sheathing" />
+      <XTreeItem Header="Wood sheathing" Description="Wood sheathing" Id="1,1,1.5" ResourcePath="ThicknessControl" Tag="WoodSheathing" TemplateName="Item" TreePath="WALL\SHEATHING\Wood sheathing" />
+      <XTreeItem Header="Metal deck wall" Description="Metal deck wall" Id="2,2,1.5" ResourcePath="DeckControl" Tag="MetalDeckWall" TemplateName="Item" TreePath="WALL\SHEATHING\Metal deck wall" />
+    </XTreeItem>
+    <XTreeItem Header="SHINGLES" Description="SHINGLES" Id="X" ResourcePath="WallShingles" Tag="X" TemplateName="Category" TreePath="WALL\SHINGLES">
+      <XTreeItem Header="Wood shingles " Description="Wood shingles " Id="X" ResourcePath="X" Tag="WoodShingles" TemplateName="Item" TreePath="WALL\SHINGLES\Wood shingles " />
+    </XTreeItem>
+    <XTreeItem Header="INSULATION" Description="INSULATION" Id="X" ResourcePath="Insulation" Tag="X" TemplateName="Category" TreePath="WALL\INSULATION">
+      <XTreeItem Header="Cellular glass  insulation" Description="Cellular glass  insulation" Id="1,1,9.5" ResourcePath="ThicknessControl" Tag="CellularGlassInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Cellular glass  insulation" />
+      <XTreeItem Header="Fibrous glass  insulation" Description="Fibrous glass  insulation" Id="1,1,9.5" ResourcePath="ThicknessControl" Tag="FibrousGlassInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Fibrous glass  insulation" />
+      <XTreeItem Header="Fiberboard  insulation" Description="Fiberboard  insulation" Id="1,1,9.5" ResourcePath="ThicknessControl" Tag="FiberboardInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Fiberboard  insulation" />
+      <XTreeItem Header="Perlite  insulation" Description="Perlite  insulation" Id="1,1,9.5" ResourcePath="ThicknessControl" Tag="PerliteInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Perlite  insulation" />
+      <XTreeItem Header="Polystyrene foam  insulation" Description="Polystyrene foam  insulation" Id="1,1,1" ResourcePath="ThicknessControl" Tag="PolystyreneFoamInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Polystyrene foam  insulation" />
+      <XTreeItem Header="Urethane foam with skin  insulation" Description="Urethane foam with skin  insulation" Id="1,1,6" ResourcePath="ThicknessControl" Tag="UrethaneFoamWithSkinInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Urethane foam with skin  insulation" />
+      <XTreeItem Header="Rigid insulation- 0.5-in. " Description="Rigid insulation- 0.5-in. " Id="X" ResourcePath="X" Tag="RigidInsulation" TemplateName="Item" TreePath="WALL\INSULATION\Rigid insulation- 0.5-in. " />
+    </XTreeItem>
+    <XTreeItem Header="GFRC" Description="GFRC" Id="X" ResourcePath="WallGFRC" Tag="X" TemplateName="Category" TreePath="WALL\GFRC">
+      <XTreeItem Header="GFRC Panels" Description="GFRC Panels" Id="0,1,0" ResourcePath="GFRCPanelControl" Tag="GFRCPanels" TemplateName="Item" TreePath="WALL\GFRC\GFRC Panels" />
+      <XTreeItem Header="GFRC system (with insulation- gyp. sheathing- metal studs- and hardware)" Description="GFRC system (with insulation- gyp. sheathing- metal studs- and hardware)" Id="X" ResourcePath="X" Tag="GFRCSystem" TemplateName="Item" TreePath="WALL\GFRC\GFRC system (with insulation- gyp. sheathing- metal studs- and hardware)" />
+    </XTreeItem>
+    <XTreeItem Header="PRECAST CONCRETE" Description="PRECAST CONCRETE" Id="X" ResourcePath="WallPrecast" Tag="X" TemplateName="Category" TreePath="WALL\PRECAST CONCRETE">
+      <XTreeItem Header="Precast Concrete Panels " Description="Precast Concrete Panels " Id="2,2,2" ResourcePath="PrecastPanelControl" Tag="PrecastConcretePanels" TemplateName="Item" TreePath="WALL\PRECAST CONCRETE\Precast Concrete Panels " />
+    </XTreeItem>
+    <XTreeItem Header="ALUMINUM CURTAIN WALLS" Description="ALUMINUM CURTAIN WALLS" Id="X" ResourcePath="WallCurtainwall" Tag="X" TemplateName="Category" TreePath="WALL\ALUMINUM CURTAIN WALLS">
+      <XTreeItem Header="Curtain-wall Framing" Description="Curtain-wall Framing" Id="X" ResourcePath="X" Tag="CurtainWallFraming" TemplateName="Item" TreePath="WALL\ALUMINUM CURTAIN WALLS\Curtain-wall Framing" />
+      <XTreeItem Header="Storefront Framing" Description="Storefront Framing" Id="X" ResourcePath="X" Tag="StorefrontFraming" TemplateName="Item" TreePath="WALL\ALUMINUM CURTAIN WALLS\Storefront Framing" />
+      <XTreeItem Header="Insulating glass (1-in. thick)" Description="Insulating glass (1-in. thick)" Id="X" ResourcePath="X" Tag="InsulatingGlass" TemplateName="Item" TreePath="WALL\ALUMINUM CURTAIN WALLS\Insulating glass (1-in. thick)" />
+      <XTreeItem Header="Solid glass" Description="Solid glass" Id="2,2,0.75" ResourcePath="ThicknessControl" Tag="SolidGlass" TemplateName="Item" TreePath="WALL\ALUMINUM CURTAIN WALLS\Solid glass" />
+      <XTreeItem Header="Aluminum Curtain Wall" Description="Aluminum Curtain Wall" Id="X" ResourcePath="X" Tag="AluminumCurtainWall" TemplateName="Item" TreePath="WALL\ALUMINUM CURTAIN WALLS\Aluminum Curtain Wall" />
+    </XTreeItem>
+    <XTreeItem Header="METAL INSULATED PANELS " Description="METAL INSULATED PANELS " Id="X" ResourcePath="WallInsulatedPanel" Tag="X" TemplateName="Category" TreePath="WALL\METAL INSULATED PANELS ">
+      <XTreeItem Header="1-0.75-in. metal insulated panel" Description="1-0.75-in. metal insulated panel" Id="X" ResourcePath="X" Tag="MetalInsulatedPanelThin" TemplateName="Item" TreePath="WALL\METAL INSULATED PANELS \1-0.75-in. metal insulated panel" />
+      <XTreeItem Header="4-in. metal insulated panel" Description="4-in. metal insulated panel" Id="X" ResourcePath="X" Tag="MetalInsulatedPanelThick" TemplateName="Item" TreePath="WALL\METAL INSULATED PANELS \4-in. metal insulated panel" />
+    </XTreeItem>
+    <XTreeItem Header="EIFS" Description="EIFS" Id="X" ResourcePath="WallEIFS" Tag="X" TemplateName="Category" TreePath="WALL\EIFS">
+      <XTreeItem Header="EIFS self-weight" Description="EIFS self-weight" Id="X" ResourcePath="X" Tag="EIFSMaterial" TemplateName="Item" TreePath="WALL\EIFS\EIFS self-weight" />
+      <XTreeItem Header="EIFS (with gyp. sheathing- metal studs- and hardware)" Description="EIFS (with gyp. sheathing- metal studs- and hardware)" Id="X" ResourcePath="X" Tag="EIFSWall" TemplateName="Item" TreePath="WALL\EIFS\EIFS (with gyp. sheathing- metal studs- and hardware)" />
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="FLOOR" Description="FLOOR" Id="X" ResourcePath="Floor" Tag="X" TemplateName="Category" TreePath="FLOOR">
+    <XTreeItem Header="FLOOR FINISH" Description="FLOOR FINISH" Id="X" ResourcePath="FloorFinish" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR FINISH">
+      <XTreeItem Header="Asphalt block (2-in.)- 0.5-in. mortar " Description="Asphalt block (2-in.)- 0.5-in. mortar " Id="X" ResourcePath="X" Tag="AsphaltBlock" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Asphalt block (2-in.)- 0.5-in. mortar " />
+      <XTreeItem Header="Cement finish (1-in.) on stone–concrete fill " Description="Cement finish (1-in.) on stone–concrete fill " Id="X" ResourcePath="X" Tag="CementFinishOnConcreteFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Cement finish (1-in.) on stone–concrete fill " />
+      <XTreeItem Header="Ceramic or quarry tile (0.75-in.) on 0.5-in. mortar bed " Description="Ceramic or quarry tile (0.75-in.) on 0.5-in. mortar bed " Id="X" ResourcePath="X" Tag="TileOnThickMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Ceramic or quarry tile (0.75-in.) on 0.5-in. mortar bed " />
+      <XTreeItem Header="Ceramic or quarry tile (0.75-in.) on 1-in. mortar bed " Description="Ceramic or quarry tile (0.75-in.) on 1-in. mortar bed " Id="X" ResourcePath="X" Tag="TileOnThinMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Ceramic or quarry tile (0.75-in.) on 1-in. mortar bed " />
+      <XTreeItem Header="Concrete fill finish" Description="Concrete fill finish" Id="2,2,1.5" ResourcePath="ThicknessControl" Tag="ConcreteFillFinish" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Concrete fill finish" />
+      <XTreeItem Header="Exterior pavers (1 0.5-in.) on 3-in. mortar bed" Description="Exterior pavers (1 0.5-in.) on 3-in. mortar bed" Id="X" ResourcePath="X" Tag="ExteriorPavers" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Exterior pavers (1 0.5-in.) on 3-in. mortar bed" />
+      <XTreeItem Header="Hardwood flooring- 7/8-in. " Description="Hardwood flooring- 7/8-in. " Id="X" ResourcePath="X" Tag="HardwoodFlooring" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Hardwood flooring- 7/8-in. " />
+      <XTreeItem Header="Linoleum or asphalt tile- 0.25-in. " Description="Linoleum or asphalt tile- 0.25-in. " Id="X" ResourcePath="X" Tag="LinoleumOrAsphaltTile" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Linoleum or asphalt tile- 0.25-in. " />
+      <XTreeItem Header="Marble and mortar on stone–concrete fill " Description="Marble and mortar on stone–concrete fill " Id="X" ResourcePath="X" Tag="MarbleAndMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Marble and mortar on stone–concrete fill " />
+      <XTreeItem Header="Slate (per mm thickness) " Description="Slate (per mm thickness) " Id="X" ResourcePath="X" Tag="Slate" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Slate (per mm thickness) " />
+      <XTreeItem Header="Solid flat tile on 1-in. mortar base " Description="Solid flat tile on 1-in. mortar base " Id="X" ResourcePath="X" Tag="SolidFlatTileOn1InMortarBase" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Solid flat tile on 1-in. mortar base " />
+      <XTreeItem Header="Subflooring- 0.75-in. " Description="Subflooring- 0.75-in. " Id="X" ResourcePath="X" Tag="Subflooring" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Subflooring- 0.75-in. " />
+      <XTreeItem Header="Terrazzo (1-0.5-in.) directly on slab " Description="Terrazzo (1-0.5-in.) directly on slab " Id="X" ResourcePath="X" Tag="Terrazzo" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-0.5-in.) directly on slab " />
+      <XTreeItem Header="Terrazzo (1-in.) on stone–concrete fill " Description="Terrazzo (1-in.) on stone–concrete fill " Id="X" ResourcePath="X" Tag="TerrazzoOnThickFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-in.) on stone–concrete fill " />
+      <XTreeItem Header="Terrazzo (1-in.)- 2-in. stone concrete " Description="Terrazzo (1-in.)- 2-in. stone concrete " Id="X" ResourcePath="X" Tag="TerrazzoOnThinFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-in.)- 2-in. stone concrete " />
+      <XTreeItem Header="Wood block (3-in.) on mastic- no fill " Description="Wood block (3-in.) on mastic- no fill " Id="X" ResourcePath="X" Tag="WoodBlock" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Wood block (3-in.) on mastic- no fill " />
+      <XTreeItem Header="Wood block (3-in.) on 0.5-in. mortar base " Description="Wood block (3-in.) on 0.5-in. mortar base " Id="X" ResourcePath="X" Tag="WoodBlockOnMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Wood block (3-in.) on 0.5-in. mortar base " />
+    </XTreeItem>
+    <XTreeItem Header="FLOOR STRUCTURE" Description="FLOOR STRUCTURE" Id="X" ResourcePath="FloorStructure" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE">
+      <XTreeItem Header="WOOD" Description="WOOD" Id="X" ResourcePath="FloorWood" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE\WOOD">
+        <XTreeItem Header="Wood framing" Description="Wood framing" Id="2,1,1.5" ResourcePath="WoodFramingControl" Tag="WoodFraming" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\WOOD\Wood framing" />
+        <XTreeItem Header="Double wood floor" Description="Double wood floor" Id="2,1,1.5" ResourcePath="WoodFramingControl" Tag="DoubleWoodFloor" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\WOOD\Double wood floor" />
+      </XTreeItem>
+      <XTreeItem Header="CONCRETE" Description="CONCRETE" Id="X" ResourcePath="FloorConcrete" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE">
+        <XTreeItem Header="Solid concrete slab" Description="Solid concrete slab" Id="2,2,8" ResourcePath="ThicknessControl" Tag="SolidConcreteSlab" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE\Solid concrete slab" />
+      </XTreeItem>
+      <XTreeItem Header="CONCRETE FILL ON METAL DECK" Description="CONCRETE FILL ON METAL DECK" Id="X" ResourcePath="FloorMetalDeckFilled" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK">
+        <XTreeItem Header="LIGHTWEIGHT CONCRETE" Description="LIGHTWEIGHT CONCRETE" Id="X" ResourcePath="LightweightConcrete" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\LIGHTWEIGHT CONCRETE">
+          <XTreeItem Header="1.5-in. composite metal deck with lightweight concrete fill" Description="1.5-in. composite metal deck with lightweight concrete fill" Id="2,0,0" ResourcePath="ConcFillOnDeck1_5Control" Tag="Deck1_5InLWFill" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\LIGHTWEIGHT CONCRETE\1.5-in. composite metal deck with lightweight concrete fill" />
+          <XTreeItem Header="2-in. composite metal deck with lightweight concrete fill" Description="2-in. composite metal deck with lightweight concrete fill" Id="2,0,0" ResourcePath="ConcFillOnDeck2Control" Tag="Deck2InLWFill" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\LIGHTWEIGHT CONCRETE\2-in. composite metal deck with lightweight concrete fill" />
+          <XTreeItem Header="3-in. composite metal deck with lightweight concrete fill" Description="3-in. composite metal deck with lightweight concrete fill" Id="3,0,0" ResourcePath="ConcFillOnDeck3Control" Tag="Deck3InLWFill" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\LIGHTWEIGHT CONCRETE\3-in. composite metal deck with lightweight concrete fill" />
+        </XTreeItem>
+        <XTreeItem Header="NORMALWEIGHT CONCRETE" Description="NORMALWEIGHT CONCRETE" Id="X" ResourcePath="NormalweightConcrete" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\NORMALWEIGHT CONCRETE">
+          <XTreeItem Header="1.5-in. composite metal deck with normalweight concrete fill" Description="1.5-in. composite metal deck with normalweight concrete fill" Id="2,0,0" ResourcePath="ConcFillOnDeck1_5Control" Tag="Deck1_5InNWFill" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\NORMALWEIGHT CONCRETE\1.5-in. composite metal deck with normalweight concrete fill" />
+          <XTreeItem Header="2-in. composite metal deck with normalweight concrete fill" Description="2-in. composite metal deck with normalweight concrete fill" Id="2,0,0" ResourcePath="ConcFillOnDeck2Control" Tag="Deck2InNWFill" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\NORMALWEIGHT CONCRETE\2-in. composite metal deck with normalweight concrete fill" />
+          <XTreeItem Header="3-in. composite metal deck with normalweight concrete fill" Description="3-in. composite metal deck with normalweight concrete fill" Id="3,0,0" ResourcePath="ConcFillOnDeck3Control" Tag="Deck3InNWFill" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\CONCRETE FILL ON METAL DECK\NORMALWEIGHT CONCRETE\3-in. composite metal deck with normalweight concrete fill" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="METAL DECK" Description="METAL DECK" Id="X" ResourcePath="FloorMetalDeck" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR STRUCTURE\METAL DECK">
+        <XTreeItem Header="Composite metal deck (unfilled)" Description="Composite metal deck (unfilled)" Id="1,2,3" ResourcePath="DeckControl" Tag="Deck" TemplateName="Item" TreePath="FLOOR\FLOOR STRUCTURE\METAL DECK\Composite metal deck (unfilled)" />
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="CUSTOM" Description="CUSTOM" Id="X" ResourcePath="Custom" Tag="X" TemplateName="Category" TreePath="CUSTOM">
+    <XTreeItem Header="Custom component" Description="Custom component" Id="X" ResourcePath="CustomComponentControl" Tag="Custom" TemplateName="Item" TreePath="CUSTOM\Custom component" />
+  </XTreeItem>
+</Root>

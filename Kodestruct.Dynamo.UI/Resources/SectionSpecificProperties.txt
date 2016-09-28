@@ -1,0 +1,7 @@
+IShape,A,d,bf,tw,tf,Ix,Zx,Sx,rx,Iy2,Zy,Sy,ry,J,Cw
+Channel,A,d,bf,tw,tf,x,eo,xp,Ix,Zx,Sx,rx,Iy3,Zy,Sy,ry,J,Cw
+Angle,A,d,B,x,y,xp,yp,Ix,Zx,Sx,rx,Iy4,Zy,Sy,ry,Iz,Sz,rz,J,Cw
+Tee,A,d,bf,tw,tf,y,yp,Ix,Zx,Sx,rx,Iy5,Zy,Sy,ry,J,Cw
+DoubleAngle,A,d,B,y,yp,Ix,Zx,Sx,rx,Iy6,Zy,Sy,ry
+CircularHSS,A,D,tnom,t,Ix,Zx,Sx,rx,Iy7,Zy,Sy,ry,J
+RectangularHSS,A,Ht,B,tnom,t,Ix,Zx,Sx,rx,Iy8,Zy,Sy,ry,J

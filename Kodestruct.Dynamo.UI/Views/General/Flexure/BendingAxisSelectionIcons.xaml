@@ -1,0 +1,39 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="BendingAxisX" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BendingAxisX" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path" Width="22.52" Height="22.5213" Canvas.Left="10.5929" Canvas.Top="10.336" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 26.3476,29.336C 24.3569,29.336 22.7423,27.724 22.7423,25.732L 22.7423,17.5453C 22.7423,15.5547 24.3569,13.94 26.3476,13.94L 32.6129,13.94L 32.6129,10.836L 11.0929,10.836L 11.0929,13.94L 17.4303,13.94C 19.4209,13.94 21.0356,15.5547 21.0356,17.5453L 21.0356,25.732C 21.0356,27.724 19.4209,29.336 17.4303,29.336L 11.0929,29.336L 11.0929,32.3573L 32.6129,32.3573L 32.6129,29.336L 26.3476,29.336 Z " />
+                            <Path x:Name="Line" Width="36.5787" Height="2.66667" Canvas.Left="3.5632" Canvas.Top="20.2631" Stretch="Fill" StrokeThickness="2.66667" StrokeMiterLimit="2.75" Stroke="#FF333333" Data="F1 M 38.8085,21.5964L 4.89653,21.5964" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BendingAxisY" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="BendingAxisY" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_0" Width="22.52" Height="22.5213" Canvas.Left="10.6256" Canvas.Top="9.80733" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" Data="F1 M 26.3803,28.8073C 24.3896,28.8073 22.7749,27.1953 22.7749,25.2033L 22.7749,17.0167C 22.7749,15.026 24.3896,13.4113 26.3803,13.4113L 32.6456,13.4113L 32.6456,10.3073L 11.1256,10.3073L 11.1256,13.4113L 17.4629,13.4113C 19.4536,13.4113 21.0683,15.026 21.0683,17.0167L 21.0683,25.2033C 21.0683,27.1953 19.4536,28.8073 17.4629,28.8073L 11.1256,28.8073L 11.1256,31.8287L 32.6456,31.8287L 32.6456,28.8073L 26.3803,28.8073 Z " />
+                            <Path x:Name="Line_1" Width="2.66667" Height="36.58" Canvas.Left="20.5528" Canvas.Top="2.7768" Stretch="Fill" StrokeThickness="2.66667" StrokeMiterLimit="2.75" Stroke="#FF333333" Data="F1 M 21.8861,38.0235L 21.8861,4.11013" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+</ResourceDictionary>

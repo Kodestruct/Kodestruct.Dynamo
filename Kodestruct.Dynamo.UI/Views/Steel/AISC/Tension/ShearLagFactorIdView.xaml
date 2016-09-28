@@ -1,0 +1,80 @@
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+<UserControl x:Class="Kodestruct.Steel.AISC.Tension.ShearLagFactorIdView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:command="http://www.galasoft.ch/mvvmlight"
+             xmlns:converters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters"
+             mc:Ignorable="d" 
+             Width="Auto"
+             Height="Auto"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ShearLagFactorIcons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:StyleConverter x:Key="IconStyleConverter">
+                <converters:StyleConverter.ResourceDictionary>
+                    <ResourceDictionary Source="ShearLagFactorIcons.xaml"/>
+                </converters:StyleConverter.ResourceDictionary>
+            </converters:StyleConverter>
+            <converters:TreeItemConverter x:Key="TreeItemConverter"/>
+
+            <XmlDataProvider x:Key="xmldata"
+                         Source="ShearLagFactorIdTreeData.xml"
+                         XPath="/Root" />
+            <HierarchicalDataTemplate DataType="XTreeItem"
+                                  ItemsSource="{Binding XPath=./*}">
+                <StackPanel Orientation="Horizontal">
+                    <ContentControl Width="20" Height="20" Background="White"
+                            Style="{Binding XPath=@ResourcePath, Converter={StaticResource IconStyleConverter}}"/>
+                    <TextBlock Text="{Binding XPath=@Header}" />
+                </StackPanel>
+            </HierarchicalDataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+
+    <Grid >
+
+        <StackPanel Orientation="Vertical" Width="300" Height="Auto" HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Stretch" Height="40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Case Id" VerticalAlignment="Center" Margin="0"/>
+                <TextBox HorizontalAlignment="Stretch" Margin="10,0,0,0" Grid.Column="1" Height="20" 
+                         Text="{Binding ShearLagCaseIdDescription, Mode=TwoWay }" 
+                         />
+            </Grid>
+            <Expander Header="Shear lag case selection" IsExpanded="False" >
+
+                <StackPanel>
+                    <Grid x:Name="AdditionalUIGrid" Grid.Row="1" HorizontalAlignment="Stretch" Height="Auto">
+                        <ContentControl Visibility="{Binding AdditionalUiVisible}"  
+                                Content="{Binding AdditionalUI}"/>
+                    </Grid>
+                    <TreeView x:Name="selectionTree"
+                  SelectedValuePath="Id" 
+                  Height="300"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Stretch"
+                  ItemsSource="{Binding Source={StaticResource xmldata}, XPath=./*}"
+                  VirtualizingPanel.IsVirtualizing="False"
+                  VirtualizingPanel.VirtualizationMode="Standard" 
+                  Background="LightGray" Width="300">
+                </TreeView>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</UserControl>

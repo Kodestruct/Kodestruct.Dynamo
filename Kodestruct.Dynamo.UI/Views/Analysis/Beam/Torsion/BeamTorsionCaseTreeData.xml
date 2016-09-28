@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+	Copyright (C) 2015 Kodestruct Inc
+-->
+
+<Root>
+  <XTreeItem Header="FREE ENDS" Description="Free ends" Id="X" ResourcePath="TorsionFree" Tag="X" TemplateName="Category" TreePath="FREE ENDS">
+    <XTreeItem Header="Pair of concentrated torques" Description="Free ends.Pair of concentrated torques. " Id="Case1" ResourcePath="PairOfT" Tag="X" TemplateName="Block" TreePath="FREE ENDS\Pair of concentrated torques" />
+  </XTreeItem>
+  <XTreeItem Header="PINNED ENDS" Description="Pinned ends" Id="X" ResourcePath="TorsionPinned" Tag="X" TemplateName="Category" TreePath="PINNED ENDS">
+    <XTreeItem Header="Concentrated torque" Description="Pinned ends.Concentrated torque. " Id="Case3" ResourcePath="ConcentratedT" Tag="X" TemplateName="Block" TreePath="PINNED ENDS\Concentrated torque" />
+    <XTreeItem Header="Uniformly distributed torque" Description="Pinned ends.Uniformly distributed torque. " Id="Case4" ResourcePath="DistibutedT" Tag="X" TemplateName="Block" TreePath="PINNED ENDS\Uniformly distributed torque" />
+    <XTreeItem Header="Linearly varying torque" Description="Pinned ends.Linearly varying torque. " Id="Case5" ResourcePath="VaryingT" Tag="X" TemplateName="Block" TreePath="PINNED ENDS\Linearly varying torque" />
+  </XTreeItem>
+  <XTreeItem Header="FIXED ENDS" Description="Fixed ends" Id="X" ResourcePath="TorsionFixed" Tag="X" TemplateName="Category" TreePath="FIXED ENDS">
+    <XTreeItem Header="Pair of concentrated torques" Description="Fixed ends.Pair of concentrated torques. " Id="Case2" ResourcePath="PairOfT" Tag="X" TemplateName="Block" TreePath="FIXED ENDS\Pair of concentrated torques" />
+    <XTreeItem Header="Concentrated torque" Description="Fixed ends.Concentrated torque. " Id="Case6" ResourcePath="ConcentratedT" Tag="X" TemplateName="Block" TreePath="FIXED ENDS\Concentrated torque" />
+    <XTreeItem Header="Uniformly distributed torque" Description="Fixed ends.Uniformly distributed torque. " Id="Case7" ResourcePath="DistibutedT" Tag="X" TemplateName="Block" TreePath="FIXED ENDS\Uniformly distributed torque" />
+    <XTreeItem Header="Linearly varying torque" Description="Fixed ends.Linearly varying torque. " Id="Case8" ResourcePath="VaryingT" Tag="X" TemplateName="Block" TreePath="FIXED ENDS\Linearly varying torque" />
+  </XTreeItem>
+  <XTreeItem Header="CANTILEVER" Description="Cantilever" Id="X" ResourcePath="TorsionCantilever" Tag="X" TemplateName="Category" TreePath="CANTILEVER">
+    <XTreeItem Header="Concentrated torque" Description="Cantilever.Concentrated torque. " Id="Case9" ResourcePath="ConcentratedT" Tag="X" TemplateName="Block" TreePath="CANTILEVER\Concentrated torque" />
+    <XTreeItem Header="Uniformly distributed torque" Description="Cantilever.Uniformly distributed torque. " Id="Case10" ResourcePath="DistibutedT" Tag="X" TemplateName="Block" TreePath="CANTILEVER\Uniformly distributed torque" />
+    <XTreeItem Header="Linearly varying torque (increased towards fixed end)" Description="Cantilever.Linearly varying torque (increased towards fixed end). " Id="Case11" ResourcePath="VaryingT" Tag="X" TemplateName="Block" TreePath="CANTILEVER\Linearly varying torque (increased towards fixed end)" />
+  </XTreeItem>
+  <XTreeItem Header="FIXED-PINNED" Description="Fixed-Pinned" Id="X" ResourcePath="TorsionFixedPinned" Tag="X" TemplateName="Category" TreePath="FIXED-PINNED">
+    <XTreeItem Header="Uniformly distributed torque" Description="Fixed-Pinned condition.Uniformly distributed torque. " Id="Case12" ResourcePath="DistibutedT" Tag="X" TemplateName="Block" TreePath="FIXED-PINNED\Uniformly distributed torque" />
+  </XTreeItem>
+</Root>
