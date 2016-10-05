@@ -57,14 +57,14 @@ namespace Concrete.ACI318.General.Reinforcement
         ///     Rebar point object by area
         /// </summary>
         /// <param name="A_b">   Area of an individual bar or wire  </param>
-        /// <param name="X_shp">  Point coordinate X (in shape coordinate system) </param>
-        /// <param name="Y_shp">  Point coordinate Y  (in shape coordinate system) </param>
+        /// <param name="X">  Point coordinate X (in shape coordinate system) </param>
+        /// <param name="Y">  Point coordinate Y  (in shape coordinate system) </param>
         /// <param name="RebarMaterial">  Rebar material (object) </param>
         /// <returns name="RebarPoint"> Rebar point object. Create the object using input parameters first </returns>
-        public static RebarPoint ByArea(double A_b, double X_shp, double Y_shp, RebarMaterial RebarMaterial)
+        public static RebarPoint ByArea(double A_b, double X, double Y, RebarMaterial RebarMaterial)
         {
 
-            return new RebarPoint(A_b,X_shp,Y_shp,RebarMaterial);
+            return new RebarPoint(A_b,X,Y,RebarMaterial);
         }
 
 
