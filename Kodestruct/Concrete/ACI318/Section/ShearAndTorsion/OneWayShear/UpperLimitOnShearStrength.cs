@@ -45,7 +45,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
         /// <param name="b_w">  Web width </param>
         /// <param name="d">   Distance from extreme compression fiber to centroid  of longitudinal tension reinforcement  </param>
         /// <param name="Code"> Applicable version of code/standard</param>
-        /// <param name="phiV_c">  Design shear strength provided by concrete  </returns>
+        /// <param name="phiV_c">  Design shear strength provided by concrete  </param>
         /// <returns name="phiV_nMax">  Upper limit on total shear strength of member </returns>
 
         [MultiReturn(new[] { "phiV_nMax" })]

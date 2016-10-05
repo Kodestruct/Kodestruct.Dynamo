@@ -44,7 +44,7 @@ namespace Steel.AISC
         /// </summary>
         /// <param name="ShearLagCaseId">  Defines the type of tension element for shear lag calculation </param>
         /// <param name="x_bar">Element eccentricity</param>
-        /// <param name="b_plate">Plate width flange or lapped plate transverece width) </param>
+        /// <param name="t_p"> Plate width flange or lapped plate transverse width </param>
         /// <param name="l">  Length of connection or weld   </param>
         /// <param name="B">  Overall width of rectangular steel section along face transferring load or overall width of rectangular HSS member  </param>
         /// <param name="H">  Overall height of rectangular HSS member (for HSS connections H is measured in the plane of the connection) </param>

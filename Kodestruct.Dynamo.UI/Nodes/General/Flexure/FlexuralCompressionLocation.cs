@@ -103,10 +103,10 @@ namespace Kodestruct.General.Flexure
 
         #region ReportEntryProperty
 
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
+        ///// <summary>
+        ///// log property
+        ///// </summary>
+        ///// <value>Calculation entries that can be converted into a report.</value>
 
         //public string reportEntry;
 

@@ -50,6 +50,7 @@ namespace Concrete.ACI318.Details
         /// <param name="ExcessRebarRatio">  Indicates the ration of areas of required reinforcement and provided renforcement. This value must be less than 1 </param>
         /// <param name="MeetsRebarSpacingAndEdgeDistance">  Identifies if clear spacing of bars being developed or lap spliced is at least 2d_b and clear cover at least d_b </param>
         /// <param name="HasMinimumTransverseReinforcement">  Identifies if member meets minimum code requirements for transverse reinforcement. Many current practical construction cases use spacing and cover values along with confining reinforcement, such as stirrups or ties,that result in a value of (cb + Ktr)/db of at least 1.5. See ACI 318-04 section 25.4.2.2  </param>
+        /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="l_d">  Development length in tension of deformed bar,  deformed wire, plain and deformed welded wire  reinforcement, or pretensioned strand  </returns>
 
         [MultiReturn(new[] { "l_d" })]
@@ -72,7 +73,7 @@ namespace Concrete.ACI318.Details
                 case "Uncoated"   :  IsEpoxyCoated= false; break;
                 case "EpoxyCoated":  IsEpoxyCoated=true; break;
 
-                default: throw new Exception("Unrecognized rebar coating. Please check string input"); break;
+                default: throw new Exception("Unrecognized rebar coating. Please check string input"); 
             }
 
             Rebar rebar = new Rebar(d_b, IsEpoxyCoated, mat);
@@ -84,7 +85,7 @@ namespace Concrete.ACI318.Details
                 case "Other"   :  IsTopRebar= false; break;
                 case "Top":  IsTopRebar=true; break;
 
-                default: throw new Exception("Unrecognized rebar casting position. Please check string input"); break;
+                default: throw new Exception("Unrecognized rebar casting position. Please check string input"); 
             }
 
             CalcLog log = new CalcLog();

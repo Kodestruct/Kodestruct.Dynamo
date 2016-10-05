@@ -32,11 +32,11 @@ using Dynamo.Graph.Nodes;
 namespace Concrete.ACI318.General.Reinforcement
 {
 
-/// <summary>
-///     Effective depth to longitudinal rebar
-///     Category:   Concrete.ACI318_14.General.Rebar
-/// </summary>
-/// 
+///// <summary>
+/////     Effective depth to longitudinal rebar
+/////     Category:   Concrete.ACI318_14.General.Rebar
+///// </summary>
+///// 
 
 
     //[IsDesignScriptCompatible]

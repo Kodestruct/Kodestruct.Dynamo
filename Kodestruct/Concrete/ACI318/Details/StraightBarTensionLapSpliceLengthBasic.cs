@@ -75,7 +75,7 @@ namespace Concrete.ACI318.Details
                 case "Uncoated": IsEpoxyCoated = false; break;
                 case "EpoxyCoated": IsEpoxyCoated = true; break;
 
-                default: throw new Exception("Unrecognized rebar coating. Please check string input"); break;
+                default: throw new Exception("Unrecognized rebar coating. Please check string input"); 
             }
 
             Rebar rebar1 = new Rebar(d_b1, IsEpoxyCoated, mat);
@@ -88,7 +88,7 @@ namespace Concrete.ACI318.Details
                 case "Other": IsTopRebar = false; break;
                 case "Top": IsTopRebar = true; break;
 
-                default: throw new Exception("Unrecognized rebar casting position. Please check string input"); break;
+                default: throw new Exception("Unrecognized rebar casting position. Please check string input");
             }
 
             TensionLapSpliceClass _RebarSpliceClass;

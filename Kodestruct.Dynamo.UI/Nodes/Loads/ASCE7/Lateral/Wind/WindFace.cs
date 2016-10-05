@@ -103,10 +103,10 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.PressureCoefficient
 
         #region ReportEntryProperty
 
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
+        ///// <summary>
+        ///// log property
+        ///// </summary>
+        ///// <value>Calculation entries that can be converted into a report.</value>
 
         //public string reportEntry;
 

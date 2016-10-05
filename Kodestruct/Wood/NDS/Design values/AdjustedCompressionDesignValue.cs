@@ -42,7 +42,7 @@ namespace Wood.NDS
         ///     Adjusted compression design value
         /// </summary>
         /// <param name="F_c">  Out-of-plane seismic forces for concrete and masonry walls  </param>
-        /// <param name="C_M_fc">  Wet service factor </param>
+        /// <param name="C_M_Fc">  Wet service factor </param>
         /// <param name="C_t">  Temperature factor </param>
         /// <param name="C_F_Fc">  Size factor </param>
         /// <param name="C_i_Fc">  Incising factor for dimension lumber </param>

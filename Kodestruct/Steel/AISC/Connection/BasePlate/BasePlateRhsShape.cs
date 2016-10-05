@@ -45,7 +45,6 @@ namespace Steel.AISC.Connection.BasePlate.Shapes
         /// <summary>
         ///     Base plate object required for calculations of minimum thickness etc.
         /// </summary>
-        /// <param name="BasePlateShapeId">  Distinguishes between steel member shapes for base plate (I-shape, rectangular, circular etc) </param>
         /// <param name="B_bp">  Base plate width (for I-shaped column measured parallel to the weak-axis of the shape) </param>
         /// <param name="N_bp">  Base plate width (for I-shaped column measured parallel to the strong-axis of the shape) </param>
         /// <param name="A_2">  Maximum area of the portion of the supporting surface that is geometrically similar to and concentric with the loaded area  </param>

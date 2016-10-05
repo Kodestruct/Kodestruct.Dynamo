@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!--
-	Copyright (C) 2015 Kodestruct Inc
+	Copyright (C) 2015 Wosad Inc
 -->
 
 <Root>
@@ -171,19 +171,19 @@
   <XTreeItem Header="FLOOR" Description="FLOOR" Id="X" ResourcePath="Floor" Tag="X" TemplateName="Category" TreePath="FLOOR">
     <XTreeItem Header="FLOOR FINISH" Description="FLOOR FINISH" Id="X" ResourcePath="FloorFinish" Tag="X" TemplateName="Category" TreePath="FLOOR\FLOOR FINISH">
       <XTreeItem Header="Asphalt block (2-in.)- 0.5-in. mortar " Description="Asphalt block (2-in.)- 0.5-in. mortar " Id="X" ResourcePath="X" Tag="AsphaltBlock" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Asphalt block (2-in.)- 0.5-in. mortar " />
-      <XTreeItem Header="Cement finish (1-in.) on stone–concrete fill " Description="Cement finish (1-in.) on stone–concrete fill " Id="X" ResourcePath="X" Tag="CementFinishOnConcreteFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Cement finish (1-in.) on stone–concrete fill " />
+      <XTreeItem Header="Cement finish (1-in.) on stoneâ€“concrete fill " Description="Cement finish (1-in.) on stoneâ€“concrete fill " Id="X" ResourcePath="X" Tag="CementFinishOnConcreteFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Cement finish (1-in.) on stoneâ€“concrete fill " />
       <XTreeItem Header="Ceramic or quarry tile (0.75-in.) on 0.5-in. mortar bed " Description="Ceramic or quarry tile (0.75-in.) on 0.5-in. mortar bed " Id="X" ResourcePath="X" Tag="TileOnThickMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Ceramic or quarry tile (0.75-in.) on 0.5-in. mortar bed " />
       <XTreeItem Header="Ceramic or quarry tile (0.75-in.) on 1-in. mortar bed " Description="Ceramic or quarry tile (0.75-in.) on 1-in. mortar bed " Id="X" ResourcePath="X" Tag="TileOnThinMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Ceramic or quarry tile (0.75-in.) on 1-in. mortar bed " />
       <XTreeItem Header="Concrete fill finish" Description="Concrete fill finish" Id="2,2,1.5" ResourcePath="ThicknessControl" Tag="ConcreteFillFinish" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Concrete fill finish" />
       <XTreeItem Header="Exterior pavers (1 0.5-in.) on 3-in. mortar bed" Description="Exterior pavers (1 0.5-in.) on 3-in. mortar bed" Id="X" ResourcePath="X" Tag="ExteriorPavers" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Exterior pavers (1 0.5-in.) on 3-in. mortar bed" />
       <XTreeItem Header="Hardwood flooring- 7/8-in. " Description="Hardwood flooring- 7/8-in. " Id="X" ResourcePath="X" Tag="HardwoodFlooring" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Hardwood flooring- 7/8-in. " />
       <XTreeItem Header="Linoleum or asphalt tile- 0.25-in. " Description="Linoleum or asphalt tile- 0.25-in. " Id="X" ResourcePath="X" Tag="LinoleumOrAsphaltTile" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Linoleum or asphalt tile- 0.25-in. " />
-      <XTreeItem Header="Marble and mortar on stone–concrete fill " Description="Marble and mortar on stone–concrete fill " Id="X" ResourcePath="X" Tag="MarbleAndMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Marble and mortar on stone–concrete fill " />
+      <XTreeItem Header="Marble and mortar on stoneâ€“concrete fill " Description="Marble and mortar on stoneâ€“concrete fill " Id="X" ResourcePath="X" Tag="MarbleAndMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Marble and mortar on stoneâ€“concrete fill " />
       <XTreeItem Header="Slate (per mm thickness) " Description="Slate (per mm thickness) " Id="X" ResourcePath="X" Tag="Slate" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Slate (per mm thickness) " />
       <XTreeItem Header="Solid flat tile on 1-in. mortar base " Description="Solid flat tile on 1-in. mortar base " Id="X" ResourcePath="X" Tag="SolidFlatTileOn1InMortarBase" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Solid flat tile on 1-in. mortar base " />
       <XTreeItem Header="Subflooring- 0.75-in. " Description="Subflooring- 0.75-in. " Id="X" ResourcePath="X" Tag="Subflooring" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Subflooring- 0.75-in. " />
       <XTreeItem Header="Terrazzo (1-0.5-in.) directly on slab " Description="Terrazzo (1-0.5-in.) directly on slab " Id="X" ResourcePath="X" Tag="Terrazzo" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-0.5-in.) directly on slab " />
-      <XTreeItem Header="Terrazzo (1-in.) on stone–concrete fill " Description="Terrazzo (1-in.) on stone–concrete fill " Id="X" ResourcePath="X" Tag="TerrazzoOnThickFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-in.) on stone–concrete fill " />
+      <XTreeItem Header="Terrazzo (1-in.) on stoneâ€“concrete fill " Description="Terrazzo (1-in.) on stoneâ€“concrete fill " Id="X" ResourcePath="X" Tag="TerrazzoOnThickFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-in.) on stoneâ€“concrete fill " />
       <XTreeItem Header="Terrazzo (1-in.)- 2-in. stone concrete " Description="Terrazzo (1-in.)- 2-in. stone concrete " Id="X" ResourcePath="X" Tag="TerrazzoOnThinFill" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Terrazzo (1-in.)- 2-in. stone concrete " />
       <XTreeItem Header="Wood block (3-in.) on mastic- no fill " Description="Wood block (3-in.) on mastic- no fill " Id="X" ResourcePath="X" Tag="WoodBlock" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Wood block (3-in.) on mastic- no fill " />
       <XTreeItem Header="Wood block (3-in.) on 0.5-in. mortar base " Description="Wood block (3-in.) on 0.5-in. mortar base " Id="X" ResourcePath="X" Tag="WoodBlockOnMortar" TemplateName="Item" TreePath="FLOOR\FLOOR FINISH\Wood block (3-in.) on 0.5-in. mortar base " />

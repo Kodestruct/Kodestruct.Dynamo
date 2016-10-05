@@ -40,6 +40,7 @@ namespace Steel.AISC.FloorVibrations
 
     public partial class EffectiveProperties 
     {
+        /// <summary>
         ///     Girder effective panel width
         /// </summary>
         /// <param name="L_g">  Girder or primary beam  span </param>
