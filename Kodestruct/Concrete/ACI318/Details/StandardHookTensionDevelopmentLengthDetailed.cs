@@ -58,7 +58,7 @@ namespace Concrete.ACI318.Details
         /// <returns name="l_dh">  Development length in tension of deformed bar or  deformed wire with a standard hook, measured  from outside end of hook, point of tangency, toward  critical section  </returns>
 
         [MultiReturn(new[] { "l_dh" })]
-        public static Dictionary<string, object> StandardHookTensionDevelopmentLengthBasic(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b,
+        public static Dictionary<string, object> StandardHookTensionDevelopmentLengthDetailed(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b,
             RebarMaterial RebarMaterial, string HookType, string RebarCoatingType, double ExcessRebarRatio, double c_side, double c_extension, string EnclosingRebarDirection, 
             double s_enclosing, string Code = "ACI318-14")
         {
