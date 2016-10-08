@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+   /*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -48,8 +48,11 @@ namespace Steel.AISC.Connection
         /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="IsGussetCompactConfiguration"> Distinguishes between compact and noncompact configuration for gusset effective length factor </returns>
 
-        [MultiReturn(new[] { "IsGussetCompactConfiguration" })]
-        public static Dictionary<string, object> GussetPlateConfigurationCompactness(double t_g, double c_Gusset, double F_y, double E, double l_1, string Code = "AISC360-10")
+        //[MultiReturn(new[] { "IsGussetCompactConfiguration" })]
+        //public static Dictionary<string, bool> GussetPlateConfigurationCompactness(double t_g, double c_Gusset, double F_y, double E, double l_1, string Code = "AISC360-10")
+        //{
+
+        public static bool GussetPlateConfigurationCompactness(double t_g, double c_Gusset, double F_y, double E, double l_1, string Code = "AISC360-10")
         {
             //Default values
             bool IsGussetCompactConfiguration = false;
@@ -59,11 +62,12 @@ namespace Steel.AISC.Connection
             AffectedElement el = new AffectedElement();
             IsGussetCompactConfiguration = el.IsGussetPlateConfigurationCompact(t_g, c_Gusset, F_y, E, l_1);
 
-            return new Dictionary<string, object>
-            {
-                { "GussetPlateConfigurationCompactness", IsGussetCompactConfiguration }
+            //return new Dictionary<string, bool>
+            //{
+            //    { "GussetPlateConfigurationCompactness", IsGussetCompactConfiguration }
  
-            };
+            //};
+            return IsGussetCompactConfiguration;
         }
 
 
