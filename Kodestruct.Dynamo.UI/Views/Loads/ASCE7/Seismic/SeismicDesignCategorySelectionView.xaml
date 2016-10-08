@@ -1,5 +1,5 @@
 <!--
-	Copyright (C) 2015 Konstantin Udilovich
+	Copyright (C) 2015 Kodestruct Inc
 -->
 <UserControl x:Class="Kodestruct.Loads.ASCE7.Lateral.Seismic.General.SeismicDesignCategorySelectionView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
