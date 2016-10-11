@@ -57,7 +57,7 @@ namespace Steel.AISC
         /// <returns name="IsApplicable"> Identifies whether the selected limit state is applicable </returns>
 
         [MultiReturn(new[] { "phiP_n", "IsApplicable" })]
-        public static Dictionary<string, object> FlexuralBucklingStrength(CustomProfile Shape, double L_ex, double L_ey, double L_ez, double F_y, double E, bool IsRolledMember,
+        public static Dictionary<string, object> FlexuralBucklingStrength(CustomProfile Shape, double L_ex, double L_ey, double L_ez, double F_y, double E=29000.0, bool IsRolledMember=true,
             string Code = "AISC360-10")
         {
             //Default values

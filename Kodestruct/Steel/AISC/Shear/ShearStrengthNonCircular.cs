@@ -52,7 +52,7 @@ namespace Steel.AISC
         /// <returns name="phiV_n"> Shear strength </returns>
 
         [MultiReturn(new[] { "phiV_n" })]
-        public static Dictionary<string, object> ShearStrengthNonCircular(string ShearCase, double F_y, double t_w, double h, double a_s, double E, string Code = "AISC360-10")
+        public static Dictionary<string, object> ShearStrengthNonCircular(string ShearCase, double F_y, double t_w, double h, double a_s=0.0, double E=29000, string Code = "AISC360-10")
         {
             //Default values
             double phiV_n = 0;

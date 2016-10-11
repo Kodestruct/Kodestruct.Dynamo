@@ -49,7 +49,7 @@ namespace Steel.AISC.Connection
         /// <returns name="IsGussetCompactConfiguration"> Distinguishes between compact and noncompact configuration for gusset effective length factor </returns>
 
         [MultiReturn(new[] { "IsGussetCompactConfiguration" })]
-        public static Dictionary<string, object> GussetPlateConfigurationCompactness(double t_g, double c_Gusset, double F_y, double E, double l_1, string Code = "AISC360-10")
+        public static Dictionary<string, object> GussetPlateConfigurationCompactness(double t_g, double c_Gusset, double F_y, double l_1, double E=29000, string Code = "AISC360-10")
         {
             //Default values
             bool IsGussetCompactConfiguration = false;

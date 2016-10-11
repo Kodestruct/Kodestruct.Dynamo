@@ -86,6 +86,10 @@
       <HintPath>..\packages\Kodestruct.Common.0.0.1.8\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.1.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.9\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>

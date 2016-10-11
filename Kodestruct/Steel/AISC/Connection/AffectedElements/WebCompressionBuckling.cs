@@ -50,7 +50,7 @@ namespace Steel.AISC.Connection
         /// <returns name="phiR_n"> Strength of member or connection </returns>
 
         [MultiReturn(new[] { "phiR_n" })]
-        public static Dictionary<string, object> WebCompressionBuckling(double t_w,double h_web,double F_yw,double E,double d,double l_edge, string Code = "AISC360-10")
+        public static Dictionary<string, object> WebCompressionBuckling(double t_w, double h_web, double F_yw, double d, double l_edge, double E=29000.0, string Code = "AISC360-10")
         {
             //Default values
             double phiR_n = 0;
