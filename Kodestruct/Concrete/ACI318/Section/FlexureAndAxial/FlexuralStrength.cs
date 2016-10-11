@@ -58,7 +58,7 @@ namespace Concrete.ACI318.Section //.FlexureAndAxialForce
 
         [MultiReturn(new[] { "phiM_n", "a", "c", "FlexuralFailureModeClassification", "epsilon_t" })]
         public static Dictionary<string, object> FlexuralStrength(ConcreteFlexureAndAxiaSection ConcreteSection,
-            string FlexuralCompressionFiberLocation = "Top", string ConfinementReinforcementType = "Ties", string Code = "ACI318-14")
+            string FlexuralCompressionFiberLocation = "Top",  string Code = "ACI318-14")
         {
             //Default values
             double phiM_n = 0;
@@ -78,16 +78,16 @@ namespace Concrete.ACI318.Section //.FlexureAndAxialForce
                 throw new Exception("Flexural compression fiber location is not recognized. Check input.");
             }
 
-            ConfinementReinforcementType co;
-            bool IsValidStringConf = Enum.TryParse(ConfinementReinforcementType, true, out co);
-            if (IsValidStringConf == false)
-            {
-                throw new Exception("Confinement reinforcement type is not recognized. Check input.");
-            }
+            //ConfinementReinforcementType co;
+            //bool IsValidStringConf = Enum.TryParse(ConfinementReinforcementType, true, out co);
+            //if (IsValidStringConf == false)
+            //{
+            //    throw new Exception("Confinement reinforcement type is not recognized. Check input.");
+            //}
 
 
              KodestructAci.IConcreteFlexuralMember beam = ConcreteSection.FlexuralSection;
-             ConcreteFlexuralStrengthResult result = beam.GetDesignFlexuralStrength(p, co);
+             ConcreteFlexuralStrengthResult result = beam.GetDesignFlexuralStrength(p);
 
             //note that internally ACI nodes in Kodestruct use psi units consistent with ACI code
             //convert to ksi units consistent with the rest of Dynamo nodes here

@@ -63,6 +63,17 @@ namespace Concrete.ACI318.Section.SectionTypes
             CrossSectionRectangularShape shape = new CrossSectionRectangularShape(ConcreteMaterial.Concrete, null, b, h);
             base.ConcreteMaterial = ConcreteMaterial; //duplicate save of concrete material into base Dynamo class
 
+            KodestructAci.ConfinementReinforcementType ConfinementReinforcementType;
+            if (hasTies == true)
+            {
+                ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.Ties;
+            }
+            else
+            {
+                ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.NoReinforcement;
+            }
+
+
             List<KodestructAci.RebarPoint> LongitudinalBars = new List<KodestructAci.RebarPoint>();
 
             KodestructAci.Rebar TopRebar = new KodestructAci.Rebar(A_sTop, LongitudinalRebarMaterial.Material);
@@ -73,7 +84,8 @@ namespace Concrete.ACI318.Section.SectionTypes
             KodestructAci.RebarPoint BottomPoint = new KodestructAci.RebarPoint(BottomRebar, new KodestructAci.RebarCoordinate() { X = 0, Y = -h / 2.0 + c_cntr });
             LongitudinalBars.Add(BottomPoint);
 
-            KodestructAci.IConcreteFlexuralMember fs = new KodestructAci14.ConcreteSectionFlexure(shape, LongitudinalBars, new CalcLog());
+            KodestructAci.IConcreteFlexuralMember fs = new KodestructAci14.ConcreteSectionFlexure(shape, LongitudinalBars, new CalcLog(),
+                ConfinementReinforcementType);
             this.FlexuralSection = fs;
         }
 
@@ -87,6 +99,7 @@ namespace Concrete.ACI318.Section.SectionTypes
         /// <param name="c_cntr">Concrete cover to tension rebar centroid</param>
         /// <param name="ConcreteMaterial">Concrete material</param>
         /// <param name="LongitudinalRebarMaterial">Rebar material for longitudinal bars</param>
+        /// <param name="hasTies">Identifies if member has ties around longitudinal reinforcement</param>
         /// <returns name="RectangularSectionDoublyReinforced">  Section [OBJECT] </returns>
 
         public static RectangularSectionDoublyReinforced ByWidthHeigthAndReinforcementArea(double b, double h, double A_sTop, double A_sBot, 

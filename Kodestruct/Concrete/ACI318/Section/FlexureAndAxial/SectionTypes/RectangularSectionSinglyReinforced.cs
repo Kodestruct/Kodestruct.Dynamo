@@ -58,13 +58,14 @@ namespace Concrete.ACI318.Section.SectionTypes
         internal RectangularSectionSinglyReinforced(double b, double h, double A_s, double c_cntr,
         ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, bool hasTies=false)
         {
+            KodestructAci.ConfinementReinforcementType ConfinementReinforcementType;
             if (hasTies == true)
             {
-                this.ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.Ties;
+                ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.Ties;
             }
             else
             {
-                this.ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.NoReinforcement;
+                ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.NoReinforcement;
             }
 
             CrossSectionRectangularShape shape = new CrossSectionRectangularShape(ConcreteMaterial.Concrete, null, b, h);
@@ -76,7 +77,7 @@ namespace Concrete.ACI318.Section.SectionTypes
                 KodestructAci.RebarPoint point = new KodestructAci.RebarPoint(thisBar, new KodestructAci.RebarCoordinate() { X = 0, Y = -h / 2.0 + c_cntr });
             LongitudinalBars.Add(point);
 
-            KodestructAci.IConcreteFlexuralMember fs = new KodestructAci14.ConcreteSectionFlexure(shape, LongitudinalBars, new CalcLog());
+            KodestructAci.IConcreteFlexuralMember fs = new KodestructAci14.ConcreteSectionFlexure(shape, LongitudinalBars, new CalcLog(), ConfinementReinforcementType);
             this.FlexuralSection = fs;
         }
 

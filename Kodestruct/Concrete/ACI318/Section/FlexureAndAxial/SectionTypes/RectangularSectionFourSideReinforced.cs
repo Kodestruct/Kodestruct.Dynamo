@@ -50,16 +50,28 @@ namespace Concrete.ACI318.Section.SectionTypes
 
         [IsVisibleInDynamoLibrary(false)]
         internal RectangularSectionFourSideReinforced(double b, double h, double A_sTopBottom, double A_sLeftRight,
-         double c_cntrTopBottom, double c_cntrLeftRight, ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, bool hasTies = false)
+         double c_cntrTopBottom, double c_cntrLeftRight, ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, 
+            bool hasTies = false)
         {
 
             CrossSectionRectangularShape shape = new CrossSectionRectangularShape(ConcreteMaterial.Concrete, null, b, h);
             base.ConcreteMaterial = ConcreteMaterial; //duplicate save of concrete material into base Dynamo class
 
+            KodestructAci.ConfinementReinforcementType ConfinementReinforcementType;
+            if (hasTies == true)
+            {
+                ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.Ties;
+            }
+            else
+            {
+                ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.NoReinforcement;
+            }
+
+
             FlexuralSectionFactory flexureFactory = new FlexuralSectionFactory();
             ConcreteSectionFlexure fs = flexureFactory.GetRectangularSectionFourSidesDistributed(b, h,A_sTopBottom, A_sLeftRight,
                 c_cntrTopBottom, c_cntrLeftRight,
-                ConcreteMaterial.Concrete, LongitudinalRebarMaterial.Material);
+                ConcreteMaterial.Concrete, LongitudinalRebarMaterial.Material,ConfinementReinforcementType);
 
 
             this.FlexuralSection = fs;
@@ -76,13 +88,15 @@ namespace Concrete.ACI318.Section.SectionTypes
         /// <param name="c_cntrLeftRight">Concrete cover to tension rebar centroid (side faces)</param>
         /// <param name="ConcreteMaterial">Concrete material</param>
         /// <param name="LongitudinalRebarMaterial">Rebar material for longitudinal bars</param>
+        /// <param name="hasTies">Identifies if member has ties around longitudinal reinforcement</param>
         /// <returns name="RectangularSectionFourSideReinforced">  Section [OBJECT] </returns>
 
         public static RectangularSectionFourSideReinforced ByWidthHeigthAndReinforcementArea(double b, double h, double A_sTopBottom,  double A_sLeftRight,
          double c_cntrTopBottom, double c_cntrLeftRight, 
-            ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, bool hasTies = true)
+            ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, bool HasTies = true)
         {
-            return new RectangularSectionFourSideReinforced(b, h, A_sTopBottom, A_sLeftRight, c_cntrTopBottom, c_cntrLeftRight, ConcreteMaterial, LongitudinalRebarMaterial);
+            return new RectangularSectionFourSideReinforced(b, h, A_sTopBottom, A_sLeftRight, c_cntrTopBottom, c_cntrLeftRight, 
+                ConcreteMaterial, LongitudinalRebarMaterial,HasTies);
         }
 
 
