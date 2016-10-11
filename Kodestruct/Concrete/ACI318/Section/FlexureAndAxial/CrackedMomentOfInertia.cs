@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+   /*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,40 +21,55 @@ using Autodesk.DesignScript.Runtime;
 using Dynamo.Models;
 using System.Collections.Generic;
 using Dynamo.Nodes;
+using Dynamo.Graph.Nodes;
+using KodestructAci = Kodestruct.Concrete.ACI;
+using Kodestruct.Common.Section.Interfaces;
+using Concrete.ACI318.Section.SectionTypes;
+using Kodestruct.Concrete.ACI318_14;
+using System;
 
 #endregion
 
-namespace Concrete.ACI318_14.Section.Flexure
+namespace Concrete.ACI318.Section
 {
 
 /// <summary>
 ///     Cracked moment of inertia
-///     Category:   Concrete.ACI318_14.Section.Flexure
+///     Category:   Concrete.ACI318.Section.FlexureAndAxialForce
 /// </summary>
 /// 
 
 
-    [IsDesignScriptCompatible]
-    public partial class Flexure 
-    {
-/// <summary>
-///     Cracked moment of inertia
-/// </summary>
-        /// <param name="ConcreteSection">  Reinforced concrete section </param>
-/// <param name="FlexuralCompressionFiberLocation">  Indicates whether the section in flexure has top or bottom in compression due to stresses from bending moment </param>
-/// <param name="c">   Distance from extreme compression fiber to neutral  axis  </param>
 
+    public partial class FlexureAndAxialForce 
+    {
+        /// <summary>
+        ///     Cracked moment of inertia
+        /// </summary>
+        /// <param name="ConcreteSection">  Reinforced concrete section </param>
+        /// <param name="FlexuralCompressionFiberLocation">  Indicates whether the section in flexure has top or bottom in compression due to stresses from bending moment </param>
+        /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="I_cr">  Moment of inertia of cracked section transformed  to concrete  </returns>
 
         [MultiReturn(new[] { "I_cr" })]
-        public static Dictionary<string, object> CrackedMomentOfInertia(ConcreteSection ConcreteSection,string FlexuralCompressionFiberLocation,double c)
+        public static Dictionary<string, object> CrackedMomentOfInertia(ConcreteFlexureAndAxiaSection ConcreteSection,
+            string FlexuralCompressionFiberLocation = "Top", string Code = "ACI318-14")
         {
             //Default values
             double I_cr = 0;
 
 
             //Calculation logic:
+            FlexuralCompressionFiberPosition p;
+            bool IsValidStringFiber = Enum.TryParse(FlexuralCompressionFiberLocation, true, out p);
+            if (IsValidStringFiber == false)
+            {
+                throw new Exception("Flexural compression fiber location is not recognized. Check input.");
+            }
 
+
+            ConcreteSectionFlexure beam = ConcreteSection.FlexuralSection as ConcreteSectionFlexure;
+            I_cr = beam.GetCrackedMomentOfInertia(p);
 
             return new Dictionary<string, object>
             {
@@ -64,15 +79,6 @@ namespace Concrete.ACI318_14.Section.Flexure
         }
 
 
-        //internal Flexure (ConcreteSection ConcreteSection,string FlexuralCompressionFiberLocation,double c)
-        //{
-
-        //}
-        //[IsVisibleInDynamoLibrary(false)]
-        //public static Flexure  ByInputParameters(ConcreteSection ConcreteSection,string FlexuralCompressionFiberLocation,double c)
-        //{
-        //    return new Flexure(ConcreteSection ,FlexuralCompressionFiberLocation ,c );
-        //}
 
     }
 }

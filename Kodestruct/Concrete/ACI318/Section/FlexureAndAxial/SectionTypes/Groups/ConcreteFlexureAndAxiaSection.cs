@@ -56,6 +56,15 @@ namespace Concrete.ACI318.Section.SectionTypes
             set { flexSection = value; }
         }
 
+        private KodestructAci.ConfinementReinforcementType confinementReinforcementType;
+
+        [IsVisibleInDynamoLibrary(false)]
+        public KodestructAci.ConfinementReinforcementType ConfinementReinforcementType
+        {
+            get { return confinementReinforcementType; }
+            set { confinementReinforcementType = value; }
+        }
+
         private List<RebarPoint> longitudinalBars;
 
         [IsVisibleInDynamoLibrary(false)]

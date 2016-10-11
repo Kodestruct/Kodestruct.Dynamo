@@ -53,12 +53,19 @@ namespace Concrete.ACI318.Section.SectionTypes
             double c_cntr;
             ConcreteMaterial ConcreteMaterial;
             RebarMaterial LongitudinalRebarMaterial;
-            RebarMaterial TransverseRebarMaterial;
 
          [IsVisibleInDynamoLibrary(false)]
         internal RectangularSectionSinglyReinforced(double b, double h, double A_s, double c_cntr,
         ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, bool hasTies=false)
         {
+            if (hasTies == true)
+            {
+                this.ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.Ties;
+            }
+            else
+            {
+                this.ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.NoReinforcement;
+            }
 
             CrossSectionRectangularShape shape = new CrossSectionRectangularShape(ConcreteMaterial.Concrete, null, b, h);
             base.ConcreteMaterial = ConcreteMaterial; //duplicate save of concrete material into base Dynamo class
@@ -82,12 +89,13 @@ namespace Concrete.ACI318.Section.SectionTypes
          /// <param name="c_cntr">Concrete cover to tension rebar centroid</param>
          /// <param name="ConcreteMaterial">Concrete material</param>
          /// <param name="LongitudinalRebarMaterial">Rebar material for longitudinal bars</param>
+         /// <param name="HasTies">Indicates if member has ties/strirrups</param>
          /// <returns name="RectangularSectionSinglyReinforced">  Section [OBJECT] </returns>
 
         public static RectangularSectionSinglyReinforced ByWidthHeigthAndReinforcementArea(double b, double h, double A_s, double c_cntr,
-            ConcreteMaterial ConcreteMaterial,RebarMaterial LongitudinalRebarMaterial)
+            ConcreteMaterial ConcreteMaterial, RebarMaterial LongitudinalRebarMaterial, bool HasTies = false)
         {
-            return new RectangularSectionSinglyReinforced(b, h, A_s, c_cntr, ConcreteMaterial, LongitudinalRebarMaterial);
+            return new RectangularSectionSinglyReinforced(b, h, A_s, c_cntr, ConcreteMaterial, LongitudinalRebarMaterial, HasTies);
         }
 
 

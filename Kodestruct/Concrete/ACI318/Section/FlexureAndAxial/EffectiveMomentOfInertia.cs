@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+/*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,56 +21,47 @@ using Autodesk.DesignScript.Runtime;
 using Dynamo.Models;
 using System.Collections.Generic;
 using Dynamo.Nodes;
+using Dynamo.Graph.Nodes;
+using Kodestruct.Concrete.ACI.Entities.FlexuralMember;
 
 #endregion
 
-namespace Concrete.ACI318_14.Section.Flexure
+namespace Concrete.ACI318.Section
 {
 
 /// <summary>
 ///     Effective moment of inertia
-///     Category:   Concrete.ACI318_14.Section.Flexure
+///     Category:   Concrete.ACI318.Section.FlexureAndAxialForce
 /// </summary>
 /// 
 
 
-    [IsDesignScriptCompatible]
-    public partial class Flexure 
+    public partial class FlexureAndAxialForce 
     {
-/// <summary>
-///     Effective moment of inertia
-/// </summary>
+        /// <summary>
+        ///     Effective moment of inertia
+        /// </summary>
         /// <param name="I_cr">   Moment of inertia of cracked section transformed  to concrete  </param>
-/// <param name="I_g">   Moment of inertia of gross concrete section about  centroidal axis, neglecting reinforcement  </param>
-/// <param name="M_cr">   Cracking moment   </param>
-/// <param name="M_a">   Maximum moment in member due to service loads  at stage deflection is calculated   </param>
+        /// <param name="I_g">   Moment of inertia of gross concrete section about  centroidal axis, neglecting reinforcement  </param>
+        /// <param name="M_cr">   Cracking moment   </param>
+        /// <param name="M_a">   Maximum moment in member due to service loads  at stage deflection is calculated   </param>
+        /// <returns name="I_e"> Effective moment of inertia </returns>
 
         
-        [MultiReturn(new[] {  })]
-        public static Dictionary<string, object> EffectiveMomentOfInertia(double I_cr,double I_g,double M_cr,double M_a)
+
+        public static double EffectiveMomentOfInertia(double I_cr,double I_g,double M_cr,double M_a)
         {
             //Default values
-            
+            double I_e = 0.0;
 
             //Calculation logic:
+            EffectiveMomentOfInertiaCalculator emic = new EffectiveMomentOfInertiaCalculator();
+            I_e = emic.GetI_e(I_g, I_cr, M_cr, M_a);
 
-
-            return new Dictionary<string, object>
-            {
-                 
-            };
+            return I_e;
         }
 
 
-        //internal Flexure (double I_cr,double I_g,double M_cr,double M_a)
-        //{
-
-        //}
-        //[IsVisibleInDynamoLibrary(false)]
-        //public static Flexure  ByInputParameters(double I_cr,double I_g,double M_cr,double M_a)
-        //{
-        //    return new Flexure(I_cr ,I_g ,M_cr ,M_a );
-        //}
 
     }
 }
