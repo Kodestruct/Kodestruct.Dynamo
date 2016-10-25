@@ -47,18 +47,18 @@ namespace Steel.AISC
 
     public partial class Flexure 
     {
-    /// <summary>
+        /// <summary>
         ///     Flexural yielding
-    /// </summary>
-    /// <param name="Shape">  Shape object </param>
-    ///  <param name="F_y">  Specified minimum yield stress </param>
-    /// <param name="BendingAxis">  Distinguishes between bending with respect to section x-axis vs x-axis </param>
-    /// <param name="FlexuralCompressionLocation">  Identifies whether top or bottom fiber of the section are subject to flexural compression (depending on the sign of moment) </param>
-    /// <param name="E">  Modulus of elasticity of steel </param>
+        /// </summary>
+        /// <param name="Shape">  Shape object </param>
+        ///  <param name="F_y">  Specified minimum yield stress </param>
+        /// <param name="BendingAxis">  Distinguishes between bending with respect to section x-axis vs x-axis </param>
+        /// <param name="FlexuralCompressionLocation">  Identifies whether top or bottom fiber of the section are subject to flexural compression (depending on the sign of moment) </param>
+        /// <param name="E">  Modulus of elasticity of steel </param>
         ///  <param name="IsRolledMember">  Identifies if member is rolled or built up from individual plates or shapes </param>
         /// <param name="Code"> Applicable version of code/standard</param>
-    /// <returns name="phiM_n"> Moment strength </returns>
-    /// <returns name="IsApplicableLimitState"> Identifies whether the selected limit state is applicable </returns>
+        /// <returns name="phiM_n"> Moment strength </returns>
+        /// <returns name="IsApplicableLimitState"> Identifies whether the selected limit state is applicable </returns>
 
         [MultiReturn(new[] { "phiM_n","IsApplicableLimitState" })]
         public static Dictionary<string, object> FlexuralYielding(CustomProfile Shape, double F_y, string BendingAxis="XAxis", string FlexuralCompressionLocation="Top",
