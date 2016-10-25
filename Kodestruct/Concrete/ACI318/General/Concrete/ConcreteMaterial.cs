@@ -43,7 +43,7 @@ namespace Concrete.ACI318.General.Concrete
     {
 
         [IsVisibleInDynamoLibrary(false)]
-        internal ConcreteMaterial(double f_c_prime, string ConcreteMaterialWeight="Normalweight")
+        internal ConcreteMaterial(double f_c_prime=4.0, string ConcreteMaterialWeight="Normalweight")
         {
             ConcreteTypeByWeight weightType;
             bool IsValidString = Enum.TryParse(ConcreteMaterialWeight, true, out weightType);

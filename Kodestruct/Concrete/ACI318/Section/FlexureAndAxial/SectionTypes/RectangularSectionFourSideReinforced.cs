@@ -54,8 +54,6 @@ namespace Concrete.ACI318.Section.SectionTypes
             bool hasTies = false)
         {
 
-            CrossSectionRectangularShape shape = new CrossSectionRectangularShape(ConcreteMaterial.Concrete, null, b, h);
-            base.ConcreteMaterial = ConcreteMaterial; //duplicate save of concrete material into base Dynamo class
 
             KodestructAci.ConfinementReinforcementType ConfinementReinforcementType;
             if (hasTies == true)
@@ -67,6 +65,7 @@ namespace Concrete.ACI318.Section.SectionTypes
                 ConfinementReinforcementType = KodestructAci.ConfinementReinforcementType.NoReinforcement;
             }
 
+            base.ConcreteMaterial = ConcreteMaterial; //duplicate save of concrete material into base Dynamo class
 
             FlexuralSectionFactory flexureFactory = new FlexuralSectionFactory();
             ConcreteSectionFlexure fs = flexureFactory.GetRectangularSectionFourSidesDistributed(b, h,A_sTopBottom, A_sLeftRight,
