@@ -235,7 +235,7 @@
     <Compile Include="Nodes\Steel\AISC\Connection\GussetConfigurationSelection.cs" />
     <Compile Include="Nodes\General\Flexure\FlexuralBracingCase.cs" />
     <Compile Include="Nodes\General\Flexure\FlexuralCompressionLocation.cs" />
-    <Compile Include="Nodes\General\ForceTypeSelection.cs" />
+    <Compile Include="Nodes\General\AxialForceTypeSelection.cs" />
     <Compile Include="Nodes\Steel\AISC\Floor vibrations\AdjacentSpanWeightIncreaseTypeSelection.cs" />
     <Compile Include="Nodes\Steel\AISC\Floor vibrations\BeamLocationSelection.cs" />
     <Compile Include="Nodes\Steel\AISC\Floor vibrations\FloorDampingComponentSelection.cs" />

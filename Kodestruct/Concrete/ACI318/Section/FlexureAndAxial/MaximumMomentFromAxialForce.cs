@@ -49,6 +49,9 @@ namespace Concrete.ACI318.Section
         /// <param name="P_u">   Factored axial force; to be taken as positive for  compression and negative for tension  </param>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>
         /// <param name="ConfinementReinforcementType">  Type of compression member confinement reinforcement (tied, spiral etc) </param>
+        /// <param name="FlexuralCompressionFiberLocation">Specifies if top or bottom fiber is in compression from the effects of bending moment</param>
+        /// <param name="IsPrestressed">Indicates if member is prestressed</param>
+        /// <param name="Code">Applicable version of code/standard</param>
         /// <returns name="phiM_n">  Design flexural strength at section   </returns>
 
 
@@ -57,6 +60,7 @@ namespace Concrete.ACI318.Section
             bool IsPrestressed = false, string Code = "ACI318-14")
         {
             //Default values
+
             double phiM_n = 0.0;
 
             //Calculation logic:

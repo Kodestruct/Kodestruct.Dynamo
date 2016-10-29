@@ -264,7 +264,6 @@
     <Compile Include="Loads\ASCE7\Gravity\Dead\Groups\Live.cs" />
     <Compile Include="Loads\ASCE7\Gravity\Dead\Groups\Dead.cs" />
     <Compile Include="Loads\ASCE7\Gravity\Live\UniformLiveLoad.cs" />
-    <Compile Include="Examples\SectionProperties\SectionIRolled.cs" />
     <Compile Include="Loads\ASCE7\Lateral\Seismic\Building fundamental period\BuildingFundamentalPeriodForSeismicLoads.cs" />
     <Compile Include="Loads\ASCE7\Lateral\Seismic\Building fundamental period\SeismicFundamentalPeriodGeneralMethod.cs" />
     <Compile Include="Loads\ASCE7\Lateral\Seismic\Building fundamental period\SeismicFundamentalPeriodUpperLimitCoefficient.cs" />
@@ -488,9 +487,6 @@
     <None Include="NOTICE" />
     <None Include="packages.config" />
     <None Include="Kodestruct.licenseheader" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Examples\SectionProperties\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\KodestructImages.resources" />
