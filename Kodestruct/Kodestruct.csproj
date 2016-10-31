@@ -83,19 +83,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Common, Version=0.0.1.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.1.9\lib\net45\Kodestruct.Common.dll</HintPath>
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.10\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.1.10, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.11\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.12\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.1.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.1.6\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.1.7\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -242,6 +242,7 @@
     <Compile Include="Concrete\ACI318\General\Rebar\Groups\SizeAreaAndProperties.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarAreaByElementWidthAndIdAndSpacing.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarAreaByIdAndNumberOfBars.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\MaximumCompressiveStrength.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\MaximumMomentFromAxialForce.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\Groups\Flexure.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\Groups\ConcreteFlexureAndAxiaSection.cs" />
@@ -255,6 +256,11 @@
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\OneWayShearStrengthProvidedByConcrete.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\OneWayShearStrengthProvidedByRebar.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\OneWayShear\TotalOneWayShearStrength.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\Groups\Torsion.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\MaximumTorsionalAndShearStrengthInteraction.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\RequiredLongitudinalTorsionRebar.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\RequiredTransverseTorsionAndShearRebar.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\ThresholdTorsion.cs" />
     <Compile Include="General\DesignToCapacityMultiple.cs" />
     <Compile Include="General\DesignToCapacitySingle.cs" />
     <Compile Include="General\Groups\DemandToCapacity.cs" />
@@ -476,7 +482,6 @@
   <ItemGroup>
     <Folder Include="Concrete\ACI318\Beam\Flexure\" />
     <Folder Include="Concrete\ACI318\Beam\ShearAndTorsion\OneWayShear\" />
-    <Folder Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\" />
     <Folder Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\" />
     <Folder Include="Loads\ASCE7\Gravity\Ice\" />
     <Folder Include="Loads\ASCE7\Gravity\Snow\" />

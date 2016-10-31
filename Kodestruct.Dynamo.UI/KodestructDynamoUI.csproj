@@ -92,19 +92,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Common, Version=0.0.1.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.1.9\lib\net45\Kodestruct.Common.dll</HintPath>
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.10\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.1.10, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.11\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.12\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.1.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.1.6\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.1.7\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -201,6 +201,7 @@
     <Compile Include="Nodes\Concrete\ACI318\Details\HookTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\RebarCastingPositionSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\RebarSpliceClassSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\ConfinementReinforcementTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\RebarSizeSelection.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -283,6 +284,9 @@
     </Compile>
     <Compile Include="Views\Concrete\ACI318\Details\RebarSpliceClassSelectionView.xaml.cs">
       <DependentUpon>RebarSpliceClassSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\General\Rebar\ConfinementReinforcementTypeSelectionView.xaml.cs">
+      <DependentUpon>ConfinementReinforcementTypeSelectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Concrete\ACI318\General\Rebar\RebarSizeSelectionView.xaml.cs">
       <DependentUpon>RebarSizeSelectionView.xaml</DependentUpon>
@@ -561,6 +565,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Concrete\ACI318\Details\RebarSpliceClassSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\General\Rebar\ConfinementReinforcementTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
