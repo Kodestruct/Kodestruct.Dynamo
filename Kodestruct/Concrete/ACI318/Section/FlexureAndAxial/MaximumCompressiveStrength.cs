@@ -73,7 +73,7 @@ namespace Concrete.ACI318.Section
                 CalcLog log = new CalcLog();
                 IConcreteSectionWithLongitudinalRebar Section = (IConcreteSectionWithLongitudinalRebar)ConcreteSection.FlexuralSection;
                 ConcreteSectionCompression column = new ConcreteSectionCompression(Section, ConfinementReinforcement, log);
-                //double P_o = column.GetMaximumForce() / 1000.0; // convert to kip inch units;
+                P_o = column.GetMaximumForce() / 1000.0; // convert to kip inch units;
                 double phi = 0.65;
                 phiP_o = phi * P_o;
 

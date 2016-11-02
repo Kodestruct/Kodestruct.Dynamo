@@ -51,7 +51,7 @@ namespace Concrete.ACI318.General.Reinforcement
 
             //Calculation logic:
             RebarMaterial mat = RebarMaterial.ByRebarSpecificationId(RebarSpecificationId);
-            f_y = mat.Material.YieldStress;
+            f_y = mat.Material.YieldStress/1000.0;
 
             return new Dictionary<string, object>
             {
