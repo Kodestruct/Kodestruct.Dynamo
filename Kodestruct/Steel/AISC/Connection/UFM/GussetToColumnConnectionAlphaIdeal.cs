@@ -57,7 +57,7 @@ namespace Steel.AISC.Connection
 
             //Calculation logic:
             UFMCase ufmCase = new UFMCase(d_b, d_c, theta);
-            beta = ufmCase.Get_alpha(beta);
+            alpha = ufmCase.Get_alpha(beta);
 
             return new Dictionary<string, object>
             {
