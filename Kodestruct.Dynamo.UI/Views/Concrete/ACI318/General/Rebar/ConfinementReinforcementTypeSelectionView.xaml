@@ -13,15 +13,15 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                <ResourceDictionary Source="RebarIcons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
-                <KodestructControls:EnumDataElement   EnumString="Ties" Description="Ties" />
-                <KodestructControls:EnumDataElement   EnumString="Spiral" Description="Spiral"/>
-                <KodestructControls:EnumDataElement   EnumString="NoReinforcement" Description="No reinforcement" />
+                <KodestructControls:EnumDataElement    Icon="{StaticResource ConfinementTies}"  EnumString="Ties" Description="Ties" />
+                <KodestructControls:EnumDataElement    Icon="{StaticResource ConfinementSpiral}" EnumString="Spiral" Description="Spiral"/>
+                <KodestructControls:EnumDataElement     EnumString="NoReinforcement" Description="No reinforcement" />
             </KodestructControls:EnumDataCollection>
 
         </ResourceDictionary>

@@ -1,0 +1,131 @@
+﻿<Root>
+  <XTreeItem Header="NON-PRESTRESSED ELEMENT" Description="Non-prestressed" Id="X" ResourcePath="Non-prestressed" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT">
+    <XTreeItem Header="CAST-IN-PLACE" Description="Cast-in-place element" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE">
+      <XTreeItem Header="SLAB OR JOIST" Description="Slab or joist" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="NP-CIP-SLAB OR JOIST-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-CIP-SLAB OR JOIST-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-CIP-SLAB OR JOIST-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="WALL" Description="Wall" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="NP-CIP-WALL-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-CIP-WALL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-CIP-WALL-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="BEAM" Description="Beam" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="NP-CIP-BEAM-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-CIP-BEAM-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-CIP-BEAM-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="COLUMN OR PEDESTAL" Description="Column or pedestal" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="NP-CIP-COLUMN OR PEDESTAL-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-CIP-COLUMN OR PEDESTAL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-CIP-COLUMN OR PEDESTAL-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="TIE" Description="Tension tie" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="NP-CIP-TIE-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-CIP-TIE-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-CIP-TIE-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="CAST IN PLANT" Description="Element manufactured under plant conditions" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT">
+      <XTreeItem Header="SLAB OR JOIST" Description="Slab or joist" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\SLAB OR JOIST">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-PLANT-SLAB OR JOIST-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\SLAB OR JOIST\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-PLANT-SLAB OR JOIST-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\SLAB OR JOIST\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="WALL" Description="Wall" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\WALL">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-PLANT-WALL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\WALL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="NP-PLANT-WALL-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\WALL\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="BEAM" Description="Beam" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\BEAM">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-PLANT-BEAM-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="NP-PLANT-BEAM-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="NP-PLANT-BEAM-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="COLUMN OR PEDESTAL" Description="Column or pedestal" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-PLANT-COLUMN OR PEDESTAL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="NP-PLANT-COLUMN OR PEDESTAL-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="NP-PLANT-COLUMN OR PEDESTAL-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="TIE" Description="Tension tie" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\TIE">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="NP-PLANT-TIE-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\TIE\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\TIE\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="NP-PLANT-TIE-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\TIE\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="NP-PLANT-TIE-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="NON-PRESTRESSED ELEMENT\CAST IN PLANT\TIE\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+  <XTreeItem Header="PRESTRESSED ELEMENT" Description="Prestressed" Id="X" ResourcePath="Prestressed" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT">
+    <XTreeItem Header="CAST-IN-PLACE" Description="Cast-in-place element" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE">
+      <XTreeItem Header="SLAB OR JOIST" Description="Slab or joist" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="PS-CIP-SLAB OR JOIST-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-CIP-SLAB OR JOIST-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="PS-CIP-SLAB OR JOIST-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="WALL" Description="Wall" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="PS-CIP-WALL-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-CIP-WALL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="PS-CIP-WALL-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\WALL\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="BEAM" Description="Beam" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="PS-CIP-BEAM-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-CIP-BEAM-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="PS-CIP-BEAM-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="PS-CIP-BEAM-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\BEAM\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="COLUMN OR PEDESTAL" Description="Column or pedestal" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="PS-CIP-COLUMN OR PEDESTAL-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-CIP-COLUMN OR PEDESTAL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="PS-CIP-COLUMN OR PEDESTAL-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="PS-CIP-COLUMN OR PEDESTAL-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="TIE" Description="Tension tie" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE">
+        <XTreeItem Header="Cast against and permanently in contact with ground" Description="Cast against and permanently in contact with ground" Id="PS-CIP-TIE-CastAgainstEarth" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\Cast against and permanently in contact with ground" />
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-CIP-TIE-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="PS-CIP-TIE-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="PS-CIP-TIE-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST-IN-PLACE\TIE\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+    </XTreeItem>
+    <XTreeItem Header="CAST IN PLANT" Description="Element manufactured under plant conditions" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT">
+      <XTreeItem Header="SLAB OR JOIST" Description="Slab or joist" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\SLAB OR JOIST">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-PLANT-SLAB OR JOIST-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\SLAB OR JOIST\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="PS-PLANT-SLAB OR JOIST-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\SLAB OR JOIST\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="WALL" Description="Wall" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\WALL">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-PLANT-WALL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\WALL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="Not exposed to weather or in contact with ground" Description="Not exposed to weather or in contact with ground" Id="PS-PLANT-WALL-Protected" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\WALL\Not exposed to weather or in contact with ground" />
+      </XTreeItem>
+      <XTreeItem Header="BEAM" Description="Beam" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\BEAM">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-PLANT-BEAM-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="PS-PLANT-BEAM-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="PS-PLANT-BEAM-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\BEAM\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="COLUMN OR PEDESTAL" Description="Column or pedestal" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-PLANT-COLUMN OR PEDESTAL-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="PS-PLANT-COLUMN OR PEDESTAL-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="PS-PLANT-COLUMN OR PEDESTAL-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\COLUMN OR PEDESTAL\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+      <XTreeItem Header="TIE" Description="Tension tie" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\TIE">
+        <XTreeItem Header="Exposed to weather or in contact with ground" Description="Exposed to weather or in contact with ground" Id="PS-PLANT-TIE-ExposedToWeather" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\TIE\Exposed to weather or in contact with ground" />
+        <XTreeItem Header="NOT EXPOSED TO WEATHER" Description="Not exposed to weather or in contact with ground" Id="X" ResourcePath="X" Tag="X" TemplateName="Category" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\TIE\NOT EXPOSED TO WEATHER">
+          <XTreeItem Header="Primary reinforcement" Description="Primary reinforcement" Id="PS-PLANT-TIE-Protected_Primary" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\TIE\NOT EXPOSED TO WEATHER\Primary reinforcement" />
+          <XTreeItem Header="Stirrup, tie, spirals or hoop" Description="Stirrup, tie, spirals or hoop" Id="PS-PLANT-TIE-Protected_Ties" ResourcePath="X" Tag=" " TemplateName="Item" TreePath="PRESTRESSED ELEMENT\CAST IN PLANT\TIE\NOT EXPOSED TO WEATHER\Stirrup, tie, spirals or hoop" />
+        </XTreeItem>
+      </XTreeItem>
+    </XTreeItem>
+  </XTreeItem>
+</Root>

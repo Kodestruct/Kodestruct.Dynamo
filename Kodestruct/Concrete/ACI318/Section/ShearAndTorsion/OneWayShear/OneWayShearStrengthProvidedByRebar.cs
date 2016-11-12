@@ -67,15 +67,6 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
         }
 
 
-        //internal NonPrestressed (double A_v,double f_yt,double d,double s)
-        //{
-
-        //}
-        //[IsVisibleInDynamoLibrary(false)]
-        //public static NonPrestressed  ByInputParameters(double A_v,double f_yt,double d,double s)
-        //{
-        //    return new NonPrestressed(A_v ,f_yt ,d ,s );
-        //}
 
     }
 }

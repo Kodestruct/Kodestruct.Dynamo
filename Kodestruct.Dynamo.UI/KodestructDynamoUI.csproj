@@ -95,8 +95,8 @@
       <HintPath>..\packages\Kodestruct.Common.0.0.1.10\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.1.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.1.16\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
@@ -196,6 +196,7 @@
     <Compile Include="Nodes\Analysis\Beam\Torsion\BeamTorsionCaseSelection.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Nodes\Concrete\ACI318\Details\ClearCoverCaseSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\CoatingTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\EnclosingRebarDirectionSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\HookTypeSelection.cs" />
@@ -269,6 +270,10 @@
     </Compile>
     <Compile Include="Views\Analysis\Beam\Torsion\BeamTorsionCaseView.xaml.cs">
       <DependentUpon>BeamTorsionCaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionView.xaml.cs">
+      <DependentUpon>ClearCoverCaseSelectionView.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Views\Concrete\ACI318\Details\CoatingTypeSelectionView.xaml.cs">
       <DependentUpon>CoatingTypeSelectionView.xaml</DependentUpon>
@@ -548,6 +553,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Resource Include="Views\Concrete\ACI318\Details\DetailIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Concrete\ACI318\Details\CoatingTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -560,6 +573,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Resource Include="Views\Concrete\ACI318\Details\ClearCoverCaseIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Include="Views\Concrete\ACI318\Details\RebarCastingPositionSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -569,6 +586,22 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Concrete\ACI318\General\Rebar\ConfinementReinforcementTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Views\Steel\AISC\HSS\HSSIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Views\General\AxialForceTypeIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Views\Steel\AISC\Floor vibrations\VibrationIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Views\Concrete\ACI318\General\Rebar\RebarIcons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1172,6 +1205,9 @@
     <EmbeddedResource Include="Resources\NDS2015Table4A.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionViewTreeData.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

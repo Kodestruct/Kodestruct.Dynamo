@@ -33,4 +33,31 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style x:Key="LLV" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="LLV" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_48" Width="18.9267" Height="36.484" Canvas.Left="13.25" Canvas.Top="3.16667" Stretch="Fill" Fill="#FF333333" Data="F1 M 13.25,3.16667L 13.25,39.6507L 32.1767,39.6507L 32.1767,36.212L 23.378,36.212C 19.9167,36.212 17.11,33.4067 17.11,29.944L 17.11,3.16667L 13.25,3.16667 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LLH" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="LLH" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path_49" Width="36.484" Height="18.928" Canvas.Left="3.47173" Canvas.Top="11.3611" Stretch="Fill" Fill="#FF333333" Data="F1 M 39.9557,30.2891L 3.47173,30.2891L 3.47173,11.3611L 6.9104,11.3611L 6.9104,20.1611C 6.9104,23.6224 9.71707,26.4291 13.1784,26.4291L 39.9557,26.4291L 39.9557,30.2891 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

@@ -13,17 +13,17 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                <ResourceDictionary Source="HSSIcons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
-                <KodestructControls:EnumDataElement   EnumString="T"            Description="T"          />
-                <KodestructControls:EnumDataElement   EnumString="Y"            Description="Y"          />
-                <KodestructControls:EnumDataElement   EnumString="X"            Description="X (Cross)"          />
-                <KodestructControls:EnumDataElement   EnumString="GappedK"      Description="Gapped K"    />
-                <KodestructControls:EnumDataElement   EnumString="OverlappedK"  Description="Overlapped K" />
+                <KodestructControls:EnumDataElement   Icon="{StaticResource HSS_T}"  EnumString="T"            Description="T"          />
+                <KodestructControls:EnumDataElement   Icon="{StaticResource HSS_Y}" EnumString="Y"            Description="Y"          />
+                <KodestructControls:EnumDataElement   Icon="{StaticResource HSS_X}" EnumString="X"            Description="X (Cross)"          />
+                <KodestructControls:EnumDataElement   Icon="{StaticResource HSS_Gapped_K}" EnumString="GappedK"      Description="Gapped K"    />
+                <KodestructControls:EnumDataElement   Icon="{StaticResource HSS_Overlapped_K}" EnumString="OverlappedK"  Description="Overlapped K" />
             </KodestructControls:EnumDataCollection>
 
         </ResourceDictionary>

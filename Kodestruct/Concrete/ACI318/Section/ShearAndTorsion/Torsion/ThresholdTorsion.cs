@@ -24,6 +24,8 @@ using Dynamo.Nodes;
 using Concrete.ACI318.Section.SectionTypes;
 using Kodestruct.Concrete.ACI;
 using Kodestruct.Concrete.ACI318_14;
+using System;
+using Kodestruct.Common.Section.Interfaces;
 
 #endregion
 
@@ -58,10 +60,26 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
 
 
             //Calculation logic:
-            //TorsionShapeFactory tss = new TorsionShapeFactory();
-            //IConcreteTorsionalShape shape = tss.GetShape(ConcreteSection.FlexuralSection, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
-            //ConcreteSectionTorsion s = new ConcreteSectionTorsion(shape);
-            //T_th = s.GetThreshholdTorsion(N_u);
+            TorsionShapeFactory tss = new TorsionShapeFactory();
+            ConcreteSectionFlexure cross_Section = ConcreteSection.FlexuralSection as ConcreteSectionFlexure;
+            if (cross_Section != null)
+            {
+                
+                if (cross_Section.Section.SliceableShape is ISectionRectangular)
+                {
+                    IConcreteTorsionalShape shape = tss.GetShape(cross_Section.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
+                    ConcreteSectionTorsion s = new ConcreteSectionTorsion(shape);
+                    T_th = s.GetThreshholdTorsion(N_u)/1000.0; //Conversion from ACI psi units to ksi units
+                }
+                else
+                {
+                    throw new Exception("Only rectangular cross-sections are currently supported for torsional calculations");
+                }
+            }
+            else
+            {
+                throw new Exception("Unrecognized shape type");
+            }
 
             return new Dictionary<string, object>
             {

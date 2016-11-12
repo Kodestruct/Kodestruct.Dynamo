@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+   /*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -33,11 +33,11 @@ using System.Windows.Shapes;
 namespace Kodestruct.Concrete.ACI318.Details
 {
     /// <summary>
-    /// Interaction logic for Kodestruct.Concrete.ACI318.Details.ConcreteCoverTypeSelectionView.xaml
+    /// Interaction logic for Kodestruct.Concrete.ACI318.Details.ClearCoverCaseSelectionView.xaml
     /// </summary>
-    public partial class ConcreteCoverTypeSelectionView: UserControl
+    public partial class ClearCoverCaseSelectionView: UserControl
     {
-        public ConcreteCoverTypeSelectionView()
+        public ClearCoverCaseSelectionView()
         {
             InitializeComponent();
         }

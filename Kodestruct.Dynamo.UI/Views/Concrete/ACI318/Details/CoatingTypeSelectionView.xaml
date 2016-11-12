@@ -13,14 +13,14 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                <ResourceDictionary Source="DetailIcons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
-                <KodestructControls:EnumDataElement   EnumString="Uncoated" Description="Uncoated and galvanized reinforcement" />
-                <KodestructControls:EnumDataElement   EnumString="EpoxyCoated" Description="Epoxy-coated"/>
+                <KodestructControls:EnumDataElement   Icon="{StaticResource RebarUncoated}"   EnumString="Uncoated" Description="Uncoated and galvanized reinforcement" />
+                <KodestructControls:EnumDataElement    Icon="{StaticResource RebarCoated}"  EnumString="EpoxyCoated" Description="Epoxy-coated"/>
             </KodestructControls:EnumDataCollection>
 
         </ResourceDictionary>

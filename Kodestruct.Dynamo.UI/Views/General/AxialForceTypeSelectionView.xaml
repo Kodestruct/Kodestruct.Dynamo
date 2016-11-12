@@ -13,15 +13,15 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                <ResourceDictionary Source="AxialForceTypeIcons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
-                <KodestructControls:EnumDataElement   EnumString="Tension"      Description="Tension" />
-                <KodestructControls:EnumDataElement   EnumString="Compression"  Description="Compression"/>
-                <KodestructControls:EnumDataElement   EnumString="Reversible"    Description="Reversible" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource Tension}"  EnumString="Tension"      Description="Tension" />
+                <KodestructControls:EnumDataElement   Icon="{StaticResource Compression}" EnumString="Compression"  Description="Compression"/>
+                <KodestructControls:EnumDataElement   Icon="{StaticResource Reversible}"  EnumString="Reversible"    Description="Reversible" />
             </KodestructControls:EnumDataCollection>
 
         </ResourceDictionary>
