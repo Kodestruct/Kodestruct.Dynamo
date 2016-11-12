@@ -91,20 +91,20 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.1.4\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.1.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.1.10\lib\net45\Kodestruct.Common.dll</HintPath>
+    <Reference Include="Kodestruct.Common, Version=0.0.1.11, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.11\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Concrete, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.2\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.1.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.1.7\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.2.1\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -196,7 +196,6 @@
     <Compile Include="Nodes\Analysis\Beam\Torsion\BeamTorsionCaseSelection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Nodes\Concrete\ACI318\Details\ClearCoverCaseSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\CoatingTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\EnclosingRebarDirectionSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\HookTypeSelection.cs" />
@@ -273,7 +272,6 @@
     </Compile>
     <Compile Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionView.xaml.cs">
       <DependentUpon>ClearCoverCaseSelectionView.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Views\Concrete\ACI318\Details\CoatingTypeSelectionView.xaml.cs">
       <DependentUpon>CoatingTypeSelectionView.xaml</DependentUpon>
@@ -553,18 +551,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Resource Include="Views\Concrete\ACI318\Details\DetailIcons.xaml">
+    <Resource Include="Views\Concrete\ACI318\Details\ClearCoverCaseIcons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
     <Page Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Concrete\ACI318\Details\CoatingTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Resource Include="Views\Concrete\ACI318\Details\DetailIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Include="Views\Concrete\ACI318\Details\EnclosingRebarDirectionSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -573,10 +575,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="Views\Concrete\ACI318\Details\ClearCoverCaseIcons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
     <Page Include="Views\Concrete\ACI318\Details\RebarCastingPositionSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -589,11 +587,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Resource Include="Views\Steel\AISC\HSS\HSSIcons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="Views\General\AxialForceTypeIcons.xaml">
+    <Resource Include="Views\Concrete\ACI318\General\Rebar\RebarIcons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
@@ -601,10 +595,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
-    <Page Include="Views\Concrete\ACI318\General\Rebar\RebarIcons.xaml">
+    <Resource Include="Views\Steel\AISC\HSS\HSSIcons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
+    </Resource>
     <Page Include="Views\Wood\General\FlatMemberTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

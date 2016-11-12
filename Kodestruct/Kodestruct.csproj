@@ -82,20 +82,20 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.1.4\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.1.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.1.10\lib\net45\Kodestruct.Common.dll</HintPath>
+    <Reference Include="Kodestruct.Common, Version=0.0.1.11, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.11\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Concrete, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.2\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.1.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.1.7\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.2.1\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
