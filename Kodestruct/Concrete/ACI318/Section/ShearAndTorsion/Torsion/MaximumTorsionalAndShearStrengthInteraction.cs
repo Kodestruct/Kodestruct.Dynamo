@@ -24,6 +24,7 @@ using Dynamo.Nodes;
 using Concrete.ACI318.Section.SectionTypes;
 using Kodestruct.Concrete.ACI;
 using Kodestruct.Concrete.ACI318_14;
+using Kodestruct.Common.Section.Interfaces;
 
 #endregion
 
@@ -64,10 +65,11 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
 
             //Calculation logic:
 
-            //TorsionShapeFactory tss = new TorsionShapeFactory();
-            //IConcreteTorsionalShape shape = tss.GetShape(ConcreteSection.FlexuralSection, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
-            //ConcreteSectionTorsion s = new ConcreteSectionTorsion(shape);
-            //InteractionRatio = s.GetMaximumForceInteractionRatio(V_u,T_u,V_c,b,d);
+            TorsionShapeFactory tss = new TorsionShapeFactory();
+            ConcreteSectionFlexure sec = (ConcreteSectionFlexure)ConcreteSection.FlexuralSection;
+            IConcreteTorsionalShape shape = tss.GetShape(sec.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
+            ConcreteSectionTorsion s = new ConcreteSectionTorsion(shape);
+            InteractionRatio = s.GetMaximumForceInteractionRatio(V_u, T_u, V_c, b, d);
 
 
             return new Dictionary<string, object>

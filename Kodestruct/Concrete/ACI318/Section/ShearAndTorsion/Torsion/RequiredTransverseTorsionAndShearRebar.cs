@@ -25,6 +25,7 @@ using Concrete.ACI318.Section.SectionTypes;
 using Concrete.ACI318.General.Reinforcement;
 using Kodestruct.Concrete.ACI;
 using Kodestruct.Concrete.ACI318_14;
+using Kodestruct.Common.Section.Interfaces;
 
 #endregion
 
@@ -60,10 +61,11 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
 
             //Calculation logic:
 
-            //TorsionShapeFactory tss = new TorsionShapeFactory();
-            //IConcreteTorsionalShape shape = tss.GetShape(ConcreteSection.FlexuralSection, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
-            //ConcreteSectionTorsion sec = new ConcreteSectionTorsion(shape);
-            //A_v = sec.GetRequiredTorsionTransverseReinforcementArea(T_u, RebarMaterial.Material.YieldStress);
+            TorsionShapeFactory tss = new TorsionShapeFactory();
+            ConcreteSectionFlexure sec = (ConcreteSectionFlexure)ConcreteSection.FlexuralSection;
+            IConcreteTorsionalShape shape = tss.GetShape(sec.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
+            ConcreteSectionTorsion secT = new ConcreteSectionTorsion(shape);
+            A_v = secT.GetRequiredTorsionTransverseReinforcementArea(T_u, s,RebarMaterial.Material.YieldStress);
 
             return new Dictionary<string, object>
             {
