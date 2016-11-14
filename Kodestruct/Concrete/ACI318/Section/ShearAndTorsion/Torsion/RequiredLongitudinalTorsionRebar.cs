@@ -64,7 +64,8 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
             ConcreteSectionFlexure sec = (ConcreteSectionFlexure)ConcreteSection.FlexuralSection;
             IConcreteTorsionalShape shape = tss.GetShape(sec.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
             ConcreteSectionTorsion secT = new ConcreteSectionTorsion(shape);
-            A_l = secT.GetRequiredTorsionLongitudinalReinforcementArea(T_u, RebarMaterial.Material.YieldStress);
+            double T_u_lb_in = T_u * 1000.0; //internally Kodestruct uses lb - in units for concrete
+            A_l = secT.GetRequiredTorsionLongitudinalReinforcementArea(T_u_lb_in, RebarMaterial.Material.YieldStress);
 
             return new Dictionary<string, object>
             {

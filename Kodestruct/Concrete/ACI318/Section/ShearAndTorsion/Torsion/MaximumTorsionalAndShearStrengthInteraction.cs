@@ -69,7 +69,9 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
             ConcreteSectionFlexure sec = (ConcreteSectionFlexure)ConcreteSection.FlexuralSection;
             IConcreteTorsionalShape shape = tss.GetShape(sec.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
             ConcreteSectionTorsion s = new ConcreteSectionTorsion(shape);
-            InteractionRatio = s.GetMaximumForceInteractionRatio(V_u, T_u, V_c, b, d);
+            double V_u_lb = V_u * 1000.0; //internally Kodestruct uses lb - in units for concrete
+            double T_u_lb_in = T_u * 1000.0; //internally Kodestruct uses lb - in units for concrete
+            InteractionRatio = s.GetMaximumForceInteractionRatio(V_u_lb, T_u_lb_in, V_c, b, d);
 
 
             return new Dictionary<string, object>
