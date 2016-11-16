@@ -27,7 +27,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace Kodestruct.Steel.AISC.Connection
+namespace KodestructDynamoUI.Views.AISC.Tension
 {
     public partial class ShearLagCase4Control : UserControl
     {

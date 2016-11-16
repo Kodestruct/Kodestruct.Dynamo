@@ -25,10 +25,10 @@ using ProtoCore.AST.AssociativeAST;
 using Kodestruct.Common.CalculationLogger;
 using Kodestruct.Dynamo.Common;
 using Dynamo.Nodes;
-using Kodestruct.Dynamo.UI.Views.Steel.AISC_10.Shear;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
+using Kodestruct.Dynamo.UI.Views.Steel.AISC10.Shear;
 
 
 namespace Kodestruct.Steel.AISC.Shear

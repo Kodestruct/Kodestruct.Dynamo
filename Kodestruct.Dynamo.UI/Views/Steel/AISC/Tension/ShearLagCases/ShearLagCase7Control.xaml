@@ -7,7 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
-    x:Class="Kodestruct.Steel.AISC.Connection.ShearLagCase7Control"
+    x:Class="KodestructDynamoUI.Views.AISC.Tension.ShearLagCase7Control"
     mc:Ignorable="d"
     d:DesignHeight="120" d:DesignWidth="400">
     

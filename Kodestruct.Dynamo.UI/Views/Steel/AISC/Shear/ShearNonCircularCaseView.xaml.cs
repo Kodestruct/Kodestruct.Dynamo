@@ -30,7 +30,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kodestruct.Dynamo.UI.Views.Steel.AISC_10.Shear
+namespace Kodestruct.Dynamo.UI.Views.Steel.AISC10.Shear
 {
     /// <summary>
     /// Interaction logic for ShearNonCircularCaseView.xaml

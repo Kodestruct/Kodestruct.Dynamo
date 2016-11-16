@@ -55,7 +55,7 @@ namespace Kodestruct.Steel.AISC.Tension
             ShearLagCaseId = "Case 2";
             //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
             //OutPortData.Add(new PortData("l", "Connection length"));
-            OutPortData.Add(new PortData("x_bar", "Element eccentricity"));
+            //OutPortData.Add(new PortData("x_bar", "Element eccentricity"));
             //OutPortData.Add(new PortData("w", "Width of plate"));
             //OutPortData.Add(new PortData("B", "HSS width"));
             //OutPortData.Add(new PortData("H", "HSS height"));
@@ -345,7 +345,7 @@ namespace Kodestruct.Steel.AISC.Tension
 
         private void SetCaseDescription()
         {
-            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Steel/AISC_10/Tension/ShearLagFactorIdTreeData.xml");
+            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Steel/AISC/Tension/ShearLagFactorIdTreeData.xml");
             XmlTreeHelper treeHelper = new XmlTreeHelper();
             treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindDescription));
         }
@@ -378,7 +378,7 @@ namespace Kodestruct.Steel.AISC.Tension
                 AssemblyName assemblyName = new AssemblyName(execAssembly.FullName);
                 string execAssemblyName = assemblyName.Name;
                 string UIPath = GetUIControlName(selectedComponent.Id);
-                string typeStr = execAssemblyName + ".Views.Steel.AISC_10." + selectedComponent.ResourcePath;
+                string typeStr = execAssemblyName + ".Views.AISC.Tension." + UIPath;
                 try
                 {
                     Type subMenuType = execAssembly.GetType(typeStr);
@@ -574,10 +574,13 @@ namespace Kodestruct.Steel.AISC.Tension
                     ShearLagCaseId = xtreeItem.Id;
                     ShearLagCaseIdDescription = xtreeItem.Description;
                     SelectedItem = xtreeItem;
-                    DisplayComponentUI(xtreeItem);
+                    //DisplayComponentUI(xtreeItem);
                 }
             }
+
         }
+
+
 
         #endregion
 
