@@ -1,0 +1,85 @@
+<!--
+	Copyright (C) 2015 Konstantin Udilovich
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <Style x:Key="RebarCastingPositionTop" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="RebarCastingPositionTop" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle Width="23.616" Height="28.8347" Canvas.Left="9.526" Canvas.Top="6.814" Stretch="Fill" StrokeThickness="1.03333" StrokeLineJoin="Round" Stroke="#FF343433" />
+                            <Path Width="4.984" Height="4.984" Canvas.Left="18.8415" Canvas.Top="10.1336" Stretch="Fill" Fill="#FF343433" Data="F1 M 23.8255,12.6256C 23.8255,14.0016 22.7095,15.1176 21.3335,15.1176C 19.9575,15.1176 18.8415,14.0016 18.8415,12.6256C 18.8415,11.2496 19.9575,10.1336 21.3335,10.1336C 22.7095,10.1336 23.8255,11.2496 23.8255,12.6256 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RebarCastingPositionBot" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="RebarCastingPositionBot" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle Width="23.616" Height="28.8347" Canvas.Left="9.52467" Canvas.Top="6.814" Stretch="Fill" StrokeThickness="1.03333" StrokeLineJoin="Round" Stroke="#FF343433" />
+                            <Path Width="4.984" Height="4.984" Canvas.Left="18.8412" Canvas.Top="27.344" Stretch="Fill" Fill="#FF343433" Data="F1 M 18.8412,29.836C 18.8412,28.46 19.9572,27.344 21.3332,27.344C 22.7092,27.344 23.8252,28.46 23.8252,29.836C 23.8252,31.212 22.7092,32.328 21.3332,32.328C 19.9572,32.328 18.8412,31.212 18.8412,29.836 Z " />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ShearFrictionSurfaceRough" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ShearFrictionSurfaceRough" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="29.5347" Height="12.0027" Canvas.Left="8.16147" Canvas.Top="9.6236" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 8.4948,21.2929L 8.4948,9.95693L 37.3628,9.95693L 37.3628,18.1383L 30.1455,21.2929L 30.1455,18.1383L 22.9281,21.2929L 22.9281,18.1383L 15.7121,21.2929L 15.7121,18.1383L 8.4948,21.2929 Z " />
+                            <Path Width="29.5347" Height="11.484" Canvas.Left="5.31253" Canvas.Top="22.5432" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 5.64587,26.0312L 5.64587,33.6939L 34.5139,33.6939L 34.5139,22.8765L 27.2965,26.0312L 27.2965,22.8765L 20.0805,26.0312L 20.0805,22.8765L 12.8632,26.0312L 12.8632,22.8765L 5.64587,26.0312 Z " />
+                            <Path Width="30.868" Height="5.15466" Canvas.Left="7.49533" Canvas.Top="17.138" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 37.3633,18.138L 30.146,21.2927L 30.146,18.138L 22.9287,21.2927L 22.9287,18.138L 15.7113,21.2927L 15.7113,18.138L 8.49533,21.2927" />
+                            <Path Width="30.868" Height="5.15467" Canvas.Left="4.64627" Canvas.Top="21.8763" Stretch="Fill" StrokeThickness="2" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 34.5143,22.8763L 27.2969,26.0309L 27.2969,22.8763L 20.0796,26.0309L 20.0796,22.8763L 12.8636,26.0309L 12.8636,22.8763L 5.64627,26.0309" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ShearFrictionSurfaceSmooth" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ShearFrictionSurfaceSmooth" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path Width="33.5347" Height="9.90667" Canvas.Left="2.97507" Canvas.Top="9.60427" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 31.4817,18.5456L 26.7871,19.1776L 22.0911,18.5456L 17.3951,19.1776L 12.6991,18.5456L 8.0044,19.1776L 3.3084,18.5456L 3.3084,9.9376L 36.1764,9.9376L 36.1764,19.1776L 31.4817,18.5456 Z " />
+                            <Path Width="33.5347" Height="9.812" Canvas.Left="6.76547" Canvas.Top="20.9995" Stretch="Fill" StrokeThickness="0.666667" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 35.2721,21.9648L 30.5775,21.3328L 25.8815,21.9648L 21.1855,21.3328L 16.4895,21.9648L 11.7948,21.3328L 7.0988,21.9648L 7.0988,30.4781L 39.9668,30.4781L 39.9668,21.3328L 35.2721,21.9648 Z " />
+                            <Path Width="34.468" Height="2.232" Canvas.Left="2.50907" Canvas.Top="17.7451" Stretch="Fill" StrokeThickness="1.6" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 36.1771,19.1771L 31.4824,18.5451L 26.7864,19.1771L 22.0904,18.5451L 17.3957,19.1771L 12.6997,18.5451L 8.00373,19.1771L 3.30907,18.5451" />
+                            <Path Width="34.468" Height="2.232" Canvas.Left="6.29947" Canvas.Top="20.5333" Stretch="Fill" StrokeThickness="1.6" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 39.9675,21.3333L 35.2728,21.9653L 30.5768,21.3333L 25.8821,21.9653L 21.1861,21.3333L 16.4901,21.9653L 11.7941,21.3333L 7.09947,21.9653" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ShearFrictionSurfaceMonolithic" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="ShearFrictionSurfaceMonolithic" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle Width="35.536" Height="21.0507" Canvas.Left="4.044" Canvas.Top="9.23733" Stretch="Fill" StrokeThickness="2.66667" StrokeMiterLimit="2.75" Stroke="#FF343433" />
+                            <Path Width="27" Height="4.76" Canvas.Left="8.83333" Canvas.Top="17.74" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF343433" Data="F1 M 9.33333,22L 15.6627,19.2653L 19.6693,20.376L 20.716,19.972L 22.9973,20.88L 30.9813,18.24L 35.3333,20.396" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

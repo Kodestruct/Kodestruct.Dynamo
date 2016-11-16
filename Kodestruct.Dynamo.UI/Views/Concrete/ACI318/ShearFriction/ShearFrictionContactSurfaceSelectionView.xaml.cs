@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+   /*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -30,10 +30,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kodestruct.Concrete.ACI318_14.ShearAndTorsion.OneWay
+namespace Kodestruct.Concrete.ACI318.Section.ShearFriction
 {
     /// <summary>
-    /// Interaction logic for Kodestruct.Concrete.ACI318_14.ShearAndTorsion.OneWay.ShearFrictionContactSurfaceSelectionView.xaml
+    /// Interaction logic for Kodestruct.Concrete.ACI318.Section.ShearFriction.ShearFrictionContactSurfaceSelectionView.xaml
     /// </summary>
     public partial class ShearFrictionContactSurfaceSelectionView: UserControl
     {

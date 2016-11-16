@@ -86,16 +86,16 @@
       <HintPath>..\packages\Kodestruct.Common.0.0.1.11\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.2\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.3\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.2.1\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.2.2\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -261,6 +261,7 @@
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\RequiredLongitudinalTorsionRebar.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\RequiredTransverseTorsionAndShearRebar.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\ThresholdTorsion.cs" />
+    <Compile Include="Concrete\ACI318\Section\ShearFriction\ShearFrictionStrength.cs" />
     <Compile Include="General\DesignToCapacityMultiple.cs" />
     <Compile Include="General\DesignToCapacitySingle.cs" />
     <Compile Include="General\Groups\DemandToCapacity.cs" />
