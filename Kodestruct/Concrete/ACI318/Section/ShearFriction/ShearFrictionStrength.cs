@@ -72,7 +72,7 @@ namespace Concrete.ACI318.Section.ShearFriction
             {
                 throw new Exception("Failed to convert string. ShearFrictionSurfaceType variable needs to be MonolithicConcrete, HardenedRoughenedConcrete, HardenedNonRoughenedConcrete or ConcreteAgainstSteel. Please check input");
             }
-            ConcreteSectionShearFriction sec = new ConcreteSectionShearFriction(ConcreteMaterial.Concrete, A_c,RebarMaterial.Material, A_v, alpha, F_comp);
+            ConcreteSectionShearFriction sec = new ConcreteSectionShearFriction(_ShearFrictionSurfaceType, ConcreteMaterial.Concrete, A_c, RebarMaterial.Material, A_v, alpha, F_comp);
             phiV_n = sec.GetShearFrictionStrength()/1000.0; //convert back to ksi units
             return new Dictionary<string, object>
             {
