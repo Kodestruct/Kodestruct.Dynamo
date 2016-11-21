@@ -87,15 +87,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Concrete, Version=0.0.2.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.4\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.5\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.2.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.2.3\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.2.2\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -247,8 +247,9 @@
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\Groups\Flexure.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\Groups\ConcreteFlexureAndAxiaSection.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\RectangularSectionDoublyReinforced.cs" />
-    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\RectangularSectionWithBoundaryZones.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\RectangularSectionFourSideReinforced.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\BoundaryZone.cs" />
+    <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\ShearWallSection.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\SectionTypes\RectangularSectionSinglyReinforced.cs">
       <SubType>Code</SubType>
     </Compile>
