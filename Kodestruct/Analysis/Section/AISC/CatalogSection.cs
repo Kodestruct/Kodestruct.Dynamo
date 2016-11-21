@@ -47,6 +47,8 @@ namespace Analysis.Section.AISC
             AiscShapeFactory factory = new AiscShapeFactory();
             AngleOrientation ori = new AngleOrientation();
             AngleRotation  rot = new Kodestruct.Common.AngleRotation();
+            
+            ShapeId = ShapeId.ToUpper();
 
               AngleOrientation _AngleOrientation;
               bool IsValidInputString = Enum.TryParse(AngleOrientation, true, out _AngleOrientation);
