@@ -46,7 +46,8 @@ namespace Wood.NDS
         /// <param name="WoodSpeciesId">  Identifies  wood species </param>
         /// <param name="CommercialGradeId">  Identifies commercial grade of wood being considered </param>
         /// <param name="SizeClassId">Wood member size classification, per NDS Supplement reference tables</param>
-        /// <param name="WoodMemberType">  Distinguishes between dimensional lumber, timber,glulam etc. </param>
+        /// <param name="WoodMemberType">  Distinguishes between 
+        /// dimensional lumber, timber,glulam etc. </param>
     /// <param name="Code">  Identifies the code or standard used for calculations </param>
     /// <returns name="F_b"> Reference bending design value  </returns>
     /// <returns name="F_c"> Out-of-plane seismic forces for concrete and masonry walls  </returns>

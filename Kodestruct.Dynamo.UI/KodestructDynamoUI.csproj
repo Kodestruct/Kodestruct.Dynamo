@@ -196,6 +196,7 @@
     <Compile Include="Nodes\Analysis\Beam\Torsion\BeamTorsionCaseSelection.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Nodes\Concrete\ACI318\Details\ClearCoverCaseSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\CoatingTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\EnclosingRebarDirectionSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\HookTypeSelection.cs" />
