@@ -231,7 +231,9 @@
     <Compile Include="Concrete\ACI318\General\Rebar\EffectiveDepthToLongitudinalRebar.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterialProperties.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarPointByArea.cs" />
-    <Compile Include="Concrete\ACI318\General\Rebar\RebarStringByElementWidthAndIdAndSpacing.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\RebarStringByElementWidthAndIdAndSpacing.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Concrete\ACI318\General\Rebar\RebarStringByIdAndNumberOfBars.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\CrackedMomentOfInertia.cs" />
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\CrackingMoment.cs" />
