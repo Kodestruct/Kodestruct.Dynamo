@@ -85,8 +85,8 @@ namespace Concrete.ACI318.Section.SectionTypes
              BoundaryZone BoundaryZoneTop, BoundaryZone BoundaryZoneBottom, RebarMaterial LongitudinalRebarMaterial)
          {
 
-             List<KodestructAci.RebarPoint> BzTopBars = GetBoundaryZoneBars(BoundaryZoneTop, LongitudinalRebarMaterial, new Point2D(0.0, shape.d - BoundaryZoneTop.h / 2.0),true);
-             List<KodestructAci.RebarPoint> BzBottomBars = GetBoundaryZoneBars(BoundaryZoneTop, LongitudinalRebarMaterial, new Point2D(0.0, shape.d - BoundaryZoneTop.h / 2.0),false);
+             List<KodestructAci.RebarPoint> BzTopBars = GetBoundaryZoneBars(BoundaryZoneTop, LongitudinalRebarMaterial, new Point2D(0.0, shape.d/2.0 - BoundaryZoneTop.h / 2.0),true);
+             List<KodestructAci.RebarPoint> BzBottomBars = GetBoundaryZoneBars(BoundaryZoneBottom, LongitudinalRebarMaterial, new Point2D(0.0, shape.d/2.0 + BoundaryZoneTop.h / 2.0), false);
              List<KodestructAci.RebarPoint> WallBars = GetWallBars(h_total - (BoundaryZoneTop.h + BoundaryZoneBottom.h), t_w, RebarSizeId, N_curtains, s, c_edge, LongitudinalRebarMaterial);
 
              List<KodestructAci.RebarPoint> retBars = BzTopBars.Concat(BzBottomBars).Concat(WallBars).ToList() ;
@@ -124,18 +124,18 @@ namespace Concrete.ACI318.Section.SectionTypes
             if (IsTop == true)
 	            {
                     topPoint = new Point2D(0, BzCentroid.Y + (BoundaryZone.h / 2.0 - BoundaryZone.c_cntrEdge));
-                    botPoint = new Point2D(0, BzCentroid.Y - (BoundaryZone.h / 2.0 + BoundaryZone.c_cntrInterior));
+                    botPoint = new Point2D(0, BzCentroid.Y - (BoundaryZone.h / 2.0 - BoundaryZone.c_cntrInterior));
 	            }
             else
 	        {
                 topPoint = new Point2D(0, BzCentroid.Y + (BoundaryZone.h / 2.0 - BoundaryZone.c_cntrInterior));
-                botPoint = new Point2D(0, BzCentroid.Y - (BoundaryZone.h / 2.0 + BoundaryZone.c_cntrEdge));
+                botPoint = new Point2D(0, BzCentroid.Y - (BoundaryZone.h / 2.0 - BoundaryZone.c_cntrEdge));
 	        }
 
 
 
             RebarLine Line = new RebarLine(BoundaryZone.A_s,
-            botPoint, topPoint, LongitudinalRebarMaterial.Material, false, false, (int)BoundaryZone.N_Bar_Rows);
+            botPoint, topPoint, LongitudinalRebarMaterial.Material, false, false, (int)BoundaryZone.N_Bar_Rows-1);
 
             return Line.RebarPoints;
         }

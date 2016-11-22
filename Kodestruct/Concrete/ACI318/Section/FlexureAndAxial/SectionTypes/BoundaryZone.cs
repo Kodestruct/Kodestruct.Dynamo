@@ -90,8 +90,9 @@ namespace Concrete.ACI318.Section.SectionTypes
             RebarSection sec = new RebarSection(des);
             double A_b = sec.Area;
 
-            int NBarLines = (int)Math.Floor(h / s);
-            A_s = NBarLines * N_curtains * A_b;
+            //int NBarLines = (int)Math.Floor(h / s);
+            //A_s = NBarLines * N_curtains * A_b;
+            A_s = N_Bar_Rows * N_curtains * A_b;
 
         }
 
