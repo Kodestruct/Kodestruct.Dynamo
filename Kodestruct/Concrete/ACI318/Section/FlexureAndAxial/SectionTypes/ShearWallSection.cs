@@ -86,10 +86,19 @@ namespace Concrete.ACI318.Section.SectionTypes
          {
 
              List<KodestructAci.RebarPoint> BzTopBars = GetBoundaryZoneBars(BoundaryZoneTop, LongitudinalRebarMaterial, new Point2D(0.0, shape.d/2.0 - BoundaryZoneTop.h / 2.0),true);
-             List<KodestructAci.RebarPoint> BzBottomBars = GetBoundaryZoneBars(BoundaryZoneBottom, LongitudinalRebarMaterial, new Point2D(0.0, shape.d/2.0 + BoundaryZoneTop.h / 2.0), false);
-             List<KodestructAci.RebarPoint> WallBars = GetWallBars(h_total - (BoundaryZoneTop.h + BoundaryZoneBottom.h), t_w, RebarSizeId, N_curtains, s, c_edge, LongitudinalRebarMaterial);
+             List<KodestructAci.RebarPoint> BzBottomBars = GetBoundaryZoneBars(BoundaryZoneBottom, LongitudinalRebarMaterial, new Point2D(0.0, -(shape.d/2.0) + BoundaryZoneTop.h / 2.0), false);
 
-             List<KodestructAci.RebarPoint> retBars = BzTopBars.Concat(BzBottomBars).Concat(WallBars).ToList() ;
+             List<KodestructAci.RebarPoint> retBars = null;
+            if (N_curtains!= 0)
+             {
+                 List<KodestructAci.RebarPoint> WallBars = GetWallBars(h_total - (BoundaryZoneTop.h + BoundaryZoneBottom.h), t_w, RebarSizeId, N_curtains, s, c_edge, LongitudinalRebarMaterial);
+                 retBars = BzTopBars.Concat(BzBottomBars).Concat(WallBars).ToList();
+             }
+             else
+             {
+                 retBars = BzTopBars.Concat(BzBottomBars).ToList();
+             }
+
              return retBars;
         }
 
