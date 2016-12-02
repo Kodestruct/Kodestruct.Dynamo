@@ -44,9 +44,8 @@ namespace Concrete.ACI318.Section
 /// <summary>
 ///     Maximum compressive strength
 /// </summary>
-        /// <param name="ConcreteSection">  Reinforced concrete section </param>
+/// <param name="ConcreteSection">  Reinforced concrete section </param>
 /// <param name="ConfinementReinforcementType">  Type of confinement reinforcement (spiral, ties or none) </param>
-/// <param name="FlexuralCompressionFiberLocation">  Indicates whether the section in flexure has top or bottom in compression due to stresses from bending moment </param>
 /// <param name="IsPrestressed">  Indicates if member is prestressed </param>
 /// <param name="Code">  Applicable version of code/standard </param>
         /// <returns name="phiP_o">  Axial strength at zero eccentricity  (maximum compressive strength) </returns>
@@ -54,7 +53,6 @@ namespace Concrete.ACI318.Section
         [MultiReturn(new[] { "phiP_o" })]
         public static Dictionary<string, object> MaximumCompressiveStrength(ConcreteFlexureAndAxiaSection ConcreteSection, 
             string ConfinementReinforcementType="Ties", 
-            string FlexuralCompressionFiberLocation="Top",
             bool IsPrestressed = false, string Code = "ACI318-14")
         {
             //Default values

@@ -59,8 +59,8 @@ namespace Concrete.ACI318.Details
 
         [MultiReturn(new[] { "l_st" })]
         public static Dictionary<string, object> StraightBarTensionLapSpliceLengthBasic(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b1, double d_b2,
-            RebarMaterial RebarMaterial, string RebarSpliceClass, string RebarCoatingType, string RebarCastingPosition, double ExcessRebarRatio,
-            bool MeetsRebarSpacingAndEdgeDistance, bool HasMinimumTransverseReinforcement, string Code = "ACI318-14")
+            RebarMaterial RebarMaterial, string RebarSpliceClass="B", string RebarCoatingType = "Uncoated", string RebarCastingPosition = "Top", double ExcessRebarRatio=1.0,
+            bool MeetsRebarSpacingAndEdgeDistance=true, bool HasMinimumTransverseReinforcement=false, string Code = "ACI318-14")
         {
             //Default values
             double l_st = 0;

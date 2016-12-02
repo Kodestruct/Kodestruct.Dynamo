@@ -24,6 +24,7 @@ using Dynamo.Nodes;
 using Kodestruct.Common.CalculationLogger;
 using Kodestruct.Common.Section.Predefined;
 using Kodestruct.Common.Section.Interfaces;
+using System;
 
 #endregion
 
@@ -179,6 +180,42 @@ namespace Analysis.Section
         public static CustomProfileProperties ByInputParameters()
         {
             return new CustomProfileProperties();
+        }
+
+
+        /// <summary>
+        ///    Calculates custom shape properties about X axis
+        /// </summary>
+        /// <param name="Shape">  Custom profile object</param>
+        /// <returns name="y_top"> Vertical offeset from highest point of section </returns>
+        /// <returns name="r_x"> Radius of gyration about the x-axis  </returns>
+        /// <returns name="Q"> Area  </returns>
+
+
+        [MultiReturn(new[] { "Q" })]
+        public static Dictionary<string, object> FirstMomentArea(CustomProfile Shape, double Y_offset)
+        {
+            //Default values
+            double Q = 0.0;
+
+
+            if (Shape.Section is IFirstMomentOfAreaCalculatable)
+            {
+                IFirstMomentOfAreaCalculatable s = Shape.Section as IFirstMomentOfAreaCalculatable;
+                Q = s.GetFirstMomentOfAreaX(Y_offset);
+            }
+
+            else
+            {
+                throw new Exception("Provided shape does not support this calculation, or wrong object type is specified.");
+            }
+
+
+            return new Dictionary<string, object>
+            {
+            { "Q", Q}   };
+
+         
         }
 
     }

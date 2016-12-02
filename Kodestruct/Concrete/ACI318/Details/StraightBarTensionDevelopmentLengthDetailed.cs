@@ -59,9 +59,9 @@ namespace Concrete.ACI318.Details
        /// <returns name="l_d">  Development length in tension of deformed bar,  deformed wire, plain and deformed welded wire  reinforcement, or pretensioned strand  </returns>
 
         [MultiReturn(new[] { "l_d" })]
-        public static Dictionary<string, object> StraightBarTensionDevelopmentLengthDetailed(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b, 
-            RebarMaterial RebarMaterial, string RebarCoatingType, string RebarCastingPosition, double ExcessRebarRatio, double s_clear, double c_c,
-            double A_tr, double s_tr, double n, string Code = "ACI318-14")
+        public static Dictionary<string, object> StraightBarTensionDevelopmentLengthDetailed(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b,
+            RebarMaterial RebarMaterial, string RebarCoatingType = "Uncoated", string RebarCastingPosition = "Top", double ExcessRebarRatio=1.0, double s_clear=3, double c_c=1.5,
+            double A_tr=0.44, double s_tr=12, double n=5, string Code = "ACI318-14")
         {
             //Default values
             double l_d = 0;

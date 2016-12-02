@@ -1,0 +1,42 @@
+<!--
+	Copyright (C) 2015 Konstantin Udilovich
+-->
+<UserControl x:Class="Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.PunchingPerimeterConfigurationSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+            <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
+              
+              <KodestructControls:EnumDataElement   EnumString="Interior"  Description="Interior" />
+              <KodestructControls:EnumDataElement   EnumString="EdgeLeft"  Description="Edge left" />
+              <KodestructControls:EnumDataElement   EnumString="EdgeRight"  Description="Edge right" />
+              <KodestructControls:EnumDataElement   EnumString="EdgeTop"  Description="Edge top" />
+              <KodestructControls:EnumDataElement   EnumString="EdgeBottom"  Description="Edge bottom" />
+              <KodestructControls:EnumDataElement   EnumString="CornerLeftTop"  Description="Corner left-top" />
+              <KodestructControls:EnumDataElement   EnumString="CornerRightTop"  Description="Corner right-top" />
+              <KodestructControls:EnumDataElement   EnumString="CornerRightBottom"  Description="Corner right-bottom" />
+              <KodestructControls:EnumDataElement   EnumString="CornerLeftBottom"  Description="Corner left-bottom" />
+
+            </KodestructControls:EnumDataCollection>
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <KodestructControls:EnumControl  HeaderText="Punching perimeter configuration" 
+                                    ItemsSource="{StaticResource SelectionItemSource}" 
+					DataPath="PunchingPerimeterConfiguration"/>
+    </Grid>
+</UserControl>

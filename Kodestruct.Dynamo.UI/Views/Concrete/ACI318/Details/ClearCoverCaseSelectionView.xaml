@@ -34,7 +34,7 @@
       <HierarchicalDataTemplate DataType="XTreeItem"
                             ItemsSource="{Binding XPath=./*}">
         <StackPanel Orientation="Horizontal">
-          <ContentControl Width="20" Height="20" Background="White"
+          <ContentControl Width="40" Height="40" Background="White"
                   Style="{Binding XPath=@ResourcePath, Converter={StaticResource IconStyleConverter}}"/>
           <TextBlock Text="{Binding XPath=@Header}" />
         </StackPanel>

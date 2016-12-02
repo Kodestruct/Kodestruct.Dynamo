@@ -56,9 +56,11 @@ namespace Concrete.ACI318.Details
         [MultiReturn(new[] { "l_d" })]
         public static Dictionary<string, object> StraightBarTensionDevelopmentLengthBasic(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b, 
             Concrete.ACI318.General.Reinforcement.RebarMaterial RebarMaterial,
-            string RebarCoatingType, string RebarCastingPosition, double ExcessRebarRatio, bool MeetsRebarSpacingAndEdgeDistance,
+            string RebarCoatingType="Uncoated", string RebarCastingPosition="Top", double ExcessRebarRatio=1.0, bool MeetsRebarSpacingAndEdgeDistance=true,
             bool HasMinimumTransverseReinforcement = false, string Code = "ACI318-14")
         {
+
+
             //Default values
             double l_d = 0;
 

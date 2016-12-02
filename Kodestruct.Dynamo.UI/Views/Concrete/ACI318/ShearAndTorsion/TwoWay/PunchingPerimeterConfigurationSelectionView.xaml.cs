@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+   /*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -30,14 +30,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kodestruct.Concrete.ACI318_14.ShearAndTorsion.TwoWay
+namespace Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
 {
     /// <summary>
-    /// Interaction logic for Kodestruct.Concrete.ACI318_14.ShearAndTorsion.TwoWay.ColumnLocationSelectionView.xaml
+    /// Interaction logic for Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.PunchingPerimeterConfigurationSelectionView.xaml
     /// </summary>
-    public partial class ColumnLocationSelectionView: UserControl
+    public partial class PunchingPerimeterConfigurationSelectionView: UserControl
     {
-        public ColumnLocationSelectionView()
+        public PunchingPerimeterConfigurationSelectionView()
         {
             InitializeComponent();
         }

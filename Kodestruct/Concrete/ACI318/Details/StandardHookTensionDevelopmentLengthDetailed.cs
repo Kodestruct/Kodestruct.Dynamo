@@ -59,8 +59,8 @@ namespace Concrete.ACI318.Details
 
         [MultiReturn(new[] { "l_dh" })]
         public static Dictionary<string, object> StandardHookTensionDevelopmentLengthDetailed(Concrete.ACI318.General.Concrete.ConcreteMaterial ConcreteMaterial, double d_b,
-            RebarMaterial RebarMaterial, string HookType, string RebarCoatingType, double ExcessRebarRatio, double c_side, double c_extension, string EnclosingRebarDirection, 
-            double s_enclosing, string Code = "ACI318-14")
+            RebarMaterial RebarMaterial, string HookType="Degree90", string RebarCoatingType="Uncoated", double ExcessRebarRatio=1.0, double c_side=1.5, double c_extension=1.5, string EnclosingRebarDirection="Parallel", 
+            double s_enclosing=12, string Code = "ACI318-14")
         {
             //Default values
             double l_dh = 0;
