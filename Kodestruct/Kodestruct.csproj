@@ -218,6 +218,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Concrete\ACI318\Details\CoverToRebarCentroid.cs" />
+    <Compile Include="Concrete\ACI318\Details\Groups\Cover.cs" />
     <Compile Include="Concrete\ACI318\Details\Groups\DevelopmentLength.cs">
       <SubType>Code</SubType>
     </Compile>
