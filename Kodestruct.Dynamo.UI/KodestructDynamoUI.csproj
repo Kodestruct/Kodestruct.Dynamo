@@ -206,6 +206,7 @@
     <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\RebarSizeSelection.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Nodes\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelection.cs" />
     <Compile Include="Nodes\General\Flexure\AngleOrientation.cs" />
     <Compile Include="Nodes\General\Flexure\AngleRotation.cs" />
@@ -295,6 +296,12 @@
     </Compile>
     <Compile Include="Views\Concrete\ACI318\General\Rebar\RebarSizeSelectionView.xaml.cs">
       <DependentUpon>RebarSizeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelectionView.xaml.cs">
+      <DependentUpon>PunchingPerimeterConfigurationSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\TwoWayShearReinforcementTypeSelectionView.xaml.cs">
+      <DependentUpon>TwoWayShearReinforcementTypeSelectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelectionView.xaml.cs">
       <DependentUpon>ShearFrictionContactSurfaceSelectionView.xaml</DependentUpon>
@@ -608,6 +615,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
+    <Page Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\TwoWayShearReinforcementTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1071,7 +1086,6 @@
     <Folder Include="Nodes\Concrete\ACI318\General\Material\" />
     <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\OneWay\" />
     <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\Torsion\" />
-    <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\TwoWay\" />
     <Folder Include="Nodes\Steel\AISC\Flexure\" />
     <Folder Include="Views\Concrete\ACI318\Compression\SectionStrength\" />
     <Folder Include="Views\Concrete\ACI318\Compression\Stability\" />
@@ -1079,7 +1093,6 @@
     <Folder Include="Views\Concrete\ACI318\General\Material\" />
     <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\OneWay\" />
     <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\Torsion\" />
-    <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\" />
     <Folder Include="Views\Loads\ASCE7\Snow\" />
   </ItemGroup>
   <ItemGroup>
