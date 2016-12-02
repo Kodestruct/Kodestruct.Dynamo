@@ -210,12 +210,14 @@
     <Compile Include="Analysis\Section\SectionTypes\CustomProfile.cs" />
     <Compile Include="Analysis\Section\SectionTypes\CustomProfileProperties.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionRectangular.cs" />
+    <Compile Include="Concrete\ACI318\Details\BarClearCover.cs" />
     <Compile Include="Concrete\ACI318\Details\CompressionDevelopmentLength.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Concrete\ACI318\Details\CompressionLapSpliceLength.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Concrete\ACI318\Details\CoverToRebarCentroid.cs" />
     <Compile Include="Concrete\ACI318\Details\Groups\DevelopmentLength.cs">
       <SubType>Code</SubType>
     </Compile>
