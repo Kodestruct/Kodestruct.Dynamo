@@ -82,12 +82,12 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.1.4\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.3.1\lib\net45\Kodestruct.Common.dll</HintPath>
+    <Reference Include="Kodestruct.Common, Version=0.0.1.11, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.11\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.3.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.2.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.6\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
@@ -210,15 +210,12 @@
     <Compile Include="Analysis\Section\SectionTypes\CustomProfile.cs" />
     <Compile Include="Analysis\Section\SectionTypes\CustomProfileProperties.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionRectangular.cs" />
-    <Compile Include="Concrete\ACI318\Details\BarClearCover.cs" />
     <Compile Include="Concrete\ACI318\Details\CompressionDevelopmentLength.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Concrete\ACI318\Details\CompressionLapSpliceLength.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Concrete\ACI318\Details\CoverToRebarCentroid.cs" />
-    <Compile Include="Concrete\ACI318\Details\Groups\Cover.cs" />
     <Compile Include="Concrete\ACI318\Details\Groups\DevelopmentLength.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -270,11 +267,6 @@
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\RequiredLongitudinalTorsionRebar.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\RequiredTransverseTorsionAndShearRebar.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\Torsion\ThresholdTorsion.cs" />
-    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\PunchingShearPerimeter.cs" />
-    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\Groups\TwoWayShear.cs" />
-    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\TwoWayShearStrengthProvidedByConcrete.cs" />
-    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\TwoWayShearStressFromConcentricLoad.cs" />
-    <Compile Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\TwoWayShearStressFromMomentAndShear.cs" />
     <Compile Include="Concrete\ACI318\Section\ShearFriction\ShearFrictionStrength.cs" />
     <Compile Include="General\DesignToCapacityMultiple.cs" />
     <Compile Include="General\DesignToCapacitySingle.cs" />
@@ -497,6 +489,7 @@
   <ItemGroup>
     <Folder Include="Concrete\ACI318\Beam\Flexure\" />
     <Folder Include="Concrete\ACI318\Beam\ShearAndTorsion\OneWayShear\" />
+    <Folder Include="Concrete\ACI318\Section\ShearAndTorsion\TwoWay\" />
     <Folder Include="Loads\ASCE7\Gravity\Ice\" />
     <Folder Include="Loads\ASCE7\Gravity\Snow\" />
   </ItemGroup>

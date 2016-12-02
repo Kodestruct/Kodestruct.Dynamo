@@ -91,12 +91,12 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.1.4\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.3.1\lib\net45\Kodestruct.Common.dll</HintPath>
+    <Reference Include="Kodestruct.Common, Version=0.0.1.11, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.1.11\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.3.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.2.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.2.6\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
@@ -206,7 +206,6 @@
     <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\RebarSizeSelection.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Nodes\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelection.cs" />
     <Compile Include="Nodes\General\Flexure\AngleOrientation.cs" />
     <Compile Include="Nodes\General\Flexure\AngleRotation.cs" />
@@ -296,10 +295,6 @@
     </Compile>
     <Compile Include="Views\Concrete\ACI318\General\Rebar\RebarSizeSelectionView.xaml.cs">
       <DependentUpon>RebarSizeSelectionView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelectionView.xaml.cs">
-      <DependentUpon>PunchingPerimeterConfigurationSelectionView.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Views\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelectionView.xaml.cs">
       <DependentUpon>ShearFrictionContactSurfaceSelectionView.xaml</DependentUpon>
@@ -613,10 +608,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
-    <Page Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelectionView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1080,6 +1071,7 @@
     <Folder Include="Nodes\Concrete\ACI318\General\Material\" />
     <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\OneWay\" />
     <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\Torsion\" />
+    <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\TwoWay\" />
     <Folder Include="Nodes\Steel\AISC\Flexure\" />
     <Folder Include="Views\Concrete\ACI318\Compression\SectionStrength\" />
     <Folder Include="Views\Concrete\ACI318\Compression\Stability\" />
@@ -1087,6 +1079,7 @@
     <Folder Include="Views\Concrete\ACI318\General\Material\" />
     <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\OneWay\" />
     <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\Torsion\" />
+    <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\" />
     <Folder Include="Views\Loads\ASCE7\Snow\" />
   </ItemGroup>
   <ItemGroup>
