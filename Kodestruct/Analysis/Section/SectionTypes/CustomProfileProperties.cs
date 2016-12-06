@@ -187,13 +187,12 @@ namespace Analysis.Section
         ///    Calculates custom shape properties about X axis
         /// </summary>
         /// <param name="Shape">  Custom profile object</param>
-        /// <returns name="y_top"> Vertical offeset from highest point of section </returns>
-        /// <returns name="r_x"> Radius of gyration about the x-axis  </returns>
-        /// <returns name="Q"> Area  </returns>
+        /// <returns name="Y_offset"> Vertical offeset ofcut-plane from highest point of section </returns>
+        /// <returns name="Q"> First moment of area  </returns>
 
 
         [MultiReturn(new[] { "Q" })]
-        public static Dictionary<string, object> FirstMomentArea(CustomProfile Shape, double Y_offset)
+        public static Dictionary<string, object> FirstMomentOfAreaX(CustomProfile Shape, double Y_offset)
         {
             //Default values
             double Q = 0.0;
