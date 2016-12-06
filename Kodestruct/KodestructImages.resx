@@ -2180,7 +2180,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="Concrete.ACI318.General.Reinforcement.SizeAreaAndProperties.BarArea.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Concrete.ACI318.General.Reinforcement.SizeAreaAndProperties.BarAreaAndDiameter.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAATlSURBVHhe7dw9btRAGMbx3CBH4Ag5AgegSEcb0SPR
@@ -2207,7 +2207,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAArMnW1n/zC0u0GBYeswAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Concrete.ACI318.General.Reinforcement.SizeAreaAndProperties.BarArea.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Concrete.ACI318.General.Reinforcement.SizeAreaAndProperties.BarAreaAndDiameter.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAE/SURBVFhH7ZU9TsNAFIR9gxwhR8gROAIdbZQeKS0d

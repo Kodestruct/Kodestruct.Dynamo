@@ -63,7 +63,7 @@ namespace Concrete.ACI318.General.Concrete
         /// <param name="ConcreteMaterialWeightType">  Type of concrete by weight (normalweight vs. lightweight) </param>
         /// <returns name="ConcreteMaterial"> Concrete material object used to extract material properties, create the object using input parameters first </returns>
         
-        public static ConcreteMaterial  ByStrengthAndWeightType(double f_c_prime,string ConcreteMaterialWeightType="Normalweight")
+        public static ConcreteMaterial  ByStrengthAndWeightType(double f_c_prime=4.0,string ConcreteMaterialWeightType="Normalweight")
         {
             return new ConcreteMaterial(f_c_prime, ConcreteMaterialWeightType);
         }

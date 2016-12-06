@@ -30,7 +30,7 @@ using Kodestruct.Concrete.ACI.ACI318_14.C22_SectionalStrength.ShearFriction;
 
 #endregion
 
-namespace Concrete.ACI318.Section.ShearFriction
+namespace Concrete.ACI318.Section
 {
 
 /// <summary>

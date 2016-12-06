@@ -180,6 +180,7 @@
     <Compile Include="Analysis\Section\SectionTypes\SectionIRolled.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionPipe.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionOfPlateWithHoles.cs" />
+    <Compile Include="Analysis\Section\SectionTypes\SectionPolygon.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionRound.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionTee.cs" />
     <Compile Include="Analysis\Section\SectionTypes\SectionTube.cs" />

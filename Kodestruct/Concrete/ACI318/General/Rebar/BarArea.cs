@@ -48,7 +48,7 @@ namespace Concrete.ACI318.General.Reinforcement
         /// <returns name="d_b"> Bar diameter </returns>
 
         [MultiReturn(new[] { "A_b","d_b" })]
-        public static Dictionary<string, object> BarArea(string RebarSizeId)
+        public static Dictionary<string, object> BarAreaAndDiameter(string RebarSizeId)
         {
             //Default values
             double A_b = 0;
