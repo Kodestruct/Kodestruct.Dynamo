@@ -208,6 +208,7 @@ namespace Kodestruct.Steel.AISC.General
             HighStrengthBoltType = "Conventional";
             AnchorRodType = "ThreadedAndNutted";
             PlateThicknessRange = "PL_0_75less_t_lessEq1_25";
+            this.BoltType = "HighStrengthBolt";
             CatalogShapeType = "IShape";
             IShapeType = "W";
             CShapeType = "C";

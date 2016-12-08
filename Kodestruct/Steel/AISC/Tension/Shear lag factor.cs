@@ -50,16 +50,15 @@ namespace Steel.AISC
         /// <param name="H">  Overall height of rectangular HSS member (for HSS connections H is measured in the plane of the connection) </param>
         ///  <param name="A_g">  Gross cross-sectional area of member (used is parameter IsBoltedSplice is set to true)  </param>
         /// <param name="A_connected">  Area of directly connected elements (to be used for Case 3 from AISC Table D3.1) when variable IsPartiallyWeldedWithTransverseWelds is set to true </param>
-        /// <param name="IsOpenOpenTensionSection">Indicates if a section is open (such as I-shape, Tee etc)</param>
+        /// <param name="IsOpenTensionSection">Indicates if a section is open (such as I-shape, Tee etc)</param>
         /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="U"> Shear lag factor  </returns>
         
 
         [MultiReturn(new[] { "U" })]
-        public static Dictionary<string, object> ShearLagFactor(string ShearLagCaseId,double x_bar,double t_p, double l,double B,double H,
-            double A_g,
-            double A_connected,
-            bool IsOpenOpenTensionSection = true, string Code = "AISC360-10")
+        public static Dictionary<string, object> ShearLagFactor(string ShearLagCaseId,double x_bar=0,double t_p=0, double l=0,double B=0,double H=0,
+            double A_g=0, double A_connected=0,
+            bool IsOpenTensionSection = true, string Code = "AISC360-10")
         {
             //Default values
             double U = 0;
@@ -74,7 +73,7 @@ namespace Steel.AISC
             }
 
             ShearLagFactor factor = new ShearLagFactor();
-            U = factor.GetShearLagFactor(ShearLagCase, x_bar, t_p, l, B, H,A_g,A_connected,IsOpenOpenTensionSection);
+            U = factor.GetShearLagFactor(ShearLagCase, x_bar, t_p, l, B, H,A_g,A_connected,IsOpenTensionSection);
 
 
             return new Dictionary<string, object>

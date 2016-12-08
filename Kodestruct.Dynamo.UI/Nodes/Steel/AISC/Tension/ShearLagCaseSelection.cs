@@ -52,7 +52,7 @@ namespace Kodestruct.Steel.AISC.Tension
         {
             ReportEntry="";
             ShearLagCaseIdDescription ="General case";
-            ShearLagCaseId = "Case 2";
+            ShearLagCaseId = "Case2";
             //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
             //OutPortData.Add(new PortData("l", "Connection length"));
             //OutPortData.Add(new PortData("x_bar", "Element eccentricity"));

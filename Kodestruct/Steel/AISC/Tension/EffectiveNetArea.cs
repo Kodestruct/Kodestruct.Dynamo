@@ -42,7 +42,6 @@ namespace Steel.AISC
         /// <summary>
         ///     Effective area for tensile strength
         /// </summary>
-        /// <param name="ShearLagCaseId">  Defines the type of tension element for shear lag calculation </param>
         /// <param name="U">  Shear lag factor  </param>
         /// <param name="A_n">  Net area of member   </param>
         /// <param name="A_g">  Gross cross-sectional area of member (used is parameter IsBoltedSplice is set to true)  </param>
@@ -54,9 +53,9 @@ namespace Steel.AISC
 
 
         
-        public static Dictionary<string, object> EffectiveNetArea(string ShearLagCaseId,double U,double A_n,
+        public static Dictionary<string, object> EffectiveNetArea(double U,double A_n,
             double A_g,
-            double A_connected,
+            double A_connected=0,
             bool IsPartiallyWeldedWithTransverseWelds =false,
             bool IsBoltedSplice = false, string Code = "AISC360-10")
         {
