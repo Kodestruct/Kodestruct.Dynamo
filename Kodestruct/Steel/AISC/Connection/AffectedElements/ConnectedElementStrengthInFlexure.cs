@@ -45,7 +45,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///     Connected element strength in flexure 
+        ///     Connected element strength in flexure  (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape"> Cross section shape   </param>
         /// <param name="L_b">  Length between points that are either braced against lateral displacement of compression flange or braced against twist of the cross section   </param>

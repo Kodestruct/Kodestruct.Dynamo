@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Strength of bolt group for the bearing on base material limit state
+        ///    Calculates Strength of bolt group for the bearing on base material limit state (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="N_BoltRowParallel">  Number of bolt rows parallel  to direction of load </param>
         /// <param name="N_BoltRowPerpendicular">  Number of bolt columns perpendicular to direction of load </param>

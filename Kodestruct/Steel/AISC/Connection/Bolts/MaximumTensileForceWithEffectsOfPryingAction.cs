@@ -39,7 +39,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Prying action maximum tension force
+        ///    Calculates Prying action maximum tension force (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Nominal fastener diameter </param>
         /// <param name="d_hole">   Bolt hole diameter (in the direction of prying action) </param>

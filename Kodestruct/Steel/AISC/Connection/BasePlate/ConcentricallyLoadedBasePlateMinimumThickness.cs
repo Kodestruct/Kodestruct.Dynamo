@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.BasePlate
     public partial class MinimumThickness 
     {
         /// <summary>
-        ///     Concentrically loaded  base plate minimum thickness
+        ///     Concentrically loaded  base plate minimum thickness (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="BasePlateShape">  Base plate shape object , created from inut parameters </param>
         /// <param name="P_u">  Required axial strength </param>

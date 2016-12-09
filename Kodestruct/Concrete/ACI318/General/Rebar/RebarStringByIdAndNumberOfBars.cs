@@ -38,7 +38,7 @@ namespace Concrete.ACI318.General.Reinforcement
     public partial class SizeAreaAndProperties 
     {
         /// <summary>
-        ///     Rebar string by number of bars
+        ///     Rebar string by number of bars (creates a text that can be used for scheduling)
         /// </summary>
         /// <param name="RebarSizeId">  Rebar designation (number) indicating the size of the bar </param>
         /// <param name="N_bars">  Number of bars </param>

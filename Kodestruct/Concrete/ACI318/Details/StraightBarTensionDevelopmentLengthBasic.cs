@@ -40,7 +40,7 @@ namespace Concrete.ACI318.Details
     public partial class DevelopmentLength
     {
         /// <summary>
-        ///     Tension development length (basic)
+        ///     Tension development length (basic) (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteMaterial">  Concrete material object used to extract material properties, create the object using input parameters first </param>
         /// <param name="d_b">   Nominal diameter of bar, wire, or prestressing  strand  </param>

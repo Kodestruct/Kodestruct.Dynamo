@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Concentrated force web compression buckling
+        ///    Calculates concentrated force web compression buckling (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="t_w">  Thickness of web  </param>
         /// <param name="h_web">  Clear distance between flanges less the fillet or corner radius for rolled shapes </param>

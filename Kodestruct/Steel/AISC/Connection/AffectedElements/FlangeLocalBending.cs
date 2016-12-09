@@ -38,8 +38,8 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Concentrated force flange local bending
-        /// </summary>
+        ///    Calculates Concentrated force flange local bending (kip - in unit system for all inputs and outputs)
+        /// </summary> 
         /// <param name="F_yf">  Specified minimum yield stress </param>
         /// <param name="t_f">  Thickness of flange   </param>
         /// <param name="l_edge">  Edge distance </param>

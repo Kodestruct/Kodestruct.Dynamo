@@ -42,7 +42,7 @@ namespace Concrete.ACI318.Details
     public partial class LapSplice
     {
         /// <summary>
-        ///     Tension lap splice length (basic)
+        ///     Tension lap splice length (basic) (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteMaterial">  Concrete material object used to extract material properties, create the object using input parameters first </param>
         /// <param name="d_b1">   Nominal diameter of first bar </param>

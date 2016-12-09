@@ -53,7 +53,16 @@ namespace Steel.AISC.Connection.BasePlate.Shapes
                     this.Plate = new bp.BasePlateCircularHss( B_bp,N_bp,D,fc_prime,F_y,A_2); //remove 0 for P_u
 
         }
-
+        /// <summary>
+         /// Circular HSS base plate object (kip - in unit system for all inputs and outputs)
+        /// </summary>
+        /// <param name="B_bp">Base plate dimension</param>
+        /// <param name="N_bp">Base plate dimension</param>
+         /// <param name="A_2">Area of the lower base of the largest frustum of a pyramid, cone, or tapered wedge contained wholly within the support and having its upper base equal to the loaded area </param>
+        /// <param name="F_y">Plate material yield stress</param>
+        /// <param name="fc_prime">Concrete minimum specified strength</param>
+        /// <param name="D">HSS diameter</param>
+        /// <returns></returns>
          public static BasePlateChsShape FromGeometry(double B_bp, double N_bp, double A_2, double F_y, double fc_prime, double D)
         {
 

@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class Seated 
     {
         /// <summary>
-        ///     Triangular seat stiffener forces
+        ///     Triangular seat stiffener forces (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="a_seat">  Vertical dimension (height) of stiffened seat </param>
         /// <param name="b_seat">  Horizontal dimension of stiffened seat </param>

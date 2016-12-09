@@ -49,7 +49,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
     public partial class LongitudinalPlate 
     {
         /// <summary>
-        ///     HSS to longitudinal plate wall plastification of member
+        ///     HSS to longitudinal plate wall plastification of member (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="HssSection">  Section object (Tube or Pipe) </param>
         /// <param name="PlateSection">  Section object (Rectangle) </param>

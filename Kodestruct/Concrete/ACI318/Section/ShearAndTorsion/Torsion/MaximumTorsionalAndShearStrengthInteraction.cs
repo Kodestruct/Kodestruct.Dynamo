@@ -42,7 +42,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
     {
 
         /// <summary>
-        ///     Maximum torsional and shear strength interaction
+        ///     Maximum torsional and shear strength interaction (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>
         /// <param name="c_transv_ctr">  Concrete cover to closed stirrups </param>

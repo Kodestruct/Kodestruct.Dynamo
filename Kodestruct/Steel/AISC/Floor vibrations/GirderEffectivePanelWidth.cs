@@ -56,8 +56,8 @@ namespace Steel.AISC.FloorVibrations
 
 
         [MultiReturn(new[] { "B_g" })]
-        public static Dictionary<string, object> GirderEffectivePanelWidth(double L_g,double L_j,double I_g,double I_j,double S_j,double L_floor,string BeamLocation,
-            string JoistToGirderConnectionType, string Code = "AISC. Design Guide 11. 1st Ed")
+        public static Dictionary<string, object> GirderEffectivePanelWidth(double L_g,double L_j,double I_g,double I_j,double S_j,double L_floor,string BeamLocation="Inner",
+            string JoistToGirderConnectionType="ConnectionToWeb", string Code = "AISC. Design Guide 11. 1st Ed")
         {
             //Default values
             double B_g = 0;

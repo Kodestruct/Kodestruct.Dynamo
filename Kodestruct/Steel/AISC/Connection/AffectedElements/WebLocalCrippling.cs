@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Concentrated force web local crippling 
+        ///    alculates concentrated force web local crippling (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="t_w">  Thickness of web  </param>
         /// <param name="t_f">  Thickness of flange   </param>

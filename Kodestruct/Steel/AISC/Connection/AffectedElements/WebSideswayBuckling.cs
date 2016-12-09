@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Concentrated force web sidesway buckling 
+        ///    Calculates concentrated force web sidesway buckling  (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="M_u">  Required flexural strength </param>
         /// <param name="M_y">  Moment at yielding of the extreme fiber  </param>

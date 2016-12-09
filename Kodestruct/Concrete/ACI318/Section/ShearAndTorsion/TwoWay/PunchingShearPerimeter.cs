@@ -89,7 +89,18 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.Perimeter
                 b_xCant, b_yCant, new Point2D(X_ColumnCenter,Y_ColumnCenter));
         }
 
-
+        /// <summary>
+         /// Creates punching perimeter object from column geometry and perimeter configuration selection (kip - in unit system for all inputs and outputs)
+        /// </summary>
+        /// <param name="PunchingPerimeterConfiguration">Identifies edge condition</param>
+        /// <param name="c_x">Column size, X axis</param>
+        /// <param name="c_y">Column size, Y axis</param>
+        /// <param name="d"> Distance from compression face to tensile reinforcement centroid</param>
+        /// <param name="b_xCant">Slab cantilever beyond face of column for edge and corner conditions</param>
+        /// <param name="b_yCant">Slab cantilever beyond face of column for edge and corner conditions</param>
+        /// <param name="X_ColumnCenter">Coordinate of column center</param>
+        /// <param name="Y_ColumnCenter">Coordinate of column center</param>
+        /// <returns></returns>
          public static PunchingShearPerimeter ByColumnType(string PunchingPerimeterConfiguration, double c_x, double c_y, double d,
         double b_xCant=0, double b_yCant=0, double X_ColumnCenter = 0, double Y_ColumnCenter=0)
         {

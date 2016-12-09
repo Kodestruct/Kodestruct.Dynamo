@@ -39,7 +39,7 @@ namespace Steel.AISC.FloorVibrations
     public partial class FundamentalFrequency 
     {
         /// <summary>
-        ///     Combined beam-girder system frequency
+        ///     Combined beam-girder system frequency (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Delta_j">  Joist deflection </param>
         /// <param name="Delta_g">  Girder deflection </param>

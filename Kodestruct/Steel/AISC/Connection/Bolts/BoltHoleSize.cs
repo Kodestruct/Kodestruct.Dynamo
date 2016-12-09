@@ -40,7 +40,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Bolt nominal hole dimension
+        ///    Calculates Bolt nominal hole dimension (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Nominal fastener diameter </param>
         /// <param name="BoltHoleType">  Type of bolt hole </param>

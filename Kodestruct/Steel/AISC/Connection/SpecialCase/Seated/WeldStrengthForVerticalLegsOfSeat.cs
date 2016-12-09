@@ -37,7 +37,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class Seated 
     {
         /// <summary>
-        ///     Weld strength for vertical legs of seat
+        ///     Weld strength for vertical legs of seat (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="phiR_nWeld">Total weld strength for a single vertical leg  </param>
         /// <param name="L_vSeat"> Vertical length (height) of seat </param>

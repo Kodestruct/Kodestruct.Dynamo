@@ -42,7 +42,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Size factor
+        ///     Size factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d">  Depth of rectangular beam cross section  </param>
         /// <param name="t">  Thickness  </param>

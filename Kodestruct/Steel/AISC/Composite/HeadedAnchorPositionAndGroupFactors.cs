@@ -40,7 +40,7 @@ namespace Steel.AISC.Composite
     public partial class Anchor 
     {
         /// <summary>
-        ///    Calculates Strength of headed stud anchor
+        ///    Calculates Strength of headed stud anchor (use kip - in unit system for all inputs)
         /// </summary>
         /// <param name="HeadedAnchorDeckCondition">  Identifies whether deck runs parallel or perpendicular to beam or there is no deck </param>
         /// <param name="HeadedAnchorWeldCase">  Identifies the type of welding between the anchor and shape (through deck or not) </param>

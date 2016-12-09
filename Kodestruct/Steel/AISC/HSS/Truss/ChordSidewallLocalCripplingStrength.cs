@@ -43,7 +43,7 @@ namespace Steel.AISC.HSS
     public partial class Truss
     {
         /// <summary>
-        ///     Chord sidewall local crippling strength
+        ///     Chord sidewall local crippling strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="HssTrussConnectionMemberType">  Specifies if the connection members are circular HSS (CHS) or rectangular HSS </param>
         /// <param name="HssTrussConnectionClassification">  Distinguishes between T, Y, X, gapped K or overlapped K connection </param>

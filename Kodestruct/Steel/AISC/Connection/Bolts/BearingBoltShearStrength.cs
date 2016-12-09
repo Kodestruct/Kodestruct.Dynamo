@@ -40,7 +40,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates bearing bolt shear strength
+        ///    Calculates bearing bolt shear strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Nominal fastener diameter </param>
         /// <param name="BoltMaterialId">  Bolt material specification </param>

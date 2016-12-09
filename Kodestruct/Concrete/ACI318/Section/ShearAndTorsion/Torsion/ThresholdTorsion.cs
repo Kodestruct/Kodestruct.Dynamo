@@ -42,7 +42,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
     public partial class Torsion 
     {
         /// <summary>
-        ///     Treshold torsion
+        ///     Treshold torsion (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>
         /// <param name="N_u">   Factored axial force normal to cross section occurring simultaneously with vu or tu; to be taken as  positive for compression and negative for tension  </param>

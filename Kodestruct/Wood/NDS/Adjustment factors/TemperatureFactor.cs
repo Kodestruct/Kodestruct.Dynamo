@@ -40,7 +40,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Temperature factor
+        ///     Temperature factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Temperature">  Service temperature </param>
         /// <param name="ServiceMoistureCondition">  Identifies the type of service moisture conditions for wet service factor </param>

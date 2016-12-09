@@ -48,7 +48,7 @@ namespace Loads.ASCE7.Lateral.Wind
         /// <param name="C_p_l">  Leeward external pressure coefficient for determination of wind loads </param>
         /// <param name="C_p_w">  Windward external pressure coefficient for determination of wind loads</param>
         /// <param name="Code"> Applicable version of code/standard</param>
-        /// <returns name="p"> Design pressure to be used in determination of wind loads for buildings </returns>
+        /// <returns name="p"> Design pressure to be used in determination of wind loads for buildings (psf)</returns>
 
         [MultiReturn(new[] { "p" })]
         public static Dictionary<string, object> WindNetPressureMWFRS(double q_z, double q_h, double G, double C_p_l, double C_p_w, string Code = "ASCE7-10")

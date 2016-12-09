@@ -38,7 +38,7 @@ namespace Steel.AISC.FloorVibrations
     public partial class EffectiveProperties 
     {
         /// <summary>
-        ///     Girder mode effective weight
+        ///     Girder mode effective weight (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="w_g">  Girder uniformly distributed (line) service load  </param>
         /// <param name="B_g">  Girder effective panel width </param>

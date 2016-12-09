@@ -40,7 +40,7 @@ namespace Wood.NDS
     public partial class DesignValues
     {
         /// <summary>
-        ///     Adjusted tension design value
+        ///     Adjusted tension design value (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_t">  Reference tension design value parallel to grain  </param>
         /// <param name="C_M_Ft">  Wet service factor </param>

@@ -42,7 +42,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
     public partial class Stresses 
     {
         /// <summary>
-        ///     Two way shear stress from moment
+        ///     Two way shear stress from moment (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="M_ux">   Factored moment with respect to x-axis </param>
         /// <param name="M_uy">   Factored moment with respect to y-axis </param>

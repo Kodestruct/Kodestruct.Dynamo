@@ -41,7 +41,7 @@ namespace Steel.AISC.Composite
     public partial class Flexure 
     {
         /// <summary>
-        ///    Calculates Positive moment flexural strength for composite beam
+        ///    Calculates Positive moment flexural strength for composite beam (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape">  Steel shape instance (must be of CompositeSteelShape type) </param>
         /// <param name="b_eff">  Effective width of concrete slab in composite beam design </param>

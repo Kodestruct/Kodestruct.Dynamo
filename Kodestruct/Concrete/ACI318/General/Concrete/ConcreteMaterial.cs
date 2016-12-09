@@ -57,7 +57,7 @@ namespace Concrete.ACI318.General.Concrete
             this.Concrete = new Kodestruct.Concrete.ACI318_14.Materials.ConcreteMaterial(f_c_prime_psi, weightType, null);
         }
         /// <summary>
-        ///     Concrete material
+        ///     Concrete material (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="f_c_prime">   Specified compressive strength of concrete  </param>
         /// <param name="ConcreteMaterialWeightType">  Type of concrete by weight (normalweight vs. lightweight) </param>

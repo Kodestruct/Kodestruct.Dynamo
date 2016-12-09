@@ -48,7 +48,7 @@ namespace Steel.AISC
     public partial class Flexure 
     {
     /// <summary>
-    ///     Limiting length for flexural inelastic buckling
+        ///     Limiting length for flexural inelastic buckling (kip - in unit system for all inputs and outputs)
     /// </summary>
     /// <param name="Shape">  Shape object   </param>
     /// <param name="F_y">  Specified minimum yield stress </param>

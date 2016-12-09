@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class ExtendedSinglePlate 
     {
         /// <summary>
-        ///    Extended single plate design torsional moment, to be compared with flexural strength of stabilized single plate per AISC SCM Chapter 10
+        ///    Extended single plate design torsional moment, to be compared with flexural strength of stabilized single plate per AISC SCM Chapter 10 (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="R_u">  Required strength </param>
         /// <param name="t_w">  Thickness of web  </param>

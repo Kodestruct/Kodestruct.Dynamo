@@ -41,7 +41,7 @@ namespace Steel.AISC
     public partial class Flexure 
     {
         /// <summary>
-        ///     Buckling modification factor
+        ///     Buckling modification factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="M_A">  Absolute value of moment at quarter point of the unbraced segment </param>
         /// <param name="M_B">  Absolute value of moment at centerline of the unbraced segment  </param>

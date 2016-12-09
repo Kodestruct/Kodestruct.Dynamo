@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class ExtendedSinglePlate 
     {
         /// <summary>
-        ///    Extended single plate shear strength if no stabilizer plates are added per AISC SCM Chapter 10
+        ///    Extended single plate shear strength if no stabilizer plates are added per AISC SCM Chapter 10 (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_pl">  Depth of plate </param>
         /// <param name="t_p">  Thickness of plate   </param>

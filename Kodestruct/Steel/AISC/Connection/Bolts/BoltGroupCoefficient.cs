@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Eccentrically loaded bolt group coefficient
+        ///    Calculates Eccentrically loaded bolt group coefficient (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="N_rows">  Number of bolt rows in bolt groups </param>
         /// <param name="N_cols">  Number of bolt columns in bolt groups </param>

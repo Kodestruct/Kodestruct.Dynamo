@@ -43,7 +43,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Bearing strength at bolt hole
+        ///    Calculates Bearing strength at bolt hole (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="BoltHoleType">  Type of bolt hole </param>
         /// <param name="l_c">  Clear distance in the direction of the force between the edge of the hole and the edge of the adjacent hole or edge of the material  </param>

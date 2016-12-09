@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Concentrated force web local yielding
+        ///    Calculates concentrated force web local yielding (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="t_w">  Thickness of web  </param>
         /// <param name="F_yw">  Specified minimum yield stress of the web material </param>

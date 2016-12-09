@@ -37,7 +37,7 @@ namespace Loads.ASCE7.Lateral.Seismic
     public partial class Building 
     {
         /// <summary>
-        ///     Seismic base shear
+        ///     Seismic base shear (kip)
         /// </summary>
         /// <param name="W_e">  Effective seismic weight of the building </param>
         /// <param name="C_s">  Seismic response coefficient which multiplied by the building seismic weight, gives the building seismic base shear (lateral pseudo-acceleration, expressed in units of gravity) </param>

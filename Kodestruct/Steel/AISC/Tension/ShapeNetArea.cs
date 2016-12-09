@@ -43,7 +43,7 @@ namespace Steel.AISC
     public partial class Tension 
     {
         /// <summary>
-        ///     Net area for tensile strength
+        ///     Net area for tensile strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="A_g">Member gross area</param>
         /// <param name="NFlangeBolts">Number of flange holes in a section (or total number of holes for HSS, angles etc)</param>

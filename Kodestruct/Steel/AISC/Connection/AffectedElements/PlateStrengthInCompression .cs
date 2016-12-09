@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Connected element strength in compression 
+        ///    Calculates connected element strength in compression (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_y">  Specified minimum yield stress </param>
         /// <param name="KL">  Effective length of element in compression </param>

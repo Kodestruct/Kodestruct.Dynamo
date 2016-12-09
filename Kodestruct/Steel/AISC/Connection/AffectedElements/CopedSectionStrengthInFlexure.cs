@@ -43,7 +43,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Coped section strength in flexure
+        ///    Calculates Coped section strength in flexure (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d">  Full nominal depth of the section    </param>
         /// <param name="b_f"> Width of flange  </param>

@@ -39,7 +39,7 @@ namespace Loads.ASCE7.Lateral.Seismic
     public partial class Building 
     {
         /// <summary>
-        ///     Fundamental period of the building  used to account for building dynamic response to base accelerations
+        ///     Fundamental period of the building  used to account for building dynamic response to base accelerations (kip - ft unit system for all inputs and outputs)
         /// </summary>
         /// <param name="T">Fundamental period of the building used for design</param>
         /// <param name="C_s">Seismic response coefficient which multiplied by the building seismic weight, gives the building seismic base shear (lateral pseudo-acceleration, expressed in units of gravity)</param>

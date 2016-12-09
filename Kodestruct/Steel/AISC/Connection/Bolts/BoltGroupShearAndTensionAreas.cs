@@ -41,7 +41,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Net and gross shear and tension areas for block shear, shear yielding and shear rupture calculations
+        ///    Calculates Net and gross shear and tension areas for block shear, shear yielding and shear rupture calculations (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ShearAreaCaseId">  Case selection for shear area calculations in affected elements in connections (block shear, shear yielding, shear rupture).Values are: StraightLine,TBlock,UBlock,Lblock </param>
         /// <param name="N_BoltRowParallel">  Number of bolt rows parallel  to direction of load (for example number of rows when load is vertical) </param>

@@ -40,7 +40,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Column stability factor
+        ///     Column stability factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_comp">  Cross-sectional dimension of rectangular column associated with axis of column buckling  </param>
         /// <param name="F_c">  Reference compression design value parallel to grain   </param>

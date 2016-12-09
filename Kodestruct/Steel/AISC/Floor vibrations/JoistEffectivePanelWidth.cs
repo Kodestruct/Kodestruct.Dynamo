@@ -43,7 +43,7 @@ namespace Steel.AISC.FloorVibrations
     public partial class EffectiveProperties 
     {
         /// <summary>
-        ///     Joist effective panel width
+        ///     Joist effective panel width (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="fc_prime">  Specified compressive strength of concrete   </param>
         /// <param name="w_c">Weight of concrete per unit volume (pcf)</param>
@@ -63,7 +63,7 @@ namespace Steel.AISC.FloorVibrations
 
         [MultiReturn(new[] { "B_j" })]
         public static Dictionary<string, object> JoistEffectivePanelWidth(double fc_prime, double w_c, double h_solid, double h_rib, double w_r, double s_r, string DeckAtBeamCondition, 
-            double L_j, double I_j, double S_j, double L_floor, string BeamLocation, string Code = "AISC. Design Guide 11. 1st Ed")
+            double L_j, double I_j, double S_j, double L_floor, string BeamLocation="Inner", string Code = "AISC. Design Guide 11. 1st Ed")
         {
             //Default values
             double B_j = 0;

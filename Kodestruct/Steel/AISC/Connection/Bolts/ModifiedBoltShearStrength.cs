@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Bearing bolt combined tension and shear
+        ///    Calculates Bearing bolt combined tension and shear (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="V_u">  Required shear strength </param>
         /// <param name="d_b">  Nominal fastener diameter </param>

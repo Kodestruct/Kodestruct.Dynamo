@@ -40,7 +40,7 @@ namespace Wood.NDS
     public partial class DesignValues
     {
         /// <summary>
-        ///     Adjusted minimum modulus of elasticity
+        ///     Adjusted minimum modulus of elasticity (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="E_min">  Reference modulus of elasticity for stability calculations  </param>
         /// <param name="C_M_E">  Wet service factor for modulus of elasticity E and minimum modulus of elasticity E_min </param>

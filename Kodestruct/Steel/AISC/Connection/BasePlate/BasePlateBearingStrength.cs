@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.BasePlate
     public partial class Bearing
     {
         /// <summary>
-        ///     Base plate bearing strength
+        ///     Base plate bearing strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="BasePlateShape">  Base plate shape object , created from inut parameters </param>
         /// <param name="Code"> Applicable version of code/standard</param>

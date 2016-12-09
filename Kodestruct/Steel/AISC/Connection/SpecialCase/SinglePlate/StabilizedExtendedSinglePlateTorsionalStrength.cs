@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class ExtendedSinglePlate 
     {
         /// <summary>
-        ///    Flexural strength of extended single plate per AISC SCM Chapter 10
+        ///    Flexural strength of extended single plate per AISC SCM Chapter 10 (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="R_u">  Required strength </param>
         /// <param name="F_yp">  Specified minimum yield stress of plate    </param>

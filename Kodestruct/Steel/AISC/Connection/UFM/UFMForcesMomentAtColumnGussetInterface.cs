@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class UniformForceMethod 
     {
         /// <summary>
-        ///     Connection interface forces per Uniform Force Method for brace connection.  Case when moment is present at COLUMN-to-gusset interface. 
+        ///     Connection interface forces per Uniform Force Method for brace connection.  Case when moment is present at COLUMN-to-gusset interface (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Depth of beam </param>
         /// <param name="d_c">  Depth of column  </param>

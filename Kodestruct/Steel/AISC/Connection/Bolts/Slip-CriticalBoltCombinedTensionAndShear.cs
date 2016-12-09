@@ -42,7 +42,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Modified shear strength slip-critical bolt combined tension and shear 
+        ///    Calculates Modified shear strength slip-critical bolt combined tension and shear (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Nominal fastener diameter </param>
         /// <param name="T_u">  Required tension force </param>

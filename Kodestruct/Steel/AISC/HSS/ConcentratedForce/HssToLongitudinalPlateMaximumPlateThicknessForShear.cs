@@ -48,7 +48,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
     public partial class LongitudinalPlate 
     {
         /// <summary>
-        ///     HSS to longitudinal plate maximum plate thickness
+        ///     HSS to longitudinal plate maximum plate thickness (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="HssSection">  Section object (Tube or Pipe) </param>
         /// <param name="PlateSection">  Section object (Rectangle) </param>

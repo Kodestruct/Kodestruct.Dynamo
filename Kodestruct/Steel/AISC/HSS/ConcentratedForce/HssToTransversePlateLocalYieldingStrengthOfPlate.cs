@@ -47,7 +47,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
     public partial class TransversePlate 
     {
 /// <summary>
-        ///     HSS to transverse plate connection local yielding of plate
+        ///     HSS to transverse plate connection local yielding of plate (kip - in unit system for all inputs and outputs)
 /// </summary>
 /// <param name="HssSection">  Section object (Tube or Pipe) </param>
 /// <param name="PlateSection">  Section object (Rectangle) </param>

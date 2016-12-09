@@ -42,7 +42,7 @@ namespace Steel.AISC.Connection
     public partial class Welded 
     {
         /// <summary>
-        ///    Calculates Concentrically loaded fillet weld group strength
+        ///    Calculates Concentrically loaded fillet weld group strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="WeldGroupPattern">  Weld group pattern type </param>
         /// <param name="l_transv">  Length of transversely loaded welds </param>
@@ -55,7 +55,7 @@ namespace Steel.AISC.Connection
 
         [MultiReturn(new[] { "phiR_n" })]
         public static Dictionary<string, object> FilletWeldGroupConcentricLoadStrength(string WeldGroupPattern,double l_transv,double l_longit,
-            double w_weld, double F_EXX, double theta, string Code = "AISC360-10")
+            double w_weld, double F_EXX=70, double theta=0, string Code = "AISC360-10")
         {
             //Default values
             double phiR_n = 0;

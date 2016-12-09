@@ -41,7 +41,7 @@ namespace Wood.NDS
     public partial class General
     {
     /// <summary>
-    ///     ReferenceValues
+        ///     ReferenceValues (kip - in unit system for all inputs and outputs)
     /// </summary>
         /// <param name="WoodSpeciesId">  Identifies  wood species </param>
         /// <param name="CommercialGradeId">  Identifies commercial grade of wood being considered </param>

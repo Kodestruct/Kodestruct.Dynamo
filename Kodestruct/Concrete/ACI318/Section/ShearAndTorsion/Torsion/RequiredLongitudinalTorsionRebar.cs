@@ -42,18 +42,19 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
     public partial class Torsion 
     {
         /// <summary>
-        ///     Required longitudinal torsion rebar
+        ///     Required longitudinal torsion rebar (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>
         /// <param name="T_u"> Factored torsional moment at section </param>
         /// <param name="RebarMaterial">  Reinforcement material object. Create the object using input parameters first </param>
         /// <param name="c_transv_ctr">Concrete cover to closed stirrups</param>
+        /// <param name="theta">Angle between assumed diagonal strut and horizontal</param>
         /// <param name="Code">Applicable version of code/standard</param> 
         /// <returns name="A_l">  Total area of longitudinal reinforcement to resist  torsion  </returns>
 
         [MultiReturn(new[] { "A_l" })]
         public static Dictionary<string, object> RequiredLongitudinalTorsionRebar(ConcreteFlexureAndAxiaSection ConcreteSection, double T_u, RebarMaterial RebarMaterial,
-            double c_transv_ctr, string Code = "ACI318-14")
+            double c_transv_ctr, double theta =45, string Code = "ACI318-14")
         {
             //Default values
             double A_l = 0;

@@ -51,7 +51,7 @@ namespace Steel.AISC.FloorVibrations
         /// <returns name="W_j"> Beam mode effective panel weight </returns>
 
         [MultiReturn(new[] { "W_j" })]
-        public static Dictionary<string, object> JoistModeEffectiveWeight(double w_j, double B_j, double L_j, double S_j, string AdjacentSpanWeightIncreaseType, string Code = "AISC. Design Guide 11. 1st Ed")
+        public static Dictionary<string, object> JoistModeEffectiveWeight(double w_j, double B_j, double L_j, double S_j, string AdjacentSpanWeightIncreaseType="None", string Code = "AISC. Design Guide 11. 1st Ed")
         {
             //Default values
             double W_j = 0;

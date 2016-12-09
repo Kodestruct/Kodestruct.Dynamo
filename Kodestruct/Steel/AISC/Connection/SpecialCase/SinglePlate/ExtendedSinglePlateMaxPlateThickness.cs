@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class ExtendedSinglePlate 
     {
         /// <summary>
-        ///    Calculates Extended single plate maximum plate thickness
+        ///    Calculates Extended single plate maximum plate thickness (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_nv">  Nominal shear stress </param>
         /// <param name="d_b">  Nominal fastener diameter </param>

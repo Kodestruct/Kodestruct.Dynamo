@@ -39,7 +39,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
     public partial class NonPrestressed 
     {
         /// <summary>
-        ///     One way  shear strength provided by concrete
+        ///     One way  shear strength provided by concrete (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="b_w">  Web width </param>
         /// <param name="d">   Distance from extreme compression fiber to centroid  of longitudinal tension reinforcement  </param>

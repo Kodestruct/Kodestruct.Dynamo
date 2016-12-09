@@ -49,7 +49,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
     public partial class CapPlate 
     {
         /// <summary>
-        ///     Strength of plate welded to cap plate
+        ///     Strength of plate welded to cap plate (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="HssSection">  Section object (Tube or Pipe) </param>
         /// <param name="PlateSection">  Section object (Rectangle). Ensure that plate thickness (smaller dimension) is b and length (larger dimension) is h   </param>

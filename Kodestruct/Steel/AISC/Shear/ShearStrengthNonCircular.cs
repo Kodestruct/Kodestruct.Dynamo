@@ -40,7 +40,7 @@ namespace Steel.AISC
     public partial class Shear 
     {
         /// <summary>
-        ///     Shear strength noncircular member
+        ///     Shear strength noncircular member (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ShearCase">  Shape type for shear </param>
         /// <param name="F_y">  Specified minimum yield stress </param>

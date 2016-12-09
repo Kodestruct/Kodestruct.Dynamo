@@ -31,7 +31,7 @@ namespace Steel.AISC.Connection
     public partial class UniformForceMethod 
     {
         /// <summary>
-        ///     Distance from the face of the beam flange to the ideal centroid of the gusset-to-column connection for brace connection.
+        ///     Distance from the face of the beam flange to the ideal centroid of the gusset-to-column connection for brace connection (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Depth of beam </param>
         /// <param name="d_c">  Depth of column  </param>

@@ -38,7 +38,7 @@ namespace Steel.AISC
     public partial class Tension 
     {
         /// <summary>
-        ///     Member tensile strength 
+        ///     Member tensile strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_y">  Specified minimum yield stress </param>
         /// <param name="F_u">  Specified minimum tensile strength   </param>
