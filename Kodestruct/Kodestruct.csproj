@@ -94,8 +94,8 @@
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.2.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.2.4\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.3.1\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
