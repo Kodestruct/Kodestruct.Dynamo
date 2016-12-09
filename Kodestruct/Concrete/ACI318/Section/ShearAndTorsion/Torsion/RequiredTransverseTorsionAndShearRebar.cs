@@ -41,19 +41,20 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
     public partial class Torsion 
     {
         /// <summary>
-        ///     Required transverse torsion rebar
+        ///     Required transverse torsion rebar (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>
         /// <param name="T_u"> Factored torsional moment at section  </param>
         /// <param name="RebarMaterial">  Reinforcement material object. Create the object using input parameters first </param>
         /// <param name="c_transv_ctr">Concrete cover to closed stirrups</param>
         /// <param name="s">   Center-to-center spacing of items, such as longitudinal reinforcement, transverse reinforcement,  tendons, or anchors  </param>
+        /// <param name="theta">Angle between assumed diagonal strut and horizontal</param>
         /// <param name="Code">Applicable version of code/standard</param>
         /// <returns name="A_v">  Area of shear reinforcement within spacing s  </returns>
 
         [MultiReturn(new[] { "A_v" })]
         public static Dictionary<string, object> RequiredTransverseTorsionAndShearRebar(ConcreteFlexureAndAxiaSection ConcreteSection, double T_u, RebarMaterial RebarMaterial,
-            double c_transv_ctr, double s, string Code = "ACI318-14")
+            double c_transv_ctr, double s, double theta = 45, string Code = "ACI318-14")
         {
             //Default values
             double A_v = 0;
@@ -66,7 +67,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
             IConcreteTorsionalShape shape = tss.GetShape(sec.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
             ConcreteSectionTorsion secT = new ConcreteSectionTorsion(shape);
             double T_u_lb_in = T_u * 1000.0; //internally Kodestruct uses lb - in units for concrete
-            A_v = secT.GetRequiredTorsionTransverseReinforcementArea(T_u_lb_in, s, RebarMaterial.Material.YieldStress);
+            A_v = secT.GetRequiredTorsionTransverseReinforcementArea(T_u_lb_in, s, RebarMaterial.Material.YieldStress,theta);
 
             return new Dictionary<string, object>
             {

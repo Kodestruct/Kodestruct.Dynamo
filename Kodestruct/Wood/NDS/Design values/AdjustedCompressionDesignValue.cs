@@ -39,7 +39,7 @@ namespace Wood.NDS
     public partial class DesignValues
     {
         /// <summary>
-        ///     Adjusted compression design value
+        ///     Adjusted compression design value (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_c">  Out-of-plane seismic forces for concrete and masonry walls  </param>
         /// <param name="C_M_Fc">  Wet service factor </param>

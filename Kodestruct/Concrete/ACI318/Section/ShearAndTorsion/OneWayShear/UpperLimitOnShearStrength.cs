@@ -39,7 +39,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
     public partial class NonPrestressed 
     {
         /// <summary>
-        ///    Upper limit on one way  shear strength provided by concrete
+        ///    Upper limit on one way  shear strength provided by concrete (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteMaterial">Concrete material </param>
         /// <param name="b_w">  Web width </param>

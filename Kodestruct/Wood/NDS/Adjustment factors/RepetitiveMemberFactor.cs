@@ -41,7 +41,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Repetitive member factor
+        ///     Repetitive member factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="t">Member thickness</param>
         /// <param name="s_member">Center-to-center spacing between adjacent members in a row </param>

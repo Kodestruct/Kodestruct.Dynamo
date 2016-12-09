@@ -44,7 +44,7 @@ namespace Concrete.ACI318.Section
     public partial class FlexureAndAxialForce
     {
         /// <summary>
-        ///     Moment strength with axial force
+        ///     Moment strength with axial force (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="P_u">   Factored axial force; to be taken as positive for  compression and negative for tension  </param>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>

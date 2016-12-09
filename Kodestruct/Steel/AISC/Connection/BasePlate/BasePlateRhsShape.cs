@@ -43,7 +43,7 @@ namespace Steel.AISC.Connection.BasePlate.Shapes
     public partial class BasePlateRhsShape : BasePlateShapeObject
     {
         /// <summary>
-        ///     Base plate object required for calculations of minimum thickness etc.
+        ///     Base plate object required for calculations of minimum thickness etc. (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="B_bp">  Base plate width (for I-shaped column measured parallel to the weak-axis of the shape) </param>
         /// <param name="N_bp">  Base plate width (for I-shaped column measured parallel to the strong-axis of the shape) </param>

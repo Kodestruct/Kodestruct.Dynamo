@@ -37,7 +37,7 @@ namespace Concrete.ACI318.General.Reinforcement
     public partial class SizeAreaAndProperties 
     {
         /// <summary>
-        ///     Rebar material properties
+        ///     Rebar material properties (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="RebarSpecificationId">  Reinforcement specification  </param>
         /// <returns name="f_y">  Specified yield strength for nonprestressed reinforcement  </returns>

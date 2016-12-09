@@ -44,7 +44,7 @@ namespace Concrete.ACI318.Section
     public partial class ShearFriction 
     {
         /// <summary>
-        ///     Shear friction strength
+        ///     Shear friction strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ShearFrictionSurfaceTypeId">  Type of contact surface for shear friction calculations </param>
         /// <param name="ConcreteMaterial">  Concrete material object used to extract material properties, create the object using input parameters first </param>

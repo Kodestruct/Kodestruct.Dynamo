@@ -39,7 +39,7 @@ namespace Wood.NDS
     public partial class DesignValues
     {
         /// <summary>
-        ///     Adjusted bending design value
+        ///     Adjusted bending design value (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_b">  Reference bending design value  </param>
         /// <param name="C_M_Fb">  Wet service factor </param>

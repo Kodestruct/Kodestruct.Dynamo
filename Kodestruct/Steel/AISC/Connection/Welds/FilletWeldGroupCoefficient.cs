@@ -40,7 +40,7 @@ namespace Steel.AISC.Connection
     public partial class Welded 
     {
             /// <summary>
-            ///    Calculates Eccentrically loaded weld group coefficient
+        ///    Calculates eccentrically loaded weld group coefficient (kip - in unit system for all inputs and outputs)
             /// </summary>
             /// <param name="WeldGroupPattern">  Weld group pattern type </param>
             /// <param name="l_Weld_horizontal">  Weld group horizontal dimension  </param>

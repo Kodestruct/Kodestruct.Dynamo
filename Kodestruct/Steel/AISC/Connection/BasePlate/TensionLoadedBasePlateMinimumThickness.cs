@@ -39,7 +39,7 @@ namespace Steel.AISC.Connection.BasePlate
     public partial class MinimumThickness 
     {
         /// <summary>
-        ///     Tension loaded base plate minimum thickness
+        ///     Tension loaded base plate minimum thickness (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="BasePlateShape">  Base plate shape object , created from inut parameters </param>
         /// <param name="T_uAnchor">  Required tension strength in single anchor </param>

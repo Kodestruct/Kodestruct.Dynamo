@@ -41,13 +41,13 @@ namespace Concrete.ACI318.Section
 
     public partial class FlexureAndAxialForce 
     {
-/// <summary>
-///     Maximum compressive strength
-/// </summary>
-/// <param name="ConcreteSection">  Reinforced concrete section </param>
-/// <param name="ConfinementReinforcementType">  Type of confinement reinforcement (spiral, ties or none) </param>
-/// <param name="IsPrestressed">  Indicates if member is prestressed </param>
-/// <param name="Code">  Applicable version of code/standard </param>
+        /// <summary>
+        ///     Maximum compressive strength (kip - in unit system for all inputs and outputs)
+        /// </summary>
+        /// <param name="ConcreteSection">  Reinforced concrete section </param>
+        /// <param name="ConfinementReinforcementType">  Type of confinement reinforcement (spiral, ties or none) </param>
+        /// <param name="IsPrestressed">  Indicates if member is prestressed </param>
+        /// <param name="Code">  Applicable version of code/standard </param>
         /// <returns name="phiP_o">  Axial strength at zero eccentricity  (maximum compressive strength) </returns>
 
         [MultiReturn(new[] { "phiP_o" })]

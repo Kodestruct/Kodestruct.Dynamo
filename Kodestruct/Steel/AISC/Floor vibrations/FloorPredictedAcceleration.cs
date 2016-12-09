@@ -42,7 +42,7 @@ namespace Steel.AISC.FloorVibrations
         ///     Floor predicted acceleration
         /// </summary>
         /// <param name="f_n"></param>
-        /// <param name="W_c">  Equivalent combined mode panel weight </param>
+        /// <param name="W_c">  Equivalent combined mode panel weight (kip) </param>
         /// <param name="beta_floor">  Floor modal damping ratio </param>
         /// <param name="FloorSeviceOccupancyId">  Indicates type of floor occupancy used for vibration checks </param>
         /// <param name="Code"> Applicable version of code/standard</param>

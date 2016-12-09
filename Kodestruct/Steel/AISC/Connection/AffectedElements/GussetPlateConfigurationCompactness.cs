@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Gusset plate configuration compactness
+        ///    Calculates gusset plate configuration compactness (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="t_g">  Gusset plate thickness </param>
         /// <param name="c_Gusset">  Shortest distance between closest bolt and beam flange </param>

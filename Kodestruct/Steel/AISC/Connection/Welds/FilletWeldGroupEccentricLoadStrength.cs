@@ -37,7 +37,7 @@ namespace Steel.AISC.Connection
     public partial class Welded 
     {
         /// <summary>
-        ///    Calculates Eccentrically loaded fillet weld group strength
+        ///    Calculates Eccentrically loaded fillet weld group strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="C_WeldGroup">  Coefficient for eccentrically loaded weld group </param>
         /// <param name="l">  Length of connection or weld   </param>

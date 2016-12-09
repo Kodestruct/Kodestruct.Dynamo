@@ -41,7 +41,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
             /// <summary>
-            ///    Calculates Concentrated force web panel zone shear
+            ///    Calculates concentrated force web panel zone shear (kip - in unit system for all inputs and outputs)
             /// </summary>
             /// <param name="t_w">  Thickness of web  </param>
             /// <param name="t_cf">  Thickness of column flange   </param>

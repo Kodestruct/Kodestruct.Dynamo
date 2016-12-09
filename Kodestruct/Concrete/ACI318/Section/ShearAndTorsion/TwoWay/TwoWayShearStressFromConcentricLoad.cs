@@ -42,7 +42,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
     public partial class Stresses 
     {
         /// <summary>
-        ///     Two way shear  stress from concentric  load
+        ///     Two way shear  stress from concentric  load (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="V_u">   Factored punching shear force at section  </param>
         /// <param name="PunchingShearPerimeter">  Punching shear (two-way shear) perimeter object. Create the object using input parameters first </param>

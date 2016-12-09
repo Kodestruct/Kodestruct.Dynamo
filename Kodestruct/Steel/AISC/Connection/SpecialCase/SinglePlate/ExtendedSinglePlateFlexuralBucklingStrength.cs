@@ -39,7 +39,7 @@ namespace Steel.AISC.Connection.SpecialCase
     public partial class ExtendedSinglePlate 
     {
         /// <summary>
-        ///    Calculates Flexural strength of extended single plate, using plate buckling equation for coped beams
+        ///    Calculates Flexural strength of extended single plate, using plate buckling equation for coped beams (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="a_bolts">  Distance from support to first line of bolts </param>
         /// <param name="t_p">  Thickness of plate   </param>

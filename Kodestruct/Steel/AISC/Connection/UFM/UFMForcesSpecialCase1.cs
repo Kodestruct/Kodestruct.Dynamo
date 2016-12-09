@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class UniformForceMethod 
     {
         /// <summary>
-        ///     Connection interface forces per Uniform Force Method for brace connection.  Non concentric connection case, when when the line of brace force goes through point with coordinate offsets x_brace, y_brace.
+        ///     Connection interface forces per Uniform Force Method for brace connection.  Non concentric connection case, when when the line of brace force goes through point with coordinate offsets x_brace, y_brace. (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Depth of beam </param>
         /// <param name="d_c">  Depth of column  </param>

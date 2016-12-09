@@ -37,7 +37,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Eccentrically loaded bolt group strength
+        ///    Calculates Eccentrically loaded bolt group strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="C_BoltGroup">  Coefficient for eccentrically loaded bolt group </param>
         /// <param name="phiR_nv">  Connection shear strength </param>

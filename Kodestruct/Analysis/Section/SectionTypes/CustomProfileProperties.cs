@@ -187,7 +187,7 @@ namespace Analysis.Section
         ///    Calculates custom shape properties about X axis
         /// </summary>
         /// <param name="Shape">  Custom profile object</param>
-        /// <returns name="Y_offset"> Vertical offeset ofcut-plane from highest point of section </returns>
+        /// <param name="Y_offset"> Vertical offeset ofcut-plane from highest point of section </returns>
         /// <returns name="Q"> First moment of area  </returns>
 
 

@@ -40,7 +40,7 @@ namespace Wood.NDS
     public partial class DesignValues
     {
         /// <summary>
-        ///     Adjusted modulus of elasticity
+        ///     Adjusted modulus of elasticity (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="E">  Earthquake force  </param>
         /// <param name="C_M_E">  Wet service factor </param>

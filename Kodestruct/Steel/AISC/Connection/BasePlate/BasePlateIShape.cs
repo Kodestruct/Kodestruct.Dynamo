@@ -53,6 +53,17 @@ namespace Steel.AISC.Connection.BasePlate.Shapes
 
         }
 
+        /// <summary>
+         /// I-Shape base plate object (kip - in unit system for all inputs and outputs)
+        /// </summary>
+         /// <param name="B_bp">Base plate dimension</param>
+         /// <param name="N_bp">Base plate dimension</param>
+         /// <param name="A_2">Area of the lower base of the largest frustum of a pyramid, cone, or tapered wedge contained wholly within the support and having its upper base equal to the loaded area </param>
+         /// <param name="F_y">Plate material yield stress</param>
+         /// <param name="fc_prime">Concrete minimum specified strength</param>
+        /// <param name="d_c">Shape depth</param>
+        /// <param name="b_f">Flange width</param>
+        /// <returns></returns>
          public static BasePlateIShape FromGeometry(double B_bp, double N_bp, double A_2, double F_y, double fc_prime, double d_c, double b_f)
         {
 

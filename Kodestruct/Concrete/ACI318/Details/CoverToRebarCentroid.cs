@@ -41,7 +41,7 @@ namespace Concrete.ACI318.Details
     public partial class Cover 
     {
         /// <summary>
-        ///     Cover to reinforcement centroid
+        ///     Cover to reinforcement centroid (in)
         /// </summary>
         /// <param name="c_c">   Clear cover of reinforcement  </param>
         /// <param name="RebarSizeId">  Rebar designation (number) indicating the size of the bar </param>

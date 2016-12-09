@@ -47,9 +47,9 @@ namespace Concrete.ACI318.General.Reinforcement
             Material = factory.GetMaterial(RebarSpecificationId);
         }
         /// <summary>
-        ///     Rebar material
+        ///     Rebar material 
         /// </summary>
-        /// <param name="RebarSpecificationId">  Reinforcement specification  </param>
+        /// <param name="RebarSpecificationId">  Reinforcement specification (applicable ASTM standard)  </param>
         /// <returns name="RebarMaterial"> Reinforcement material object, create the object using input parameters first </returns>
         public static RebarMaterial ByRebarSpecificationId(string RebarSpecificationId = "A615Grade60")
         {

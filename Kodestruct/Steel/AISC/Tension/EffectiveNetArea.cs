@@ -40,7 +40,7 @@ namespace Steel.AISC
     public partial class Tension 
     {
         /// <summary>
-        ///     Effective area for tensile strength
+        ///     Effective area for tensile strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="U">  Shear lag factor  </param>
         /// <param name="A_n">  Net area of member   </param>

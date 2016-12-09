@@ -40,7 +40,7 @@ namespace Loads.ASCE7.Lateral.Wind
     public partial class PressureCoefficient 
     {
         /// <summary>
-        ///     Wind internal pressure coefficient  accounting for the effects of the internal pressure on the component wind pressures 
+        ///     Wind internal pressure coefficient  accounting for the effects of the internal pressure on the component wind pressures (kip - ft unit system for all inputs and outputs)
         /// </summary>
         /// <param name="WindEnclosureType">  Type of enclosure (open, partially-enclosed or enclosed)  </param>
         /// <param name="Code"> Applicable version of code/standard</param>

@@ -232,7 +232,6 @@
     <Compile Include="Concrete\ACI318\Details\StraightBarTensionDevelopmentLengthDetailed.cs" />
     <Compile Include="Concrete\ACI318\Details\StraightBarTensionLapSpliceLengthBasic.cs" />
     <Compile Include="Concrete\ACI318\Details\StraightBarTensionLapSpliceLengthDetailed.cs" />
-    <Compile Include="Concrete\ACI318\General\Rebar\EffectiveDepthToLongitudinalRebar.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterialProperties.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarPointByArea.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarStringByElementWidthAndIdAndSpacing.cs">
@@ -246,7 +245,7 @@
     <Compile Include="Concrete\ACI318\Section\FlexureAndAxial\Groups\Flexure.cs" />
     <Compile Include="Concrete\ACI318\General\Concrete\ConcreteMaterial.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterial.cs" />
-    <Compile Include="Concrete\ACI318\General\Rebar\BarArea.cs" />
+    <Compile Include="Concrete\ACI318\General\Rebar\BarAreaAndDiameter.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\Groups\SizeAreaAndProperties.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarAreaByElementWidthAndIdAndSpacing.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarAreaByIdAndNumberOfBars.cs" />

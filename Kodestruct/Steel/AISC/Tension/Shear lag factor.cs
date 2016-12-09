@@ -40,7 +40,7 @@ namespace Steel.AISC
     public partial class Tension 
     {
         /// <summary>
-        ///     Shear lag factor
+        ///     Shear lag factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ShearLagCaseId">  Defines the type of tension element for shear lag calculation </param>
         /// <param name="x_bar">Element eccentricity</param>

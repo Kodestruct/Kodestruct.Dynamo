@@ -54,7 +54,7 @@ namespace Concrete.ACI318.General.Reinforcement
         }
 
          /// <summary>
-        ///     Rebar point object by area
+        ///     Rebar point object by area (inches for all dimensions)
         /// </summary>
         /// <param name="A_b">   Area of an individual bar or wire  </param>
         /// <param name="X">  Point coordinate X (in shape coordinate system) </param>

@@ -43,10 +43,10 @@ namespace Loads.ASCE7.Lateral.Wind
     public partial class PressureCoefficient 
     {
         /// <summary>
-        ///     External pressure coefficient  used in calculation of wind loads on Main Wind-Force Resisting System (MWFRS) elements . 
+        ///     External pressure coefficient  used in calculation of wind loads on Main Wind-Force Resisting System (MWFRS) elements. (kip - ft unit system for all inputs and outputs)
         /// </summary>
-        /// <param name="B">  Horizontal dimension of building measured normal to wind direction </param>
-        /// <param name="L">  Horizontal dimension of a building measured parallel to the wind direction </param>
+        /// <param name="B">  Horizontal dimension of building measured normal to wind direction (ft)</param>
+        /// <param name="L">  Horizontal dimension of a building measured parallel to the wind direction (ft) </param>
         /// <param name="WindFaceType">  Type of face relative to wind direction (windward, leeward or side)  </param>
         /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="C_p"> External pressure coefficient to be used in determination of wind loads for buildings </returns>

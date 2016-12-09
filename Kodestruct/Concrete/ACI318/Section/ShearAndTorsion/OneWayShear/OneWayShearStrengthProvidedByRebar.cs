@@ -38,7 +38,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
     public partial class NonPrestressed 
     {
         /// <summary>
-        ///     One way  shear strength provided by rebar
+        ///     One way  shear strength provided by rebar (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="A_v">   Area of shear reinforcement within spacing s  </param>
         /// <param name="TransverseRebarMaterial">Rebar material for transverse bars</param>

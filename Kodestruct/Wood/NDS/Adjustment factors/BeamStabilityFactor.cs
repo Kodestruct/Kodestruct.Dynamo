@@ -39,7 +39,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Beam stability factor
+        ///     Beam stability factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="b">  Length of shearwall parallel to lateral force; distance between chords of shearwall  </param>
         /// <param name="d">  Depth of rectangular beam cross section  </param>

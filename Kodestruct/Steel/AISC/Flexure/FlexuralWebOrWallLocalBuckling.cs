@@ -47,7 +47,7 @@ namespace Steel.AISC
     public partial class Flexure 
     {
         /// <summary>
-        ///     Flexural web or wall local buckling
+        ///     Flexural web or wall local buckling (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape">  Shape object  </param>
         /// <param name="F_y">  Specified minimum yield stress </param>

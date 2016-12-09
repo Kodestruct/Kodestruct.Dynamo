@@ -46,7 +46,7 @@ namespace Steel.AISC
     public partial class Flexure 
     {
         /// <summary>
-        ///     Flexural compression flange yielding 
+        ///     Flexural compression flange yielding (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape">  Shape object </param>
         /// <param name="BendingAxis">  Distinguishes between bending with respect to section x-axis vs x-axis </param>

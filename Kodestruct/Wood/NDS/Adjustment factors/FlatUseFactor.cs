@@ -41,7 +41,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Flat use factor
+        ///     Flat use factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="b"> Width (long dimension)</param>
         /// <param name="t"> Thickness </param>

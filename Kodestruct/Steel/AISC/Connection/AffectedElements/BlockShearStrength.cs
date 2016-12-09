@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Block shear strength
+        ///    Calculates Block shear strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="A_gv">  Gross area subject to shear </param>
         /// <param name="A_nv">  Net area subject to shear </param>

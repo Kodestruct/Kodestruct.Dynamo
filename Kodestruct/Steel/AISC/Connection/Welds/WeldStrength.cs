@@ -41,7 +41,7 @@ namespace Steel.AISC.Connection
     public partial class Welded 
     {
         /// <summary>
-        ///    Calculates Weld strength
+        ///    Calculates Weld strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="l_weld">  Weld length </param>
         /// <param name="WeldType">  Weld type </param>

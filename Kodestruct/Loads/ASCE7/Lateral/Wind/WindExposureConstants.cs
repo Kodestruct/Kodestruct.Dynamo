@@ -41,7 +41,7 @@ namespace Loads.ASCE7.Lateral.Wind
     public partial class General 
     {
         /// <summary>
-        ///     Terrain exposure constants, as a function of Exposure Category . 
+        ///     Terrain exposure constants, as a function of Exposure Category.  (kip - ft unit system for all inputs and outputs)
         /// </summary>
         /// <param name="WindExposureCategory">  Exposure category for wind calculation </param>
         /// <param name="Code"> Applicable version of code/standard</param>

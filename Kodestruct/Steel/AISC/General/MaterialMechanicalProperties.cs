@@ -39,7 +39,7 @@ namespace Steel.AISC.General
     public partial class MaterialProperties 
     {
         /// <summary>
-        ///    Calculates yield and ultimate stress for slected steel material as well as modulus of elasticity and shear modulus
+        ///    Calculates yield and ultimate stress for slected steel material as well as modulus of elasticity and shear modulus (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="SteelMaterialId">  Steel material </param>
         /// <param name="d_b">  Bolt diameter (if applicable) </param>

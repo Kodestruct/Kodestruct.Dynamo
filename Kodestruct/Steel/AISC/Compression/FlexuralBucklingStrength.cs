@@ -43,7 +43,7 @@ namespace Steel.AISC
     public partial class Compression
     {
         /// <summary>
-        ///     Flexural buckling strength
+        ///     Flexural buckling strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape">  Shape object  </param>
         /// <param name="L_ex">  Effective unbraced length (KL) for major-axis compression buckling </param>

@@ -39,7 +39,7 @@ namespace Concrete.ACI318.Section
     public partial class FlexureAndAxialForce 
     {
         /// <summary>
-        ///     Effective moment of inertia
+        ///     Effective moment of inertia (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="I_cr">   Moment of inertia of cracked section transformed  to concrete  </param>
         /// <param name="I_g">   Moment of inertia of gross concrete section about  centroidal axis, neglecting reinforcement  </param>

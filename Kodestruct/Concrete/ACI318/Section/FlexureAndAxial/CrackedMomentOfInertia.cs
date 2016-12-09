@@ -44,7 +44,7 @@ namespace Concrete.ACI318.Section
     public partial class FlexureAndAxialForce 
     {
         /// <summary>
-        ///     Cracked moment of inertia
+        ///     Cracked moment of inertia (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ConcreteSection">  Reinforced concrete section </param>
         /// <param name="FlexuralCompressionFiberLocation">  Indicates whether the section in flexure has top or bottom in compression due to stresses from bending moment </param>

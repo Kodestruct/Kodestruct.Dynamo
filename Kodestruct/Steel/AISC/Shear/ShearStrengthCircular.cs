@@ -36,7 +36,7 @@ namespace Steel.AISC
     public partial class Shear 
     {
         /// <summary>
-        ///     Shear strength circular member
+        ///     Shear strength circular member (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="D">  Outside diameter of round HSS  </param>
         /// <param name="t_nom">  HSS and pipe nominal wall thickness </param>

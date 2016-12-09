@@ -42,7 +42,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
     /// <summary>
-    ///     Incising factor
+        ///     Incising factor (kip - in unit system for all inputs and outputs)
     /// </summary>
         /// <param name="IsIncised">Determines if the member is incised</param>
     /// <param name="WoodMemberType">  Distinguishes between dimensional lumber, timber,glulam etc. </param>

@@ -37,7 +37,7 @@ namespace Steel.AISC.Connection
     public partial class UniformForceMethod 
     {
         /// <summary>
-        ///     Connection interface forces per Uniform Force Method for brace connection.  Case when ideal gusset proportions (for distances alpha and beta) are satisfied and no moments are present at gusset interfaces. 
+        ///     Connection interface forces per Uniform Force Method for brace connection.  Case when ideal gusset proportions (for distances alpha and beta) are satisfied and no moments are present at gusset interfaces, (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Depth of beam </param>
         /// <param name="d_c">  Depth of column  </param>

@@ -38,7 +38,7 @@ namespace Steel.AISC.Composite
     public partial class Anchor 
     {
         /// <summary>
-        ///    Calculates Shear strength of headed  anchor
+        ///    Calculates shear strength of headed  anchor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_sa">  Headed anchor diameter </param>
         /// <param name="R_g">  Coefficient to account for group effect   </param>

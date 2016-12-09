@@ -49,7 +49,7 @@ namespace Steel.AISC
     public partial class Flexure 
     {
         /// <summary>
-        ///     Flexural lateral-torsional buckling
+        ///     Flexural lateral-torsional buckling (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape">  Shape object   </param>
         /// <param name="BendingAxis">  Distinguishes between bending with respect to section x-axis vs x-axis </param>

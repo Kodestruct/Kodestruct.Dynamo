@@ -40,7 +40,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Gusset plate effective compression length
+        ///    Calculates gusset plate effective compression length (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="GussetPlateConfigurationId">  Type of gusset plate configuration for calculation of effective length </param>
         /// <param name="l_1">  Gusset plate distance from beam to nearest row of bolts </param>

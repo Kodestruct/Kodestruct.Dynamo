@@ -41,7 +41,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
         /// <summary>
-        ///     Wet service factor
+        ///     Wet service factor (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="ServiceMoistureCondition">  Identifies the type of service moisture conditions for wet service factor </param>
         /// <param name="F_ref">Reference value F_b or Fc</param>

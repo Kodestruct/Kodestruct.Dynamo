@@ -38,7 +38,7 @@ namespace Steel.AISC.FloorVibrations
     public partial class EffectiveProperties 
     {
         /// <summary>
-        ///     Combined mode effective weight
+        ///     Combined mode effective weight (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="W_j">  Beam mode effective panel weight </param>
         /// <param name="W_g">  Girder mode effective panel weight </param>

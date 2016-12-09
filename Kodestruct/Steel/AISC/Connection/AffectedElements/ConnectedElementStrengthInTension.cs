@@ -39,7 +39,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///    Calculates Connected element strength in tension 
+        ///    Calculates Connected element strength in tension (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="A_g">  Gross cross-sectional area of member </param>
         /// <param name="F_y">  Specified minimum yield stress </param>

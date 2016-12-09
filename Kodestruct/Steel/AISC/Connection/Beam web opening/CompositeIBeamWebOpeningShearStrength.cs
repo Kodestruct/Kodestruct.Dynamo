@@ -44,7 +44,7 @@ namespace Steel.AISC.Connection
     public partial class BeamWebOpening 
     {
         /// <summary>
-        ///     Composite I-Beam web opening shear strength
+        ///     Composite I-Beam web opening shear strength (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="IShape">  Shape object  </param>
         /// <param name="b_eff">  Effective width of concrete slab in composite beam design </param>

@@ -39,7 +39,7 @@ namespace Wood.NDS
     public partial class DesignValues
     {
         /// <summary>
-        ///     Adjusted shear design value
+        ///     Adjusted shear design value (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="F_v">  Velocity-based seismic site coefficient at 1.0 second period </param>
         /// <param name="C_M_Fv">  Wet service factor </param>

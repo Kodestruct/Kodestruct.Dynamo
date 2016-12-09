@@ -38,7 +38,7 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates bolt nominal shear stress from AISC Table J3.2
+        ///    Calculates bolt nominal shear stress from AISC Table J3.2 (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="BoltMaterialId">  Bolt material specification </param>
         /// <param name="BoltThreadCase">  Identifies whether threads are included or excluded from shear planes </param>

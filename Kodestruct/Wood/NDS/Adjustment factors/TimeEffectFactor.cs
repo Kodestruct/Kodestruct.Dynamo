@@ -40,7 +40,7 @@ namespace Wood.NDS
     public partial class AdjustmentFactor 
     {
     /// <summary>
-    ///     Time effect factor
+        ///     Time effect factor (kip - in unit system for all inputs and outputs)
     /// </summary>
     /// <param name="LoadCombinationType">  Identifies the type of load combination as required to calculate time-effect factor </param>
     /// <param name="IsConnection">  Identifies if the calculated value is applied in connection designed </param>
