@@ -70,6 +70,7 @@ namespace Analysis.Section.AISC
 
             //Calculation logic:
                 CalcLog cl = new CalcLog();
+                SteelShapeId = SteelShapeId.ToUpper();
                 AiscCatalogShape shape = new AiscCatalogShape(SteelShapeId, cl);
                 
                 J = shape.J;

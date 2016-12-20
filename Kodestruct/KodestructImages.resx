@@ -3793,7 +3793,7 @@
         t2MjIAuIaL0a2wng3DtOljgPhLz8OoMUIeU/G6f4v1Gp/AIzbUh71m+XowAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Concrete.ACI318.Section.ShearFriction.ShearFriction.ShearFrictionStrength.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Concrete.ACI318.Section.ShearFriction.ShearFrictionStrength.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAXHSURBVHhe7Z29bhw3FIX1CHoEP4IeQb0bV64F9wZc
@@ -3824,7 +3824,7 @@
         Fp4Q0jJHR98AwZfePT+bm94AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Concrete.ACI318.Section.ShearFriction.ShearFriction.ShearFrictionStrength.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Concrete.ACI318.Section.ShearFriction.ShearFrictionStrength.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFtSURBVFhH7ZexTsMwFEXzCf2EfkI+ITs7M+rOiMRY
@@ -10274,32 +10274,31 @@
   </data>
   <data name="Steel.AISC.Tension.ShapeNetArea.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADEElEQVR4Xu3csW0UQRjF8SuB
-        ElyC5QpcgkOHJM7pwO7AsSNHjimBBixRgksg5zDL+6QRMMtbZhbQoZnv/5Nedjfs7Pd0YterPQAAAAAA
-        AAAAAAAAAAAAAADdPl9cXPbk9eHhclmW7sTn3TqnyvHmxh7XVr4+P9t1NnJWTt/4tJmlJxqozlO/+Lxb
-        51RRAcqR9FEB7DobuSunb3xmczYUoAoFaKEAgzCbs6EAVShACwUYhNmcDQWoQgFaKMAgzOZsKEAVCtBC
-        AQZhNmdDAapQgBYKMAizORsKUIUCtFCAQZjN2VCAKhSghQIMwmzOhgJUmaoA7oGHX6KB2gcpthKfN+vc
-        KY/KJ8Wd2L2JdWK9WPdK+f5vqQD2uLaiAvx8nK3M80DI/6KTGENzQ+3NvfKmLIcRaYDnyp/8GrwtS2B0
-        Gua71XBbeSxfxSw01JfVkH8XfvZno6H2/gq8L1/BTDTY+J+1G/g681x+4QcNlgJkpsFSgMziplHcOewI
-        BZhRuRvXgwLMSIOlAJlpsBQgMw2WAmQWf4mLP8d2hALMSJd3XAZmpsFSgMw0WAqQmQZLATLTYClAZhos
-        BcgsHuCMp3g7QgFmtHAjKDcNlgJkpsFSgMw0WAqQmQZLATLT5R2XgZlpsBQgMw2WAmSmwVKAzDRYCpCZ
-        BksBMtNgKUBmur7nPkBmGiwFyEyDpQCZabAUIDMNlgJkduSJoNx0ecdlYGYaLAXITIONt3y6ga9zX76C
-        mWiw8bpXN/B1XspXMAsN9Ww15FauylcxAw3042rArcSrZXlZ5OhiiMqHMtS9idKcl6UwEg0ufvLjTeH/
-        4pXx8cZwivA3Vid0M8fra/fGjs18ub2165wqe4/39enJrrOReS5HzeZs4k7cHvFeP7fOqbL3eKMEbp2N
-        UIAWCjAIszkbClCFArRQgEGYzdlQgCoUoIUCDMJszoYCVKEALRRgEGZzNhSgCgVooQCDMJuzoQBVKEAL
-        BRiE2ZwNBahCAVoowCDM5mwoQBUK0EIBAAAAAAAAAAAAAAAAAAAAAAAAkNDh8A3Fafbw160IUQAAAABJ
-        RU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAMQSURBVHhe7dyxbRRBGMXxK4ESXILlClyCQ4ckzunA
+        7sCxI0eOKYEGLFGCSyDnMMv7pBEwy1tmFtChme//k152N+zs93Ri16s9AAAAAAAAAAAAAAAAAAAAAN0+
+        X1xc9uT14eFyWZbuxOfdOqfK8ebGHtdWvj4/23U2clZO3/i0maUnGqjOU7/4vFvnVFEBypH0UQHsOhu5
+        K6dvfGZzNhSgCgVooQCDMJuzoQBVKEALBRiE2ZwNBahCAVoowCDM5mwoQBUK0EIBBmE2Z0MBqlCAFgow
+        CLM5GwpQhQK0UIBBmM3ZUIAqFKCFAgzCbM6GAlSZqgDugYdfooHaBym2Ep8369wpj8onxZ3YvYl1Yr1Y
+        90r5/m+pAPa4tqIC/HycrczzQMj/opMYQ3ND7c298qYshxFpgOfKn/wavC1LYHQa5rvVcFt5LF/FLDTU
+        l9WQfxd+9mejofb+CrwvX8FMNNj4n7Ub+DrzXH7hBw2WAmSmwVKAzOKmUdw57AgFmFG5G9eDAsxIg6UA
+        mWmwFCAzDZYCZBZ/iYs/x3aEAsxIl3dcBmamwVKAzDRYCpCZBksBMtNgKUBmGiwFyCwe4IyneDtCAWa0
+        cCMoNw2WAmSmwVKAzDRYCpCZBksBMtPlHZeBmWmwFCAzDZYCZKbBUoDMNFgKkJkGSwEy02ApQGa6vuc+
+        QGYaLAXITIOlAJlpsBQgMw2WAmR25Img3HR5x2VgZhosBchMg423fLqBr3NfvoKZaLDxulc38HVeylcw
+        Cw31bDXkVq7KVzEDDfTjasCtxKtleVnk6GKIyocy1L2J0pyXpTASDS5+8uNN4f/ilfHxxnCK8DdWJ3Qz
+        x+tr98aOzXy5vbXrnCp7j/f16cmus5F5LkfN5mziTtwe8V4/t86psvd4owRunY1QgBYKMAizORsKUIUC
+        tFCAQZjN2VCAKhSghQIMwmzOhgJUoQAtFGAQZnM2FKAKBWihAIMwm7OhAFUoQAsFGITZnA0FqEIBWijA
+        IMzmbChAFQrQQgEAAAAAAAAAAAAAAAAAAAAAAACQ0OHwDcVp9vDXrQhRAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Steel.AISC.Tension.ShapeNetArea.Small" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAA1UlEQVRYR+2WwQ3CMAxFM1Mn
-        yChcemeErNETIzACIzACe4CQ+Y5sZKGERqhqkOInvYvlOKmTtA2O87fcp+kALywRvX3Mc47VrOVK2XYw
-        KEFiLSiaYzUtNlfKtoNBvoBvZ+DKRT+8wVLub2dgDRQ9Qp18+wnWwNNFbrGYJLwfaHGEyv4L6N6B7gtA
-        2wffAly9aK7hgFvwXJYISeyyBfZNeJbwdqAo7zF/kBK3WOUDh9gJ6uQqv/NLuVkp244MzMUtfOo1XtJi
-        c6VsOxjkC+j7T+g4gxDCC7ecoKYLkrT9AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADVSURBVFhH7ZbBDcIwDEUzUyfIKFx6Z4Ss0RMjMAIj
+        MAJ7gJD5jmxkoYRGqGqQ4ie9i+U4qZO0DY7zt9yn6QAvLBG9fcxzjtWs5UrZdjAoQWItKJpjNS02V8q2
+        g0G+gG9n4MpFP7zBUu5vZ2ANFD1CnXz7CdbA00VusZgkvB9ocYTK/gvo3oHuC0DbB98CXL1oruGAW/Bc
+        lghJ7LIF9k14lvB2oCjvMX+QErdY5QOH2Anq5Cq/80u5WSnbjgzMxS186jVe0mJzpWw7GOQL6PtP6DiD
+        EMILt5ygpguStP0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="Steel.AISC.Tension.ShearLagFactor.Large" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

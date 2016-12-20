@@ -55,23 +55,24 @@ namespace Analysis.Section.AISC
         {
             //Default values
             double y_e = 0;
-double y_p = 0;
-double I_y = 0;
-double Z_y = 0;
-double S_y = 0;
-double r_y = 0;
+            double y_p = 0;
+            double I_y = 0;
+            double Z_y = 0;
+            double S_y = 0;
+            double r_y = 0;
 
 
-            //Calculation logic:
-CalcLog cl = new CalcLog();
-AiscCatalogShape shape = new AiscCatalogShape(SteelShapeId, cl);
+                        //Calculation logic:
+            CalcLog cl = new CalcLog();
+            SteelShapeId = SteelShapeId.ToUpper();
+            AiscCatalogShape shape = new AiscCatalogShape(SteelShapeId, cl);
 
-y_e = shape.y;
-y_p = shape.yp;
-I_y = shape.Iy;
-Z_y = shape.Zy;
-S_y = shape.Sy;
-r_y = shape.ry;
+            y_e = shape.y;
+            y_p = shape.yp;
+            I_y = shape.Iy;
+            Z_y = shape.Zy;
+            S_y = shape.Sy;
+            r_y = shape.ry;
 
 
             return new Dictionary<string, object>

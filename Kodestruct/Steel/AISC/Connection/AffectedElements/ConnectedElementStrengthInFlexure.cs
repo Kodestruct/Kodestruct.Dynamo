@@ -47,21 +47,20 @@ namespace Steel.AISC.Connection
         /// <summary>
         ///     Connected element strength in flexure  (kip - in unit system for all inputs and outputs)
         /// </summary>
-        /// <param name="Shape"> Cross section shape   </param>
-        /// <param name="L_b">  Length between points that are either braced against lateral displacement of compression flange or braced against twist of the cross section   </param>
+        /// <param name="GrossShape"> Cross section shape (gross)   </param>
+        /// <param name="NetShape"> Cross section shape (net)   </param>
         /// <param name="F_y">  Specified minimum yield stress </param>
         /// <param name="F_u">  Specified minimum tensile strength   </param>
-        /// <param name="HasHolesInTensionFlange">  Identifies if member has holes in tension flange, for checking tension rupture of flange per F13 </param>
-        /// <param name="A_fg">  Gross area of tension flange  </param>
-        /// <param name="A_fn">  Net area of tension flange  </param>
+        /// <param name="L_b">  Length between points that are either braced against lateral displacement of compression flange or braced against twist of the cross section   </param>
         /// <param name="IsCompactDoublySymmetricForFlexure">  Indicates whether shape is compact for flexure and doubly symmetric </param>
-        /// <param name="C_b">  Lateral-torsional buckling modification factor for nonuniform moment diagrams  </param>
         /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="phiM_n"> Moment strength </returns>
 
         [MultiReturn(new[] { "phiM_n" })]
-        public static Dictionary<string, object> ConnectedElementStrengthInFlexure(CustomProfile Shape,
-            double L_b, double F_y, double F_u, bool HasHolesInTensionFlange = false, double A_fg = 0, double A_fn = 0, bool IsCompactDoublySymmetricForFlexure = true, double C_b = 1,
+        public static Dictionary<string, object> ConnectedElementStrengthInFlexure(CustomProfile GrossShape,
+            CustomProfile NetShape,
+             double F_y, double F_u, double L_b=0,
+            bool IsCompactDoublySymmetricForFlexure = true, double C_b = 1,
             string Code = "AISC360-10")
         {
             //Default values
@@ -70,10 +69,10 @@ namespace Steel.AISC.Connection
 
             //Calculation logic:
             ICalcLog log = new CalcLog();
-            ISection Isec = Shape.Section as ISection;
-            ISteelMaterial Material = new SteelMaterial(F_y, F_u, SteelConstants.ModulusOfElasticity, SteelConstants.ShearModulus);
-            AffectedElementInFlexure element = new AffectedElementInFlexure(Isec, F_y, F_u, HasHolesInTensionFlange, A_fg, A_fn, IsCompactDoublySymmetricForFlexure);
-            phiM_n = element.GetFlexuralStrength();
+            ISection IsecGross = GrossShape.Section as ISection;
+            ISection IsecNet = NetShape.Section as ISection;
+            AffectedElementInFlexure element = new AffectedElementInFlexure(IsecGross, IsecNet, F_y, F_u, IsCompactDoublySymmetricForFlexure);
+            phiM_n = element.GetFlexuralStrength(L_b);
 
             return new Dictionary<string, object>
             {
