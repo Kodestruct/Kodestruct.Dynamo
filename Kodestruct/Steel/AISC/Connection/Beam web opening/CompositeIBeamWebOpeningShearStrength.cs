@@ -52,7 +52,7 @@ namespace Steel.AISC.Connection
         /// <param name="h_rib">  Depth of ribs for corrugated metal deck </param>
         /// <param name="F_y">  Specified minimum yield stress </param>
         /// <param name="fc_prime">  Specified compressive strength of concrete   </param>
-        /// <param name="N_anchors">  Number of shear anchors along full length of element </param>
+        /// <param name="N_anchors">  Total number of studs (between point of zero and maximum moment) </param>
         /// <param name="Q_n">  Nominal strength of one steel headed stud or steel channel anchor  </param>
         /// <param name="N_o">  Number of anchors over opening </param>
         /// <param name="a_o">  Length of opening </param>
