@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Kodestruct Inc
+   /*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -21,37 +21,40 @@ using Autodesk.DesignScript.Runtime;
 using Dynamo.Models;
 using System.Collections.Generic;
 using Dynamo.Nodes;
+using Kodestruct.Steel.AISC.AISC360v10.Connections.Weld;
 
 #endregion
 
-namespace Steel.AISC_10.Connection
+namespace Steel.AISC.Connection
 {
 
 /// <summary>
-///     Weld effective length
-///     Category:   Steel.AISC_10.Connection
+///     Fillet weld effective length
+///     Category:   Steel.AISC.Connection
 /// </summary>
 /// 
 
 
-    [IsDesignScriptCompatible]
+
     public partial class Welded 
     {
-/// <summary>
-///    Calculates Weld effective length
-/// </summary>
-        /// <param name="l_weld">  Weld length </param>
-
+        /// <summary>
+        ///     Fillet weld effective length
+        /// </summary>
+        /// <param name="w_weld">  Size of weld leg </param>
+        /// <param name="l">Weld actual length</param>
+        /// <param name="IsEndLoaded">Indicates if weld is end loaded</param>
         /// <returns name="l_eff"> Effective weld length </returns>
 
         [MultiReturn(new[] { "l_eff" })]
-        public static Dictionary<string, object> EffectiveWeldLength(double l_weld)
+        public static Dictionary<string, object> FilletWeldEffectiveLength(double w_weld, double l, bool IsEndLoaded)
         {
             //Default values
             double l_eff = 0;
 
 
             //Calculation logic:
+            l_eff = FilletWeldLimits.GetEffectiveLegth(w_weld, l, IsEndLoaded);
 
 
             return new Dictionary<string, object>
@@ -62,15 +65,6 @@ namespace Steel.AISC_10.Connection
         }
 
 
-        //internal Welded (double l_weld)
-        //{
-
-        //}
-        //[IsVisibleInDynamoLibrary(false)]
-        //public static Welded  ByInputParameters(double l_weld)
-        //{
-        //    return new Welded(l_weld );
-        //}
 
     }
 }

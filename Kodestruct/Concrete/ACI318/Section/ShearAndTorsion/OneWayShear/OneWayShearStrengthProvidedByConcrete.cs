@@ -63,7 +63,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
             IConcreteMaterial mat = ConcreteMaterial.Concrete;
             CrossSectionRectangularShape shape = new CrossSectionRectangularShape(mat,null, b_w, h);
             ConcreteSectionOneWayShearNonPrestressed section = new ConcreteSectionOneWayShearNonPrestressed(d,shape);
-            phiV_c = section.GetConcreteShearStrength(N_u, rho_w, M_u, V_u)/1000.0; //default ACI units are psi. Convert to ksi, consistent with Dynamo nodes
+            phiV_c = section.GetConcreteShearStrength(N_u*1000.0, rho_w, M_u*1000.0, V_u*1000.0)/1000.0; //default ACI units are psi. Convert to ksi, consistent with Dynamo nodes
 
             return new Dictionary<string, object>
             {

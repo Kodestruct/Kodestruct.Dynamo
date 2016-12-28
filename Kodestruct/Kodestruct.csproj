@@ -94,8 +94,8 @@
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.3.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.3.6\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.3.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.3.9\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -344,6 +344,10 @@
     <Compile Include="Steel\AISC\Connection\Beam web opening\CompositeIBeamWebOpeningShearStrength.cs" />
     <Compile Include="Steel\AISC\Connection\Beam web opening\Groups\CompositeIBeamWebOpeningShearStrength.cs" />
     <Compile Include="Steel\AISC\Connection\Beam web opening\SteelIBeamWebOpeningShearStrength.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\WebOpeningMaximumHeight.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\WebOpeningMaximumWidth.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\WebOpeningReinforcementDevelopmentLength.cs" />
+    <Compile Include="Steel\AISC\Connection\Beam web opening\WebReinforcementWeldRequiredStrength.cs" />
     <Compile Include="Steel\AISC\Connection\Bolts\BearingBoltNominalShearStress.cs" />
     <Compile Include="Steel\AISC\Connection\Bolts\BearingBoltShearStrength.cs" />
     <Compile Include="Steel\AISC\Connection\Bolts\BearingStrengthAtBoltHole.cs" />
@@ -378,6 +382,7 @@
     <Compile Include="Steel\AISC\Connection\UFM\UFMForcesSpecialCase1.cs" />
     <Compile Include="Steel\AISC\Connection\UFM\UFMForcesSpecialCase2.cs" />
     <Compile Include="Steel\AISC\Connection\UFM\UFMForcesSpecialCase3.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\FilletWeldEffectiveLength.cs" />
     <Compile Include="Steel\AISC\Connection\Welds\FilletWeldGroupConcentricLoadStrength.cs" />
     <Compile Include="Steel\AISC\Connection\Welds\FilletWeldGroupEccentricLoadStrength.cs" />
     <Compile Include="Steel\AISC\Connection\AffectedElements\FlangeLocalBending.cs" />
@@ -408,6 +413,8 @@
     <Compile Include="Steel\AISC\Connection\AffectedElements\WebLocalYielding.cs" />
     <Compile Include="Steel\AISC\Connection\AffectedElements\WebPanelZoneShear.cs" />
     <Compile Include="Steel\AISC\Connection\AffectedElements\WebSideswayBuckling.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\MinimumWeldSize.cs" />
+    <Compile Include="Steel\AISC\Connection\Welds\WeldGroupElasticCentroid.cs" />
     <Compile Include="Steel\AISC\Connection\Welds\WeldStrength.cs">
       <SubType>Code</SubType>
     </Compile>
