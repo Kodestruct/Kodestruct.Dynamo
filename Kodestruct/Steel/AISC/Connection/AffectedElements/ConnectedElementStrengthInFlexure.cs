@@ -45,7 +45,7 @@ namespace Steel.AISC.Connection
     public partial class AffectedElements 
     {
         /// <summary>
-        ///     Connected element strength in flexure  (kip - in unit system for all inputs and outputs)
+        ///     Connected element strength in flexure. Checks gross section yielding, net section fracture and plate Stability if L_b >0  (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="GrossShape"> Cross section shape (gross)   </param>
         /// <param name="NetShape"> Cross section shape (net)   </param>

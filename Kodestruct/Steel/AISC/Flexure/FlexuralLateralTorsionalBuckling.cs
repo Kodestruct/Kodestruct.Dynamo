@@ -52,11 +52,11 @@ namespace Steel.AISC
         ///     Flexural lateral-torsional buckling (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="Shape">  Shape object   </param>
-        /// <param name="BendingAxis">  Distinguishes between bending with respect to section x-axis vs x-axis </param>
-        /// <param name="FlexuralCompressionLocation">  Identifies whether top or bottom fiber of the section are subject to flexural compression (depending on the sign of moment) </param>
         /// <param name="F_y">  Specified minimum yield stress </param>
         /// <param name="L_b">  Length between points that are either braced against lateral displacement of compression flange or braced against twist of the cross section   </param>
         /// <param name="C_b"> Lateral-torsional buckling modification factor for nonuniform moment diagrams   </param>
+        /// <param name="BendingAxis">  Distinguishes between bending with respect to section x-axis vs x-axis </param>
+        /// <param name="FlexuralCompressionLocation">  Identifies whether top or bottom fiber of the section are subject to flexural compression (depending on the sign of moment) </param>
         /// <param name="FlexuralBracingCase">  Identifies the type of lateral bracing for a flexural member </param>
         /// <param name="E">  Modulus of elasticity of steel </param>
         /// <param name="IsRolledMember">  Identifies if member is rolled or built up from individual plates or shapes </param>
@@ -65,8 +65,8 @@ namespace Steel.AISC
         /// <returns name="IsApplicableLimitState"> Identifies whether the selected limit state is applicable </returns>
 
         [MultiReturn(new[] { "phiM_n","IsApplicableLimitState" })]
-        public static Dictionary<string, object> FlexuralLateralTorsionalBuckling(CustomProfile Shape,string BendingAxis,string FlexuralCompressionLocation,double F_y,
-            double L_b, double C_b = 1.0, string FlexuralBracingCase = "NoLateralBracing", double E = 29000, bool IsRolledMember = true, string Code = "AISC360-10")
+        public static Dictionary<string, object> FlexuralLateralTorsionalBuckling(CustomProfile Shape,double F_y,
+            double L_b, double C_b = 1.0, string BendingAxis = "XAxis", string FlexuralCompressionLocation = "Top", string FlexuralBracingCase = "NoLateralBracing", double E = 29000, bool IsRolledMember = true, string Code = "AISC360-10")
         {
             //Default values
             double phiM_n = 0;

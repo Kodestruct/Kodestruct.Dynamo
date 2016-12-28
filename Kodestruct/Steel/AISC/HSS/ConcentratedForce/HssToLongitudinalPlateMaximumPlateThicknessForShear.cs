@@ -31,6 +31,7 @@ using Kodestruct.Steel.AISC360v10.HSS.ConcentratedForces;
 using Kodestruct.Common.Section.SectionTypes;
 using Kodestruct.Common.CalculationLogger;
 using Kodestruct.Steel.AISC.Steel.Entities;
+using Kodestruct.Steel.AISC.SteelEntities;
 
 #endregion
 
@@ -53,6 +54,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
         /// <param name="HssSection">  Section object (Tube or Pipe) </param>
         /// <param name="PlateSection">  Section object (Rectangle) </param>
         /// <param name="F_y">  Specified minimum yield stress of HSS</param>
+        /// <param name="F_u">  Ultimate stress of HSS</param>
         /// <param name="F_yp">  Specified minimum yield stress of plate    </param>
         /// <param name="IsTensionHss">  Indicates if HSS member is in tension  </param>
         /// <param name="P_uHss">  Required axial strength of HSS member </param>
@@ -61,7 +63,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
 
         [MultiReturn(new[] { "t_max" })]
         public static Dictionary<string, object> HssToLongitudinalPlateMaximumPlateThicknessForShear(CustomProfile HssSection,CustomProfile PlateSection,
-            double F_y,double F_yp,bool IsTensionHss,double P_uHss,double M_uHss)
+            double F_y,double F_u, double F_yp,bool IsTensionHss,double P_uHss,double M_uHss)
         {
             //Default values
             double t_max = 0;
@@ -81,7 +83,7 @@ namespace Steel.AISC.HSS.ConcentratedForce
             }
             else
             {
-                SteelMaterial mat = new SteelMaterial(F_y);
+                SteelMaterial mat = new SteelMaterial(F_y, F_u, SteelConstants.ModulusOfElasticity, SteelConstants.ShearModulus);
                 ISectionRectangular rect = PlateSection.Section as ISectionRectangular;
                 double t_pl, b_pl = 0.0;
                 SectionRectangular rSect;

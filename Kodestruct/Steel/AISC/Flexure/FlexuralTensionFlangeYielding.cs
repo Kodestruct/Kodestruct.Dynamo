@@ -60,7 +60,7 @@ namespace Steel.AISC
     /// <returns name="IsApplicableLimitState"> Identifies whether the selected limit state is applicable </returns>
 
         [MultiReturn(new[] { "phiM_n","IsApplicableLimitState" })]
-        public static Dictionary<string, object> FlexuralTensionFlangeYielding(CustomProfile Shape, double F_y, string BendingAxis="Axis",
+        public static Dictionary<string, object> FlexuralTensionFlangeYielding(CustomProfile Shape, double F_y, string BendingAxis="XAxis",
             string FlexuralCompressionLocation = "Top", double E = 29000, bool IsRolledMember = true, string Code = "AISC360-10")
         {
             //Default values

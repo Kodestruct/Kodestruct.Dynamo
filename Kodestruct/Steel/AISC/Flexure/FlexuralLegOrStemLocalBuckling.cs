@@ -63,7 +63,7 @@ namespace Steel.AISC
 
         [MultiReturn(new[] { "phiM_n","IsApplicableLimitState" })]
         public static Dictionary<string, object> FlexuralLegOrStemLocalBuckling(CustomProfile Shape,
-            double F_y, string BendingAxis = "Axis", string FlexuralCompressionLocation = "Top", double E = 29000,
+            double F_y, string BendingAxis = "XAxis", string FlexuralCompressionLocation = "Top", double E = 29000,
             string FlexuralBracingCase = "NoLateralBracing", bool IsRolledMember = true, string Code = "AISC360-10")
         {
 
