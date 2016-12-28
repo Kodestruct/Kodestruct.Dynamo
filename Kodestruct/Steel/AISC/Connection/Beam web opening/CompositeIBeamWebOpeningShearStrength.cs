@@ -60,13 +60,19 @@ namespace Steel.AISC.Connection
         /// <param name="e_op">  Eccentriciy of opening with repect to neutral axis </param>
         /// <param name="t_r">  Thickness of reinforcing plate </param>
         /// <param name="b_r">  Length of a projection of reinforcing plate from web </param>
+        /// <param name="HeadedAnchorDeckCondition"> Deck orientation relative to beam direction</param>
+        /// <param name="w_rMin">Minimum rib width for deck</param>
+        /// <param name="s_r"> Deck rib spacing</param>
         /// <param name="IsSingleSideReinforcement">  Identifies whether web reinforcing plate is placed on one side of web </param>
+        /// <param name="M_u">Design moment at opening center (required only if single-side reinforcement is specified, otherwise can be zero</param>
+        /// <param name="V_u">Design shear (required only if single-side reinforcement is specified, otherwise can be zero</param>
         /// <returns name="phiV_n"> Shear strength </returns>
 
         [MultiReturn(new[] { "phiV_n" })]
         public static Dictionary<string, object> CompositeIBeamWebOpeningShearStrength(CustomProfile IShape,double b_eff,double h_solid,double h_rib,
             double F_y, double fc_prime, double N_anchors, double Q_n, double N_o, double a_o, double h_op, double e_op, double t_r, double b_r, 
-            string HeadedAnchorDeckCondition ="Perpendicular", double w_rMin=4.0, double s_r=12.0, bool IsSingleSideReinforcement = true)
+            string HeadedAnchorDeckCondition ="Perpendicular", double w_rMin=4.0, double s_r=12.0, bool IsSingleSideReinforcement = false,
+            double V_u=0, double M_u=0)
         {
             //Default values
             double phiV_n = 0;

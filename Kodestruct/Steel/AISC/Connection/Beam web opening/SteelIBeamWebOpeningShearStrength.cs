@@ -40,22 +40,24 @@ namespace Steel.AISC.Connection
 
     public partial class BeamWebOpening 
     {
-    /// <summary>
+        /// <summary>
         ///     Steel I-Beam web opening shear strength (kip - in unit system for all inputs and outputs)
-    /// </summary>
-    /// <param name="IShape">  Shape object  </param>
-    /// <param name="F_y">  Specified minimum yield stress </param>
-    /// <param name="a_o">  Length of opening </param>
-    /// <param name="h_op">  Height of opening </param>
-    /// <param name="e_op">  Eccentriciy of opening with repect to neutral axis </param>
-    /// <param name="t_r">  Thickness of reinforcing plate </param>
-    /// <param name="b_r">  Length of a projection of reinforcing plate from web </param>
-    /// <param name="IsSingleSideReinforcement">  Identifies whether web reinforcing plate is placed on one side of web </param>
-    /// <returns name="phiV_n"> Shear strength </returns>
+        /// </summary>
+        /// <param name="IShape">  Shape object  </param>
+        /// <param name="F_y">  Specified minimum yield stress </param>
+        /// <param name="a_o">  Length of opening </param>
+        /// <param name="h_op">  Height of opening </param>
+        /// <param name="e_op">  Eccentriciy of opening with repect to neutral axis </param>
+        /// <param name="t_r">  Thickness of reinforcing plate </param>
+        /// <param name="b_r">  Length of a projection of reinforcing plate from web </param>
+        /// <param name="IsSingleSideReinforcement">  Identifies whether web reinforcing plate is placed on one side of web </param>
+        /// <param name="M_u">Design moment at opening center (required only if single-side reinforcement is specified, otherwise can be zero</param>
+        /// <param name="V_u">Design shear (required only if single-side reinforcement is specified, otherwise can be zero</param>
+        /// <returns name="phiV_n"> Shear strength </returns>
 
         [MultiReturn(new[] { "phiV_n" })]
         public static Dictionary<string, object> SteelIBeamWebOpeningShearStrength(CustomProfile IShape,double F_y,double a_o,double h_op,
-            double e_op,double t_r,double b_r,bool IsSingleSideReinforcement)
+            double e_op, double t_r, double b_r, bool IsSingleSideReinforcement = false, double V_u = 0, double M_u = 0)
         {
             //Default values
             double phiV_n = 0;
