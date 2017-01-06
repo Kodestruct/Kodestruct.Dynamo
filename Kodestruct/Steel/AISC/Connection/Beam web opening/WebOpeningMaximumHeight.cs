@@ -43,7 +43,7 @@ namespace Steel.AISC.Connection
         /// </summary>
         /// <param name="a_o">  Length of opening </param>
         /// <param name="d">  Full nominal depth of the section    </param>
-        /// <param name="e">  Eccentricity in a truss connection positive being away from the branches  </param>
+        /// <param name="e_op">  Eccentriciy of opening with repect to neutral axis </param>
         /// <param name="t_f">  Thickness of flange   </param>
         /// <param name="t_w">  Thickness of web  </param>
         /// <param name="F_y">  Specified minimum yield stress </param>
