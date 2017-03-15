@@ -86,8 +86,8 @@
       <XTreeItem Header="Uniformly distributed load" Description="Cantilever. Uniform load on partial span. Uniformly distributed load" Id="C5C_1" ResourcePath="C5C_1" Tag="w,b" TemplateName="Block" TreePath="CANTILEVER\UNIFORM LOAD PARTIAL SPAN\Uniformly distributed load" />
     </XTreeItem>
     <XTreeItem Header="VARYING LOAD" Description="Varying load" Id="X" ResourcePath="LoadDVariable" Tag="X" TemplateName="Category" TreePath="CANTILEVER\VARYING LOAD">
-      <XTreeItem Header="Load uniformly increasing to free end" Description="Cantilever. Varying load. Load uniformly increasing to free end" Id="C5D_1" ResourcePath="C5D_1" Tag="w" TemplateName="Block" TreePath="CANTILEVER\VARYING LOAD\Load uniformly increasing to free end" />
-      <XTreeItem Header="Load uniformly increasing to fixed end" Description="Cantilever. Varying load. Load uniformly increasing to fixed end" Id="C5D_2" ResourcePath="C5D_2" Tag="w" TemplateName="Block" TreePath="CANTILEVER\VARYING LOAD\Load uniformly increasing to fixed end" />
+      <XTreeItem Header="Load uniformly increasing to fixed end" Description="Cantilever. Varying load. Load uniformly increasing to fixed end" Id="C5D_1" ResourcePath="C5D_1" Tag="w" TemplateName="Block" TreePath="CANTILEVER\VARYING LOAD\Load uniformly increasing to fixed end" />
+      <XTreeItem Header="Load uniformly increasing to free end" Description="Cantilever. Varying load. Load uniformly increasing to free end" Id="C5D_2" ResourcePath="C5D_2" Tag="w" TemplateName="Block" TreePath="CANTILEVER\VARYING LOAD\Load uniformly increasing to free end" />
     </XTreeItem>
     <XTreeItem Header="APPLIED MOMENT" Description="Applied moment" Id="X" ResourcePath="LoadECouple" Tag="X" TemplateName="Category" TreePath="CANTILEVER\APPLIED MOMENT">
       <XTreeItem Header="Moment applied at free end" Description="Cantilever. Applied moment. Moment applied at free end" Id="C5E_1" ResourcePath="C5E_1" Tag="M" TemplateName="Block" TreePath="CANTILEVER\APPLIED MOMENT\Moment applied at free end" />

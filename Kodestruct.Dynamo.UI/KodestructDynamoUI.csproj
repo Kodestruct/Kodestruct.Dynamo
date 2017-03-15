@@ -91,20 +91,20 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.3.1\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.3.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.3.9\lib\net45\Kodestruct.Common.dll</HintPath>
+    <Reference Include="Kodestruct.Common, Version=0.0.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.5.1\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.3.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.4.2\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.3.9, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.3.9\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.5.1\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -202,6 +202,8 @@
     <Compile Include="Nodes\Concrete\ACI318\Details\HookTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\RebarCastingPositionSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\Details\RebarSpliceClassSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\General\Concrete\ConcreteMaterialWeightSelection.cs" />
+    <Compile Include="Nodes\Concrete\ACI318\General\Concrete\LightweightConcreteTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\ConfinementReinforcementTypeSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\General\Reinforcement\RebarSizeSelection.cs">
       <SubType>Code</SubType>
@@ -273,6 +275,9 @@
     <Compile Include="Views\Analysis\Beam\Torsion\BeamTorsionCaseView.xaml.cs">
       <DependentUpon>BeamTorsionCaseView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Analysis\Section\AISI\AisiShapeSelectionView.xaml.cs">
+      <DependentUpon>AisiShapeSelectionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionView.xaml.cs">
       <DependentUpon>ClearCoverCaseSelectionView.xaml</DependentUpon>
     </Compile>
@@ -290,6 +295,13 @@
     </Compile>
     <Compile Include="Views\Concrete\ACI318\Details\RebarSpliceClassSelectionView.xaml.cs">
       <DependentUpon>RebarSpliceClassSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\General\Concrete\ConcreteMaterialWeightSelectionView.xaml.cs">
+      <DependentUpon>ConcreteMaterialWeightSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Concrete\ACI318\General\Concrete\LightweightConcreteTypeSelectionView.xaml.cs">
+      <DependentUpon>LightweightConcreteTypeSelectionView.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Views\Concrete\ACI318\General\Rebar\ConfinementReinforcementTypeSelectionView.xaml.cs">
       <DependentUpon>ConfinementReinforcementTypeSelectionView.xaml</DependentUpon>
@@ -567,6 +579,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
+    <Page Include="Views\Analysis\Section\AISI\AisiShapeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -595,6 +611,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Concrete\ACI318\General\Concrete\ConcreteMaterialWeightSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Concrete\ACI318\General\Concrete\LightweightConcreteTypeSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Views\Concrete\ACI318\General\Concrete\ConcreteMaterialIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Include="Views\Concrete\ACI318\General\Rebar\ConfinementReinforcementTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -615,6 +643,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
+    <Page Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1087,14 +1119,13 @@
     <Folder Include="Nodes\Concrete\ACI318\Compression\SectionStrength\" />
     <Folder Include="Nodes\Concrete\ACI318\Compression\Stability\" />
     <Folder Include="Nodes\Concrete\ACI318\Flexure\" />
-    <Folder Include="Nodes\Concrete\ACI318\General\Material\" />
     <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\OneWay\" />
     <Folder Include="Nodes\Concrete\ACI318\ShearAndTorsion\Torsion\" />
     <Folder Include="Nodes\Steel\AISC\Flexure\" />
+    <Folder Include="Nodes\Steel\AISI\" />
     <Folder Include="Views\Concrete\ACI318\Compression\SectionStrength\" />
     <Folder Include="Views\Concrete\ACI318\Compression\Stability\" />
     <Folder Include="Views\Concrete\ACI318\Flexure\" />
-    <Folder Include="Views\Concrete\ACI318\General\Material\" />
     <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\OneWay\" />
     <Folder Include="Views\Concrete\ACI318\ShearAndTorsion\Torsion\" />
     <Folder Include="Views\Loads\ASCE7\Snow\" />

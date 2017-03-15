@@ -40,7 +40,7 @@ namespace Analysis.Section
         /// <summary>
         ///    Calculates Normal stress due to bending
         /// </summary>
-        /// <param name="M">  Concentrated moment </param>
+        /// <param name="M">  Bending moment </param>
         /// <param name="y">  Vertical distance from horizontal neutral axis to section point under consideration </param>
         /// <param name="I">  Moment of inertia (I_x or I_y where applicable) </param>
         /// <returns name="sigma_b"> Normal stress due to bending about either the x or y </returns>
@@ -64,7 +64,31 @@ namespace Analysis.Section
             };
         }
 
+        /// <summary>
+        ///    Calculates Normal stress due to bending using section modulus
+        /// </summary>
+        /// <param name="M">  Bending moment </param>
+        /// <param name="S">  Section modulus (S_x or S_y where applicable) </param>
+        /// <returns name="sigma_b"> Normal stress due to bending about either the x or y </returns>
 
+        [MultiReturn(new[] { "sigma_b" })]
+        public static Dictionary<string, object> NormalStressDueToBendingFromSectionModulus(double M, double S)
+        {
+            //Default values
+            double sigma_b = 0;
+
+
+            //Calculation logic:
+            SectionStressAnalysis analysis = new SectionStressAnalysis();
+            sigma_b = M / S;
+
+
+            return new Dictionary<string, object>
+            {
+                { "sigma_b", sigma_b }
+ 
+            };
+        }
 
     }
 }

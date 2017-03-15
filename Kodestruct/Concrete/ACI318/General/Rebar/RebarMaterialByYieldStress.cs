@@ -36,34 +36,25 @@ namespace Concrete.ACI318.General.Reinforcement
 /// 
 
 
-    [IsDesignScriptCompatible]
     public partial class RebarMaterial 
     {
 
         [IsVisibleInDynamoLibrary(false)]
-        internal RebarMaterial(string RebarSpecificationId)
+        internal RebarMaterial(double f_y)
         {
-            RebarMaterialFactory factory = new RebarMaterialFactory();
-            Material = factory.GetMaterial(RebarSpecificationId);
+            RebarMaterialGeneral Material = new RebarMaterialGeneral(f_y);
+
         }
         /// <summary>
-        ///     Rebar material (by specification Id)
+        ///     Rebar material 
         /// </summary>
-        /// <param name="RebarSpecificationId">  Reinforcement specification (applicable ASTM standard)  </param>
-        /// <returns name="RebarMaterial"> Reinforcement material object, create the object using input parameters first </returns>
-        public static RebarMaterial ByRebarSpecificationId(string RebarSpecificationId = "A615Grade60")
+        /// <param name="f_y">   Specified yield strength for nonprestressed reinforcement   </param>
+        /// <returns name="RebarMaterial"> Reinforcement material object, create the object using input parameters first. This material assumes steel elasto-plastic behavior </returns>
+        public static RebarMaterial ByYieldStress(double f_y)
         {
-            return new RebarMaterial(RebarSpecificationId);
+            return new RebarMaterial(f_y);
         }
 
-        private IRebarMaterial material;
-
-         [IsVisibleInDynamoLibrary(false)]
-        public IRebarMaterial Material
-        {
-            get { return material; }
-            set { material = value; }
-        }
         
        
     }

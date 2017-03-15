@@ -13,22 +13,21 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                <ResourceDictionary Source="ConcreteMaterialIcons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
-                <KodestructControls:EnumDataElement   EnumString="Case1" Description="Case1" />
-                <KodestructControls:EnumDataElement   EnumString="Case2" Description="Case2"/>
-                <KodestructControls:EnumDataElement   EnumString="Case3" Description="Case3" />
-            </KodestructControls:EnumDataCollection>
+                <KodestructControls:EnumDataElement Icon="{StaticResource Lightweight}" EnumString="AllLightweightConcrete" Description=" Lightweight concrete"/>
+                <KodestructControls:EnumDataElement Icon="{StaticResource SandLightweight}" EnumString="SandLightweightConcrete" Description="Sand Lightweight concrete" />
+           </KodestructControls:EnumDataCollection>
 
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot">
-        <KodestructControls:EnumControl  HeaderText="Case selection" 
+        <KodestructControls:EnumControl  HeaderText="Type of lightweight concrete" 
                                     ItemsSource="{StaticResource SelectionItemSource}" 
-					DataPath="LightweightConcreteTypeSelection"/>
+					DataPath="LightweightConcreteType"/>
     </Grid>
 </UserControl>

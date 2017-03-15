@@ -49,14 +49,14 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
         /// <param name="c_transv_ctr">Concrete cover to closed stirrups</param>
         /// <param name="IsPrestressed">  Indicates if member is prestressed </param>
         /// <param name="Code">Applicable version of code/standard</param>
-        /// <returns name="T_th">  Threshold torsional moment   </returns>
+        /// <returns name="phiT_th">  Design threshold torsional moment   </returns>
 
-        [MultiReturn(new[] { "T_th" })]
+        [MultiReturn(new[] { "phiT_th" })]
         public static Dictionary<string, object> ThresholdTorsion(ConcreteFlexureAndAxiaSection ConcreteSection, double N_u, double c_transv_ctr,
             bool IsPrestressed=false, string Code = "ACI318-14")
         {
             //Default values
-            double T_th = 0;
+            double phiT_th = 0;
 
 
             //Calculation logic:
@@ -69,7 +69,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
                 {
                     IConcreteTorsionalShape shape = tss.GetShape(cross_Section.Section.SliceableShape, ConcreteSection.ConcreteMaterial.Concrete, c_transv_ctr);
                     ConcreteSectionTorsion s = new ConcreteSectionTorsion(shape);
-                    T_th = s.GetThreshholdTorsion(N_u)/1000.0; //Conversion from ACI psi units to ksi units
+                    phiT_th = s.GetThreshholdTorsion(N_u)/1000.0; //Conversion from ACI psi units to ksi units
                 }
                 else
                 {
@@ -83,7 +83,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.Torsion
 
             return new Dictionary<string, object>
             {
-                { "T_th", T_th }
+                { "T_th", phiT_th }
  
             };
         }

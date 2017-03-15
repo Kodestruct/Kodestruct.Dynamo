@@ -47,7 +47,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.OneWayShear
 
 
 
-        [MultiReturn(new[] { "phiV_s" } )]
+        [MultiReturn(new[] { "phiV_n" } )]
         public static Dictionary<string, object> TotalOneWayShearStrength(double phiV_c, double phiV_s, bool CheckUpperLimit = true, string Code = "ACI318-14")
         {
             //Default values

@@ -13,22 +13,22 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
+                <ResourceDictionary Source="PunchingIcons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <KodestructControls:EnumDataCollection x:Key="SelectionItemSource" d:IsDataSource="True">
-              
-              <KodestructControls:EnumDataElement   EnumString="Interior"  Description="Interior" />
-              <KodestructControls:EnumDataElement   EnumString="EdgeLeft"  Description="Edge left" />
-              <KodestructControls:EnumDataElement   EnumString="EdgeRight"  Description="Edge right" />
-              <KodestructControls:EnumDataElement   EnumString="EdgeTop"  Description="Edge top" />
-              <KodestructControls:EnumDataElement   EnumString="EdgeBottom"  Description="Edge bottom" />
-              <KodestructControls:EnumDataElement   EnumString="CornerLeftTop"  Description="Corner left-top" />
-              <KodestructControls:EnumDataElement   EnumString="CornerRightTop"  Description="Corner right-top" />
-              <KodestructControls:EnumDataElement   EnumString="CornerRightBottom"  Description="Corner right-bottom" />
-              <KodestructControls:EnumDataElement   EnumString="CornerLeftBottom"  Description="Corner left-bottom" />
+
+                <KodestructControls:EnumDataElement  Icon="{StaticResource Interior}"    EnumString="Interior"  Description="Interior" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource EdgeLeft}"    EnumString="EdgeLeft"  Description="Edge left" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource EdgeRight}"    EnumString="EdgeRight"  Description="Edge right" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource EdgeTop}"    EnumString="EdgeTop"  Description="Edge top" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource EdgeBottom}"    EnumString="EdgeBottom"  Description="Edge bottom" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource CornerLeftTop}"    EnumString="CornerLeftTop"  Description="Corner left-top" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource CornerRightTop }"    EnumString="CornerRightTop"  Description="Corner right-top" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource CornerRightBottom}"    EnumString="CornerRightBottom"  Description="Corner right-bottom" />
+                <KodestructControls:EnumDataElement  Icon="{StaticResource CornerLeftBottom}"    EnumString="CornerLeftBottom"  Description="Corner left-bottom" />
 
             </KodestructControls:EnumDataCollection>
 

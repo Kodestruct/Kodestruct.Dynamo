@@ -38,17 +38,17 @@ namespace Steel.AISC.Connection
     public partial class Bolted 
     {
         /// <summary>
-        ///    Calculates Bearing bolt combined tension and shear (kip - in unit system for all inputs and outputs)
+        ///    Calculates bearing bolt combined tensile strength in the presence of shear shear (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="V_u">  Required shear strength </param>
         /// <param name="d_b">  Nominal fastener diameter </param>
         /// <param name="BoltMaterialId">  Bolt material specification </param>
         /// <param name="BoltThreadCase">  Identifies whether threads are included or excluded from shear planes </param>
         /// <param name="Code"> Applicable version of code/standard</param>
-        /// <returns name="phiR_nt_modified"> Modified shear strength of bolt subjected to tension  </returns>
+        /// <returns name="phiR_nt_modified"> Modified tensile strength of bolt subjected to tension  </returns>
 
         [MultiReturn(new[] { "phiR_nt_modified" })]
-        public static Dictionary<string, object> ModifiedBoltShearStrength(double V_u,double d_b,string BoltMaterialId,
+        public static Dictionary<string, object> ModifiedBoltTensileStrength(double V_u,double d_b,string BoltMaterialId,
             string BoltThreadCase, string Code = "AISC360-10")
         {
             //Default values
