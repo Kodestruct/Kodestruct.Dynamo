@@ -50,11 +50,11 @@ namespace Analysis.Section.SectionTypes
         }
 
         /// <summary>
-        /// Creates a custom profile object consisting of multiple vertically stacked rectangles. Ensure there are no vertical overlaps or gaps between rectnagles.
+        /// Creates a custom profile object consisting of multiple vertically stacked rectangles.List rectangles in the ascending Y-coordinate order (lower rectangles first). Ensure there are no vertical overlaps or gaps between rectnagles.
         /// </summary>
         /// <param name="Rectangles">List of rectangle profile objects</param>
         /// <returns></returns>
-        public static SectionMultipleStacked ByShapesAndTopToTopDistance(List<SectionRectangular> Rectangles)
+        public static SectionMultipleStacked ByStackedRectangles(List<SectionRectangular> Rectangles)
         {
             return new SectionMultipleStacked(Rectangles);
         }
