@@ -191,6 +191,11 @@
     <Compile Include="Common\TreeItems\Category.cs" />
     <Compile Include="Common\TreeItems\XmlTreeHelper.cs" />
     <Compile Include="Common\TreeItems\XTreeItem.cs" />
+    <Compile Include="Nodes\Aluminum\AA\General\LateralSupportTypeSelection.cs" />
+    <Compile Include="Nodes\Aluminum\AA\General\MaterialSelection.cs" />
+    <Compile Include="Nodes\Aluminum\AA\General\MaterialWeldCaseSelection.cs" />
+    <Compile Include="Nodes\Aluminum\AA\General\SectionSubElementTypeSelection.cs" />
+    <Compile Include="Nodes\Aluminum\AA\General\BucklingTypeSelection.cs" />
     <Compile Include="Nodes\Analysis\Beam\Flexure\BeamDeflectionCaseSelection.cs" />
     <Compile Include="Nodes\Analysis\Beam\Flexure\BeamForceCaseSelection.cs" />
     <Compile Include="Nodes\Analysis\Beam\Torsion\BeamTorsionCaseSelection.cs">
@@ -266,6 +271,21 @@
     <Compile Include="Nodes\Wood\NDS\General\WoodCommercialGradeSelection.cs" />
     <Compile Include="Nodes\Wood\NDS\General\WoodMemberTypeSelection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Aluminum\LateralSupportTypeSelectionView.xaml.cs">
+      <DependentUpon>LateralSupportTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluminum\MaterialSelectionView.xaml.cs">
+      <DependentUpon>MaterialSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluminum\MaterialWeldCaseSelectionView.xaml.cs">
+      <DependentUpon>MaterialWeldCaseSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluminum\SectionSubElementTypeSelectionView.xaml.cs">
+      <DependentUpon>SectionSubElementTypeSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aluminum\BucklingTypeSelectionView.xaml.cs">
+      <DependentUpon>BucklingTypeSelectionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Analysis\Beam\Flexure\BeamDeflectionCaseView.xaml.cs">
       <DependentUpon>BeamDeflectionCaseView.xaml</DependentUpon>
     </Compile>
@@ -579,6 +599,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
+    <Page Include="Views\Aluminum\LateralSupportTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aluminum\MaterialSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aluminum\MaterialWeldCaseSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aluminum\SectionSubElementTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Aluminum\BucklingTypeSelectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Analysis\Section\AISI\AisiShapeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1116,6 +1156,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Nodes\Aluminum\AA\Flexure\" />
+    <Folder Include="Nodes\Aluminum\AA\Shear\" />
     <Folder Include="Nodes\Concrete\ACI318\Compression\SectionStrength\" />
     <Folder Include="Nodes\Concrete\ACI318\Compression\Stability\" />
     <Folder Include="Nodes\Concrete\ACI318\Flexure\" />

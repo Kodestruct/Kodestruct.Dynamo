@@ -78,8 +78,8 @@
       <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoUtilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Aluminum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Aluminum.0.0.1.1\lib\net45\Kodestruct.Aluminum.dll</HintPath>
+    <Reference Include="Kodestruct.Aluminum, Version=0.0.6.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Aluminum.0.0.6.5\lib\net45\Kodestruct.Aluminum.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Analysis, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
@@ -165,6 +165,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aluminum\Flexure\FlexuralYieldingAndRupture.cs" />
+    <Compile Include="Aluminum\Flexure\Groups\Flexure.cs" />
+    <Compile Include="Aluminum\General\Groups\General.cs" />
+    <Compile Include="Aluminum\General\MaterialMechanicalProperties.cs" />
+    <Compile Include="Aluminum\General\AluminumMaterial.cs" />
     <Compile Include="Analysis\Beam\Flexure\BeamDeflections.cs" />
     <Compile Include="Analysis\Beam\Flexure\BeamForces.cs" />
     <Compile Include="Analysis\Beam\Groups\BeamAnalysisFlexure.cs">
@@ -512,6 +517,7 @@
     <Compile Include="Wood\NDS\Design values\AdjustedTensionDesignValue.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Aluminum\Shear\" />
     <Folder Include="Concrete\ACI318\Beam\Flexure\" />
     <Folder Include="Concrete\ACI318\Beam\ShearAndTorsion\OneWayShear\" />
     <Folder Include="Loads\ASCE7\Gravity\Ice\" />
