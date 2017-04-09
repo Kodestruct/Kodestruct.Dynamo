@@ -1,0 +1,56 @@
+<!--
+	Copyright (C) 2015 Konstantin Udilovich
+-->
+<UserControl x:Class="Kodestruct.Aluminum.AA.MaterialParameters.AluminumMaterialSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:KodestructConverters="clr-namespace:Kodestruct.Dynamo.Common.Infra.Converters" 
+             xmlns:KodestructControls="clr-namespace:Kodestruct.Dynamo.Common.Infra" 
+             mc:Ignorable="d" 
+             d:DesignHeight="360" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <KodestructConverters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Height="380" Width="300"        >
+        <StackPanel  VerticalAlignment="Top" >
+            <StackPanel VerticalAlignment="Top" Background="White" >
+                <TextBlock TextWrapping="Wrap" Text="Alloy:" FontFamily="Segoe UI Light" FontSize="12" HorizontalAlignment="Center"/>
+
+                <ListBox ItemsSource="{Binding AvailableAlloys}" SelectedItem="{Binding AluminumAlloyId, Mode=TwoWay}" 
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="100"  />
+            </StackPanel>
+
+                <StackPanel Margin="0,20,0,0" VerticalAlignment="Top" Background="White" >
+                    <TextBlock TextWrapping="Wrap" Text="Temper:" FontFamily="Segoe UI Light" FontSize="12" HorizontalAlignment="Center"/>
+
+                <ListBox ItemsSource="{Binding AvailableTempers}" SelectedItem="{Binding AluminumTemperId, Mode=TwoWay}" 
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="60"  />
+                </StackPanel>
+
+            <StackPanel Margin="0,20,0,0" VerticalAlignment="Top" Background="White" >
+                <TextBlock TextWrapping="Wrap" Text="Product:" FontFamily="Segoe UI Light" FontSize="12" HorizontalAlignment="Center"/>
+
+                <ListBox ItemsSource="{Binding AvailableProducts}" SelectedItem="{Binding AluminumProductId, Mode=TwoWay}" 
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="40"  />
+            </StackPanel>
+
+            <StackPanel Margin="0,20,0,0" VerticalAlignment="Top" Background="White" >
+                <TextBlock TextWrapping="Wrap" Text="Thickness range:" FontFamily="Segoe UI Light" FontSize="12" HorizontalAlignment="Center"/>
+
+                <ListBox ItemsSource="{Binding AvailableThicknessRanges}" SelectedItem="{Binding ThicknessRangeId, Mode=TwoWay}" 
+                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="40"  />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

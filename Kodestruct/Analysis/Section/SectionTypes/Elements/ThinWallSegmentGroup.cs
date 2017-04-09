@@ -40,7 +40,7 @@ namespace Analysis.Section.SectionTypes.Elenents
         [IsVisibleInDynamoLibrary(false)]
         internal ThinWallSegmentGroup(List<Line> Lines, double WallThickness)
         {
-
+            
             _segments = (List<ThinWallSegment>)Lines.Select(l =>
                {
                    Point2D nodeI = new Point2D(l.StartPoint.X, l.StartPoint.Y);

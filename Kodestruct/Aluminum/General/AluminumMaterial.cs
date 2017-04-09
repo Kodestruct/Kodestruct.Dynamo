@@ -37,7 +37,7 @@ namespace Aluminum.AA.Material
     {
 
         [IsVisibleInDynamoLibrary(false)]
-        internal AluminumMaterial(string Alloy, string Temper, string ThicknessRange, string ProductType, string WeldCaseId = "NotAffected",
+        internal AluminumMaterial(string AluminumAlloyId, string AluminumTemperId, string AluminumProductId, string ThicknessRangeId, string WeldCaseId = "NotAffected",
             bool MeetsAdditionalWeldingCriteria=true)
         {
             
@@ -52,18 +52,18 @@ namespace Aluminum.AA.Material
             //Material = new Kodestruct.Aluminum.AA.AA2015.AluminumMaterial(Alloy, Temper, ThicknessRange, ProductType, IsWelded,
             //MeetsAdditionalWeldingCriteria);
 
-            this.Alloy = Alloy;
-            this.Temper                          =Temper                         ;
-            this.ThicknessRange                  =ThicknessRange                 ;
-            this.ProductType                     =ProductType                    ;
+            this.Alloy = AluminumAlloyId;
+            this.Temper = AluminumTemperId;
+            this.ThicknessRange = ThicknessRangeId;
+            this.ProductType = AluminumProductId;
             this.WeldCaseId                      =WeldCaseId                     ;
             this.MeetsAdditionalWeldingCriteria  =MeetsAdditionalWeldingCriteria ;
         }
 
-        public static AluminumMaterial ByAlloyTemperProduct(string Alloy, string Temper, string ThicknessRange, string ProductType, string WeldCaseId = "NotAffected",
+        public static AluminumMaterial ByAlloyTemperProduct(string AluminumAlloyId, string AluminumTemperId, string AluminumProductId, string ThicknessRangeId, string WeldCaseId = "NotAffected",
             bool MeetsAdditionalWeldingCriteria = true)
         {
-            return new AluminumMaterial(Alloy, Temper, ThicknessRange, ProductType, WeldCaseId,
+            return new AluminumMaterial(AluminumAlloyId, AluminumTemperId, AluminumProductId, ThicknessRangeId, WeldCaseId,
             MeetsAdditionalWeldingCriteria);
         }
 

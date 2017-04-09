@@ -78,8 +78,8 @@
       <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoUtilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Aluminum, Version=0.0.6.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Aluminum.0.0.6.5\lib\net45\Kodestruct.Aluminum.dll</HintPath>
+    <Reference Include="Kodestruct.Aluminum, Version=0.0.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Aluminum.0.0.6.6\lib\net45\Kodestruct.Aluminum.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Analysis, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">

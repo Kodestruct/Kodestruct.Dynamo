@@ -192,10 +192,9 @@
     <Compile Include="Common\TreeItems\XmlTreeHelper.cs" />
     <Compile Include="Common\TreeItems\XTreeItem.cs" />
     <Compile Include="Nodes\Aluminum\AA\General\LateralSupportTypeSelection.cs" />
-    <Compile Include="Nodes\Aluminum\AA\General\MaterialSelection.cs" />
+    <Compile Include="Nodes\Aluminum\AA\General\AluminumMaterialSelection.cs" />
     <Compile Include="Nodes\Aluminum\AA\General\MaterialWeldCaseSelection.cs" />
     <Compile Include="Nodes\Aluminum\AA\General\SectionSubElementTypeSelection.cs" />
-    <Compile Include="Nodes\Aluminum\AA\General\BucklingTypeSelection.cs" />
     <Compile Include="Nodes\Analysis\Beam\Flexure\BeamDeflectionCaseSelection.cs" />
     <Compile Include="Nodes\Analysis\Beam\Flexure\BeamForceCaseSelection.cs" />
     <Compile Include="Nodes\Analysis\Beam\Torsion\BeamTorsionCaseSelection.cs">
@@ -274,17 +273,14 @@
     <Compile Include="Views\Aluminum\LateralSupportTypeSelectionView.xaml.cs">
       <DependentUpon>LateralSupportTypeSelectionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Aluminum\MaterialSelectionView.xaml.cs">
-      <DependentUpon>MaterialSelectionView.xaml</DependentUpon>
+    <Compile Include="Views\Aluminum\AluminumMaterialSelectionView.xaml.cs">
+      <DependentUpon>AluminumMaterialSelectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Aluminum\MaterialWeldCaseSelectionView.xaml.cs">
       <DependentUpon>MaterialWeldCaseSelectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Aluminum\SectionSubElementTypeSelectionView.xaml.cs">
       <DependentUpon>SectionSubElementTypeSelectionView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Aluminum\BucklingTypeSelectionView.xaml.cs">
-      <DependentUpon>BucklingTypeSelectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Analysis\Beam\Flexure\BeamDeflectionCaseView.xaml.cs">
       <DependentUpon>BeamDeflectionCaseView.xaml</DependentUpon>
@@ -603,7 +599,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Aluminum\MaterialSelectionView.xaml">
+    <Page Include="Views\Aluminum\AluminumMaterialSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -612,10 +608,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Aluminum\SectionSubElementTypeSelectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Aluminum\BucklingTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1307,6 +1299,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Concrete\ACI318\Details\ClearCoverCaseSelectionViewTreeData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AAMaterialPropertiesTableA3_3_3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

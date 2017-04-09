@@ -86,8 +86,11 @@ namespace Aluminum.AA
 
 
             m.Section = new AluminumSection(a,Shape.Section);
-            AluminumLimitStateValue ls = m.GetFlexuralYieldingStrength(FlexuralCompression);
-            phiM_n = ls.Value;
+            AluminumLimitStateValue ls_Y = m.GetFlexuralYieldingStrength(FlexuralCompression);
+
+            AluminumLimitStateValue ls_R = m.GetFlexuralRuptureStrength();
+
+            phiM_n = Math.Min(ls_Y.Value, ls_R.Value);
 
             return new Dictionary<string, object>
             {

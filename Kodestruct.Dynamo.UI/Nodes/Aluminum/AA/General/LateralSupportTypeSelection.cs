@@ -25,30 +25,30 @@ using ProtoCore.AST.AssociativeAST;
 using Kodestruct.Common.CalculationLogger;
 using Kodestruct.Dynamo.Common;
 using Dynamo.Nodes;
+using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-using Dynamo.Graph.Nodes;
 
 
 namespace Kodestruct.Aluminum.AA.General
 {
 
     /// <summary>
-    ///Material selection   
+    ///Lateral support type selection  
     /// </summary>
 
-    [NodeName("Material selection ")]
+    [NodeName("Lateral support type selection")]
     [NodeCategory("Kodestruct.Aluminum.AA.General")]
-    [NodeDescription("Material selection ")]
+    [NodeDescription("Lateral support type selection")]
     [IsDesignScriptCompatible]
-    public class MaterialSelection : UiNodeBase
+    public class LateralSupportTypeSelection : UiNodeBase
     {
 
-        public MaterialSelection()
+        public LateralSupportTypeSelection()
         {
             
             //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("AluminumAlloyId", "Aluminum alloy"));OutPortData.Add(new PortData("AluminumTemperId", "Aluminum temper"));OutPortData.Add(new PortData("AluminumProductId", "Aluminum product type"));OutPortData.Add(new PortData("ThicknessRangeId", "Range of aluminum material thicknesses"));
+            OutPortData.Add(new PortData("LateralSupportType", "Type of support for section local and lateral-torsional buckling"));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;
@@ -57,7 +57,7 @@ namespace Kodestruct.Aluminum.AA.General
         private void SetDefaultParameters()
         {
             //ReportEntry="";
-
+            LateralSupportType = "OneEdge";
         }
 
 
@@ -79,81 +79,21 @@ namespace Kodestruct.Aluminum.AA.General
 
         #region OutputProperties
 
-		#region AluminumAlloyIdProperty
+		#region LateralSupportTypeProperty
 		
 		/// <summary>
-		/// AluminumAlloyId property
+		/// LateralSupportType property
 		/// </summary>
-		/// <value>Aluminum alloy</value>
-		public string _AluminumAlloyId;
+		/// <value>Type of support for section local and lateral-torsional buckling</value>
+		public string _LateralSupportType;
 		
-		public string AluminumAlloyId
+		public string LateralSupportType
 		{
-		    get { return _AluminumAlloyId; }
+		    get { return _LateralSupportType; }
 		    set
 		    {
-		        _AluminumAlloyId = value;
-		        RaisePropertyChanged("AluminumAlloyId");
-		        OnNodeModified();
-		    }
-		}
-		#endregion
-
-		#region AluminumTemperIdProperty
-		
-		/// <summary>
-		/// AluminumTemperId property
-		/// </summary>
-		/// <value>Aluminum temper</value>
-		public string _AluminumTemperId;
-		
-		public string AluminumTemperId
-		{
-		    get { return _AluminumTemperId; }
-		    set
-		    {
-		        _AluminumTemperId = value;
-		        RaisePropertyChanged("AluminumTemperId");
-		        OnNodeModified();
-		    }
-		}
-		#endregion
-
-		#region AluminumProductIdProperty
-		
-		/// <summary>
-		/// AluminumProductId property
-		/// </summary>
-		/// <value>Aluminum product type</value>
-		public string _AluminumProductId;
-		
-		public string AluminumProductId
-		{
-		    get { return _AluminumProductId; }
-		    set
-		    {
-		        _AluminumProductId = value;
-		        RaisePropertyChanged("AluminumProductId");
-		        OnNodeModified();
-		    }
-		}
-		#endregion
-
-		#region ThicknessRangeIdProperty
-		
-		/// <summary>
-		/// ThicknessRangeId property
-		/// </summary>
-		/// <value>Range of aluminum material thicknesses</value>
-		public string _ThicknessRangeId;
-		
-		public string ThicknessRangeId
-		{
-		    get { return _ThicknessRangeId; }
-		    set
-		    {
-		        _ThicknessRangeId = value;
-		        RaisePropertyChanged("ThicknessRangeId");
+		        _LateralSupportType = value;
+		        RaisePropertyChanged("LateralSupportType");
 		        OnNodeModified();
 		    }
 		}
@@ -197,7 +137,7 @@ namespace Kodestruct.Aluminum.AA.General
         protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
         {
             base.SerializeCore(nodeElement, context);
-            //nodeElement.SetAttribute("Material", Material);
+            nodeElement.SetAttribute("LateralSupportType", LateralSupportType);
         }
 
         /// <summary>
@@ -205,15 +145,17 @@ namespace Kodestruct.Aluminum.AA.General
         /// </summary>
         protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
         {
-            //base.DeserializeCore(nodeElement, context);
-            //var attrib = nodeElement.Attributes["Material"];
-            //if (attrib == null)
-            //    return;
+            base.DeserializeCore(nodeElement, context);
+            var attrib = nodeElement.Attributes["LateralSupportTypeSelection"];
+            if (attrib == null)
+                return;
            
-            //MaterialSelection = attrib.Value;
+           // LateralSupportTypeSelection = attrib.Value;
             //SetComponentDescription();
 
         }
+
+
 
 
 
@@ -221,20 +163,21 @@ namespace Kodestruct.Aluminum.AA.General
 
 
 
+
         /// <summary>
         ///Customization of WPF view in Dynamo UI      
         /// </summary>
-        public class MaterialSelectionViewCustomization : UiNodeBaseViewCustomization,
-            INodeViewCustomization<MaterialSelection>
+        public class LateralSupportTypeSelectionViewCustomization : UiNodeBaseViewCustomization,
+            INodeViewCustomization<LateralSupportTypeSelection>
         {
-            public void CustomizeView(MaterialSelection model, NodeView nodeView)
+            public void CustomizeView(LateralSupportTypeSelection model, NodeView nodeView)
             {
                 base.CustomizeView(model, nodeView);
 
-                MaterialSelectionView control = new MaterialSelectionView();
+                LateralSupportTypeSelectionView control = new LateralSupportTypeSelectionView();
                 control.DataContext = model;
                 
-               
+                
                 nodeView.inputGrid.Children.Add(control);
                 base.CustomizeView(model, nodeView);
             }
