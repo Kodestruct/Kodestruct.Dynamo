@@ -30,7 +30,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kodestruct.Aluminum.AA.MaterialParameters
+namespace Kodestruct.Aluminum.AA.Material.MaterialParameters
 {
     /// <summary>
     /// Interaction logic for Kodestruct.Aluminum.AA.General.MaterialSelectionView.xaml

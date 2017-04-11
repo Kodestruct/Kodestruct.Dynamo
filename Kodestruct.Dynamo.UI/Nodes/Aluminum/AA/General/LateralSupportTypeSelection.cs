@@ -146,7 +146,7 @@ namespace Kodestruct.Aluminum.AA.General
         protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
         {
             base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["LateralSupportTypeSelection"];
+            var attrib = nodeElement.Attributes["LateralSupportType"];
             if (attrib == null)
                 return;
            

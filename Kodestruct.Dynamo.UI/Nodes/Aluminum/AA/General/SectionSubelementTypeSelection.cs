@@ -34,7 +34,7 @@ using System.Windows.Input;
 
 namespace Kodestruct.Aluminum.AA.General
 {
-
+    
     /// <summary>
     ///Section subelement type selection  
     /// </summary>

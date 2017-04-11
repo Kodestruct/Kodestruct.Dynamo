@@ -30,7 +30,7 @@ using Kodestruct.Common.Mathematics;
 
 #endregion
 
-namespace Analysis.Section.SectionTypes.Elenents
+namespace Analysis.Section.SectionTypes.Elements
 {
 
 
@@ -38,23 +38,23 @@ namespace Analysis.Section.SectionTypes.Elenents
     {
 
         [IsVisibleInDynamoLibrary(false)]
-        internal ThinWallSegmentGroup(List<Line> Lines, double WallThickness)
+        internal ThinWallSegmentGroup(List<Line> Lines, double WallThickness, double ScaleFactor)
         {
             
             _segments = (List<ThinWallSegment>)Lines.Select(l =>
                {
-                   Point2D nodeI = new Point2D(l.StartPoint.X, l.StartPoint.Y);
-                   Point2D nodeJ = new Point2D(l.EndPoint.X, l.EndPoint.Y);
+                   Point2D nodeI = new Point2D(l.StartPoint.X * ScaleFactor, l.StartPoint.Y * ScaleFactor);
+                   Point2D nodeJ = new Point2D(l.EndPoint.X * ScaleFactor, l.EndPoint.Y * ScaleFactor);
                    Line2D line = new Line2D(nodeI, nodeJ);
                    ThinWallSegment s = new ThinWallSegment(line, WallThickness);
                    return s;
                }).ToList();
         }
 
-        public static ThinWallSegmentGroup ByLines(List<Line> Lines, double WallThickness)
+        public static ThinWallSegmentGroup ByLines(List<Line> Lines, double WallThickness, double ScaleFactor=12.0)
         {
 
-            return new ThinWallSegmentGroup(Lines, WallThickness);
+            return new ThinWallSegmentGroup(Lines, WallThickness, ScaleFactor);
         }
 
 

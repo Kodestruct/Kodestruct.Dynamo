@@ -78,8 +78,8 @@
       <HintPath>..\packages\DynamoVisualProgramming.Core.1.1.0\lib\net45\DynamoUtilities.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Aluminum, Version=0.0.6.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Aluminum.0.0.6.6\lib\net45\Kodestruct.Aluminum.dll</HintPath>
+    <Reference Include="Kodestruct.Aluminum, Version=0.0.6.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Aluminum.0.0.6.7\lib\net45\Kodestruct.Aluminum.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Analysis, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
@@ -165,6 +165,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aluminum\Flexure\FlexuralLocalBuckling.cs" />
+    <Compile Include="Aluminum\Flexure\FlexuralLocalBucklingCriticalStress.cs" />
     <Compile Include="Aluminum\Flexure\FlexuralYieldingAndRupture.cs" />
     <Compile Include="Aluminum\Flexure\Groups\Flexure.cs" />
     <Compile Include="Aluminum\General\Groups\General.cs" />
@@ -531,10 +533,10 @@
     <None Include="Kodestruct.licenseheader" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\KodestructImages.resources" />
     <EmbeddedResource Include="KodestructImages.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\KodestructImages.resources" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -28,6 +28,7 @@ using Analysis.Section;
 using System;
 using Kodestruct.Aluminum.AA.AA2015.Flexure;
 using Kodestruct.Aluminum.AA.Entities.Section;
+using Aluminum.AA;
 using Aluminum.AA.Material;
 
 #endregion
@@ -61,15 +62,6 @@ namespace Aluminum.AA
             //Default values
             double phiM_n = 0;
 
-
-            ////Calculation logic:
-            //MomentAxis Axis;
-            ////Calculation logic:
-            //bool IsValidStringAxis = Enum.TryParse(BendingAxis, true, out Axis);
-            //if (IsValidStringAxis == false)
-            //{
-            //    throw new Exception("Axis selection not recognized. Check input string.");
-            //}
 
             FlexuralCompressionFiberPosition FlexuralCompression;
             //Calculation logic:

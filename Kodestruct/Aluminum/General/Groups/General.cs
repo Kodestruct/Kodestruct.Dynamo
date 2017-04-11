@@ -25,7 +25,7 @@ using Dynamo.Graph.Nodes;
 
 #endregion
 
-namespace Aluminum.AA
+namespace Aluminum.AA.Material
 {
 
 /// <summary>

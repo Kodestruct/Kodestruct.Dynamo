@@ -35,7 +35,7 @@ using MoreLinq;
 using System.Collections.ObjectModel;
 
 
-namespace Kodestruct.Aluminum.AA.MaterialParameters
+namespace Kodestruct.Aluminum.AA.Material.MaterialParameters
 {
 
     /// <summary>
@@ -43,7 +43,7 @@ namespace Kodestruct.Aluminum.AA.MaterialParameters
     /// </summary>
 
     [NodeName("Alumimum material selection")]
-    [NodeCategory("Kodestruct.Aluminum.AA.MaterialParameters")]
+    [NodeCategory("Kodestruct.Aluminum.AA.Material.MaterialParameters")]
     [NodeDescription("Alumimum material selection (alloy, temper, product and thickness range")]
     [IsDesignScriptCompatible]
     public class AluminumMaterialSelection : UiNodeBase
@@ -404,6 +404,7 @@ namespace Kodestruct.Aluminum.AA.MaterialParameters
         /// </summary>
         protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
         {
+            base.DeserializeCore(nodeElement, context);
             var AluminumAlloyId_attrib = nodeElement.Attributes["AluminumAlloyId"];
             if (AluminumAlloyId_attrib != null) { AluminumAlloyId = AluminumAlloyId_attrib.Value; }
 

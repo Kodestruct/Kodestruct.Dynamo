@@ -23,7 +23,7 @@ using System.Collections.Generic;
 using Dynamo.Nodes;
 using Kodestruct.Common.Section.Interfaces;
 using ds = Kodestruct.Common.Section.SectionTypes;
-using Analysis.Section.SectionTypes.Elenents;
+using Analysis.Section.SectionTypes.Elements;
 using Kodestruct.Common.Section;
 
 #endregion
@@ -36,13 +36,13 @@ namespace Analysis.Section.SectionTypes
     {
 
         [IsVisibleInDynamoLibrary(false)]
-        internal SectionThinWall(List<ThinWallSegmentGroup> SegmentGroups)
+        internal SectionThinWall(List<ThinWallSegmentGroup> ThinWallSegmentGroups)
         {
 
 
             List<ThinWallSegment> segments = new List<ThinWallSegment>();
 
-            foreach (var grp in SegmentGroups)
+            foreach (var grp in ThinWallSegmentGroups)
             {
                 segments.AddRange(grp.Segments);
             }
@@ -52,10 +52,10 @@ namespace Analysis.Section.SectionTypes
 
         }
 
-        public static SectionThinWall BySegmentGroups(List<ThinWallSegmentGroup> SegmentGroups)
+        public static SectionThinWall BySegmentGroups(List<ThinWallSegmentGroup> ThinWallSegmentGroups)
         {
 
-            return new SectionThinWall(SegmentGroups);
+            return new SectionThinWall(ThinWallSegmentGroups);
         }
 
     }
