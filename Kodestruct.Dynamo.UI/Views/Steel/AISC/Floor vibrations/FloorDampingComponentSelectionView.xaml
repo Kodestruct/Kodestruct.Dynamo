@@ -1,6 +1,7 @@
 <!--
 	Copyright (C) 2015 Konstantin Udilovich
 -->
+
 <UserControl x:Class="Kodestruct.Steel.AISC.FloorVibrations.Acceleration.FloorDampingComponentSelectionView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

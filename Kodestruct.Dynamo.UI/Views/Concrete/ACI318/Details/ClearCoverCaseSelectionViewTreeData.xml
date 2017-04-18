@@ -1,4 +1,8 @@
-﻿<Root>
+﻿<!--
+	Copyright (C) 2015 Konstantin Udilovich
+-->
+
+<Root>
   <XTreeItem Header="NON-PRESTRESSED ELEMENT" Description="Non-prestressed" Id="X" ResourcePath="ConcreteMildReinforcement" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT">
     <XTreeItem Header="CAST-IN-PLACE" Description="Cast-in-place element" Id="X" ResourcePath="SiteCast" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE">
       <XTreeItem Header="SLAB OR JOIST" Description="Slab or joist" Id="X" ResourcePath="Slab" Tag="X" TemplateName="Category" TreePath="NON-PRESTRESSED ELEMENT\CAST-IN-PLACE\SLAB OR JOIST">

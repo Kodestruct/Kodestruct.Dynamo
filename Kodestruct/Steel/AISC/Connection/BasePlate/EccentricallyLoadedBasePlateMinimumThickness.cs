@@ -51,7 +51,7 @@ namespace Steel.AISC.Connection.BasePlate
         /// <returns name="t_min"> Minimum thickness of connection material </returns>
 
         [MultiReturn(new[] { "t_min" })]
-        public static Dictionary<string, object> EccentricallyLoadedBasePlateMinimumThickness(BasePlateShapeObject BasePlateShape, double P_u, double M_u, string BendingAxis, double f_anchor
+        public static Dictionary<string, object> EccentricallyLoadedBasePlateMinimumThickness(BasePlateShapeObject BasePlateShape, double P_u, double M_u, string BendingAxis="Major", double f_anchor=14
             , string Code = "AISC360-10")
         {
             //Default values
