@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Konstantin Udilovich
+/*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
    limitations under the License.
    */
 #endregion
- 
+
 #region
 
 using Autodesk.DesignScript.Runtime;
@@ -32,7 +32,7 @@ namespace Analysis.Section.SectionTypes
 {
 
 
-    public partial class SectionThinWall: CustomProfile
+    public partial class SectionThinWall : CustomProfile
     {
 
         [IsVisibleInDynamoLibrary(false)]
@@ -44,7 +44,11 @@ namespace Analysis.Section.SectionTypes
 
             foreach (var grp in ThinWallSegmentGroups)
             {
-                segments.AddRange(grp.Segments);
+                // segments.AddRange(grp.Segments);
+                foreach (var seg in grp.Segments)
+                {
+                    segments.Add(seg);
+                }
             }
 
             ISection r = new Kodestruct.Common.Section.SectionTypes.SectionThinWall(segments);

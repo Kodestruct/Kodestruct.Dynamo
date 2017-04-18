@@ -91,8 +91,8 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.3.1\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.6.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.6.2\lib\net45\Kodestruct.Common.dll</HintPath>
+    <Reference Include="Kodestruct.Common, Version=0.0.6.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.6.4\lib\net45\Kodestruct.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Concrete, Version=0.0.4.2, Culture=neutral, processorArchitecture=MSIL">
@@ -611,6 +611,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Resource Include="Views\Aluminum\AluminumIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Include="Views\Analysis\Section\AISI\AisiShapeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

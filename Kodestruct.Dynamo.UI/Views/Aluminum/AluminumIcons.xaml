@@ -1,0 +1,69 @@
+<!--
+	Copyright (C) 2015 Konstantin Udilovich
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="NotWeldeded" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="NotWeldeded" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle x:Name="Rectangle" Width="33.2107" Height="11.556" Canvas.Left="4.728" Canvas.Top="19.7773" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Welding" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="Welding" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Path x:Name="Path" Width="24.292" Height="16.7453" Canvas.Left="14.252" Canvas.Top="7.43974" Stretch="Fill" Fill="#FF333333" Data="F1 M 14.252,12.2864L 22.9013,16.1411L 19.32,18.3997L 24.2227,17.7944L 23.7267,24.1851L 27.0867,18.3997L 31.0813,22.3944L 29.0147,17.7397L 38.544,19.6117L 29.5667,15.8131L 33.1453,13.6624L 28.8507,14.2691L 28.8507,7.43974L 25.7653,13.6091L 22.0747,10.1944L 24.2227,14.2144L 14.252,12.2864 Z " />
+                            <Path x:Name="Path_0" Width="8.82267" Height="8.90933" Canvas.Left="29.7213" Canvas.Top="4.35973" Stretch="Fill" Fill="#FF333333" Data="F1 M 29.7213,12.2344L 29.7213,13.2691L 31.1453,13.0677L 33.792,10.4211L 34.7667,11.3957L 38.544,7.43974L 35.4653,4.35973L 31.688,8.31707L 32.6627,9.29173L 29.7213,12.2344 Z " />
+                            <Rectangle x:Name="Rectangle_1" Width="17.82" Height="11.5547" Canvas.Left="3.22133" Canvas.Top="24.1853" Stretch="Fill" Fill="#FF333333" />
+                            <Rectangle x:Name="Rectangle_2" Width="17.82" Height="11.5547" Canvas.Left="22.736" Canvas.Top="24.1853" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Supported2Sides" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="Supported2Sides" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle x:Name="Rectangle" Width="19.6667" Height="4.33334" Canvas.Left="11.5" Canvas.Top="3.04663" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                            <Rectangle x:Name="Rectangle_0" Width="19.6667" Height="4.33334" Canvas.Left="11.5" Canvas.Top="34.7898" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                            <Rectangle x:Name="Rectangle_1" Width="3.33333" Height="18.6667" Canvas.Left="27.3333" Canvas.Top="12" Stretch="Fill" Fill="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Supported1Side" TargetType="ContentControl">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Viewbox>
+                        <Canvas x:Name="Supported1Side" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Rectangle x:Name="Rectangle_2" Width="18.6667" Height="3.33334" Canvas.Left="12" Canvas.Top="3.71289" Stretch="Fill" Fill="#FF333333" />
+                            <Rectangle x:Name="Rectangle_3" Width="18.6667" Height="3.33333" Canvas.Left="12" Canvas.Top="35.1107" Stretch="Fill" Fill="#FF333333" />
+                            <Rectangle x:Name="Rectangle_4" Width="4.33333" Height="19.6667" Canvas.Left="26.8333" Canvas.Top="11.5" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#FF333333" />
+                        </Canvas>
+                    </Viewbox>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

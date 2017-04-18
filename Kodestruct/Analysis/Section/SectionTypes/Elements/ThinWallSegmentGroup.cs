@@ -1,5 +1,5 @@
 #region Copyright
-   /*Copyright (C) 2015 Konstantin Udilovich
+/*Copyright (C) 2015 Konstantin Udilovich
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
    limitations under the License.
    */
 #endregion
- 
+
 #region
 
 using Autodesk.DesignScript.Runtime;
@@ -40,18 +40,18 @@ namespace Analysis.Section.SectionTypes.Elements
         [IsVisibleInDynamoLibrary(false)]
         internal ThinWallSegmentGroup(List<Line> Lines, double WallThickness, double ScaleFactor)
         {
-            
-            _segments = (List<ThinWallSegment>)Lines.Select(l =>
-               {
-                   Point2D nodeI = new Point2D(l.StartPoint.X * ScaleFactor, l.StartPoint.Y * ScaleFactor);
-                   Point2D nodeJ = new Point2D(l.EndPoint.X * ScaleFactor, l.EndPoint.Y * ScaleFactor);
-                   Line2D line = new Line2D(nodeI, nodeJ);
-                   ThinWallSegment s = new ThinWallSegment(line, WallThickness);
-                   return s;
-               }).ToList();
+
+            Segments = Lines.Select(l =>
+            {
+                Point2D nodeI = new Point2D(l.StartPoint.X * ScaleFactor, l.StartPoint.Y * ScaleFactor);
+                Point2D nodeJ = new Point2D(l.EndPoint.X * ScaleFactor, l.EndPoint.Y * ScaleFactor);
+                Line2D line = new Line2D(nodeI, nodeJ);
+                ThinWallSegment s = new ThinWallSegment(line, WallThickness);
+                return s;
+            }).ToList();
         }
 
-        public static ThinWallSegmentGroup ByLines(List<Line> Lines, double WallThickness, double ScaleFactor=12.0)
+        public static ThinWallSegmentGroup ByLines(List<Line> Lines, double WallThickness, double ScaleFactor = 12.0)
         {
 
             return new ThinWallSegmentGroup(Lines, WallThickness, ScaleFactor);
