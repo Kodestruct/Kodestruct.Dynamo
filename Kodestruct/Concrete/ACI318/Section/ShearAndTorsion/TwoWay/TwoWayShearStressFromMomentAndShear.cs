@@ -84,8 +84,8 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
 
             return new Dictionary<string, object>
             {
-                { "v_uMomentMax", v_u_Max }
-                ,{ "v_uMomentMin", v_u_Min }
+                { "v_u_Max", v_u_Max }
+                ,{ "v_u_Min", v_u_Min }
                 ,{ "gamma_vx", gamma_vx }
                 ,{ "gamma_vy", gamma_vy }
  

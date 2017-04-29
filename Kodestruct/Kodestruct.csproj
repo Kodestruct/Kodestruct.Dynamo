@@ -472,6 +472,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Analysis\Section\AISC\YAxisProperties.cs" />
+    <Compile Include="Steel\AISC\General\StandardShapeWeight.cs" />
     <Compile Include="Steel\AISC\HSS\ConcentratedForce\Groups\CapPlate.cs" />
     <Compile Include="Steel\AISC\HSS\ConcentratedForce\Groups\TransversePlate.cs" />
     <Compile Include="Steel\AISC\HSS\ConcentratedForce\Groups\LongitudinalPlate.cs" />
