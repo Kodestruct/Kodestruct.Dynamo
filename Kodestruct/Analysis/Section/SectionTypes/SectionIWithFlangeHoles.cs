@@ -42,7 +42,7 @@ namespace Analysis.Section.SectionTypes
             Section = r;
         }
 
-        public static SectionIWithFlangeHoles ByFlangeWebAndPlateDimensions(double d, double b_f, double t_f, double t_w, double b_hole, double N_holes,
+        public static SectionIWithFlangeHoles ByFlangeWebAndHoleDimensions(double d, double b_f, double t_f, double t_w, double b_hole, double N_holes,
             bool IsRolled = false)
         {
             return new SectionIWithFlangeHoles(d, b_f, t_f, t_w,  b_hole,  N_holes, IsRolled );

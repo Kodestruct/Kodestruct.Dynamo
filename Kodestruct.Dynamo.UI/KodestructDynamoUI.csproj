@@ -1146,7 +1146,6 @@
     <None Include="NOTICE" />
     <None Include="packages.config" />
     <None Include="KodestructDynamoUI.licenseheader" />
-    <EmbeddedResource Include="Resources\KodestructDynamoUIImages.resources" />
     <EmbeddedResource Include="KodestructDynamoUIImages.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
