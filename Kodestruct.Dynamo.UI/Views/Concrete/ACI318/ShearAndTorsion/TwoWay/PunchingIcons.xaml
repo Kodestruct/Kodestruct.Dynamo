@@ -150,19 +150,20 @@
             </Setter.Value>
         </Setter>
     </Style>
+
     <Style x:Key="CornerRightBottom" TargetType="ContentControl">
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>
                     <Viewbox>
                         <Canvas x:Name="CornerRightBottom" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-                            <Rectangle x:Name="Rectangle_84" Width="15.1107" Height="15.1107" Canvas.Left="14.0413" Canvas.Top="12.9867" Stretch="Fill" Fill="#FF343433" />
-                            <Path x:Name="Path_85" Width="31.8053" Height="31.8613" Canvas.Left="4.65307" Canvas.Top="5.6244" Stretch="Fill" Fill="#FF343433" Data="F1 M 36.4584,37.4857L 4.65307,37.4857L 4.65307,5.6244L 9.9864,5.6244L 9.9864,32.1524L 36.4584,32.1524L 36.4584,37.4857 Z " />
-                            <Rectangle x:Name="Rectangle_86" Width="2.66667" Height="1.33333" Canvas.Left="7.32" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" />
-                            <Path x:Name="Path_87" Width="13.9333" Height="1.33333" Canvas.Left="14.6307" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" Data="F1 M 23.92,6.93067L 28.564,6.93067L 28.564,5.59734L 23.92,5.59734M 14.6307,6.93067L 19.276,6.93067L 19.276,5.59734L 14.6307,5.59734L 14.6307,6.93067 Z " />
-                            <Path x:Name="Path_88" Width="3.33333" Height="3.33333" Canvas.Left="33.2084" Canvas.Top="5.59707" Stretch="Fill" Fill="#FF343433" Data="F1 M 36.5417,8.9304L 35.2084,8.9304L 35.2084,6.9304L 33.2084,6.9304L 33.2084,5.59707L 36.5417,5.59707L 36.5417,8.9304 Z " />
-                            <Path x:Name="Path_89" Width="1.33333" Height="13.9333" Canvas.Left="35.208" Canvas.Top="13.5747" Stretch="Fill" Fill="#FF343433" Data="F1 M 35.208,18.2187L 36.5413,18.2187L 36.5413,13.5747L 35.208,13.5747M 35.208,27.508L 36.5413,27.508L 36.5413,22.8627L 35.208,22.8627L 35.208,27.508 Z " />
-                            <Rectangle x:Name="Rectangle_90" Width="1.33333" Height="2.66667" Canvas.Left="35.208" Canvas.Top="32.152" Stretch="Fill" Fill="#FF343433" />
+                            <Rectangle x:Name="Rectangle" Width="15.1107" Height="15.1107" Canvas.Left="14.0413" Canvas.Top="12.9867" Stretch="Fill" Fill="#FF343433" />
+                            <Path x:Name="Path" Width="31.8053" Height="31.8613" Canvas.Left="7.5416" Canvas.Top="5.6244" Stretch="Fill" Fill="#FF343433" Data="F1 M 7.5416,37.4857L 39.3469,37.4857L 39.3469,5.6244L 34.0136,5.6244L 34.0136,32.1524L 7.5416,32.1524L 7.5416,37.4857 Z " />
+                            <Rectangle x:Name="Rectangle_0" Width="2.66667" Height="1.33333" Canvas.Left="34.0133" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" />
+                            <Path x:Name="Path_1" Width="13.9333" Height="1.33333" Canvas.Left="15.436" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" Data="F1 M 24.724,6.93067L 29.3693,6.93067L 29.3693,5.59734L 24.724,5.59734M 15.436,6.93067L 20.0813,6.93067L 20.0813,5.59734L 15.436,5.59734L 15.436,6.93067 Z " />
+                            <Path x:Name="Path_2" Width="3.33333" Height="3.33333" Canvas.Left="7.45827" Canvas.Top="5.59707" Stretch="Fill" Fill="#FF343433" Data="F1 M 7.45827,8.9304L 8.7916,8.9304L 8.7916,6.9304L 10.7916,6.9304L 10.7916,5.59707L 7.45827,5.59707L 7.45827,8.9304 Z " />
+                            <Path x:Name="Path_3" Width="1.33333" Height="13.9333" Canvas.Left="7.45867" Canvas.Top="13.5747" Stretch="Fill" Fill="#FF343433" Data="F1 M 7.45867,18.2187L 8.792,18.2187L 8.792,13.5747L 7.45867,13.5747M 7.45867,27.508L 8.792,27.508L 8.792,22.8627L 7.45867,22.8627L 7.45867,27.508 Z " />
+                            <Rectangle x:Name="Rectangle_4" Width="1.33333" Height="2.66667" Canvas.Left="7.45867" Canvas.Top="32.152" Stretch="Fill" Fill="#FF343433" />
                         </Canvas>
                     </Viewbox>
                 </DataTemplate>
@@ -175,13 +176,13 @@
                 <DataTemplate>
                     <Viewbox>
                         <Canvas x:Name="CornerLeftBottom" Width="42.6667" Height="42.6667" Canvas.Left="0" Canvas.Top="0" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-                            <Rectangle x:Name="Rectangle_91" Width="15.1107" Height="15.1107" Canvas.Left="14.0413" Canvas.Top="12.9867" Stretch="Fill" Fill="#FF343433" />
-                            <Path x:Name="Path_92" Width="31.8053" Height="31.8613" Canvas.Left="4.65307" Canvas.Top="5.6244" Stretch="Fill" Fill="#FF343433" Data="F1 M 36.4584,37.4857L 4.65307,37.4857L 4.65307,5.6244L 9.9864,5.6244L 9.9864,32.1524L 36.4584,32.1524L 36.4584,37.4857 Z " />
-                            <Rectangle x:Name="Rectangle_93" Width="2.66667" Height="1.33333" Canvas.Left="7.32" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" />
-                            <Path x:Name="Path_94" Width="13.9333" Height="1.33333" Canvas.Left="14.6307" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" Data="F1 M 23.92,6.93067L 28.564,6.93067L 28.564,5.59734L 23.92,5.59734M 14.6307,6.93067L 19.276,6.93067L 19.276,5.59734L 14.6307,5.59734L 14.6307,6.93067 Z " />
-                            <Path x:Name="Path_95" Width="3.33333" Height="3.33333" Canvas.Left="33.2084" Canvas.Top="5.59707" Stretch="Fill" Fill="#FF343433" Data="F1 M 36.5417,8.9304L 35.2084,8.9304L 35.2084,6.9304L 33.2084,6.9304L 33.2084,5.59707L 36.5417,5.59707L 36.5417,8.9304 Z " />
-                            <Path x:Name="Path_96" Width="1.33333" Height="13.9333" Canvas.Left="35.208" Canvas.Top="13.5747" Stretch="Fill" Fill="#FF343433" Data="F1 M 35.208,18.2187L 36.5413,18.2187L 36.5413,13.5747L 35.208,13.5747M 35.208,27.508L 36.5413,27.508L 36.5413,22.8627L 35.208,22.8627L 35.208,27.508 Z " />
-                            <Rectangle x:Name="Rectangle_97" Width="1.33333" Height="2.66667" Canvas.Left="35.208" Canvas.Top="32.152" Stretch="Fill" Fill="#FF343433" />
+                            <Rectangle x:Name="Rectangle_5" Width="15.1107" Height="15.1107" Canvas.Left="14.0413" Canvas.Top="12.9867" Stretch="Fill" Fill="#FF343433" />
+                            <Path x:Name="Path_6" Width="31.8053" Height="31.8613" Canvas.Left="4.65307" Canvas.Top="5.6244" Stretch="Fill" Fill="#FF343433" Data="F1 M 36.4584,37.4857L 4.65307,37.4857L 4.65307,5.6244L 9.9864,5.6244L 9.9864,32.1524L 36.4584,32.1524L 36.4584,37.4857 Z " />
+                            <Rectangle x:Name="Rectangle_7" Width="2.66667" Height="1.33333" Canvas.Left="7.32" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" />
+                            <Path x:Name="Path_8" Width="13.9333" Height="1.33333" Canvas.Left="14.6307" Canvas.Top="5.59734" Stretch="Fill" Fill="#FF343433" Data="F1 M 23.92,6.93067L 28.564,6.93067L 28.564,5.59734L 23.92,5.59734M 14.6307,6.93067L 19.276,6.93067L 19.276,5.59734L 14.6307,5.59734L 14.6307,6.93067 Z " />
+                            <Path x:Name="Path_9" Width="3.33333" Height="3.33333" Canvas.Left="33.2084" Canvas.Top="5.59707" Stretch="Fill" Fill="#FF343433" Data="F1 M 36.5417,8.9304L 35.2084,8.9304L 35.2084,6.9304L 33.2084,6.9304L 33.2084,5.59707L 36.5417,5.59707L 36.5417,8.9304 Z " />
+                            <Path x:Name="Path_10" Width="1.33333" Height="13.9333" Canvas.Left="35.208" Canvas.Top="13.5747" Stretch="Fill" Fill="#FF343433" Data="F1 M 35.208,18.2187L 36.5413,18.2187L 36.5413,13.5747L 35.208,13.5747M 35.208,27.508L 36.5413,27.508L 36.5413,22.8627L 35.208,22.8627L 35.208,27.508 Z " />
+                            <Rectangle x:Name="Rectangle_11" Width="1.33333" Height="2.66667" Canvas.Left="35.208" Canvas.Top="32.152" Stretch="Fill" Fill="#FF343433" />
                         </Canvas>
                     </Viewbox>
                 </DataTemplate>
