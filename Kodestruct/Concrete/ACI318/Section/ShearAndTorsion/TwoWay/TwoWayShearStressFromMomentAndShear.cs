@@ -49,20 +49,21 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
         /// <param name="V_u">   Factored punching shear force at section  </param>
         /// <param name="PunchingShearPerimeter">  Punching shear (two-way shear) perimeter object. Create the object using input parameters first </param>
         /// <param name="PunchingPerimeterConfiguration">  Type of punching perimeter (interior, edge, corner etc) </param>
+        /// <param name="gamma_vx">  Factor used to determine the fraction of moment about X-axis transferred by eccentricity of shear at slab-column  connections </param>
+        /// <param name="gamma_vy">  Factor used to determine the fraction of moment about Y-axis transferred by eccentricity of shear at slab-column  connections </param>
         /// <param name="AllowShearRedistribution">  Indicates if reduction in calculated shear is permitted </param>
         /// <returns name="v_u_Max">  Maximum factored two-way shear stress </returns>
         /// <returns name="v_u_Min">  Minimum factored two-way shear stress </returns>
-        /// <returns name="gamma_vx">  Factor used to determine the fraction of moment about X-axis transferred by eccentricity of shear at slab-column  connections </returns>
-        /// <returns name="gamma_vy">  Factor used to determine the fraction of moment about Y-axis transferred by eccentricity of shear at slab-column  connections </returns>
 
-        [MultiReturn(new[] { "v_u_Max","v_u_Min","gamma_vx","gamma_vy" })]
-        public static Dictionary<string, object> TwoWayShearStressFromMomentAndShear(double M_ux, double M_uy, double V_u, PunchingShearPerimeter PunchingShearPerimeter, string PunchingPerimeterConfiguration, bool AllowShearRedistribution=false)
+
+        [MultiReturn(new[] { "v_u_Max","v_u_Min" })]
+        public static Dictionary<string, object> TwoWayShearStressFromMomentAndShear(double M_ux, double M_uy, double V_u, PunchingShearPerimeter PunchingShearPerimeter, string PunchingPerimeterConfiguration,
+            double gamma_vx, double gamma_vy, bool AllowShearRedistribution=false)
         {
             //Default values
             double v_u_Max = 0;
             double v_u_Min = 0;
-            double gamma_vx = 0;
-            double gamma_vy = 0;
+
 
 
             //Calculation logic:
@@ -76,7 +77,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
             }
 
             ConcreteSectionTwoWayShear sec = new ConcreteSectionTwoWayShear(p.PerimeterData, p.d, p.c_x, p.c_y, Configuration,false);
-            ResultOfShearStressDueToMoment result = sec.GetCombinedShearStressDueToMomementAndShear(M_ux, M_uy, V_u, AllowShearRedistribution);
+            ResultOfShearStressDueToMoment result = sec.GetCombinedShearStressDueToMomementAndShear(M_ux, M_uy, V_u, gamma_vx, gamma_vy, AllowShearRedistribution);
 
             v_u_Max =  result.v_max ;
             v_u_Min =  result.v_min ;

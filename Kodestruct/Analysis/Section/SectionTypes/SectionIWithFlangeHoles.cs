@@ -30,14 +30,14 @@ namespace Analysis.Section.SectionTypes
 {
 
 
-    public partial class SectionIWithFlangeHoles: CustomProfile
+    public partial class SectionIWithFlangeHoles : CustomProfile
     {
 
         [IsVisibleInDynamoLibrary(false)]
-        internal SectionIWithFlangeHoles(double d, double b_f, double t_f, double t_w, double b_hole, 
+        internal SectionIWithFlangeHoles(double d, double b_f, double t_f, double t_w, double b_hole,
             double N_holes, bool IsRolled = false)
         {
-            ds.SectionIWithFlangeHoles r = new ds.SectionIWithFlangeHoles("", d, b_f, t_f, t_w,  b_hole,  N_holes, 
+            ds.SectionIWithFlangeHoles r = new ds.SectionIWithFlangeHoles("", d, b_f, t_f, t_w, b_hole, N_holes,
              IsRolled);
             Section = r;
         }
@@ -45,7 +45,7 @@ namespace Analysis.Section.SectionTypes
         public static SectionIWithFlangeHoles ByFlangeWebAndHoleDimensions(double d, double b_f, double t_f, double t_w, double b_hole, double N_holes,
             bool IsRolled = false)
         {
-            return new SectionIWithFlangeHoles(d, b_f, t_f, t_w,  b_hole,  N_holes, IsRolled );
+            return new SectionIWithFlangeHoles(d, b_f, t_f, t_w, b_hole, N_holes, IsRolled);
         }
 
     }

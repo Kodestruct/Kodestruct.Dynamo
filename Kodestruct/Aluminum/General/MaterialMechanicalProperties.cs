@@ -37,12 +37,6 @@ namespace Aluminum.AA.Material
 
     public partial class MaterialParameters
     {
-        /// <summary>
-        ///     Material mechanical properties
-        /// </summary>
-        /// <param name="AluminumMaterial">  Material object  </param>
-
-
 
         /// <summary>
         ///     Material mechanical properties

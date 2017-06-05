@@ -99,8 +99,8 @@
       <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Analysis, Version=0.0.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Analysis.0.0.3.1\lib\net45\Kodestruct.Analysis.dll</HintPath>
+    <Reference Include="Kodestruct.Analysis, Version=0.0.8.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Analysis.0.0.8.1\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Common, Version=0.0.6.6, Culture=neutral, processorArchitecture=MSIL">
@@ -108,15 +108,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Concrete, Version=0.0.7.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.7.3\lib\net45\Kodestruct.Concrete.dll</HintPath>
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.8.1\lib\net45\Kodestruct.Concrete.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.1.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.1.4\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.6.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.6.1\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.8.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.8.1\lib\net45\Kodestruct.Steel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
@@ -234,6 +234,7 @@
     </Compile>
     <Compile Include="Nodes\Concrete\ACI318\ShearAndTorsion\TwoWay\PunchingPerimeterConfigurationSelection.cs" />
     <Compile Include="Nodes\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelection.cs" />
+    <Compile Include="Nodes\General\NodeHelp.cs" />
     <Compile Include="Nodes\General\Flexure\AngleOrientation.cs" />
     <Compile Include="Nodes\General\Flexure\AngleRotation.cs" />
     <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\EnclosureType.cs" />
@@ -353,6 +354,9 @@
     </Compile>
     <Compile Include="Views\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelectionView.xaml.cs">
       <DependentUpon>ShearFrictionContactSurfaceSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\NodeHelpView.xaml.cs">
+      <DependentUpon>NodeHelpView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\General\Flexure\AngleOrientationView.xaml.cs">
       <DependentUpon>AngleOrientationView.xaml</DependentUpon>
@@ -719,6 +723,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Resource>
+    <Page Include="Views\General\NodeHelpView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Wood\General\FlatMemberTypeSelectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
