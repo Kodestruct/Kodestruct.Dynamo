@@ -72,7 +72,7 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
 
             ConcreteSectionTwoWayShear sec = new ConcreteSectionTwoWayShear(ConcreteMaterial.Concrete,
                 PunchingShearPerimeter.PerimeterData, d, c_x, c_y, Configuration);
-            phi_v_c = sec.GetTwoWayStrengthForUnreinforcedConcrete() / 1000.0; //convert to kips
+            phi_v_c = sec.GetTwoWayStrengthForUnreinforcedConcrete() / 1000.0; //convert to ksi
 
             return new Dictionary<string, object>
             {

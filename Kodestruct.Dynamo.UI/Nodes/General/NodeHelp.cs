@@ -30,6 +30,9 @@ using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Kodestruct.General;
 using Kodestruct.Dynamo.UI.Views.General;
+using KodestructDynamoUI.General;
+using KodestructDynamoUI.Nodes.General;
+using System.Linq;
 
 namespace Kodestruct.General
 {
@@ -47,10 +50,11 @@ namespace Kodestruct.General
 
         public NodeHelp()
         {
-            
 
+            provider = new NodeListProvider();
+            SelectedNodeUri = "https://github.com/Kodestruct/Kodestruct.Dynamo/wiki";
         }
-
+        NodeListProvider provider;
 
         /// <summary>
         ///     Gets the type of this class, to be used in base class for reflection
@@ -61,9 +65,44 @@ namespace Kodestruct.General
         }
 
 
+        //NodeData
 
 
 
+        #region SelectedNode Property
+        private string _SelectedNodeName;
+        public string SelectedNodeName
+        {
+            get { return _SelectedNodeName; }
+            set
+            {
+                _SelectedNodeName = value;
+                RaisePropertyChanged("SelectedNodeName");
+                UpdateUri(SelectedNodeName);
+            }
+        }
+
+        #endregion
+
+        private void UpdateUri(string selectedNodeName)
+        {
+           var uri = provider.NodeItems.Where(nd => nd.FullName == selectedNodeName).Select(d => d.Uri);
+            SelectedNodeUri ="https://github.com/Kodestruct/Kodestruct.Dynamo/wiki/Load-nodes";
+        }
+
+        #region SelectedNodeUri Property
+        private string _SelectedNodeUri;
+        public string SelectedNodeUri
+        {
+            get { return _SelectedNodeUri; }
+            set
+            {
+                _SelectedNodeUri = value;
+                RaisePropertyChanged("SelectedNodeUri");
+            }
+        }
+
+        #endregion
 
         /// <summary>
         ///Customization of WPF view in Dynamo UI      

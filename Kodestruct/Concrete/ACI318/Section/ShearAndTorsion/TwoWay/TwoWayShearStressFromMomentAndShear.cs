@@ -76,7 +76,23 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
                 throw new Exception("Failed to convert string. Examples of acceptable values are Interior, EdgeLeft, CornerLeftTop. Please check input");
             }
 
+
+
+
             ConcreteSectionTwoWayShear sec = new ConcreteSectionTwoWayShear(p.PerimeterData, p.d, p.c_x, p.c_y, Configuration,false);
+
+            //Check gamma's
+            double v_uConcentric = sec.GetConcentricShearStress(V_u);
+            double phi_v_c = sec.GetTwoWayStrengthForUnreinforcedConcrete() / 1000.0; //convert to ksi
+            if (gamma_vx == 1.0 && v_uConcentric>0.75*phi_v_c)
+            {
+                throw new Exception("gamma_vx cannot be 1.0 if stress due to concentric shear force exceeds 75% of concrete shear strength");
+            }
+            if (gamma_vy == 1.0 && v_uConcentric > 0.75 * phi_v_c)
+            {
+                throw new Exception("gamma_vy cannot be 1.0 if stress due to concentric shear force exceeds 75% of concrete shear strength");
+            }
+
             ResultOfShearStressDueToMoment result = sec.GetCombinedShearStressDueToMomementAndShear(M_ux, M_uy, V_u, gamma_vx, gamma_vy, AllowShearRedistribution);
 
             v_u_Max =  result.v_max ;
