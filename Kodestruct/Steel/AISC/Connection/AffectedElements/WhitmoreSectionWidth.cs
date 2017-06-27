@@ -41,8 +41,8 @@ namespace Steel.AISC.Connection
         /// <summary>
         ///    Calculates Width of Whitmore section
         /// </summary>
-        /// <param name="l">  Length of connection or weld   </param>
-        /// <param name="b_con">  Connection (Whitmore section) width </param>
+        /// <param name="l">  Length of gusset   </param>
+        /// <param name="b_con">  Connected element (Whitmore section) width </param>
         /// <param name="Code"> Applicable version of code/standard</param>
         /// <returns name="b_Whitmore"> Whitmore section width </returns>
 

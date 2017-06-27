@@ -46,7 +46,7 @@ namespace Steel.AISC.Connection
         /// <param name="l_weld">  Weld length </param>
         /// <param name="WeldType">  Weld type </param>
         /// <param name="WeldLoadTypeId">  Type of load on weld  under consideration </param>
-        /// <param name="t_weld">  Weld throat thickness </param>
+        /// <param name="t_weld">  Weld size (leg for fillet welds or effective throat thickness for groove welds)</param>
         /// <param name="F_EXX">  Filler metal classification strength </param>
         /// <param name="A_nBase">  Area of base metal in a welded connection </param>
         /// <param name="F_y"> Base metal specified minimum yield stress </param>

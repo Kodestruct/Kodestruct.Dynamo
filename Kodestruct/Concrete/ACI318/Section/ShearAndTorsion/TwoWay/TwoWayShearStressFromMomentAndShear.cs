@@ -44,8 +44,8 @@ namespace Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear
         /// <summary>
         ///     Two way shear stress from moment (kip - in unit system for all inputs and outputs)
         /// </summary>
-        /// <param name="M_ux">   Factored moment with respect to x-axis </param>
-        /// <param name="M_uy">   Factored moment with respect to y-axis </param>
+        /// <param name="M_ux">   Moment around X axis normal to slab edge or in the direction of corner bisecting ray. This moment must be reported at column centoid. </param>
+        /// <param name="M_uy">   Moment around Y axis parallel to slab edge or in the direction normal to corner bisecting ray. This moment must be reported at column centoid. </param>
         /// <param name="V_u">   Factored punching shear force at section  </param>
         /// <param name="PunchingShearPerimeter">  Punching shear (two-way shear) perimeter object. Create the object using input parameters first </param>
         /// <param name="PunchingPerimeterConfiguration">  Type of punching perimeter (interior, edge, corner etc) </param>

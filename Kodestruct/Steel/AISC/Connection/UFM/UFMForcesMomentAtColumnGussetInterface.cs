@@ -42,7 +42,7 @@ namespace Steel.AISC.Connection
         /// </summary>
         /// <param name="d_b">  Depth of beam </param>
         /// <param name="d_c">  Depth of column  </param>
-        /// <param name="theta">  Angle of loading for eccentric bolt or weld group </param>
+        /// <param name="theta">  Angle of brace to column </param>
         /// <param name="alpha">  Distance from the face of the column flange or web to the ideal centroid of the gusset-to-beam connection </param>
         /// <param name="beta">  Distance from the face of the beam flange to the ideal centroid of the gusset-to-column connection </param>
         /// <param name="beta_bar">  Distance from the face of the beam flange to the actual centroid of the gusset-to-column connection </param>
