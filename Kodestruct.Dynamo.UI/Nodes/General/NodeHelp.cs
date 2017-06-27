@@ -30,7 +30,6 @@ using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Kodestruct.General;
 using Kodestruct.Dynamo.UI.Views.General;
-using KodestructDynamoUI.General;
 using KodestructDynamoUI.Nodes.General;
 using System.Linq;
 
@@ -70,15 +69,15 @@ namespace Kodestruct.General
 
 
         #region SelectedNode Property
-        private string _SelectedNodeName;
-        public string SelectedNodeName
+        private NodeData _SelectedNodeName;
+        public NodeData SelectedNodeName
         {
             get { return _SelectedNodeName; }
             set
             {
                 _SelectedNodeName = value;
                 RaisePropertyChanged("SelectedNodeName");
-                UpdateUri(SelectedNodeName);
+                UpdateUri(SelectedNodeName.Uri);
             }
         }
 
@@ -87,7 +86,11 @@ namespace Kodestruct.General
         private void UpdateUri(string selectedNodeName)
         {
            var uri = provider.NodeItems.Where(nd => nd.FullName == selectedNodeName).Select(d => d.Uri);
-            SelectedNodeUri ="https://github.com/Kodestruct/Kodestruct.Dynamo/wiki/Load-nodes";
+            if (selectedNodeName !=null)
+            {
+                SelectedNodeUri = provider.NodeItems.Where(n => n.FullName == selectedNodeName).First().Uri;
+            }
+            
         }
 
         #region SelectedNodeUri Property

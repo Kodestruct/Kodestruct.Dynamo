@@ -1,4 +1,4 @@
-﻿using KodestructDynamoUI.General;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,8 @@ namespace KodestructDynamoUI.Nodes.General
 
         public IEnumerable GetSuggestions(string filter)
         {
-            return provider.NodeItems.Select(i => i.FullName);
+            //return provider.NodeItems.Select(i => i.FullName);
+            return provider.NodeItems.Where(n => n.Name.Contains(filter));
         }
 
     }

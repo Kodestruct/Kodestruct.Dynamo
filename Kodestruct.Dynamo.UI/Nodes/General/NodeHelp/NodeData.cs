@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KodestructDynamoUI.General
+namespace KodestructDynamoUI.Nodes.General
 {
     public class NodeData
     {
@@ -12,6 +12,10 @@ namespace KodestructDynamoUI.General
         public string FullName { get; set; }
         public string Uri { get; set; }
 
+        public NodeData()
+        {
+
+        }
         public NodeData(string Name, string FullName, string Uri)
         {
             this.Name     =Name    ;

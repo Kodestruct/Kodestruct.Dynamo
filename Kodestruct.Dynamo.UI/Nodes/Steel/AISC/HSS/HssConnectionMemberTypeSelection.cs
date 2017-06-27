@@ -48,7 +48,7 @@ namespace Kodestruct.Steel.AISC.HSS
         {
             
             //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("HssConnectionMemberType", "Specifies if the connection members are circular HSS (CHS) or rectangular HSS"));
+            OutPortData.Add(new PortData("HssConnectionMemberType", "Specifies if the connection members are circular HSS (CHS) or rectangular HSS (RHS)"));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;
@@ -57,7 +57,7 @@ namespace Kodestruct.Steel.AISC.HSS
         private void SetDefaultParameters()
         {
             //ReportEntry="";
-            HssTrussConnectionMemberType = "Rhs";
+            HssConnectionMemberType = "Rhs";
         }
 
 
@@ -85,15 +85,15 @@ namespace Kodestruct.Steel.AISC.HSS
 		/// HssTrussConnectionMemberType property
 		/// </summary>
 		/// <value>Specifies if the connection members are circular HSS (CHS) or rectangular HSS</value>
-		public string _HssTrussConnectionMemberType;
+		public string _HssConnectionMemberType;
 		
-		public string HssTrussConnectionMemberType
+		public string HssConnectionMemberType
 		{
-		    get { return _HssTrussConnectionMemberType; }
+		    get { return _HssConnectionMemberType; }
 		    set
 		    {
-		        _HssTrussConnectionMemberType = value;
-		        RaisePropertyChanged("HssTrussConnectionMemberType");
+		        _HssConnectionMemberType = value;
+		        RaisePropertyChanged("HssConnectionMemberType");
 		        OnNodeModified();
 		    }
 		}
@@ -137,7 +137,7 @@ namespace Kodestruct.Steel.AISC.HSS
         protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
         {
             base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("HssTrussConnectionMemberType", HssTrussConnectionMemberType);
+            nodeElement.SetAttribute("HssTrussConnectionMemberType", HssConnectionMemberType);
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace Kodestruct.Steel.AISC.HSS
             if (attrib == null)
                 return;
            
-            HssTrussConnectionMemberType = attrib.Value;
+            HssConnectionMemberType = attrib.Value;
             //SetComponentDescription();
 
         }

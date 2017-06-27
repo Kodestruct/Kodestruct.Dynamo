@@ -18,6 +18,27 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <local:NodeHelpSuggestionProvider x:Key="NodeSuggestionProvider" />
+            <DataTemplate x:Key="NodeInfoTemplate">
+                <Border Padding="5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Path=Name}"
+                               FontWeight="Bold" 
+                               Foreground="Red"
+                               Grid.Column="0" 
+                               FontFamily="Segoe UI"
+                               VerticalAlignment="Bottom"/>
+                        <TextBlock Text="{Binding Path=FullName}"
+                               Grid.Column="1"
+                                   Foreground="Gray"
+                               VerticalAlignment="Top"/>
+                    </Grid>
+                </Border>
+            </DataTemplate>
+            
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -40,6 +61,7 @@
                                                           Watermark="Search here"
                                  IconPlacement="Left"
                                  IconVisibility="Visible"
+                                         ItemTemplate="{StaticResource ResourceKey=NodeInfoTemplate}"
                                  Provider="{StaticResource ResourceKey=NodeSuggestionProvider}">
                     <wpf:AutoCompleteTextBox.SelectedItem>
                         <Binding Path="SelectedNodeName" Mode="TwoWay">
@@ -48,7 +70,7 @@
                             </Binding.ValidationRules>-->
                         </Binding>
                     </wpf:AutoCompleteTextBox.SelectedItem>
-                    
+
                 </wpf:AutoCompleteTextBox>
 
             </Grid>

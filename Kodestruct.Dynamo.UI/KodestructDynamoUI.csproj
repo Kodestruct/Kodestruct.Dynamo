@@ -245,9 +245,9 @@
     <Compile Include="Nodes\General\NodeHelp.cs" />
     <Compile Include="Nodes\General\Flexure\AngleOrientation.cs" />
     <Compile Include="Nodes\General\Flexure\AngleRotation.cs" />
-    <Compile Include="Nodes\General\NodeHelpSuggestionProvider.cs" />
-    <Compile Include="Nodes\General\NodeListProvider.cs" />
-    <Compile Include="Nodes\General\WebBrowserUtility.cs" />
+    <Compile Include="Nodes\General\NodeHelp\NodeHelpSuggestionProvider.cs" />
+    <Compile Include="Nodes\General\NodeHelp\NodeListProvider.cs" />
+    <Compile Include="Nodes\General\NodeHelp\WebBrowserUtility.cs" />
     <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\EnclosureType.cs" />
     <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindDirectionalityCaseIdSelection.cs" />
     <Compile Include="Nodes\Loads\ASCE7\Lateral\Wind\WindStrucureDynamicResponseType.cs" />
@@ -369,7 +369,7 @@
     <Compile Include="Views\Concrete\ACI318\ShearFriction\ShearFrictionContactSurfaceSelectionView.xaml.cs">
       <DependentUpon>ShearFrictionContactSurfaceSelectionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Nodes\General\NodeData.cs" />
+    <Compile Include="Nodes\General\NodeHelp\NodeData.cs" />
     <Compile Include="Views\General\NodeHelpView.xaml.cs">
       <DependentUpon>NodeHelpView.xaml</DependentUpon>
     </Compile>
@@ -1354,6 +1354,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AAMaterialPropertiesTableA3_3_3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AllNodeHelp.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
