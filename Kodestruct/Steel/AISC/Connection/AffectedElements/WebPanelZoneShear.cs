@@ -40,20 +40,20 @@ namespace Steel.AISC.Connection
 
     public partial class AffectedElements 
     {
-            /// <summary>
-            ///    Calculates concentrated force web panel zone shear (kip - in unit system for all inputs and outputs)
-            /// </summary>
-            /// <param name="t_w">  Thickness of web  </param>
-            /// <param name="t_cf">  Thickness of column flange   </param>
-            /// <param name="b_cf">  Width of column flange  </param>
-            /// <param name="d_b">  Nominal fastener diameter </param>
-            /// <param name="d_c">  Depth of column  </param>
-            /// <param name="F_y">  Specified minimum yield stress </param>
-            /// <param name="P_u">  Required axial strength </param>
-            /// <param name="A_g">  Gross cross-sectional area of member </param>
-            /// <param name="PanelDeformationConsideredInAnalysis">  Identifies whether the effect of panel-zone deformation on frame stability is  considered in the analysis </param>
-            /// <param name="Code"> Applicable version of code/standard</param>
-            /// <returns name="phiR_n"> Strength of member or connection </returns>
+        /// <summary>
+        ///    Calculates concentrated force web panel zone shear (kip - in unit system for all inputs and outputs)
+        /// </summary>
+        /// <param name="t_w">  Thickness of web  </param>
+        /// <param name="t_cf">  Thickness of column flange   </param>
+        /// <param name="b_cf">  Width of column flange  </param>
+        /// <param name="d_b">  Depth of beam </param>
+        /// <param name="d_c">  Depth of column  </param>
+        /// <param name="F_y">  Specified minimum yield stress </param>
+        /// <param name="P_u">  Required axial strength </param>
+        /// <param name="A_g">  Gross cross-sectional area of member </param>
+        /// <param name="PanelDeformationConsideredInAnalysis">  Identifies whether the effect of panel-zone deformation on frame stability is  considered in the analysis </param>
+        /// <param name="Code"> Applicable version of code/standard</param>
+        /// <returns name="phiR_n"> Strength of member or connection </returns>
 
         [MultiReturn(new[] { "phiR_n" })]
         public static Dictionary<string, object> WebPanelZoneShear(double t_w,double t_cf,double b_cf,double d_b,double d_c,double F_y,double P_u,double A_g,

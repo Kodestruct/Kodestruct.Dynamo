@@ -29,6 +29,6 @@
     <Grid x:Name="LayoutRoot">
         <KodestructControls:EnumControl  HeaderText="Type of HSS member:" 
                                     ItemsSource="{StaticResource SelectionItemSource}" 
-					DataPath="HssTrussConnectionMemberType"/>
+					DataPath="HssConnectionMemberType"/>
     </Grid>
 </UserControl>

@@ -1,28 +1,28 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WpfControls;
-using System.Collections;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using WpfControls;
+//using System.Collections;
 
-namespace KodestructDynamoUI.Nodes.General
-{
-    public class NodeHelpSuggestionProvider: ISuggestionProvider
-    {
-        public NodeHelpSuggestionProvider()
-        {
-            provider = new NodeListProvider();
-        }
+//namespace KodestructDynamoUI.Nodes.General
+//{
+//    public class NodeHelpSuggestionProvider: ISuggestionProvider
+//    {
+//        public NodeHelpSuggestionProvider()
+//        {
+//            provider = new NodeListProvider();
+//        }
 
-        NodeListProvider provider;
+//        NodeListProvider provider;
 
-        public IEnumerable GetSuggestions(string filter)
-        {
-            //return provider.NodeItems.Select(i => i.FullName);
-            return provider.NodeItems.Where(n => n.Name.Contains(filter));
-        }
+//        public IEnumerable GetSuggestions(string filter)
+//        {
+//            //return provider.NodeItems.Select(i => i.FullName);
+//            return provider.NodeItems.Where(n => n.Name.Contains(filter));
+//        }
 
-    }
-}
+//    }
+//}

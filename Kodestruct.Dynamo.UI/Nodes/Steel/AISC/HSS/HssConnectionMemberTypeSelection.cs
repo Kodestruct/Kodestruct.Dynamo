@@ -137,7 +137,7 @@ namespace Kodestruct.Steel.AISC.HSS
         protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
         {
             base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("HssTrussConnectionMemberType", HssConnectionMemberType);
+            nodeElement.SetAttribute("HssConnectionMemberType", HssConnectionMemberType);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace Kodestruct.Steel.AISC.HSS
         protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
         {
             base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["HssTrussConnectionMemberType"];
+            var attrib = nodeElement.Attributes["HssConnectionMemberType"];
             if (attrib == null)
                 return;
            
