@@ -50,8 +50,8 @@ namespace Concrete.ACI318.General.Concrete
 
 
         [MultiReturn(new[] { "E","f_r" })]
-        public static Dictionary<string, object> MaterialMechanicalProperties(ConcreteMaterial ConcreteMaterial, 
-            double Density, string Code = "ACI318-14")
+        public static Dictionary<string, object> ConcreteMaterialMechanicalProperties(ConcreteMaterial ConcreteMaterial, 
+            double Density=0, string Code = "ACI318-14")
         {
             //Default values
             double E = 0;
@@ -62,10 +62,10 @@ namespace Concrete.ACI318.General.Concrete
             //Calculation logic:
 
             Kodestruct.Concrete.ACI318_14.Materials.ConcreteMaterial mat =
-                new Kodestruct.Concrete.ACI318_14.Materials.ConcreteMaterial(cm.Concrete.SpecifiedCompressiveStrength, cm.Concrete.TypeByWeight, null);
+                new Kodestruct.Concrete.ACI318_14.Materials.ConcreteMaterial(cm.Concrete.SpecifiedCompressiveStrength, cm.Concrete.TypeByWeight, Density, null);
 
-            E =     mat.ModulusOfElasticity    ;
-            f_r = mat.ModulusOfRupture;
+            E =     mat.ModulusOfElasticity / 1000.0    ;
+            f_r = mat.ModulusOfRupture / 1000.0;
 
 
             return new Dictionary<string, object>

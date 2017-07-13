@@ -51,14 +51,13 @@ namespace Steel.AISC.Connection
         /// <param name="t_r">  Thickness of reinforcing plate </param>
         /// <param name="b_r">  Length of a projection of reinforcing plate from web </param>
         /// <param name="IsSingleSideReinforcement">  Identifies whether web reinforcing plate is placed on one side of web </param>
-        /// <param name="PlateOffset"> Offset of reinforcement plate from face of web opening</param>
         /// <param name="M_u">Design moment at opening center (required only if single-side reinforcement is specified, otherwise can be zero</param>
         /// <param name="V_u">Design shear (required only if single-side reinforcement is specified, otherwise can be zero</param>
         /// <returns name="phiV_n"> Shear strength </returns>
 
         [MultiReturn(new[] { "phiV_n" })]
         public static Dictionary<string, object> SteelIBeamWebOpeningShearStrength(CustomProfile IShape,double F_y,double a_o,double h_op,
-            double e_op, double t_r, double b_r, bool IsSingleSideReinforcement = false, double PlateOffset=0, double V_u = 0, double M_u = 0)
+            double e_op, double t_r, double b_r, bool IsSingleSideReinforcement = false,  double V_u = 0, double M_u = 0)
         {
             //Default values
             double phiV_n = 0;
@@ -71,7 +70,9 @@ namespace Steel.AISC.Connection
             {
                 throw new Exception("Specified shape type is not supported. Provide I-shape object as inputparameter");
             }
-            SteelIBeamWebOpening op = new SteelIBeamWebOpening(sectionI, F_y, a_o, h_op, e_op, t_r, b_r, IsSingleSideReinforcement, PlateOffset,V_u,M_u);
+
+            double PlateOffset = 0;
+            SteelIBeamWebOpening op = new SteelIBeamWebOpening(sectionI, F_y, a_o, h_op, e_op, t_r, b_r, IsSingleSideReinforcement, PlateOffset, M_u,V_u);
             phiV_n = op.GetShearStrength();
 
             return new Dictionary<string, object>

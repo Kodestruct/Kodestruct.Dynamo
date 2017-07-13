@@ -267,7 +267,8 @@
     <Compile Include="Concrete\ACI318\Details\StraightBarTensionDevelopmentLengthDetailed.cs" />
     <Compile Include="Concrete\ACI318\Details\StraightBarTensionLapSpliceLengthBasic.cs" />
     <Compile Include="Concrete\ACI318\Details\StraightBarTensionLapSpliceLengthDetailed.cs" />
-    <Compile Include="Concrete\ACI318\General\Concrete\Groups\MaterialMechanicalProperties.cs" />
+    <Compile Include="Concrete\ACI318\General\Concrete\Groups\General.cs" />
+    <Compile Include="Concrete\ACI318\General\Concrete\MaterialMechanicalProperties.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterialByYieldStress.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarMaterialProperties.cs" />
     <Compile Include="Concrete\ACI318\General\Rebar\RebarPointByArea.cs" />
