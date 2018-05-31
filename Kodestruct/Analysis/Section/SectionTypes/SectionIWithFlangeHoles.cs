@@ -42,7 +42,18 @@ namespace Analysis.Section.SectionTypes
             Section = r;
         }
 
-        public static SectionIWithFlangeHoles ByFlangeWebAndHoleDimensions(double d, double b_f, double t_f, double t_w, double b_hole, double N_holes,
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="d">Overall depth</param>
+        /// <param name="b_f">Flange width</param>
+        /// <param name="t_f">Flange thickness</param>
+        /// <param name="t_w">Web thickness</param>
+        /// <param name="b_hole">Hole width</param>
+        /// <param name="N_holes">Number of holes per flange (typically 2)</param>
+        /// <param name="IsRolled">Indicates whether the shape is rolled</param>
+        /// <returns></returns>
+        public static SectionIWithFlangeHoles ByFlangeWebAndHoleDimensions(double d, double b_f, double t_f, double t_w, double b_hole, double N_holes=2,
             bool IsRolled = false)
         {
             return new SectionIWithFlangeHoles(d, b_f, t_f, t_w, b_hole, N_holes, IsRolled);

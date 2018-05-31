@@ -45,7 +45,7 @@ namespace Steel.AISC.Connection
         /// <param name="BoltMaterialId">  Bolt material specification </param>
         /// <param name="BoltThreadCase">  Identifies whether threads are included or excluded from shear planes </param>
         /// <param name="Code"> Applicable version of code/standard</param>
-        /// <returns name="phiR_nt_modified"> Modified tensile strength of bolt subjected to tension  </returns>
+        /// <returns name="phiR_nt_modified"> Modified tensile strength of bolt subjected to shear  </returns>
 
         [MultiReturn(new[] { "phiR_nt_modified" })]
         public static Dictionary<string, object> ModifiedBoltTensileStrength(double V_u,double d_b,string BoltMaterialId,

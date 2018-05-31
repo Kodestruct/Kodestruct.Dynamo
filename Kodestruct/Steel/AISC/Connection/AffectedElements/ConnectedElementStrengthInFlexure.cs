@@ -68,24 +68,9 @@ namespace Steel.AISC.Connection
             double phiM_n = 0;
 
 
-            //Calculation logic:
             ICalcLog log = new CalcLog();
             bool grossShapeValid=false, netShapeValid=false;
 
-            //if (GrossShape.Section is ISectionRectangular || GrossShape.Section is ISectionI)
-            //{
-            //    grossShapeValid = true;
-            //}
-
-            //if (NetShape.Section is ISectionRectangular || NetShape.Section is ISectionI)
-            //{
-            //    netShapeValid = true;
-            //}
-
-            //if (grossShapeValid != true || netShapeValid!=true)
-            //{
-            //    throw new Exception("Specify an I-shape or Rectangular shape as gross and net sections");
-            //}
 
             AffectedElementInFlexure element = new AffectedElementInFlexure(GrossShape.Section, NetShape.Section, F_y, F_u, IsCompactDoublySymmetricForFlexure);
             phiM_n = element.GetFlexuralStrength(L_b);

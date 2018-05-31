@@ -17,6 +17,7 @@
     <SccProvider>SAK</SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,9 +99,8 @@
       <HintPath>..\packages\Kodestruct.Analysis.0.0.8.1\lib\net45\Kodestruct.Analysis.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Common, Version=0.0.9.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Common.0.0.9.1\lib\net45\Kodestruct.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kodestruct.Common, Version=0.0.11.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Common.0.0.11.4\lib\net45\Kodestruct.Common.dll</HintPath>
     </Reference>
     <Reference Include="Kodestruct.Concrete, Version=0.0.8.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Concrete.0.0.8.2\lib\net45\Kodestruct.Concrete.dll</HintPath>
@@ -110,9 +110,8 @@
       <HintPath>..\packages\Kodestruct.Loads.0.0.9.1\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.9.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.9.1\lib\net45\Kodestruct.Steel.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kodestruct.Steel, Version=0.0.11.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.11.6\lib\net45\Kodestruct.Steel.dll</HintPath>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Wood.0.0.1.4\lib\net45\Kodestruct.Wood.dll</HintPath>
@@ -373,6 +372,7 @@
     <Compile Include="Steel\AISC\Composite\Shapes\CompositeSectionGeneral.cs" />
     <Compile Include="Steel\AISC\Composite\Shapes\CompositeSectionI.cs" />
     <Compile Include="Steel\AISC\Composite\ShearStrengthOfHeadedAnchor.cs" />
+    <Compile Include="Steel\AISC\Compression\FlexuralBucklingCriticalStress.cs" />
     <Compile Include="Steel\AISC\Compression\FlexuralBucklingStrength.cs" />
     <Compile Include="Steel\AISC\Compression\Groups\Compression.cs" />
     <Compile Include="Steel\AISC\Compression\TorsionalAndFlexuralTorsionalBucklingStrength.cs" />

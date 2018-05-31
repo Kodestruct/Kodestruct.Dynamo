@@ -58,7 +58,7 @@ namespace Steel.AISC.Connection
 
         [MultiReturn(new[] { "phiR_n" })]
         public static Dictionary<string, object> WeldStrength(double l_weld, string WeldType, string WeldLoadTypeId, double t_weld, double F_EXX=70, double A_nBase = 0,
-            double F_y = 36, double F_u = 58, double theta = 0, bool IgnoreBaseMetalChecks = false, string Code = "AISC360-10")
+            double F_y = 36, double F_u = 58, double theta = 0, bool IgnoreBaseMetalChecks = true, string Code = "AISC360-10")
         {
             //Default values
             double phiR_n = 0;

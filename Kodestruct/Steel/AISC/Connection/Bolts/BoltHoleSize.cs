@@ -22,6 +22,7 @@ using Dynamo.Models;
 using System.Collections.Generic;
 using Dynamo.Nodes;
 using b = Kodestruct.Steel.Tests.AISC.AISC360v10.Connections.Bolt;
+using b16 = Kodestruct.Steel.Tests.AISC.AISC360v16.Connections.Bolt;
 using Kodestruct.Steel.AISC.SteelEntities.Bolts;
 using System;
 
@@ -60,7 +61,15 @@ namespace Steel.AISC.Connection
             bool IsValidString =Enum.TryParse(BoltHoleType, true, out holeType);
             if (IsValidString == true)
             {
-                b.BoltGeneral b = new b.BoltGeneral(d_b, 0, 0);
+                b.BoltGeneral b;
+                if (Code == "AISC360-16")
+                {
+                    b = new b16.BoltGeneral(d_b, 0, 0);
+                }
+                else
+                {
+                    b = new b.BoltGeneral(d_b, 0, 0);
+                }
                 d_hole = b.GetBoltHoleWidth(holeType,  IsTensionOrShear);
                 b_hole = b.GetBoltHoleLength(holeType, IsTensionOrShear);
             }

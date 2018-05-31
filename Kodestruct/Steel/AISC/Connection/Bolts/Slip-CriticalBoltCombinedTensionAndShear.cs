@@ -45,14 +45,14 @@ namespace Steel.AISC.Connection
         ///    Calculates Modified shear strength slip-critical bolt combined tension and shear (kip - in unit system for all inputs and outputs)
         /// </summary>
         /// <param name="d_b">  Nominal fastener diameter </param>
-        /// <param name="T_u">  Required tension force </param>
+        /// <param name="T_u">  Required tension force per bolt</param>
         /// <param name="BoltMaterialId">  Bolt material specification </param>
         /// <param name="BoltHoleType">  Type of bolt hole </param>
         /// <param name="BoltFillerCase">  Distinguishes between filler cases for slip-critical bolt capacity calculations </param>
         /// <param name="BoltFayingSurfaceClass">  Identifies the type of faying surface for a slip critical bolt </param>
         /// <param name="NumberShearPlanes">  Number of shear planes </param>
         /// <param name="Code"> Applicable version of code/standard</param>
-        /// <returns name="phiR_nModified"> Modified shear strength of bolt subjected to tension </returns>
+        /// <returns name="phiR_nModified"> Modified shear strength of single bolt subjected to tension </returns>
 
         [MultiReturn(new[] { "phiR_nModified" })]
         public static Dictionary<string, object> SlipCriticalBoltCombinedTensionAndShear(double d_b, double T_u, string BoltMaterialId, string BoltHoleType, string BoltFillerCase = "One",
