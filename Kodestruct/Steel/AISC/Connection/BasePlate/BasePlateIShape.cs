@@ -46,28 +46,30 @@ namespace Steel.AISC.Connection.BasePlate.Shapes
 
 
          [IsVisibleInDynamoLibrary(false)]
-        internal BasePlateIShape(double B_bp,double N_bp,double A_2,double F_y, double fc_prime,double d_c, double b_f )
+        internal BasePlateIShape(double B_bp,double N_bp,double A_2,double F_y, double fc_prime,double d_c, double b_f, double t_f, double f_anchor )
         {
 
-            this.Plate = new bp.BasePlateIShape(B_bp, N_bp, d_c, b_f, fc_prime, F_y, A_2); 
+            this.Plate = new bp.BasePlateIShape(B_bp, N_bp, d_c, b_f,t_f, f_anchor, fc_prime, F_y, A_2); 
 
         }
 
         /// <summary>
-         /// I-Shape base plate object (kip - in unit system for all inputs and outputs)
+        /// I-Shape base plate object (kip - in unit system for all inputs and outputs)
         /// </summary>
-         /// <param name="B_bp">Base plate dimension  measured across the flange)</param>
-         /// <param name="N_bp">Base plate dimension (measured along the plane of the web)</param>
-         /// <param name="A_2">Area of the lower base of the largest frustum of a pyramid, cone, or tapered wedge contained wholly within the support and having its upper base equal to the loaded area </param>
-         /// <param name="F_y">Plate material yield stress</param>
-         /// <param name="fc_prime">Concrete minimum specified strength</param>
+        /// <param name="B_bp">Base plate dimension  measured across the flange)</param>
+        /// <param name="N_bp">Base plate dimension (measured along the plane of the web)</param>
+        /// <param name="A_2">Area of the lower base of the largest frustum of a pyramid, cone, or tapered wedge contained wholly within the support and having its upper base equal to the loaded area </param>
+        /// <param name="F_y">Plate material yield stress</param>
+        /// <param name="fc_prime">Concrete minimum specified strength</param>
         /// <param name="d_c">Shape depth</param>
         /// <param name="b_f">Flange width</param>
+        /// <param name="t_f">Flange thickness</param>
+        /// <param name="f_anchor">  Distance from column centerline to the plane of tension anchors </param>
         /// <returns></returns>
-         public static BasePlateIShape FromGeometry(double B_bp, double N_bp, double A_2, double F_y, double fc_prime, double d_c, double b_f)
+        public static BasePlateIShape FromGeometry(double B_bp, double N_bp, double A_2, double F_y, double fc_prime, double d_c, double b_f, double t_f, double f_anchor)
         {
 
-            return new BasePlateIShape( B_bp, N_bp, A_2, F_y, fc_prime,d_c,b_f);
+            return new BasePlateIShape( B_bp, N_bp, A_2, F_y, fc_prime,d_c,b_f,t_f,f_anchor);
         }
 
 

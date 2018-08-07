@@ -45,29 +45,31 @@ namespace Steel.AISC.Connection.BasePlate.Shapes
         /// <summary>
         ///     Base plate object required for calculations of minimum thickness etc. (kip - in unit system for all inputs and outputs)
         /// </summary>
-        /// <param name="B_bp">  Base plate width (for I-shaped column measured parallel to the weak-axis of the shape) </param>
-        /// <param name="N_bp">  Base plate width (for I-shaped column measured parallel to the strong-axis of the shape) </param>
+        /// <param name="B_bp">  Base plate width  </param>
+        /// <param name="N_bp">  Base plate width </param>
         /// <param name="A_2">  Maximum area of the portion of the supporting surface that is geometrically similar to and concentric with the loaded area  </param>
         /// <param name="F_y">  Specified minimum yield stress </param>
         /// <param name="fc_prime"> </param>
         /// <param name="B">HSS column width </param>
         /// <param name="H">HSS column depth</param>
+        /// <param name="t">Wall thickness</param>
+        /// <param name="f_anchor">  Distance from column centerline to the plane of tension anchors </param>
         /// <returns name="BasePlateRhsShape"> Base plate Rectangular HSS shape object , created from input parameters </returns>
 
 
 
-         [IsVisibleInDynamoLibrary(false)]
-        internal BasePlateRhsShape(double B_bp,double N_bp,double A_2,double F_y, double fc_prime,double B, double H )
+        [IsVisibleInDynamoLibrary(false)]
+        internal BasePlateRhsShape(double B_bp,double N_bp,double A_2,double F_y, double fc_prime,double B, double H, double t, double f_anchor)
         {
 
-                    this.Plate = new bp.BasePlateRectangularHss( B_bp,N_bp,B,H,fc_prime,F_y,A_2); //remove 0 for P_u
+                    this.Plate = new bp.BasePlateRectangularHss( B_bp,N_bp,B,H,t, fc_prime,F_y,A_2,f_anchor); //remove 0 for P_u
 
         }
 
-         public static BasePlateRhsShape FromGeometry(double B_bp, double N_bp, double A_2, double F_y, double fc_prime, double B, double H)
+         public static BasePlateRhsShape FromGeometry(double B_bp, double N_bp, double A_2, double F_y, double fc_prime, double B, double H, double t, double f_anchor)
         {
 
-            return new BasePlateRhsShape(B_bp, N_bp, A_2, F_y,fc_prime,B,H);
+            return new BasePlateRhsShape(B_bp, N_bp, A_2, F_y,fc_prime,B,H,t,f_anchor);
         }
 
 
