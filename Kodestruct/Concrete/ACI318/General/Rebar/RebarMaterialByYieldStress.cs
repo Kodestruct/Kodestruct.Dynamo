@@ -42,8 +42,8 @@ namespace Concrete.ACI318.General.Reinforcement
         [IsVisibleInDynamoLibrary(false)]
         internal RebarMaterial(double f_y)
         {
-            RebarMaterialGeneral Material = new RebarMaterialGeneral(f_y);
-
+            RebarMaterialGeneral remat = new RebarMaterialGeneral(f_y);
+            Material = remat;
         }
         /// <summary>
         ///     Rebar material 
@@ -55,8 +55,8 @@ namespace Concrete.ACI318.General.Reinforcement
             return new RebarMaterial(f_y);
         }
 
-        
-       
+
+
     }
 }
 

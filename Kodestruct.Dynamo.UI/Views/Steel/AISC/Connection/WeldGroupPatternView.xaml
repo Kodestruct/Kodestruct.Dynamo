@@ -28,6 +28,7 @@
                 <KodestructControls:EnumDataElement Icon="{StaticResource WeldRect}" EnumString="Rectangle"       Description="Closed rectangle" />
                 <KodestructControls:EnumDataElement Icon="{StaticResource WeldC}" EnumString="C"       Description="C-shape" />
                 <KodestructControls:EnumDataElement Icon="{StaticResource WeldL}" EnumString="L"       Description="L-shape" />
+                <KodestructControls:EnumDataElement Icon="{StaticResource WeldL}" EnumString="U"       Description="U-shape" />
             </KodestructControls:EnumDataCollection>
 
         </ResourceDictionary>

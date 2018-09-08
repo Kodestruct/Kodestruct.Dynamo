@@ -550,6 +550,7 @@
     <Folder Include="Concrete\ACI318\Beam\ShearAndTorsion\OneWayShear\" />
     <Folder Include="Loads\ASCE7\Gravity\Ice\" />
     <Folder Include="Loads\ASCE7\Gravity\Snow\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -562,7 +563,6 @@
     <EmbeddedResource Include="KodestructImages.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\KodestructImages.resources" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
