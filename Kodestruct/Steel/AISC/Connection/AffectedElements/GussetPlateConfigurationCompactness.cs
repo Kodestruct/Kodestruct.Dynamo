@@ -61,7 +61,7 @@ namespace Steel.AISC.Connection
 
             return new Dictionary<string, object>
             {
-                { "GussetPlateConfigurationCompactness", IsGussetCompactConfiguration }
+                { "IsGussetCompactConfiguration", IsGussetCompactConfiguration }
  
             };
         }

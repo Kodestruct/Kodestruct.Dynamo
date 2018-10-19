@@ -59,8 +59,10 @@ namespace Steel.AISC.Connection
         /// <returns name="M_ub"> Moment at gusset-to-beam interface </returns>
         /// <returns name="H_ub"> Required shear force on the gusset-to-beam connection </returns>
         /// <returns name="H_uc"> Required axial force on the gusset-to-column connection </returns>
+        /// <returns name="V_ubc"> Required shear force on the beam-to-column connection </returns>
+        /// <returns name="H_ubc"> Required axial force on the beam-to-column connection </returns>
 
-        [MultiReturn(new[] { "V_uc","V_ub","M_ub","H_ub","H_uc" })]
+        [MultiReturn(new[] { "V_uc","V_ub","M_ub","H_ub","H_uc", "V_ubc", "H_ubc" })]
         public static Dictionary<string, object> UFMForcesSpecialCase2(double d_b,double d_c,double theta,double alpha,double alpha_bar,
             double beta, double beta_bar, double P_u, double DeltaV_b, double R_beam, bool IncludeDistortionalMomentForces = false, double M_d = 0, double A_ub = 0, string Code = "AISC360-10")
         {
@@ -70,7 +72,8 @@ namespace Steel.AISC.Connection
             double M_ub = 0;
             double H_ub = 0;
             double H_uc = 0;
-
+            double V_ubc = 0;
+            double H_ubc = 0;
 
             //Calculation logic:
 
@@ -82,6 +85,8 @@ namespace Steel.AISC.Connection
              M_ub=ufmCase.M_ub;
              H_ub=ufmCase.H_ub;
              H_uc = ufmCase.H_uc;
+            V_ubc = ufmCase.V_bc;
+            H_ubc = ufmCase.H_bc;
 
             return new Dictionary<string, object>
             {
@@ -90,7 +95,8 @@ namespace Steel.AISC.Connection
             ,{ "M_ub", M_ub }
             ,{ "H_ub", H_ub }
             ,{ "H_uc", H_uc }
- 
+                   ,{ "V_ubc", V_ubc }
+                ,{ "H_ubc", H_ubc }
             };
         }
 

@@ -102,16 +102,15 @@
     <Reference Include="Kodestruct.Common, Version=0.0.11.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Common.0.0.11.5\lib\net45\Kodestruct.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Kodestruct.Concrete, Version=0.0.8.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Concrete.0.0.8.2\lib\net45\Kodestruct.Concrete.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Kodestruct.Concrete, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Concrete.0.0.11.3\lib\net45\Kodestruct.Concrete.dll</HintPath>
     </Reference>
     <Reference Include="Kodestruct.Loads, Version=0.0.9.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Loads.0.0.9.1\lib\net45\Kodestruct.Loads.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Kodestruct.Steel, Version=0.0.11.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kodestruct.Steel.0.0.11.8\lib\net45\Kodestruct.Steel.dll</HintPath>
+    <Reference Include="Kodestruct.Steel, Version=0.0.11.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kodestruct.Steel.0.0.11.9\lib\net45\Kodestruct.Steel.dll</HintPath>
     </Reference>
     <Reference Include="Kodestruct.Wood, Version=0.0.9.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Kodestruct.Wood.0.0.1.4\lib\net45\Kodestruct.Wood.dll</HintPath>
@@ -144,6 +143,9 @@
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NodeServices2, Version=1.3.0.961, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.DynamoServices.1.3.0\lib\net45\NodeServices2.dll</HintPath>
