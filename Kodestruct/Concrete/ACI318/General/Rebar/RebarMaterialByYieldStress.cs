@@ -42,13 +42,13 @@ namespace Concrete.ACI318.General.Reinforcement
         [IsVisibleInDynamoLibrary(false)]
         internal RebarMaterial(double f_y)
         {
-            RebarMaterialGeneral remat = new RebarMaterialGeneral(f_y);
+            RebarMaterialGeneral remat = new RebarMaterialGeneral(f_y*1000);
             Material = remat;
         }
         /// <summary>
         ///     Rebar material 
         /// </summary>
-        /// <param name="f_y">   Specified yield strength for nonprestressed reinforcement   </param>
+        /// <param name="f_y">   Specified yield strength for nonprestressed reinforcement  (ksi) </param>
         /// <returns name="RebarMaterial"> Reinforcement material object, create the object using input parameters first. This material assumes steel elasto-plastic behavior </returns>
         public static RebarMaterial ByYieldStress(double f_y)
         {
