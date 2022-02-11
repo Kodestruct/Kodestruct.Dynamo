@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.FloorVibrations.EffectiveProperties
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Steel.AISC.FloorVibrations.EffectiveProperties
     [IsDesignScriptCompatible]
     public class BeamLocationSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public BeamLocationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public BeamLocationSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BeamLocation", "Distinguishes between beams located at the floor free edge versus all other  beams"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BeamLocation", "Distinguishes between beams located at the floor free edge versus all other  beams")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

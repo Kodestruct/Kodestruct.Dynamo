@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Wood.NDS.General
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Wood.NDS.General
     [IsDesignScriptCompatible]
     public class WoodMemberTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public WoodMemberTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public WoodMemberTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WoodMemberType", "Distinguishes between dimensional lumber, timber,glulam etc."));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WoodMemberType", "Distinguishes between dimensional lumber, timber,glulam etc.")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

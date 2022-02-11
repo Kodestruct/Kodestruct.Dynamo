@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Aluminum.AA.General
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Aluminum.AA.General
     public class LateralSupportTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public LateralSupportTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public LateralSupportTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("LateralSupportType", "Type of support for section local and lateral-torsional buckling"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("LateralSupportType", "Type of support for section local and lateral-torsional buckling")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

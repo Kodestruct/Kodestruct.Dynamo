@@ -38,7 +38,7 @@ using Kodestruct.Dynamo.UI.Common.TreeItems;
 using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Gravity.Dead
 {
@@ -54,6 +54,11 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
     public class ComponentIdSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public ComponentIdSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public ComponentIdSelection()
         {
             ReportEntry="";
@@ -61,11 +66,11 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
             ComponentOption1 = 1;
             ComponentOption2 = 0;
             ComponentValue = 0;
-            //OutPortData.Add(new PortData("ReportEntry", "calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ComponentId", "building component id (name)"));
-            OutPortData.Add(new PortData("ComponentOption1", "building component subtype (option1)"));
-            OutPortData.Add(new PortData("ComponentOption2", "building component subtype (option2)"));
-            OutPortData.Add(new PortData("ComponentValue", "building component numerical value"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this,new PortData("ComponentId", "building component id (name)")));
+            OutPorts.Add(new PortModel(PortType.Output, this,new PortData("ComponentOption1", "building component subtype (option1)")));
+            OutPorts.Add(new PortModel(PortType.Output, this,new PortData("ComponentOption2", "building component subtype (option2)")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ComponentValue", "building component numerical value")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.FloorVibrations.Acceleration
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Steel.AISC.FloorVibrations.Acceleration
     public class FloorOccupancyTypeForVibrationSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public FloorOccupancyTypeForVibrationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public FloorOccupancyTypeForVibrationSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("FloorSeviceOccupancyId", "Indicates type of floor occupancy used for vibration checks"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("FloorSeviceOccupancyId", "Indicates type of floor occupancy used for vibration checks")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

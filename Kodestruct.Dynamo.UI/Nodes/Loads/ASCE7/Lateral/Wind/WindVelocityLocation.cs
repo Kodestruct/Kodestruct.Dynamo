@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Wind.General
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.General
     public class WindVelocityLocationSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public WindVelocityLocationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public WindVelocityLocationSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WindVelocityLocation", "Location type for wind velocity used in pressure calculations"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WindVelocityLocation", "Location type for wind velocity used in pressure calculations")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

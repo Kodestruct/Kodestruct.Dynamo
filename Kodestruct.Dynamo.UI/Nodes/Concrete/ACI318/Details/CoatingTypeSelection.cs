@@ -29,7 +29,7 @@ using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using System.Windows;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Details.General
 {
@@ -45,11 +45,16 @@ namespace Kodestruct.Concrete.ACI318.Details.General
     public class CoatingTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public CoatingTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public CoatingTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("RebarCoatingType", "Type of rebar surface coating (epoxy coated or black)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("RebarCoatingType", "Type of rebar surface coating (epoxy coated or black)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

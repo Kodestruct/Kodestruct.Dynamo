@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.General.Reinforcement
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Concrete.ACI318.General.Reinforcement
     public class ConfinementReinforcementTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public ConfinementReinforcementTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public ConfinementReinforcementTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ConfinementReinforcementType", "Type of confinement reinforcement (spiral, ties or none)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ConfinementReinforcementType", "Type of confinement reinforcement (spiral, ties or none)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

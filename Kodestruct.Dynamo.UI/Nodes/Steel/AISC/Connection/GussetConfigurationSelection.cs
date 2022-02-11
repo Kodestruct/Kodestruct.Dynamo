@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -43,13 +43,17 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class GussetConfigurationSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public GussetConfigurationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public GussetConfigurationSelection()
         {
             ReportEntry="";
             GussetPlateConfigurationId = "ExtendedCorner";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("GussetPlateConfigurationId", "Type of gusset plate configuration for calculation of effective length"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("GussetPlateConfigurationId", "Type of gusset plate configuration for calculation of effective length")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

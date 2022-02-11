@@ -28,7 +28,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection.AffectedElements
 {
@@ -43,13 +43,17 @@ namespace Kodestruct.Steel.AISC.Connection.AffectedElements
     [IsDesignScriptCompatible]
     public class BeamCopeCaseSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public BeamCopeCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public BeamCopeCaseSelection()
         {
             
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BeamCopeCase", "Identifies beam cope condition for stability calculations: single cope vs double cope"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BeamCopeCase", "Identifies beam cope condition for stability calculations: single cope vs double cope")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

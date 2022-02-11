@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Details.General
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Concrete.ACI318.Details.General
     [IsDesignScriptCompatible]
     public class RebarSpliceClassSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public RebarSpliceClassSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public RebarSpliceClassSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("RebarSpliceClass", "Identifies if splice is class A or class B"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("RebarSpliceClass", "Identifies if splice is class A or class B")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

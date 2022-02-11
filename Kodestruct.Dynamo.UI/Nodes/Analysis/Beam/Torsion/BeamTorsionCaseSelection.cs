@@ -34,8 +34,7 @@ using GalaSoft.MvvmLight.CommandWpf;
 using Kodestruct.Dynamo.UI.Common.TreeItems;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Analysis.Beam.Torsion
 {
@@ -51,13 +50,18 @@ namespace Kodestruct.Analysis.Beam.Torsion
     public class BeamTorsionCaseSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public BeamTorsionCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public BeamTorsionCaseSelection()
         {
             ReportEntry = "";
             BeamTorsionCaseDescription="Uniformly distributed torque";
             BeamTorsionCaseId = "Case4";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BeamTorsionCaseId", "Case ID used in calculation of the values of torsional functions (per AISC design guide 9)"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BeamTorsionCaseId", "Case ID used in calculation of the values of torsional functions (per AISC design guide 9)")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

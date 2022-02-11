@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Section.ShearFriction
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Concrete.ACI318.Section.ShearFriction
     public class ShearFrictionContactSurfaceSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public ShearFrictionContactSurfaceSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public ShearFrictionContactSurfaceSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ShearFrictionSurfaceTypeId", "Type of contact surface for shear friction calculations"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ShearFrictionSurfaceTypeId", "Type of contact surface for shear friction calculations")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

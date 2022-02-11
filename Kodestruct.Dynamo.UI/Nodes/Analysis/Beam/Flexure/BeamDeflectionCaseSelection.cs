@@ -34,7 +34,7 @@ using GalaSoft.MvvmLight.CommandWpf;
 using Kodestruct.Dynamo.UI.Common.TreeItems;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Analysis.Beam.Flexure
 {
@@ -50,13 +50,18 @@ namespace Kodestruct.Analysis.Beam.Flexure
     public class BeamDeflectionCaseSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public BeamDeflectionCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public BeamDeflectionCaseSelection()
         {
             ReportEntry = "";
             BeamDeflectionCaseId = "C1B_1";
             BeamForcesCaseDescription = "Simply supported. Uniform load on full span. Uniformly distributed load";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BeamDeflectionCaseId", "Case ID used in calculation of the beam deflection"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BeamDeflectionCaseId", "Case ID used in calculation of the beam deflection")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

@@ -33,7 +33,7 @@ using System.Windows;
 using System.Windows.Input;
 using Kodestruct.Dynamo.UI.Common.TreeItems;
 using GalaSoft.MvvmLight.Command;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
 {
@@ -49,11 +49,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
     public class WindDirectionalityCaseIdSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public WindDirectionalityCaseIdSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public WindDirectionalityCaseIdSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WindDirectionalityCaseId", "Structure type for directionality factor calculation"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WindDirectionalityCaseId", "Structure type for directionality factor calculation")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

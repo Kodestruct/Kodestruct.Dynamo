@@ -28,7 +28,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -43,13 +43,17 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class BoltDiameterSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public BoltDiameterSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public BoltDiameterSelection()
         {
             
-            InPortData.Add(new PortData("BoltMaterialId", "Bolt material specification"));
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("d_b", "Nominal fastener diameter"));
+            InPorts.Add(new PortModel(PortType.Input, this, new PortData("BoltMaterialId", "Bolt material specification")));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("d_b", "Nominal fastener diameter")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

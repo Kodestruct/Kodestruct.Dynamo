@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.HSS
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Steel.AISC.HSS
     public class HssTrussConnectionClassificationSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public HssTrussConnectionClassificationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public HssTrussConnectionClassificationSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("HssTrussConnectionClassification", "Distinguishes between T, Y, X, gapped K or overlapped K"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("HssTrussConnectionClassification", "Distinguishes between T, Y, X, gapped K or overlapped K")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Kodestruct.Concrete.ACI318_14.General.Material;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.General.Concrete.Weight
 {
@@ -44,12 +44,17 @@ namespace Kodestruct.Concrete.ACI318.General.Concrete.Weight
     [IsDesignScriptCompatible]
     public class ConcreteMaterialWeightSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public ConcreteMaterialWeightSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
 
         public ConcreteMaterialWeightSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ConcreteMaterialWeightType", "Type of concrete by weight (normalweight vs. lightweight)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ConcreteMaterialWeightType", "Type of concrete by weight (normalweight vs. lightweight)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

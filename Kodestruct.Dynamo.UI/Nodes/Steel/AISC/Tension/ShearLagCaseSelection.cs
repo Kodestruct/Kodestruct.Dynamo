@@ -32,7 +32,7 @@ using System.Reflection;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Tension
 {
@@ -47,21 +47,18 @@ namespace Kodestruct.Steel.AISC.Tension
     [IsDesignScriptCompatible]
     public class ShearLagCaseIdSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public ShearLagCaseIdSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public ShearLagCaseIdSelection()
         {
             ReportEntry="";
             ShearLagCaseIdDescription ="General case";
             ShearLagCaseId = "Case2";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            //OutPortData.Add(new PortData("l", "Connection length"));
-            //OutPortData.Add(new PortData("x_bar", "Element eccentricity"));
-            //OutPortData.Add(new PortData("w", "Width of plate"));
-            //OutPortData.Add(new PortData("B", "HSS width"));
-            //OutPortData.Add(new PortData("H", "HSS height"));
-            //OutPortData.Add(new PortData("b_f","Flange width"));
-            //OutPortData.Add(new PortData("d", "Member depth"));
-            OutPortData.Add(new PortData("ShearLagCaseId",  "Case of shear lag condition"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ShearLagCaseId",  "Case of shear lag condition")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

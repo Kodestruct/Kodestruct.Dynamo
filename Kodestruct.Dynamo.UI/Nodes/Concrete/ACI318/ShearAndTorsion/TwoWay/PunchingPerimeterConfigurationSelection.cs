@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.General
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.General
     public class PunchingPerimeterConfigurationSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public PunchingPerimeterConfigurationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public PunchingPerimeterConfigurationSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("PunchingPerimeterConfiguration", "Type of punching perimeter (interior, edge, corner etc)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("PunchingPerimeterConfiguration", "Type of punching perimeter (interior, edge, corner etc)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

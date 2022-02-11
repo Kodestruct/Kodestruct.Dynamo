@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.General.Reinforcement
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Concrete.ACI318.General.Reinforcement
     public class RebarSizeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public RebarSizeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public RebarSizeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("RebarSizeId", "Rebar designation (number) indicating the size of the bar"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("RebarSizeId", "Rebar designation (number) indicating the size of the bar")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

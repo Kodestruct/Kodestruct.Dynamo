@@ -32,7 +32,7 @@ using System.Linq;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Wood.NDS.General
 
@@ -48,16 +48,19 @@ namespace Kodestruct.Wood.NDS.General
     [IsDesignScriptCompatible]
     public class WoodSpeciesAndGradeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public WoodSpeciesAndGradeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public WoodSpeciesAndGradeSelection()
         {
-            
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WoodSpeciesId", "Wood species for reference value selection"));
-            OutPortData.Add(new PortData("CommercialGradeId", "Wood commercial grade"));
-            OutPortData.Add(new PortData("SizeClassId", "Wood species size classification for reference value selection"));
-            OutPortData.Add(new PortData("WoodMemberType", "Wood member type"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this,new PortData("WoodSpeciesId", "Wood species for reference value selection")));
+            OutPorts.Add(new PortModel(PortType.Output, this,new PortData("CommercialGradeId", "Wood commercial grade")));
+            OutPorts.Add(new PortModel(PortType.Output, this,new PortData("SizeClassId", "Wood species size classification for reference value selection")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WoodMemberType", "Wood member type")));
             RegisterAllPorts();
             this.WoodMemberType = "SawnDimensionLumber"; //initial member type assignment to get species list
             SetDefaultParams();

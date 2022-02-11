@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
     public class WindEnclosureTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public WindEnclosureTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public WindEnclosureTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WindEnclosureType", "Type of enclosure (open, partially-enclosed or enclosed) "));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WindEnclosureType", "Type of enclosure (open, partially-enclosed or enclosed) ")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

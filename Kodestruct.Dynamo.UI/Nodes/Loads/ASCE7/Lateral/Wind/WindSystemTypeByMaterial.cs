@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph;
 using System.Xml;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
     public class WindSystemTypeByMaterialSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public WindSystemTypeByMaterialSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public WindSystemTypeByMaterialSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WindMaterialDampingType", "Type of material for determining inherent structural damping"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WindMaterialDampingType", "Type of material for determining inherent structural damping")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

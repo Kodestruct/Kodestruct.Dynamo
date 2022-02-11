@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.FloorVibrations.EffectiveProperties
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Steel.AISC.FloorVibrations.EffectiveProperties
     [IsDesignScriptCompatible]
     public class AdjacentSpanWeightIncreaseTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public AdjacentSpanWeightIncreaseTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public AdjacentSpanWeightIncreaseTypeSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("AdjacentSpanWeightIncreaseType", "Identifies whether the effective joist weight can be incretased due to continuous over the column and adjacent span is greater than 0.7 times the span considered, or for joists whether bottom chord is extended."));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("AdjacentSpanWeightIncreaseType", "Identifies whether the effective joist weight can be incretased due to continuous over the column and adjacent span is greater than 0.7 times the span considered, or for joists whether bottom chord is extended.")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.StructureParameters
     [IsDesignScriptCompatible]
     public class WindStructureDynamicResponseTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public WindStructureDynamicResponseTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public WindStructureDynamicResponseTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WindStructureDynamicResponseType", "Type of wind dynamic response (flexible or rigid)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WindStructureDynamicResponseType", "Type of wind dynamic response (flexible or rigid)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

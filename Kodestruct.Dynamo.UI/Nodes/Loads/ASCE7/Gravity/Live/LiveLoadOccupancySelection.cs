@@ -35,7 +35,7 @@ using KodestructDynamoUI.Views.Loads.ASCE7;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Gravity.Live
 {
@@ -51,13 +51,18 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Live
     public class LiveLoadOccupancySelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public LiveLoadOccupancySelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public LiveLoadOccupancySelection()
         {
             ReportEntry="";
             LiveLoadOccupancyId = "Office";
             LiveLoadOccupancyDescription = "Office space";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("LiveLoadOccupancyId", "description of space for calculation of live loads"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("LiveLoadOccupancyId", "description of space for calculation of live loads")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

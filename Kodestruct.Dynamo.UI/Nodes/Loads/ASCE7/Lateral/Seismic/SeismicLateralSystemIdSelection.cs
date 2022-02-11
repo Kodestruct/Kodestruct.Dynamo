@@ -33,7 +33,7 @@ using Dynamo.Graph;
 using Kodestruct.Dynamo.Common.Infra.TreeItems;
 using Kodestruct.Dynamo.UI.Common.TreeItems;
 using GalaSoft.MvvmLight.Command;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
 {
@@ -49,11 +49,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
     public class SeismicLateralSystemIdSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public SeismicLateralSystemIdSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public SeismicLateralSystemIdSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("SeismicLateralSystemId", "Id of the lateral system from ASCE7-10 table 12.2-1"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SeismicLateralSystemId", "Id of the lateral system from ASCE7-10 table 12.2-1")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

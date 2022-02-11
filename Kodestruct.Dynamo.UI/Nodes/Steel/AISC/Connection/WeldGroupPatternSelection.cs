@@ -28,7 +28,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -44,12 +44,17 @@ namespace Kodestruct.Steel.AISC.Connection
     public class WeldGroupPatternSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public WeldGroupPatternSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public WeldGroupPatternSelection()
         {
             ReportEntry="";
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WeldGroupPattern", "Weld group pattern type"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WeldGroupPattern", "Weld group pattern type")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
             SetDefaultParameters();

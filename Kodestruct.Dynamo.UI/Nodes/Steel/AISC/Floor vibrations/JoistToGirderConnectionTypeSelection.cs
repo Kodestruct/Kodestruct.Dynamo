@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using System.Xml;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.FloorVibrations.EffectiveProperties
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Steel.AISC.FloorVibrations.EffectiveProperties
     public class JoistToGirderConnectionTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public JoistToGirderConnectionTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public JoistToGirderConnectionTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("JoistToGirderConnectionType", "Differentiates between beams having connection to girder flange versus connection to girder web"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("JoistToGirderConnectionType", "Differentiates between beams having connection to girder flange versus connection to girder web")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

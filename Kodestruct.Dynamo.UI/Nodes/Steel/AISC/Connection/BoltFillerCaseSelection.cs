@@ -28,7 +28,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -43,13 +43,17 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class BoltFillerCaseSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public BoltFillerCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public BoltFillerCaseSelection()
         {
             
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BoltFillerCase", "Distinguishes between filler cases for slip-critical bolt capacity calculations"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BoltFillerCase", "Distinguishes between filler cases for slip-critical bolt capacity calculations")));
             RegisterAllPorts();
 
             SetDefaultParameters();

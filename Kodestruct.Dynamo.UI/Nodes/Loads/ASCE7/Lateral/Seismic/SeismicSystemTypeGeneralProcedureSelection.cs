@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using System.Xml;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.BuildingFundamentalPeriod
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.BuildingFundamentalPeriod
     public class SeismicSystemTypeGeneralProcedureSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public SeismicSystemTypeGeneralProcedureSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public SeismicSystemTypeGeneralProcedureSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("SeismicSystemTypeGeneralProcedure", "Seismic lateral system type (used in approximate procedure for fundamental period determination)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SeismicSystemTypeGeneralProcedure", "Seismic lateral system type (used in approximate procedure for fundamental period determination)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -33,7 +33,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using KodestructDynamoUI.Views.Loads.ASCE7;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.General
 {
@@ -49,13 +49,18 @@ namespace Kodestruct.Loads.ASCE7.General
     public class BuildingOccupancyIdSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public BuildingOccupancyIdSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public BuildingOccupancyIdSelection()
         {
             ReportEntry="";
             BuildingOccupancyDescription ="Commercial building";
             BuildingOccupancyId = "Commercial building";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BuildingOccupancyId", "Occupancy description"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BuildingOccupancyId", "Occupancy description")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

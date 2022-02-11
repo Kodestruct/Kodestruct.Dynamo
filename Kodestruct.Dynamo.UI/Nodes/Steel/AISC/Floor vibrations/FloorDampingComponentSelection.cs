@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.FloorVibrations.Acceleration
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Steel.AISC.FloorVibrations.Acceleration
     public class FloorDampingComponentSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public FloorDampingComponentSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public FloorDampingComponentSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("FloorDampingComponent", "Component contributing to damping"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("FloorDampingComponent", "Component contributing to damping")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using System.Xml;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.General.Flexure
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.General.Flexure
     public class AngleOrientationSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public AngleOrientationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public AngleOrientationSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("AngleOrientation", "Ondicates whether the long leg of unequal leg angle is vertical or horizontal"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("AngleOrientation", "Ondicates whether the long leg of unequal leg angle is vertical or horizontal")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

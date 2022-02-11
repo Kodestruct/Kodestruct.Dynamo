@@ -28,8 +28,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Combination
 {
@@ -44,11 +43,15 @@ namespace Kodestruct.Steel.AISC.Combination
     [IsDesignScriptCompatible]
     public class CombinedForcesMemberTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public CombinedForcesMemberTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public CombinedForcesMemberTypeSelection()
         {
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("CombinationCaseId", "Defines a type of interaction equation to be used"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("CombinationCaseId", "Defines a type of interaction equation to be used")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

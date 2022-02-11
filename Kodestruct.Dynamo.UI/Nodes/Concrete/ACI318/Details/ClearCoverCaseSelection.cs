@@ -31,7 +31,7 @@ using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using System.Windows;
 using Kodestruct.Dynamo.UI.Common.TreeItems;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Details
 {
@@ -47,11 +47,17 @@ namespace Kodestruct.Concrete.ACI318.Details
     public class ClearCoverCaseSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public ClearCoverCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
+
         public ClearCoverCaseSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ClearCoverCaseId", "Concrete member type for clear cover case  selection"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ClearCoverCaseId", "Concrete member type for clear cover case  selection")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -32,7 +32,7 @@ using System.Linq;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Analysis.Section.AISC
 
@@ -49,12 +49,17 @@ namespace Kodestruct.Analysis.Section.AISC
     public class AiscShapeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public AiscShapeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public AiscShapeSelection()
         {
-            
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("SteelShapeId", "Section name from steel shape database"));
+
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SteelShapeId", "Section name from steel shape database")));
             RegisterAllPorts();
             SetDefaultParams();
             //PropertyChanged += NodePropertyChanged;

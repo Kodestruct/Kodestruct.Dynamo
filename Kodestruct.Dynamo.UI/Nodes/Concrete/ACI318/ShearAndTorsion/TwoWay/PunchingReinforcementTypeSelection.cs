@@ -28,6 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.General
 {
@@ -42,12 +43,17 @@ namespace Kodestruct.Concrete.ACI318.Section.ShearAndTorsion.TwoWayShear.General
     [IsDesignScriptCompatible]
     public class PunchingReinforcementTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public PunchingReinforcementTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
 
         public PunchingReinforcementTypeSelection()
         {
-            
 
-            OutPortData.Add(new PortData("PunchingReinforcementType", "Distinguishes between different types of punching shear reinforcement (studs, stirrups etc)"));
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("PunchingReinforcementType", "Distinguishes between different types of punching shear reinforcement (studs, stirrups etc)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -43,13 +43,17 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class ShearAreaCaseSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public ShearAreaCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public ShearAreaCaseSelection()
         {
             ReportEntry="";
             ShearAreaCaseId = "TBlock";
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ShearAreaCaseId", "Case selection for shear area calculations in affected elements in connections (block shear, shear yielding, shear rupture).Values are: StraightLine,TBlock,UBlock,Lblock"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ShearAreaCaseId", "Case selection for shear area calculations in affected elements in connections (block shear, shear yielding, shear rupture).Values are: StraightLine,TBlock,UBlock,Lblock")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
         }

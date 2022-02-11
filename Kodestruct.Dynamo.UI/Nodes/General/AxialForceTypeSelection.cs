@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Kodestruct.General;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.General
 {
@@ -45,11 +45,16 @@ namespace Kodestruct.General
     public class AxialForceTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public AxialForceTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public AxialForceTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("AxialForceType", "Distinguishes between tension, compression or reversible force in main branch member"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("AxialForceType", "Distinguishes between tension, compression or reversible force in main branch member")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

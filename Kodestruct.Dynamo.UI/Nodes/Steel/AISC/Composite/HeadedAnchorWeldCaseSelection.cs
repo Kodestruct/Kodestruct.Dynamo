@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Composite.Anchor
 {
@@ -43,13 +43,17 @@ namespace Kodestruct.Steel.AISC.Composite.Anchor
     [IsDesignScriptCompatible]
     public class HeadedAnchorWeldCaseSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public HeadedAnchorWeldCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public HeadedAnchorWeldCaseSelection()
         {
             
 
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("HeadedAnchorWeldCase", "Identifies the type of welding between the anchor and shape (through deck or not)"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("HeadedAnchorWeldCase", "Identifies the type of welding between the anchor and shape (through deck or not)")));
             RegisterAllPorts();
             SetDefaultPrameters();
             //PropertyChanged += NodePropertyChanged;

@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -44,12 +44,16 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class WeldTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public WeldTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public WeldTypeSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WeldType", "Weld type"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WeldType", "Weld type")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
             SetDefaultParameters();

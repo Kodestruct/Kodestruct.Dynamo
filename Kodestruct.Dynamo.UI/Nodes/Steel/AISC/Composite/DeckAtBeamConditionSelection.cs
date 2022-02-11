@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Composite.Anchor
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Steel.AISC.Composite.Anchor
     [IsDesignScriptCompatible]
     public class DeckConditionSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public DeckConditionSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public DeckConditionSelection()
         {
 
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("DeckAtBeamCondition", "Identifies whether deck runs parallel or perpendicular to beam or there is no deck"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("DeckAtBeamCondition", "Identifies whether deck runs parallel or perpendicular to beam or there is no deck")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

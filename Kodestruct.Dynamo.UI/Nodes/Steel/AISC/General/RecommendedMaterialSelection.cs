@@ -34,7 +34,7 @@ using Dynamo.Nodes;
 using System.Reflection;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.General
 {
@@ -50,13 +50,17 @@ namespace Kodestruct.Steel.AISC.General
     public class RecommendedMaterialSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public RecommendedMaterialSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public RecommendedMaterialSelection()
         {
 
-            //InPortData.Add(new PortData("d_b", "Bolt diameter required for recommended material filtering"));
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("SteelMaterialId", "Steel material"));
-            //OutPortData.Add(new PortData("d_b", "Bolt diameter required for recommended material filtering"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SteelMaterialId", "Steel material")));
             RegisterAllPorts();
             SetDefaultParameters();
 

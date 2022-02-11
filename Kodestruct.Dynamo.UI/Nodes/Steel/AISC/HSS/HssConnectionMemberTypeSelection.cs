@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.HSS
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Steel.AISC.HSS
     public class HssConnectionMemberTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public HssConnectionMemberTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public HssConnectionMemberTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("HssConnectionMemberType", "Specifies if the connection members are circular HSS (CHS) or rectangular HSS (RHS)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("HssConnectionMemberType", "Specifies if the connection members are circular HSS (CHS) or rectangular HSS (RHS)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

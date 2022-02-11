@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.General.Flexure
 {
@@ -45,12 +45,17 @@ namespace Kodestruct.General.Flexure
     public class BendingAxisSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public BendingAxisSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public BendingAxisSelection()
         {
             ReportEntry="";
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BendingAxis", "Distinguishes between bending with respect to section x-axis vs x-axis"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BendingAxis", "Distinguishes between bending with respect to section x-axis vs x-axis")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
             SetDefaultParameters();

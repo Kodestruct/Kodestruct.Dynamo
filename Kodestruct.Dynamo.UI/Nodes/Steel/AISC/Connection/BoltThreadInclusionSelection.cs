@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -44,12 +44,16 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class BoltThreadInclusionSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public BoltThreadInclusionSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public BoltThreadInclusionSelection()
         {
             
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("BoltThreadCase", "Identifies whether threads are included or excluded from shear planes"));
+            //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BoltThreadCase", "Identifies whether threads are included or excluded from shear planes")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
             SetDefaultParameters();

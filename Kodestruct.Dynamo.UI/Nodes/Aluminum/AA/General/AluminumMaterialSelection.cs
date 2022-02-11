@@ -33,7 +33,7 @@ using System.Reflection;
 using System.Linq;
 using MoreLinq;
 using System.Collections.ObjectModel;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Aluminum.AA.Material.MaterialParameters
 {
@@ -49,14 +49,19 @@ namespace Kodestruct.Aluminum.AA.Material.MaterialParameters
     public class AluminumMaterialSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public AluminumMaterialSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public AluminumMaterialSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("AluminumAlloyId", "Aluminum alloy"));
-            OutPortData.Add(new PortData("AluminumTemperId", "Aluminum temper"));
-            OutPortData.Add(new PortData("AluminumProductId", "Aluminum product type"));
-            OutPortData.Add(new PortData("ThicknessRangeId", "Range of aluminum material thicknesses"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("AluminumAlloyId", "Aluminum alloy")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("AluminumTemperId", "Aluminum temper")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("AluminumProductId", "Aluminum product type")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ThicknessRangeId", "Range of aluminum material thicknesses")));
 
             ReadMaterialInfo();
             SetDefaultParameters();

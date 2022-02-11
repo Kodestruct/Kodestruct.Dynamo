@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Wood.NDS.General
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Wood.NDS.General
     [IsDesignScriptCompatible]
     public class ServiceMoistureConditionSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public ServiceMoistureConditionSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public ServiceMoistureConditionSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ServiceMoistureCondition", "Identifies the type of service moisture conditions for wet service factor"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ServiceMoistureCondition", "Identifies the type of service moisture conditions for wet service factor")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Connection
 {
@@ -44,11 +44,15 @@ namespace Kodestruct.Steel.AISC.Connection
     [IsDesignScriptCompatible]
     public class StressDistributionSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public StressDistributionSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public StressDistributionSelection()
         {
-              //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("StressDistibutionType", "Type of stress distribution in connected element"));
+              //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("StressDistibutionType", "Type of stress distribution in connected element")));
             RegisterAllPorts();
             //PropertyChanged += NodePropertyChanged;
             SetDefaultParameters();

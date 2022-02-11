@@ -30,7 +30,7 @@ using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using System.Windows.Input;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Aluminum.AA.General
 {
@@ -46,11 +46,16 @@ namespace Kodestruct.Aluminum.AA.General
     public class SectionSubElementTypeSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public SectionSubElementTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public SectionSubElementTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("SectionSubElementType", "Identifies whether section sub-element is flat or curved"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SectionSubElementType", "Identifies whether section sub-element is flat or curved")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

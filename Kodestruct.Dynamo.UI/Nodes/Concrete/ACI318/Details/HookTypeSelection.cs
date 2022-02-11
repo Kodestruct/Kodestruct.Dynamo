@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using System.Xml;
 using Dynamo.Graph;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Details.General
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Concrete.ACI318.Details.General
     [IsDesignScriptCompatible]
     public class HookTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public HookTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public HookTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("HookType", "Identifies rebar hook configuration (90-degree versus 180-degree)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("HookType", "Identifies rebar hook configuration (90-degree versus 180-degree)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

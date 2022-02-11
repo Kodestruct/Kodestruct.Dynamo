@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.General
 {
@@ -43,12 +43,17 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.General
     [IsDesignScriptCompatible]
     public class SeismicDesignCategorySelection : UiNodeBase
     {
+        [JsonConstructor]
+        public SeismicDesignCategorySelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
 
         public SeismicDesignCategorySelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("SeismicDesignCategory", "Seismic design category (SDC)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SeismicDesignCategory", "Seismic design category (SDC)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

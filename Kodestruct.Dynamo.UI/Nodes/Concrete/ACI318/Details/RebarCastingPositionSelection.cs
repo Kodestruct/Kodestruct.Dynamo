@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using System.Xml;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Details.General
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Concrete.ACI318.Details.General
     public class RebarCastingPositionSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public RebarCastingPositionSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public RebarCastingPositionSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("RebarCastingPosition", "Indicates if rebar is  a horizontal bar placed over 12in. Of concrete."));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("RebarCastingPosition", "Indicates if rebar is  a horizontal bar placed over 12in. Of concrete.")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

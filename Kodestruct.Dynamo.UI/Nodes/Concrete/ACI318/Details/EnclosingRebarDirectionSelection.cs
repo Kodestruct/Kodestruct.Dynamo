@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph;
 using System.Xml;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Concrete.ACI318.Details.General
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.Concrete.ACI318.Details.General
     public class EnclosingRebarDirectionSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public EnclosingRebarDirectionSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public EnclosingRebarDirectionSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("EnclosingRebarDirection", "Indicates if enclosing reinforcement is perpendicular or parallel to bar"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("EnclosingRebarDirection", "Indicates if enclosing reinforcement is perpendicular or parallel to bar")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

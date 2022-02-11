@@ -29,7 +29,7 @@ using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Kodestruct.Dynamo.UI.Views.Steel.AISC10.Shear;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Steel.AISC.Shear
 {
@@ -45,11 +45,16 @@ namespace Kodestruct.Steel.AISC.Shear
     public class NonCircularShearCaseSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public NonCircularShearCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public NonCircularShearCaseSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("NonCircularShearCase", "Case type for shear checks"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output,this, new PortData("NonCircularShearCase", "Case type for shear checks")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

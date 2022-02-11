@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.General.Flexure
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.General.Flexure
     public class FlexuralCompressionLocationSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public FlexuralCompressionLocationSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public FlexuralCompressionLocationSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("FlexuralCompressionLocation", "Identifies whether top or bottom fiber of the section are subject to flexural compression (depending on the sign of moment)"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("FlexuralCompressionLocation", "Identifies whether top or bottom fiber of the section are subject to flexural compression (depending on the sign of moment)")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

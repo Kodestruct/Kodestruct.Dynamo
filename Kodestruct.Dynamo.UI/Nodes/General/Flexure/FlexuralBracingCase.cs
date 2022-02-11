@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using System.Xml;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.General.Flexure
 {
@@ -44,11 +44,16 @@ namespace Kodestruct.General.Flexure
     public class FlexuralBracingCaseSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public FlexuralBracingCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public FlexuralBracingCaseSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("FlexuralBracingCase", "Identifies the type of lateral bracing for a flexural member"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("FlexuralBracingCase", "Identifies the type of lateral bracing for a flexural member")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

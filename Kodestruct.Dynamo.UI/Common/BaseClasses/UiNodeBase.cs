@@ -27,7 +27,7 @@ using ProtoCore.AST.AssociativeAST;
 using Kodestruct.Common.CalculationLogger;
 using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Dynamo.Common
 {
@@ -86,12 +86,26 @@ namespace Kodestruct.Dynamo.Common
 
         #region constructor
 
+        
+ 
         /// <summary>
         ///     The constructor for a NodeModel is used to create
         ///     the input and output ports and specify the argument
         ///     lacing.
         /// </summary>
-        protected UiNodeBase()
+        [JsonConstructor]
+        protected UiNodeBase(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+            PropertyChanged += PropertyChangedHandler;
+            // The arugment lacing is the way in which Dynamo handles
+            // inputs of lists. If you don't want your node to
+            // support argument lacing, you can set this to LacingStrategy.Disabled.
+            ArgumentLacing = LacingStrategy.CrossProduct;
+            // We create a DelegateCommand object which will be 
+            // bound to our button in our custom UI. 
+            ShowUI = new DelegateCommand(RenderUI);
+        }
+        public UiNodeBase()
         {
             PropertyChanged += PropertyChangedHandler;
             // The arugment lacing is the way in which Dynamo handles
@@ -167,11 +181,11 @@ namespace Kodestruct.Dynamo.Common
             List<PropertyInfo> outProps = new List<PropertyInfo>();
            
             
-            foreach (var outP in OutPortData)
+            foreach (var outP in OutPorts)
             {
                 foreach (var gp in props)
                 {
-                    if (outP.NickName==gp.Name)
+                    if (outP.Name==gp.Name)
                     {
                         outProps.Add(gp);
                     }

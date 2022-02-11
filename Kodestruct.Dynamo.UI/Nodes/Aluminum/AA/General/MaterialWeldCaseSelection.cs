@@ -30,7 +30,7 @@ using System.Xml;
 using Dynamo.Graph;
 using System.Windows;
 using Dynamo.Graph.Nodes;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Aluminum.AA.General
 {
@@ -46,11 +46,16 @@ namespace Kodestruct.Aluminum.AA.General
     public class MaterialWeldCaseSelection : UiNodeBase
     {
 
+        [JsonConstructor]
+        public MaterialWeldCaseSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
+
+        }
         public MaterialWeldCaseSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("WeldCaseId", "Distinguishes between welded and non-welded element type for aluminum"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("WeldCaseId", "Distinguishes between welded and non-welded element type for aluminum")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;

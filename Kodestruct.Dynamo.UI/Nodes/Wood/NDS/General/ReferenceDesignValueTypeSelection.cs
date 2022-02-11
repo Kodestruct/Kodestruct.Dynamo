@@ -28,7 +28,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using System.Xml;
-
+using Newtonsoft.Json;
 
 namespace Kodestruct.Wood.NDS.General
 {
@@ -43,12 +43,16 @@ namespace Kodestruct.Wood.NDS.General
     [IsDesignScriptCompatible]
     public class ReferenceDesignValueTypeSelection : UiNodeBase
     {
+        [JsonConstructor]
+        public ReferenceDesignValueTypeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
+        {
 
+        }
         public ReferenceDesignValueTypeSelection()
         {
-            
-            //OutPortData.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
-            OutPortData.Add(new PortData("ReferenceDesignValueType", "Identifies the type of value for which adjustment factor is calculated"));
+
+            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
+            OutPorts.Add(new PortModel(PortType.Output, this, new PortData("ReferenceDesignValueType", "Identifies the type of value for which adjustment factor is calculated")));
             RegisterAllPorts();
             SetDefaultParameters();
             //PropertyChanged += NodePropertyChanged;
