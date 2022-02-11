@@ -58,7 +58,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Live
         }
         public LiveLoadOccupancySelection()
         {
-            ReportEntry="";
+
             LiveLoadOccupancyId = "Office";
             LiveLoadOccupancyDescription = "Office space";
             //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
@@ -117,95 +117,12 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Live
         }
         #endregion
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("LiveLoadOccupancyId", LiveLoadOccupancyId);
-        }
-
-        /// <summary>
-        ///Retrieves property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["LiveLoadOccupancyId"];
-            if (attrib == null)
-                return;
-
-            LiveLoadOccupancyId = attrib.Value;
-            SetOcupancyDescription();
-
-        }
-
-
-        public void UpdateSelectionEvents()
-        {
-            if (TreeViewControl != null)
-            {
-                TreeViewControl.SelectedItemChanged += OnTreeViewSelectionChanged;
-            }
-        }
-        private void OnTreeViewSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            OnSelectedItemChanged(e.NewValue);
-        }
-
-        private void SetOcupancyDescription()
-        {
-            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Loads/ASCE7/Live/LiveLoadOccupancyIdTreeData.xml");
-            XmlTreeHelper treeHelper = new XmlTreeHelper();
-            treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindOccupancyDescription));
-        }
-
-        private void FindOccupancyDescription(XmlNode node)
-        {
-            if (null != node.Attributes["Id"])
-            {
-                   if (node.Attributes["Id"].Value== LiveLoadOccupancyId)
-                   {
-                       LiveLoadOccupancyDescription = node.Attributes["Description"].Value;
-                   }
-            }
-        }
-
-        #endregion
 
         #region treeView elements
-
+        [JsonIgnore]
         public TreeView TreeViewControl { get; set; }
 
         public void DisplayComponentUI(XTreeItem selectedComponent)
@@ -216,7 +133,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Live
 
 
         private XTreeItem selectedItem;
-
+        [JsonIgnore]
         public XTreeItem SelectedItem
         {
             get { return selectedItem; }
@@ -263,7 +180,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Live
 
         #region Additional UI
         private UserControl additionalUI;
-
+        [JsonIgnore]
         public UserControl AdditionalUI
         {
             get { return additionalUI; }
@@ -296,7 +213,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Live
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    model.UpdateSelectionEvents();
+                    //model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

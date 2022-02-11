@@ -43,6 +43,7 @@ namespace Kodestruct.Dynamo.Common
         ///     UI interaction to methods on your data context.
         /// </summary>
         [IsVisibleInDynamoLibrary(false)]
+        [JsonIgnore]
         public DelegateCommand ShowUI { get; set; }
 
         #endregion

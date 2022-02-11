@@ -390,53 +390,7 @@ namespace Kodestruct.Aluminum.AA.Material.MaterialParameters
         
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("AluminumAlloyId", AluminumAlloyId);
-            nodeElement.SetAttribute("AluminumTemperId", AluminumTemperId);
-            nodeElement.SetAttribute("AluminumProductId", AluminumProductId);
-            nodeElement.SetAttribute("ThicknessRangeId", ThicknessRangeId);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var AluminumAlloyId_attrib = nodeElement.Attributes["AluminumAlloyId"];
-            if (AluminumAlloyId_attrib != null) { AluminumAlloyId = AluminumAlloyId_attrib.Value; }
-
-            var AluminumTemperId_attrib = nodeElement.Attributes["AluminumTemperId"];
-            if (AluminumTemperId_attrib != null) { AluminumTemperId = AluminumTemperId_attrib.Value; }
-
-            var AluminumProductId_attrib = nodeElement.Attributes["AluminumProductId"];
-            if (AluminumProductId_attrib != null) { AluminumProductId = AluminumProductId_attrib.Value; }
-
-            var ThicknessRangeId_attrib = nodeElement.Attributes["ThicknessRangeId"];
-            if (ThicknessRangeId_attrib != null) { ThicknessRangeId = ThicknessRangeId_attrib.Value; }
-
-            //base.DeserializeCore(nodeElement, context);
-            //var attrib = nodeElement.Attributes["Material"];
-            //if (attrib == null)
-            //    return;
-           
-            //MaterialSelection = attrib.Value;
-
-
-        }
-
-
-
-        #endregion
-
-
+ 
 
         /// <summary>
         ///Customization of WPF view in Dynamo UI      

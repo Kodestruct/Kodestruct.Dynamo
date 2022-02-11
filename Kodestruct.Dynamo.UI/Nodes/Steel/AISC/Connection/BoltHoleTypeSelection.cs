@@ -50,8 +50,7 @@ namespace Kodestruct.Steel.AISC.Connection
         }
         public BoltHoleTypeSelection()
         {
-            ReportEntry="";
-            
+
             //OutPorts.Add(new PortData("ReportEntry", "Calculation log entries (for reporting)"));
             OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BoltHoleType", "Type of bolt hole")));
             RegisterAllPorts();
@@ -62,7 +61,7 @@ namespace Kodestruct.Steel.AISC.Connection
 
         private void SetDefaultParameters()
         {
-            ReportEntry = "";
+
             BoltHoleType = "STD";
         }
 
@@ -108,61 +107,8 @@ namespace Kodestruct.Steel.AISC.Connection
 
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
-            #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("BoltHoleType", BoltHoleType);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["BoltHoleType"];
-            if (attrib == null)
-                return;
-           
-            BoltHoleType = attrib.Value;
-
-        }
-
-
-        #endregion
-
 
 
 

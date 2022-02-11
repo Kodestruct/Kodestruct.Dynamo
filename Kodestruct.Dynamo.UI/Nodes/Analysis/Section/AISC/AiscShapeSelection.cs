@@ -85,7 +85,7 @@ namespace Kodestruct.Analysis.Section.AISC
 		/// SteelShapeId property
 		/// </summary>
 		/// <value>Section name from steel shape database</value>
-		public string _SteelShapeId;
+		string _SteelShapeId;
 		
 		public string SteelShapeId
 		{
@@ -103,30 +103,6 @@ namespace Kodestruct.Analysis.Section.AISC
 		}
 		#endregion
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
-        #endregion
 
         #endregion
         #endregion
@@ -134,6 +110,7 @@ namespace Kodestruct.Analysis.Section.AISC
 
         #region SelectedItem Property
         private EnumDataElement selectedItem;
+        [JsonIgnore]
         public EnumDataElement SelectedItem
         {
             get { return selectedItem; }
@@ -144,7 +121,7 @@ namespace Kodestruct.Analysis.Section.AISC
 
         private void SetDefaultParams()
         {
-            ReportEntry = "";
+
             RefreshView = false;
             CatalogShapeType = "IShape";
             ShapeTypeSteel = "IShapeRolled";
@@ -172,7 +149,6 @@ namespace Kodestruct.Analysis.Section.AISC
             CHSShapeGroup = "HSS6";
             PipeGroup = "Pipe6";
             LDoubleGapType = "NoGap";
-
             SteelShapeId = "W18X35";
 
         }
@@ -1671,88 +1647,7 @@ namespace Kodestruct.Analysis.Section.AISC
 
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            
-            nodeElement.SetAttribute("ReportEntry",ReportEntry);
-            nodeElement.SetAttribute("CatalogShapeType",CatalogShapeType);
-            nodeElement.SetAttribute("ShapeTypeSteel",ShapeTypeSteel);
-            nodeElement.SetAttribute("IShapeType",IShapeType);
-            nodeElement.SetAttribute("CShapeType",CShapeType);
-            nodeElement.SetAttribute("TShapeType",TShapeType);
-            nodeElement.SetAttribute("CHSType",CHSType);
-            nodeElement.SetAttribute("LDoubleShapeType",LDoubleShapeType);
-            
-            nodeElement.SetAttribute("AnchorRodType",AnchorRodType);
-
-            nodeElement.SetAttribute("WShapeGroup", WShapeGroup);
-            nodeElement.SetAttribute("SShapeGroup", SShapeGroup);
-            nodeElement.SetAttribute("MShapeGroup", MShapeGroup);
-            nodeElement.SetAttribute("CShapeGroup", CShapeGroup);
-            nodeElement.SetAttribute("MCShapeGroup", MCShapeGroup);
-            nodeElement.SetAttribute("WTShapeGroup", WTShapeGroup);
-            nodeElement.SetAttribute("STShapeGroup", STShapeGroup);
-            nodeElement.SetAttribute("LShapeGroup", LShapeGroup);
-            nodeElement.SetAttribute("LDoubleEqualGroup", LDoubleEqualGroup);
-            nodeElement.SetAttribute("LDoubleLLBBGroup", LDoubleLLBBGroup);
-            nodeElement.SetAttribute("LDoubleSLBBGroup", LDoubleSLBBGroup);
-            nodeElement.SetAttribute("RHSShapeGroup", RHSShapeGroup);
-            nodeElement.SetAttribute("CHSShapeGroup", CHSShapeGroup);
-            nodeElement.SetAttribute("PipeGroup", PipeGroup);
-            nodeElement.SetAttribute("LDoubleGapType", LDoubleGapType);
-
-            nodeElement.SetAttribute("SteelShapeId", SteelShapeId);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-        
-            var CatalogShapeType_attrib = nodeElement.Attributes["CatalogShapeType"]; if (CatalogShapeType_attrib != null) { CatalogShapeType = CatalogShapeType_attrib.Value; }
-            var ShapeTypeSteel_attrib = nodeElement.Attributes["ShapeTypeSteel"]; if (ShapeTypeSteel_attrib != null) { ShapeTypeSteel = ShapeTypeSteel_attrib.Value; }
-            var IShapeType_attrib = nodeElement.Attributes["IShapeType"]; if (IShapeType_attrib != null) { IShapeType = IShapeType_attrib.Value; }
-            var CShapeType_attrib = nodeElement.Attributes["CShapeType"]; if (CShapeType_attrib != null) { CShapeType = CShapeType_attrib.Value; }
-            var TShapeType_attrib = nodeElement.Attributes["TShapeType"]; if (TShapeType_attrib != null) { TShapeType = TShapeType_attrib.Value; }
-            var CHSType_attrib = nodeElement.Attributes["CHSType"]; if (CHSType_attrib != null) { CHSType = CHSType_attrib.Value; }
-            var LDoubleShapeType_attrib = nodeElement.Attributes["LDoubleShapeType"]; if (LDoubleShapeType_attrib != null) { LDoubleShapeType = LDoubleShapeType_attrib.Value; }
-            var WShapeGroup_attrib = nodeElement.Attributes["WShapeGroup"]; if (WShapeGroup_attrib != null) { WShapeGroup = WShapeGroup_attrib.Value; }
-            var AnchorRodType_attrib = nodeElement.Attributes["AnchorRodType"]; if (AnchorRodType_attrib != null) { AnchorRodType = AnchorRodType_attrib.Value; }
-
-            
-
-            var SShapeGroup_attrib = nodeElement.Attributes["SShapeGroup"]; if (SShapeGroup_attrib != null)                     { SShapeGroup           = SShapeGroup_attrib.Value; }
-            var MShapeGroup_attrib = nodeElement.Attributes["MShapeGroup"]; if (MShapeGroup_attrib != null)                     { MShapeGroup           = MShapeGroup_attrib.Value; }
-            var CShapeGroup_attrib = nodeElement.Attributes["CShapeGroup"]; if (CShapeGroup_attrib != null)                     { CShapeGroup           = CShapeGroup_attrib.Value; }
-            var MCShapeGroup_attrib = nodeElement.Attributes["MCShapeGroup"]; if (MCShapeGroup_attrib != null)                  { MCShapeGroup          = MCShapeGroup_attrib.Value; }
-            var WTShapeGroup_attrib = nodeElement.Attributes["WTShapeGroup"]; if (WTShapeGroup_attrib != null)                  { WTShapeGroup          = WTShapeGroup_attrib.Value; }
-            var STShapeGroup_attrib = nodeElement.Attributes["STShapeGroup"]; if (STShapeGroup_attrib != null)                  { STShapeGroup          = STShapeGroup_attrib.Value; }
-            var LShapeGroup_attrib = nodeElement.Attributes["LShapeGroup"]; if (LShapeGroup_attrib != null)                     { LShapeGroup           = LShapeGroup_attrib.Value; }
-            var LDoubleEqualGroup_attrib = nodeElement.Attributes["LDoubleEqualGroup"]; if (LDoubleEqualGroup_attrib != null)   { LDoubleEqualGroup     = LDoubleEqualGroup_attrib.Value; }
-            var LDoubleLLBBGroup_attrib = nodeElement.Attributes["LDoubleLLBBGroup"]; if (LDoubleLLBBGroup_attrib != null)      { LDoubleLLBBGroup      = LDoubleLLBBGroup_attrib.Value; }
-            var LDoubleSLBBGroup_attrib = nodeElement.Attributes["LDoubleSLBBGroup"]; if (LDoubleSLBBGroup_attrib != null)      { LDoubleSLBBGroup      = LDoubleSLBBGroup_attrib.Value; }
-            var RHSShapeGroup_attrib = nodeElement.Attributes["RHSShapeGroup"]; if (RHSShapeGroup_attrib != null)               { RHSShapeGroup         = RHSShapeGroup_attrib.Value; }
-            var CHSShapeGroup_attrib = nodeElement.Attributes["CHSShapeGroup"]; if (CHSShapeGroup_attrib != null)               { CHSShapeGroup         = CHSShapeGroup_attrib.Value; }
-            var PipeGroup_attrib = nodeElement.Attributes["PipeGroup"]; if (PipeGroup_attrib != null)                           { PipeGroup             = PipeGroup_attrib.Value; }
-            var LDoubleGapType_attrib = nodeElement.Attributes["LDoubleGapType"]; if (LDoubleGapType_attrib != null)            { LDoubleGapType        = LDoubleGapType_attrib.Value; }
-
-
-            var SteelShapeId_attrib = nodeElement.Attributes["SteelShapeId"]; if (SteelShapeId_attrib != null) { SteelShapeId = SteelShapeId_attrib.Value; }
-
-        }
-
-
-
-        #endregion
-
+ 
 
         /// <summary>
         ///Customization of WPF view in Dynamo UI      

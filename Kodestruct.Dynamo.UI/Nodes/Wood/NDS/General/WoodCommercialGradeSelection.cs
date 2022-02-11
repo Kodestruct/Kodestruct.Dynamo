@@ -104,64 +104,8 @@ namespace Kodestruct.Wood.NDS.General
 		#endregion
 
 
-
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified();
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
-
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("WoodCommercialGrade", WoodCommercialGrade);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["WoodCommercialGrade"];
-            if (attrib == null)
-                return;
-           
-            WoodCommercialGrade = attrib.Value;
-            //SetComponentDescription();
-
-        }
-
-
-        #endregion
-
 
 
 

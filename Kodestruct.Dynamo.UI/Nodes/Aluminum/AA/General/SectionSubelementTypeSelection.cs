@@ -108,64 +108,10 @@ namespace Kodestruct.Aluminum.AA.General
 
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified();
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("SectionSubelementType", SectionSubelementType);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["SectionSubelementType"];
-            if (attrib == null)
-                return;
-           
-            SectionSubelementType = attrib.Value;
-            //SetComponentDescription();
-
-        }
-
-
-
-        #endregion
-
+ 
 
         /// <summary>
         ///Customization of WPF view in Dynamo UI      

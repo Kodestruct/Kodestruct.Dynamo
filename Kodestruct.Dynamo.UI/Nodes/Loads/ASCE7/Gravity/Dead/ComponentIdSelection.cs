@@ -61,7 +61,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
         }
         public ComponentIdSelection()
         {
-            ReportEntry="";
+
             ComponentId = "Deck3InLWFill";
             ComponentOption1 = 1;
             ComponentOption2 = 0;
@@ -188,114 +188,17 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
         } 
         #endregion
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-        #endregion
 
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("ComponentId", ComponentId);
-            nodeElement.SetAttribute("ComponentOption1", ComponentOption1.ToString());
-            nodeElement.SetAttribute("ComponentOption2", ComponentOption2.ToString());
-            nodeElement.SetAttribute("ComponentValue", ComponentValue.ToString());
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attribComponentId = nodeElement.Attributes["ComponentId"];
-            if (attribComponentId != null)
-            {
-                ComponentId = attribComponentId.Value;
-                SetComponentDescription();
-            }
-            var attribComponentOption1 = nodeElement.Attributes["ComponentOption1"];
-            var attribComponentOption2 = nodeElement.Attributes["ComponentOption2"];
-            var attribComponentValue = nodeElement.Attributes["ComponentValue"];
-
-            try
-            {
-                this.ComponentOption1 = double.Parse(attribComponentOption1.Value);
-                this.ComponentOption2 = double.Parse(attribComponentOption2.Value);
-                this.ComponentValue = double.Parse(attribComponentValue.Value);
-            }
-            catch (Exception)
-            {
-
-            }
-            
-
-
-        }
-
-
-        public void UpdateSelectionEvents()
-        {
-            if (TreeViewControl != null)
-            {
-                TreeViewControl.SelectedItemChanged += OnTreeViewSelectionChanged;
-            }
-        }
-        private void OnTreeViewSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            OnSelectedItemChanged(e.NewValue);
-        }
-
-        private void SetComponentDescription()
-        {
-            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Loads/ASCE7/Dead/ComponentDeadWeightTreeData.xml");
-            XmlTreeHelper treeHelper = new XmlTreeHelper();
-            treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindDescription));
-        }
-
-        private void FindDescription(XmlNode node)
-        {
-            if (null != node.Attributes["Tag"])
-            {
-                   if (node.Attributes["Tag"].Value== ComponentId)
-                   {
-                       ComponentDescription = node.Attributes["Description"].Value;
-                   }
-            }
-        }
-
-        #endregion
 
         #region treeView elements
-
+        [JsonIgnore]
         public TreeView TreeViewControl { get; set; }
 
         private ICommand selectedItemChanged;
+        [JsonIgnore]
         public ICommand SelectedItemChanged
         {
             get
@@ -437,7 +340,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    model.UpdateSelectionEvents();
+                    //model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

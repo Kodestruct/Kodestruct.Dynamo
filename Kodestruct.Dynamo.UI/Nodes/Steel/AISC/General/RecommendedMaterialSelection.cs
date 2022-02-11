@@ -109,93 +109,7 @@ namespace Kodestruct.Steel.AISC.General
 		#endregion
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
         #endregion
-
-        #endregion
-        #endregion
-
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            
-
-            nodeElement.SetAttribute("MaterialGroup",MaterialGroup);
-            nodeElement.SetAttribute("HighStrengthBoltType",HighStrengthBoltType);
-            nodeElement.SetAttribute("AnchorRodType",AnchorRodType);
-            nodeElement.SetAttribute("PlateThicknessRange",PlateThicknessRange);
-            nodeElement.SetAttribute("CatalogShapeType",CatalogShapeType);
-            nodeElement.SetAttribute("IShapeType",IShapeType);
-            nodeElement.SetAttribute("CShapeType",CShapeType);
-            nodeElement.SetAttribute("TShapeType",TShapeType);
-            nodeElement.SetAttribute("CHSType",CHSType);
-            nodeElement.SetAttribute("d_b",d_b.ToString());
-            nodeElement.SetAttribute("IsShapeI",IsShapeI.ToString());
-            nodeElement.SetAttribute("IsMaterialAnchorRod", IsMaterialAnchorRod.ToString());
-
-            nodeElement.SetAttribute("SteelMaterialId", SteelMaterialId);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-
-
-
-            var  MaterialGroupAttrib=nodeElement.Attributes["MaterialGroup"];               if(MaterialGroupAttrib!=null){MaterialGroup=MaterialGroupAttrib.Value;}
-            var  HighStrengthBoltTypeAttrib=nodeElement.Attributes["HighStrengthBoltType"]; if(HighStrengthBoltTypeAttrib!=null){HighStrengthBoltType=HighStrengthBoltTypeAttrib.Value;}
-            var  AnchorRodTypeAttrib=nodeElement.Attributes["AnchorRodType"];               if(AnchorRodTypeAttrib!=null){AnchorRodType=AnchorRodTypeAttrib.Value;}
-            var  PlateThicknessRangeAttrib=nodeElement.Attributes["PlateThicknessRange"];   if(PlateThicknessRangeAttrib!=null){PlateThicknessRange=PlateThicknessRangeAttrib.Value;}
-            var  CatalogShapeTypeAttrib=nodeElement.Attributes["CatalogShapeType"];         if(CatalogShapeTypeAttrib!=null){CatalogShapeType=CatalogShapeTypeAttrib.Value;}
-            var  IShapeTypeAttrib=nodeElement.Attributes["IShapeType"];                     if(IShapeTypeAttrib!=null){IShapeType=IShapeTypeAttrib.Value;}
-            var  CShapeTypeAttrib=nodeElement.Attributes["CShapeType"];                     if(CShapeTypeAttrib!=null){CShapeType=CShapeTypeAttrib.Value;}
-            var  TShapeTypeAttrib=nodeElement.Attributes["TShapeType"];                     if(TShapeTypeAttrib!=null){TShapeType=TShapeTypeAttrib.Value;}
-            var  CHSTypeAttrib=nodeElement.Attributes["CHSType"];                           if(CHSTypeAttrib!=null){CHSType=CHSTypeAttrib.Value;}
-            var  d_bAttrib=nodeElement.Attributes["d_b"];                                   if(d_bAttrib!=null){d_b=double.Parse(d_bAttrib.Value);}
-            var  IsShapeIAttrib=nodeElement.Attributes["IsShapeI"];                         if(IsShapeIAttrib!=null){IsShapeI=bool.Parse(IsShapeIAttrib.Value);}
-            var  IsMaterialAnchorRodAttrib=nodeElement.Attributes["IsMaterialAnchorRod"];   if(IsMaterialAnchorRodAttrib!=null){IsMaterialAnchorRod=bool.Parse(IsMaterialAnchorRodAttrib.Value);}
-   
-
-
-            var attrib = nodeElement.Attributes["SteelMaterialId"];
-            if (attrib == null)
-                return;
-           
-            SteelMaterialId = attrib.Value;
-
-        }
-
-
         #endregion
 
 
@@ -205,7 +119,7 @@ namespace Kodestruct.Steel.AISC.General
 
         private void SetDefaultParameters()
         {
-            ReportEntry = "";
+
             SteelMaterialId = "A992";
             RecommendedSpecificationUsed = true;
             MaterialGroup = "Shape";

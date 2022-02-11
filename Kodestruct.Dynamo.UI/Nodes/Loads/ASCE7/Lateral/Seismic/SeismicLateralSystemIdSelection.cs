@@ -130,101 +130,16 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
         }
         #endregion
 
-
-
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified();
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("SeismicLateralSystemId", SeismicLateralSystemId);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["SeismicLateralSystemId"];
-            if (attrib == null)
-                return;
-
-            SeismicLateralSystemId = attrib.Value;
-            //SetComponentDescription();
-
-        }
-
-
-        public void UpdateSelectionEvents()
-        {
-            if (TreeViewControl != null)
-            {
-                TreeViewControl.SelectedItemChanged += OnTreeViewSelectionChanged;
-            }
-        }
-        private void OnTreeViewSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            OnSelectedItemChanged(e.NewValue);
-        }
-
-        private void SetComponentDescription()
-        {
-            Uri uri = new Uri("pack://application:,,,/Kodestruct.Dynamo.UI;component/Loads/ASCE7/Lateral/Seismic/SeismicLateralSystemIdTreeData.xml");
-            XmlTreeHelper treeHelper = new XmlTreeHelper();
-            treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindDescription));
-        }
-
-        private void FindDescription(XmlNode node)
-        {
-            //check if attribute "Id" exists
-            if (null != node.Attributes["Tag"])
-            {
-                if (node.Attributes["Tag"].Value == SeismicLateralSystemId)
-                   {
-                       SeismicLateralSystemIdDescription = node.Attributes["Description"].Value;
-                   }
-            }
-        }
-
-        #endregion
 
         #region TreeView elements
-
+        [JsonIgnore]
         public TreeView TreeViewControl { get; set; }
 
         private ICommand selectedItemChanged;
+        [JsonIgnore]
         public ICommand SelectedItemChanged
         {
             get
@@ -247,7 +162,7 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
 
 
         private XTreeItem selectedItem;
-
+        [JsonIgnore]
         public XTreeItem SelectedItem
         {
             get { return selectedItem; }
@@ -312,7 +227,7 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    model.UpdateSelectionEvents();
+                    //model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

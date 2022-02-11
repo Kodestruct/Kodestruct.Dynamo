@@ -198,31 +198,6 @@ namespace Kodestruct.Wood.NDS.General
 
         #endregion
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
 
@@ -517,45 +492,6 @@ namespace Kodestruct.Wood.NDS.General
             AvailableWoodSpecies = null;
             CommercialGrades = null;
             SizeClasses = null;
-        }
-
-
-
-        #endregion
-
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            
-            //nodeElement.SetAttribute("ReportEntry",ReportEntry);
- 
-
-            nodeElement.SetAttribute("WoodSpeciesId", WoodSpeciesId);
-            nodeElement.SetAttribute("CommercialGradeId", CommercialGradeId);
-            nodeElement.SetAttribute("SizeClassId", SizeClassId);
-            nodeElement.SetAttribute("WoodMemberType", WoodMemberType);
-
-
-
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-
-            var WoodSpeciesId_attrib = nodeElement.Attributes["WoodSpeciesId"]; if (WoodSpeciesId_attrib != null) { WoodSpeciesId = WoodSpeciesId_attrib.Value; }
-            var CommercialGradeId_attrib = nodeElement.Attributes["CommercialGradeId"]; if (CommercialGradeId_attrib != null) { CommercialGradeId = CommercialGradeId_attrib.Value; }
-            var SizeClassId_attrib = nodeElement.Attributes["SizeClassId"]; if (SizeClassId_attrib != null) { SizeClassId = SizeClassId_attrib.Value; }
-            var WoodMemberType_attrib = nodeElement.Attributes["WoodMemberType"]; if (WoodMemberType_attrib != null) { WoodMemberType = WoodMemberType_attrib.Value; }
-
         }
 
 

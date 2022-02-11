@@ -52,7 +52,7 @@ namespace Kodestruct.General.Flexure
         }
         public BendingAxisSelection()
         {
-            ReportEntry="";
+
 
             //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
             OutPorts.Add(new PortModel(PortType.Output, this, new PortData("BendingAxis", "Distinguishes between bending with respect to section x-axis vs x-axis")));
@@ -63,7 +63,7 @@ namespace Kodestruct.General.Flexure
 
         private void SetDefaultParameters()
         {
-            ReportEntry = "";
+
             BendingAxis = "XAxis";
         }
 
@@ -108,61 +108,7 @@ namespace Kodestruct.General.Flexure
 
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
         #endregion
-
-        #endregion
-        #endregion
-
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("BendingAxis", BendingAxis);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["BendingAxis"];
-            if (attrib == null)
-                return;
-           
-            BendingAxis = attrib.Value;
-
-        }
-
-
-
         #endregion
 
 

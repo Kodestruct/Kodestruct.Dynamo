@@ -60,7 +60,7 @@ namespace Kodestruct.Concrete.ACI318.Details.General
 
         private void SetDefaultParameters()
         {
-            //ReportEntry="";
+
             HookType = "Hook90";
         }
 
@@ -105,64 +105,8 @@ namespace Kodestruct.Concrete.ACI318.Details.General
 
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified();
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
-
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("HookType", HookType);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["HookType"];
-            if (attrib == null)
-                return;
-           
-            HookType = attrib.Value;
-            //SetComponentDescription();
-
-        }
-
-
-        #endregion
-
-
 
 
 

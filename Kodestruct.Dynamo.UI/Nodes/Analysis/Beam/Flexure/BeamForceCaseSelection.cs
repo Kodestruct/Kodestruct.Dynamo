@@ -149,74 +149,12 @@ namespace Kodestruct.Analysis.Beam.Flexure
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("BeamForcesCaseId", BeamForcesCaseId);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["BeamForcesCaseId"];
-            if (attrib == null)
-                return;
-
-            BeamForcesCaseId = attrib.Value;
-            SetCaseDescription();
-        }
-
-        private void SetCaseDescription()
-        {
-            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Analysis/Beam/Flexure/BeamForceCaseTreeData.xml");
-            XmlTreeHelper treeHelper = new XmlTreeHelper();
-            treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindCaseDescription));
-        }
-
-
-
-        private void FindCaseDescription(XmlNode node)
-        {
-            if (null != node.Attributes["Id"])
-            {
-                if (node.Attributes["Id"].Value == BeamForcesCaseId)
-                {
-                    BeamForcesCaseDescription = node.Attributes["Description"].Value;
-                }
-            }
-        }
-
-
-        public void UpdateSelectionEvents()
-        {
-            if (TreeViewControl != null)
-            {
-                TreeViewControl.SelectedItemChanged += OnTreeViewSelectionChanged;
-            }
-        }
-        private void OnTreeViewSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            OnSelectedItemChanged(e.NewValue);
-        }
-
-
-
-
-        #endregion
-
         #region TreeView elements
-
+        [JsonIgnore]
         public TreeView TreeViewControl { get; set; }
 
         private ICommand selectedItemChanged;
+        [JsonIgnore]
         public ICommand SelectedItemChanged
         {
             get
@@ -243,7 +181,7 @@ namespace Kodestruct.Analysis.Beam.Flexure
 
 
         private XTreeItem selectedItem;
-
+        [JsonIgnore]
         public XTreeItem SelectedItem
         {
             get { return selectedItem; }
@@ -303,7 +241,7 @@ namespace Kodestruct.Analysis.Beam.Flexure
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    model.UpdateSelectionEvents();
+                    //model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

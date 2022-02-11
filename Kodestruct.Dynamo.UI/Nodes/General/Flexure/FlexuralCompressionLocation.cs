@@ -134,36 +134,6 @@ namespace Kodestruct.General.Flexure
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("FlexuralCompressionLocation", FlexuralCompressionLocation);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["FlexuralCompressionLocation"];
-            if (attrib == null)
-                return;
-           
-            FlexuralCompressionLocation = attrib.Value;
-            //SetComponentDescription();
-
-        }
-
-
-
-        #endregion
-
 
 
         /// <summary>

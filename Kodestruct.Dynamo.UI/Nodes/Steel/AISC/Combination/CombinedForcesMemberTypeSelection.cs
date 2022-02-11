@@ -59,7 +59,7 @@ namespace Kodestruct.Steel.AISC.Combination
 
         private void SetDefaultParameters()
         {
-            ReportEntry                 = "";
+
             CombinationCaseId           = "H1";
             MemberForceCase             = "FlexureAndAxial";
             MemberSectionType           = "DoublyOrSinglySymmetric";
@@ -107,72 +107,11 @@ namespace Kodestruct.Steel.AISC.Combination
 		}
 		#endregion
 
-
-
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
+ 
         #endregion
 
         #endregion
 
-        #endregion
-
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            
-            nodeElement.SetAttribute("ReportEntry",ReportEntry);
-            nodeElement.SetAttribute("MemberForceCase",MemberForceCase);
-            nodeElement.SetAttribute("MemberSectionType",MemberSectionType);
-            nodeElement.SetAttribute("ElementType",ElementType);
-            nodeElement.SetAttribute("ConnectionCombinationType",ConnectionCombinationType);
-
-            nodeElement.SetAttribute("CombinationCaseId", CombinationCaseId);
-
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            
-            var MemberForceCase_attrib = nodeElement.Attributes["MemberForceCase"]; if (MemberForceCase_attrib != null) { MemberForceCase = MemberForceCase_attrib.Value; }
-            var MemberSectionType_attrib = nodeElement.Attributes["MemberSectionType"]; if (MemberSectionType_attrib != null) { MemberSectionType = MemberSectionType_attrib.Value; }
-            var ElementType_attrib = nodeElement.Attributes["ElementType"]; if (ElementType_attrib != null) { ElementType = ElementType_attrib.Value; }
-            var ConnectionCombinationType_attrib = nodeElement.Attributes["ConnectionCombinationType"]; if (ConnectionCombinationType_attrib != null) { ConnectionCombinationType = ConnectionCombinationType_attrib.Value; }
-            var attrib = nodeElement.Attributes["CombinationCaseId"]; if (attrib != null) { CombinationCaseId = attrib.Value; }
-        }
-
-
-        #endregion
 
         #region Display parameters
 

@@ -54,7 +54,6 @@ namespace Kodestruct.Steel.AISC.Tension
         }
         public ShearLagCaseIdSelection()
         {
-            ReportEntry="";
             ShearLagCaseIdDescription ="General case";
             ShearLagCaseId = "Case2";
             //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
@@ -255,113 +254,12 @@ namespace Kodestruct.Steel.AISC.Tension
         #endregion
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("ShearLagCaseId", ShearLagCaseId);
-            nodeElement.SetAttribute("l",l.ToString());
-            nodeElement.SetAttribute("x_bar", x_bar.ToString());
-            nodeElement.SetAttribute("w", w.ToString());
-            nodeElement.SetAttribute("B", B.ToString());
-            nodeElement.SetAttribute("H", H.ToString());
-            nodeElement.SetAttribute("b_f", b_f.ToString());
-            nodeElement.SetAttribute("d", d.ToString());
-
-
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["ShearLagCaseId"];
-            if (attrib == null)
-                return;
-
-            ShearLagCaseId = attrib.Value;
-
-           attrib = nodeElement.Attributes["l"]; if (attrib ==null) return; l           =double.Parse(attrib.Value);
-           attrib = nodeElement.Attributes["x_bar"]; if (attrib ==null) return; x_bar   =double.Parse(attrib.Value);
-           attrib = nodeElement.Attributes["w"]; if (attrib ==null) return; w           =double.Parse(attrib.Value);
-           attrib = nodeElement.Attributes["B"]; if (attrib ==null) return; B           =double.Parse(attrib.Value);
-           attrib = nodeElement.Attributes["H"]; if (attrib ==null) return; H           =double.Parse(attrib.Value);
-           attrib = nodeElement.Attributes["b_f"]; if (attrib ==null) return; b_f       =double.Parse(attrib.Value);
-           attrib = nodeElement.Attributes["d"]; if (attrib == null) return;d           =double.Parse(attrib.Value);
-
-            SetCaseDescription();
-
-        }
-
-
-        public void UpdateSelectionEvents()
-        {
-            if (TreeViewControl != null)
-            {
-                TreeViewControl.SelectedItemChanged += OnTreeViewSelectionChanged;
-            }
-        }
-        private void OnTreeViewSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            OnSelectedItemChanged(e.NewValue);
-        }
-
-        private void SetCaseDescription()
-        {
-            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Steel/AISC/Tension/ShearLagFactorIdTreeData.xml");
-            XmlTreeHelper treeHelper = new XmlTreeHelper();
-            treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindDescription));
-        }
-
-        private void FindDescription(XmlNode node)
-        {
-            if (null != node.Attributes["Id"])
-            {
-                   if (node.Attributes["Id"].Value== ShearLagCaseId)
-                   {
-                       ShearLagCaseIdDescription = node.Attributes["Description"].Value;
-                   }
-            }
-        }
-
-        #endregion
 
         #region treeView elements
-
+        [JsonIgnore]
         public TreeView TreeViewControl { get; set; }
 
 
@@ -536,7 +434,7 @@ namespace Kodestruct.Steel.AISC.Tension
 
 
         private XTreeItem selectedItem;
-
+        [JsonIgnore]
         public XTreeItem SelectedItem
         {
             get { return selectedItem; }
@@ -586,7 +484,7 @@ namespace Kodestruct.Steel.AISC.Tension
 
         #region Additional UI
         private UserControl additionalUI;
-
+        [JsonIgnore]
         public UserControl AdditionalUI
         {
             get { return additionalUI; }
@@ -618,7 +516,7 @@ namespace Kodestruct.Steel.AISC.Tension
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    model.UpdateSelectionEvents();
+                    //model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

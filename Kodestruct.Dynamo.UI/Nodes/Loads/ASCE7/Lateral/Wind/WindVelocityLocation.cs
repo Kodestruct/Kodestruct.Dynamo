@@ -134,36 +134,6 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Wind.General
         #endregion
         #endregion
 
-        #region Serialization
-
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("WindVelocityLocation", WindVelocityLocation);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["WindVelocityLocation"];
-            if (attrib == null)
-                return;
-           
-            WindVelocityLocation = attrib.Value;
-            //SetComponentDescription();
-
-        }
-
-
-
-        #endregion
-
 
 
 

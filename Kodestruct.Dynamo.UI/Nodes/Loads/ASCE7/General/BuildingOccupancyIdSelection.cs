@@ -56,7 +56,7 @@ namespace Kodestruct.Loads.ASCE7.General
         }
         public BuildingOccupancyIdSelection()
         {
-            ReportEntry="";
+
             BuildingOccupancyDescription ="Commercial building";
             BuildingOccupancyId = "Commercial building";
             //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
@@ -118,95 +118,12 @@ namespace Kodestruct.Loads.ASCE7.General
 
 
 
-        #region ReportEntryProperty
-
-        /// <summary>
-        /// log property
-        /// </summary>
-        /// <value>Calculation entries that can be converted into a report.</value>
-
-        public string reportEntry;
-
-        public string ReportEntry
-        {
-            get { return reportEntry; }
-            set
-            {
-                reportEntry = value;
-                RaisePropertyChanged("ReportEntry");
-                OnNodeModified(true); 
-            }
-        }
-
-
-
-
-        #endregion
-
         #endregion
         #endregion
-        
-        #region Serialization
 
-        /// <summary>
-        ///Saves property values to be retained when opening the node     
-        /// </summary>
-        protected override void SerializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.SerializeCore(nodeElement, context);
-            nodeElement.SetAttribute("BuildingOccupancyId", BuildingOccupancyId);
-        }
-
-        /// <summary>
-        ///Retrieved property values when opening the node     
-        /// </summary>
-        protected override void DeserializeCore(XmlElement nodeElement, SaveContext context)
-        {
-            base.DeserializeCore(nodeElement, context);
-            var attrib = nodeElement.Attributes["BuildingOccupancyId"];
-            if (attrib == null)
-                return;
-
-            BuildingOccupancyId = attrib.Value;
-            SetOccupancyDescription();
-
-        }
-
-
-        public void UpdateSelectionEvents()
-        {
-            if (TreeViewControl != null)
-            {
-                TreeViewControl.SelectedItemChanged += OnTreeViewSelectionChanged;
-            }
-        }
-        private void OnTreeViewSelectionChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            OnSelectedItemChanged(e.NewValue);
-        }
-
-        private void SetOccupancyDescription()
-        {
-            Uri uri = new Uri("pack://application:,,,/KodestructDynamoUI;component/Views/Loads/ASCE7/General/BuildingOccupancyTreeData.xml");
-            XmlTreeHelper treeHelper = new XmlTreeHelper();
-            treeHelper.ExamineXmlTreeFile(uri, new EvaluateXmlNodeDelegate(FindDescription));
-        }
-
-        private void FindDescription(XmlNode node)
-        {
-            if (null != node.Attributes["Id"])
-            {
-                   if (node.Attributes["Id"].Value== BuildingOccupancyId)
-                   {
-                       BuildingOccupancyDescription = node.Attributes["Description"].Value;
-                   }
-            }
-        }
-
-        #endregion
 
         #region treeView elements
-
+        [JsonIgnore]
         public TreeView TreeViewControl { get; set; }
 
 
@@ -220,7 +137,7 @@ namespace Kodestruct.Loads.ASCE7.General
 
 
         private XTreeItem selectedItem;
-
+        [JsonIgnore]
         public XTreeItem SelectedItem
         {
             get { return selectedItem; }
@@ -267,7 +184,7 @@ namespace Kodestruct.Loads.ASCE7.General
 
         #region Additional UI
         private UserControl additionalUI;
-
+        [JsonIgnore]
         public UserControl AdditionalUI
         {
             get { return additionalUI; }
@@ -299,7 +216,7 @@ namespace Kodestruct.Loads.ASCE7.General
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    model.UpdateSelectionEvents();
+                    //model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);
