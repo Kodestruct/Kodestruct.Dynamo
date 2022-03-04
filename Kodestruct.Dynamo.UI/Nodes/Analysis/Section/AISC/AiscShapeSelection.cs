@@ -52,17 +52,18 @@ namespace Kodestruct.Analysis.Section.AISC
         [JsonConstructor]
         public AiscShapeSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
         {
-
+          
+            UpdateView();
+            RefreshView = true;
         }
         public AiscShapeSelection()
         {
 
 
-            //InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description")));
             OutPorts.Add(new PortModel(PortType.Output, this, new PortData("SteelShapeId", "Section name from steel shape database")));
             RegisterAllPorts();
             SetDefaultParams();
-            //PropertyChanged += NodePropertyChanged;
+
         }
 
 
@@ -1267,7 +1268,7 @@ namespace Kodestruct.Analysis.Section.AISC
                         break;
 
                 }
-                SetDefaultParameterValuesForGivenShapeSeries();
+                //SetDefaultParameterValuesForGivenShapeSeries();
             }
         }
 

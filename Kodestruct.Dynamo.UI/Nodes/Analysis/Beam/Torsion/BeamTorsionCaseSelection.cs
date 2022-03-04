@@ -35,6 +35,7 @@ using Kodestruct.Dynamo.UI.Common.TreeItems;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Newtonsoft.Json;
+using KodestructDynamoUI.Common.BaseClasses;
 
 namespace Kodestruct.Analysis.Beam.Torsion
 {
@@ -47,7 +48,7 @@ namespace Kodestruct.Analysis.Beam.Torsion
     [NodeCategory("Kodestruct.Analysis.Beam.Torsion")]
     [NodeDescription("Selection of beam load and boundary condition case for torsional analysis")]
     [IsDesignScriptCompatible]
-    public class BeamTorsionCaseSelection : UiNodeBase
+    public class BeamTorsionCaseSelection : UiNodeTreeBase
     {
 
         [JsonConstructor]
@@ -127,8 +128,7 @@ namespace Kodestruct.Analysis.Beam.Torsion
 
 
         #region TreeView elements
-        [JsonIgnore]
-        public TreeView TreeViewControl { get; set; }
+
 
         private ICommand selectedItemChanged;
         [JsonIgnore]
@@ -170,7 +170,7 @@ namespace Kodestruct.Analysis.Beam.Torsion
         }
 
 
-        private void OnSelectedItemChanged(object i)
+        protected override void OnSelectedItemChanged(object i)
         {
             XmlElement item = i as XmlElement;
             XTreeItem xtreeItem = new XTreeItem()
@@ -196,6 +196,8 @@ namespace Kodestruct.Analysis.Beam.Torsion
             }
         }
 
+ 
+
         #endregion
 
 
@@ -218,7 +220,7 @@ namespace Kodestruct.Analysis.Beam.Torsion
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                   // model.UpdateSelectionEvents();
+                    model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

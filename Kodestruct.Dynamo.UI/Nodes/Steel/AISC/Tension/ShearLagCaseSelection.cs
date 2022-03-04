@@ -33,6 +33,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Newtonsoft.Json;
+using KodestructDynamoUI.Common.BaseClasses;
 
 namespace Kodestruct.Steel.AISC.Tension
 {
@@ -45,7 +46,7 @@ namespace Kodestruct.Steel.AISC.Tension
     [NodeCategory("Kodestruct.Steel.AISC.Tension")]
     [NodeDescription("Selection of case for calculation of shear lag factor")]
     [IsDesignScriptCompatible]
-    public class ShearLagCaseIdSelection : UiNodeBase
+    public class ShearLagCaseIdSelection : UiNodeTreeBase
     {
         [JsonConstructor]
         public ShearLagCaseIdSelection(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)
@@ -259,8 +260,7 @@ namespace Kodestruct.Steel.AISC.Tension
 
 
         #region treeView elements
-        [JsonIgnore]
-        public TreeView TreeViewControl { get; set; }
+
 
 
 
@@ -446,7 +446,7 @@ namespace Kodestruct.Steel.AISC.Tension
         }
 
 
-        private void OnSelectedItemChanged(object i)
+        protected override void OnSelectedItemChanged(object i)
         {
             XmlElement item = i as XmlElement;
             XTreeItem xtreeItem = new XTreeItem()
@@ -516,7 +516,7 @@ namespace Kodestruct.Steel.AISC.Tension
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    //model.UpdateSelectionEvents();
+                    model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

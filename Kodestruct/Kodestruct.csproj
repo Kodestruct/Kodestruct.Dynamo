@@ -732,4 +732,8 @@
     <GenerateResource UseSourcePath="true" Sources="$(ProjectDir)\KodestructImages.resx" OutputResources="$(ProjectDir)\Resources\KodestructImages.resources" References="$(FrameworkAssembliesPath)System.Drawing.dll" />
     <AL TargetType="library" EmbedResources="$(ProjectDir)\Resources\KodestructImages.resources" OutputAssembly="$(OutDir)Kodestruct.customization.dll" Version="%(AssemblyInfo.Version)" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)bin\Debug\Kodestruct.dll" "$(AppData)\Dynamo\Dynamo Core\2.13\packages\Kodestruct\bin"
+copy "$(ProjectDir)bin\Debug\Kodestruct.pdb" "$(AppData)\Dynamo\Dynamo Core\2.13\packages\Kodestruct\bin"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

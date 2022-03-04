@@ -34,6 +34,7 @@ using Kodestruct.Dynamo.Common.Infra.TreeItems;
 using Kodestruct.Dynamo.UI.Common.TreeItems;
 using GalaSoft.MvvmLight.Command;
 using Newtonsoft.Json;
+using KodestructDynamoUI.Common.BaseClasses;
 
 namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
 {
@@ -46,7 +47,7 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
     [NodeCategory("Kodestruct.Loads.ASCE7.Lateral.Seismic.Building")]
     [NodeDescription("Selection of lateral system and Design Coefficients and Factors for Seismic Force-Resisting System ")]
     [IsDesignScriptCompatible]
-    public class SeismicLateralSystemIdSelection : UiNodeBase
+    public class SeismicLateralSystemIdSelection : UiNodeTreeBase
     {
 
         [JsonConstructor]
@@ -135,8 +136,7 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
 
 
         #region TreeView elements
-        [JsonIgnore]
-        public TreeView TreeViewControl { get; set; }
+
 
         private ICommand selectedItemChanged;
         [JsonIgnore]
@@ -174,7 +174,7 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
         }
 
 
-        private void OnSelectedItemChanged(object i)
+        protected override void OnSelectedItemChanged(object i)
         {
             XmlElement item = i as XmlElement;
             XTreeItem xtreeItem = new XTreeItem()
@@ -227,7 +227,7 @@ namespace Kodestruct.Loads.ASCE7.Lateral.Seismic.Building
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    //model.UpdateSelectionEvents();
+                    model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

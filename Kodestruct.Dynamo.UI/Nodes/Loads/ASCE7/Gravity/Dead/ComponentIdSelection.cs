@@ -39,6 +39,7 @@ using Dynamo.Nodes;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph;
 using Newtonsoft.Json;
+using KodestructDynamoUI.Common.BaseClasses;
 
 namespace Kodestruct.Loads.ASCE7.Gravity.Dead
 {
@@ -51,7 +52,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
     [NodeCategory("Kodestruct.Loads.ASCE7.Gravity.Dead")]
     [NodeDescription("Building component ID (name) used for calculation of dead weight")]
     [IsDesignScriptCompatible]
-    public class ComponentIdSelection : UiNodeBase
+    public class ComponentIdSelection : UiNodeTreeBase
     {
 
         [JsonConstructor]
@@ -194,8 +195,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
 
 
         #region treeView elements
-        [JsonIgnore]
-        public TreeView TreeViewControl { get; set; }
+
 
         private ICommand selectedItemChanged;
         [JsonIgnore]
@@ -281,7 +281,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
         }
 
 
-        private void OnSelectedItemChanged(object i)
+        protected override void OnSelectedItemChanged(object i)
         {
             XmlElement item = i as XmlElement;
             XTreeItem xtreeItem = new XTreeItem()
@@ -340,7 +340,7 @@ namespace Kodestruct.Loads.ASCE7.Gravity.Dead
                 if (tv!=null)
                 {
                     model.TreeViewControl = tv;
-                    //model.UpdateSelectionEvents();
+                    model.UpdateSelectionEvents();
                 }
                 
                 nodeView.inputGrid.Children.Add(control);

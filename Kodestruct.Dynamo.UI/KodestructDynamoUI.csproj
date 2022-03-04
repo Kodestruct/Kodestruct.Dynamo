@@ -332,6 +332,7 @@
     <Compile Include="Common\BaseClasses\IUiNodeBase.cs" />
     <Compile Include="Common\BaseClasses\UiNodeBase.cs" />
     <Compile Include="Common\BaseClasses\UiNodeBaseViewCustomization.cs" />
+    <Compile Include="Common\BaseClasses\UiNodeTreeBase.cs" />
     <Compile Include="Common\Controls\DataEntryElement.xaml.cs">
       <DependentUpon>DataEntryElement.xaml</DependentUpon>
     </Compile>
@@ -1492,8 +1493,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)bin\Debug\KodestructDynamoUI.dll" "$(AppData)\Dynamo\Dynamo Core\2.13\packages\Kodestruct\bin"
+copy "$(ProjectDir)bin\Debug\KodestructDynamoUI.pdb" "$(AppData)\Dynamo\Dynamo Core\2.13\packages\Kodestruct\bin"</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
